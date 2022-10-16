@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="没事儿,tong-h,Tong-H,tong-h blog"><meta name="descriptioon" content="personal blog by Tong-H"><meta name="renderer" content="wekit"><link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"><link rel="stylesheet" href="/css/public.css"><link rel="stylesheet" href="/css/reset.css"><link rel="stylesheet" href="/css/iconfont.css"><script>var _hmt = _hmt || [];(function(){var hm = document.createElement("script");hm.src = "https://hm.baidu.com/hm.js?7b429839b56cf831028b7ac4cb9b5086";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})()</script><title>(译)CSS 是魔法, 是时候试试 3D 了 [ Tong-H ]</title><link rel="stylesheet" href="/css/partial/footer.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/partial/sidebar.css"><link rel="stylesheet" href="/css/post.css"><link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"><meta name="generator" content="Hexo 5.1.1"></head><body class="scroll"><link rel="stylesheet" href="/css/partial/header.css"><div class="header scroll"><div class="maxwidth"><div class="nav"><a id="artlist" href="/404"><i class="iconfont icon404"></i><span class="headhid">&nbsp;404</span></a><a id="artlist" href="/archives"><i class="iconfont iconarchives"></i><span class="headhid">&nbsp;Archives</span></a><a id="artlist" href="/link"><i class="iconfont iconlink"></i><span class="headhid">&nbsp;Link</span></a><a id="artlist" href="/about"><i class="iconfont iconabout"></i><span class="headhid">&nbsp;About</span></a></div><div class="search">TONG-H</div></div></div><div class="main"> <div class="maxwidth"><link rel="stylesheet" href="/css/partial/sidebar.css"><div class="scroll" id="sidebar"><div class="social"><a href="/archives" title="Home"><i class="iconfont iconHome"></i></a><a href="mailto:tongt0232@gmail.com" title="E-Mail"><i class="iconfont iconweibiaoti554"></i></a><a target="_blank" rel="noopener" href="https://github.com/tong-h" title="GitHub"><i class="iconfont iconGitHub"></i></a><a target="_blank" rel="noopener" href="https://juejin.cn/user/1204720474809741" title="juejin"><img src="/images/juejinicon-sidebar.png"></a><a target="_blank" rel="noopener" href="https://www.jianshu.com/u/20de04cc53de" title="jianshu"><img src="/images/jianicon-sidebar.png"></a></div><div class="structure category-list"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS-%E6%98%AF%E9%AD%94%E6%B3%95-%E6%98%AF%E6%97%B6%E5%80%99%E8%AF%95%E8%AF%95-3D-%E4%BA%86"><span class="toc-number">1.</span> <span class="toc-text">CSS 是魔法, 是时候试试 3D 了</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%88%E8%AF%B4%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%84%EF%BC%8CTranslate-%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%9F"><span class="toc-number">1.0.1.</span> <span class="toc-text">先说最重要的，Translate 是如何工作的？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%86-Z-%E8%BD%B4%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.0.2.</span> <span class="toc-text">但 Z 轴是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS-%E7%9A%84-perspective-%E5%B1%9E%E6%80%A7"><span class="toc-number">1.0.3.</span> <span class="toc-text">CSS 的 perspective 属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rotate-%E6%96%B9%E6%B3%95"><span class="toc-number">1.0.4.</span> <span class="toc-text">rotate 方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AB%8B%E6%96%B9%E4%BD%93"><span class="toc-number">1.0.5.</span> <span class="toc-text">立方体</span></a></li></ol></li></ol></li></ol></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/NOTES/">NOTES</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/OTHER/">OTHER</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PYTHON/">PYTHON</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/WEB/">WEB</a><span class="category-list-count">41</span></li></ul><div class="tags"><a href="/tags/Cache/" style="font-size: 15px; color: #ec9d00">Cache</a> <a href="/tags/ECharts/" style="font-size: 12px; color: #ffac00">ECharts</a> <a href="/tags/Electron/" style="font-size: 12px; color: #ffac00">Electron</a> <a href="/tags/Git/" style="font-size: 12px; color: #ffac00">Git</a> <a href="/tags/JS-%E6%8B%BE%E9%81%97/" style="font-size: 12px; color: #ffac00">JS 拾遗</a> <a href="/tags/JSON/" style="font-size: 12px; color: #ffac00">JSON</a> <a href="/tags/OTHER/" style="font-size: 12px; color: #ffac00">OTHER</a> <a href="/tags/Svg/" style="font-size: 12px; color: #ffac00">Svg</a> <a href="/tags/angular/" style="font-size: 15px; color: #ec9d00">angular</a> <a href="/tags/canvas/" style="font-size: 21px; color: #c77e00">canvas</a> <a href="/tags/cordova/" style="font-size: 21px; color: #c77e00">cordova</a> <a href="/tags/domain/" style="font-size: 12px; color: #ffac00">domain</a> <a href="/tags/ffmpeg/" style="font-size: 12px; color: #ffac00">ffmpeg</a> <a href="/tags/gitment/" style="font-size: 12px; color: #ffac00">gitment</a> <a href="/tags/hexo/" style="font-size: 18px; color: #da8d00">hexo</a> <a href="/tags/http/" style="font-size: 12px; color: #ffac00">http</a> <a href="/tags/markdown/" style="font-size: 12px; color: #ffac00">markdown</a> <a href="/tags/mpvue/" style="font-size: 12px; color: #ffac00">mpvue</a> <a href="/tags/mysql/" style="font-size: 12px; color: #ffac00">mysql</a> <a href="/tags/nginx/" style="font-size: 12px; color: #ffac00">nginx</a> <a href="/tags/nodejs/" style="font-size: 12px; color: #ffac00">nodejs</a> <a href="/tags/npm/" style="font-size: 12px; color: #ffac00">npm</a> <a href="/tags/python/" style="font-size: 12px; color: #ffac00">python</a> <a href="/tags/search/" style="font-size: 12px; color: #ffac00">search</a> <a href="/tags/server/" style="font-size: 12px; color: #ffac00">server</a> <a href="/tags/translation/" style="font-size: 24px; color: #b46e00">translation</a> <a href="/tags/typescript/" style="font-size: 12px; color: #ffac00">typescript</a> <a href="/tags/vue/" style="font-size: 12px; color: #ffac00">vue</a> <a href="/tags/yarn/" style="font-size: 12px; color: #ffac00">yarn</a> <a href="/tags/%E5%8E%9F%E5%9E%8B%E9%93%BE/" style="font-size: 12px; color: #ffac00">原型链</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/" style="font-size: 15px; color: #ec9d00">网络爬虫</a> <a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%BB%9A%E5%8A%A8%E6%9D%A1/" style="font-size: 12px; color: #ffac00">自定义滚动条</a> <a href="/tags/%E8%B7%A8%E5%9F%9F/" style="font-size: 12px; color: #ffac00">跨域</a></div></div><div class="post rightside"><div class="artititle">(译)CSS 是魔法, 是时候试试 3D 了</div><div class="info"><i class="iconfont iconwenzi" title="字数">1.5k</i><i class="iconfont iconshijian" title="阅读时长">5</i><i class="iconfont iconarchives" title="文章分类"><span>WEB</span></i><i class="iconfont iconbiaoqian" title="文章标签"><span>translation</span></i><i class="iconfont iconshijian"><span title="文章发布时间">2021-07-28</span></i></div><div class="postDetail"><blockquote>
+<ul>
+<li>原文地址：<a target="_blank" rel="noopener" href="https://levelup.gitconnected.com/css-is-magic-its-time-you-try-3d-91a2dd49c781">CSS is magic, its time you try 3D</a></li>
+<li>原文作者：<a target="_blank" rel="noopener" href="https://medium.com/@ankitachakraborty">Ankita Chakraborty</a></li>
+<li>译文出自：<a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner">掘金翻译计划</a></li>
+<li>本文永久链接：<a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner/blob/master/article/2021/css-is-magic-its-time-you-try-3d.md">https://github.com/xitu/gold-miner/blob/master/article/2021/css-is-magic-its-time-you-try-3d.md</a></li>
+<li>译者：<a target="_blank" rel="noopener" href="https://github.com/Tong-H">tong-h</a></li>
+<li>校对者：<a target="_blank" rel="noopener" href="https://github.com/Chorer">Chorer</a> <a target="_blank" rel="noopener" href="https://github.com/PassionPenguin">PassionPenguin</a></li>
+</ul>
+</blockquote>
+<h1 id="CSS-是魔法-是时候试试-3D-了"><a href="#CSS-是魔法-是时候试试-3D-了" class="headerlink" title="CSS 是魔法, 是时候试试 3D 了"></a>CSS 是魔法, 是时候试试 3D 了</h1><p><img src="https://cdn-images-1.medium.com/max/5440/1*WKVcqB1XHjA5Fbdm-AQU-g.png" alt="小狗插图：[subpng](https://www.subpng.com/)，眼睛插图：[pngegg](https://www.pngegg.com)"></p>
+<p><strong>CSS transform</strong> 是 css 最全能，最神奇的属性之一。它不仅是在你的网站上实现平滑动画的最佳方式，更是你创造奇迹的一种方式。比如这个 🙀 —</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*dFJEMRBc7vlHnLf_MYI0Iw.gif" alt="CSS 3D 立方体!"></p>
+<blockquote>
+<p>我先为这几个占了你的网络宽带的动图道歉，但我希望它是值得的！🤜🤛</p>
+</blockquote>
+<p>等下，这个立方体的两个面不见了！！！</p>
+<p>我是故意这么做的，这样就会更形象，也更容易理解。我会在文章末尾添加一个链接用于获取上面示例的完整代码！</p>
+<h3 id="先说最重要的，Translate-是如何工作的？"><a href="#先说最重要的，Translate-是如何工作的？" class="headerlink" title="先说最重要的，Translate 是如何工作的？"></a>先说最重要的，Translate 是如何工作的？</h3><p><code>translate</code> 方法主要是将一个 html 元素从它真实的位置上移动，而且不会干扰布局树上的其他兄弟或父级元素。简单来说，<code>translateX</code> 方法是将元素左右移动，而 <code>translateY</code> 是上下移动元素。</p>
+<p><img src="https://cdn-images-1.medium.com/max/3688/1*cq8Q9DGLScj3v038DnxjhQ.png" alt="translate 是如何使元素在 X 轴和 Y 轴中平移的"></p>
+<h3 id="但-Z-轴是什么？"><a href="#但-Z-轴是什么？" class="headerlink" title="但 Z 轴是什么？"></a>但 Z 轴是什么？</h3><p>为了更形象地了解 <code>translate</code> 是如何沿着 Z 轴工作的，想象一下你的 <code>div</code> 在你的屏幕中前后移动而不是上下或左右。</p>
+<p><img src="https://cdn-images-1.medium.com/max/4328/1*qXx6HIGzXvPZY4oO_4gEFQ.png" alt="沿着 Z 轴平移"></p>
+<p>这怎么可能？一个网站看上去就像是一本书中的一页纸，对吧？怎么可能会有东西从屏幕中跑出来向你靠近（或者远离你）？</p>
+<p>你的 <code>div</code> 当然不会真的跑出来，但它给你一种感觉好像它会。让我们一起看看沿着不同的轴修改 <code>translate</code> 的值会怎样。</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*lNQdNBsRYNzWduwKFCdR5w.gif"></p>
+<p>我不知道你怎么想，但这个绿色的盒子看起来并不像是在靠近或者远离我。👺</p>
+<p>如何解决这个问题呢？我们需要改变一下我们的<strong>视角</strong>。😉</p>
+<h3 id="CSS-的-perspective-属性"><a href="#CSS-的-perspective-属性" class="headerlink" title="CSS 的 perspective 属性"></a>CSS 的 perspective 属性</h3><p>如果不设置正确的 <code>perspective</code> 值，你无法在视觉上检测到 Z 轴的改变。</p>
+<blockquote>
+<p><code>perspective</code> 属性定义元素与用户的距离。那么，相比于一个较高的值，一个较低的值产生的 3D 效果会更强烈。</p>
+<p>来源 —— <a target="_blank" rel="noopener" href="https://www.w3schools.com/cssref/css3_pr_perspective.asp">W3 Schools</a></p>
+</blockquote>
+<p>让我们给这三个方块的父元素加上下面的 CSS ——</p>
+<p><img src="https://cdn-images-1.medium.com/max/2724/1*ijVRelbthN6Ivuf5xDs7Iw.png"></p>
+<p><strong>瞧：</strong></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*5Go0arpobwsP4NtVYPRH4A.gif"></p>
+<h3 id="rotate-方法"><a href="#rotate-方法" class="headerlink" title="rotate 方法"></a>rotate 方法</h3><p>顾名思义，<code>rotate</code> 根据一个给定的角度，沿着某一个轴旋转元素。但我们需要一点视觉效果来展示 <code>rotate</code> 是如何沿着不同的轴工作的。</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*L06oWqkChV9deUNUVKrITw.gif" alt="在没有 perspective 的情况下沿着不同的轴旋转"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*nu1bM-wUxugvSsDj2H1ZSg.gif" alt="有 perspective 的情况下沿着不同的轴旋转"></p>
+<h3 id="立方体"><a href="#立方体" class="headerlink" title="立方体"></a>立方体</h3><p>我们终于可以从立方体的面开始了！我们将有四个面 —— bottom，front，back，left：</p>
+<p><img src="https://cdn-images-1.medium.com/max/2388/1*q69vRRksjkM4M2xY0Meycg.png"></p>
+<p>同样的，我为主要的包裹容器 <code>box-wrapper</code> 添加了一些 css。</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*gSM7KPGdGmzmo5D-Jpr_UA.png"></p>
+<p>注意我为容器添加了 <code>transform-style: preserve-3d</code>，这是渲染 3D 子元素的一个重要步骤。每一个面的宽高都是 <code>200px</code>，我们需要记住这个值，因为我们将依据每一个面的尺寸为每个面添加 <code>translate</code> 值。</p>
+<p>立方体的每一个面都将是一个绝对的划分，我添加了文字用于代表每一个面。我为每一个面添加了 <code>opacity: 0.5</code>，这样就能清楚地看到它们之间的重叠了。</p>
+<p><img src="https://cdn-images-1.medium.com/max/2236/1*iygD8k6WIHvobgQKUAc9Ww.png"></p>
+<p>为了将 front 放到前面，我们为它添加 <code>translateZ(100px)</code>。</p>
+<p><img src="https://cdn-images-1.medium.com/max/2768/1*-URkuoY7VunPTDHgQzSqsA.png"></p>
+<p>对，看起来就像这样。🙁</p>
+<p>那么我们怎么使它 3D <strong>化</strong>？我们的 <code>perspective</code> 知识在这里要派上用场了。</p>
+<p>添加这个 css 到包裹容器的父级元素 <code>box-container</code>：</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*pB8EdPyeKJywcoUVkdNszw.png"></p>
+<p>同样的，为了将 back 调后，我们将为它添加与 front 相反的 css。</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*r1-jRUGjUW-8a0-ckLay_Q.png"></p>
+<p><strong>效果 ——</strong></p>
+<p><img src="https://cdn-images-1.medium.com/max/2608/1*q6x7s9gLwwVf3WtIMaQYvg.png"></p>
+<p>你能够想象 front 向你靠近，back （黄色那个）离你远去吗？如果这仍然不足以描绘，那让我们试着把立方体的包裹容器旋转一下：</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*jaSlx71f9SunHXIOxGdthg.gif"></p>
+<p>很奇妙，对吗？</p>
+<p>下一步，我们需要安顿 bottom 💁‍♀️，为了将 bottom 放到适当的位置，我们把他沿着 X 轴旋转 ** 90 度**。</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*icrwzzydWhtOKhj85QnO1A.gif"></p>
+<p>我们还需要移动它的位置使它能正好在立方体的 front 和 back 之间。我们可以做的是移动 bottom 使其与 front 一致，然后旋转它。听起来有点困惑对吗？</p>
+<p><strong>步骤 —— 1: 将 bottom 和 front 对齐</strong></p>
+<p><strong>CSS:</strong></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*CBL0oCueX-bgBbVRJXC0dA.png" alt="将 bottom 和 front 对齐"></p>
+<p><strong>效果:</strong></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*xLD_mS8WsK3nzScd6tbwKw.gif" alt="将 bottom 和 front 对齐"></p>
+<p><strong>步骤 —— 2: 将 bottom 旋转 90 度</strong></p>
+<p><strong>CSS:</strong></p>
+<p><img src="https://cdn-images-1.medium.com/max/2152/1*LVmwdMV9BtJEZYP9u37pmw.png" alt="将 bottom 的 translate 和 rotate 相结合"></p>
+<p><strong>Result:</strong></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*qsGQ7VjZngLZm9SoU8LuxA.gif" alt="将 bottom 的 translate 和 rotate 相结合"></p>
+<p>bottom 看起来现在安全的在自己的位置上了。但 left 好像被困在了中间。🙍‍♀️ 首先我们需要将它移动到旁边然后旋转它。让我们把他沿着 X 轴移动 <strong>-100px</strong>，然后在 Y 轴上旋转它。</p>
+<p><strong>CSS:</strong></p>
+<p><img src="https://cdn-images-1.medium.com/max/2180/1*5RJvq7AM6mGD5zVVGoXM7w.png"></p>
+<p><strong>效果:</strong></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*WnnTtpzcd691KA2qO0b16w.gif"></p>
+<p><strong>看</strong>！我们的<strong>近似立方体</strong>已经快完成了。我建议你在每一个轴上都尝试调整一下 translate 和 rotate 的值，尝试添加顶面和右面去做一个完整的立方体。</p>
+<p>现在，最后关键的一步，旋转我们的立方体 😍</p>
+<p><strong>CSS:</strong></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*VhF0Ltn-I8vLPhTc6xaj9A.png"></p>
+<p>将上面的动画添加到我们的 <code>box-wrapper</code> 上 ——</p>
+<p><img src="https://cdn-images-1.medium.com/max/2336/1*RbHF6_VStIc1nYnx5g_pog.png"></p>
+<p>效果 🤜🤛:</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*OZ9tJyqDlJZ5NZhuRT1-wA.gif"></p>
+<p>相同的工作代码，参考[GitHub 仓库]](<a target="_blank" rel="noopener" href="https://github.com/ankita1010/css-cube)%EF%BC%8C%E5%B0%9D%E8%AF%95%E4%BD%93%E9%AA%8C%E4%B8%80%E4%B8%8B">https://github.com/ankita1010/css-cube)，尝试体验一下</a> <strong>CSS 3D</strong> 这个魔法之池。💫</p>
+<blockquote>
+<p><strong>请注意</strong> —— 我调整了 perspective 的值，以及添加了一些动画来达到侧面的最终位置，以更清楚地展示变化。我稍微旋转了 <code>box-wrapper</code>，这样从正确的角度看更明显些。</p>
+</blockquote>
+<p>干杯！</p>
+<blockquote>
+<p>如果发现译文存在错误或其他需要改进的地方，欢迎到 <a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner">掘金翻译计划</a> 对译文进行修改并 PR，也可获得相应奖励积分。文章开头的 <strong>本文永久链接</strong> 即为本文在 GitHub 上的 MarkDown 链接。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner">掘金翻译计划</a> 是一个翻译优质互联网技术文章的社区，文章来源为 <a target="_blank" rel="noopener" href="https://juejin.im/">掘金</a> 上的英文分享文章。内容覆盖 <a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner#android">Android</a>、<a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner#ios">iOS</a>、<a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner#%E5%89%8D%E7%AB%AF">前端</a>、<a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner#%E5%90%8E%E7%AB%AF">后端</a>、<a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner#%E5%8C%BA%E5%9D%97%E9%93%BE">区块链</a>、<a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner#%E4%BA%A7%E5%93%81">产品</a>、<a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner#%E8%AE%BE%E8%AE%A1">设计</a>、<a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner#%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD">人工智能</a>等领域，想要查看更多优质译文请持续关注 <a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner">掘金翻译计划</a>、<a target="_blank" rel="noopener" href="http://weibo.com/juejinfanyi">官方微博</a>、<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/juejinfanyi">知乎专栏</a>。</p>
+</blockquote>
+</div></div><link rel="stylesheet" href="/css/partial/footer.css"><div class="footer"><p><span>Copyright © 2017 - 2022  </span><a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/">蜀ICP备19024124号</a></p><p><i class="iconfont iconchakan"><span>本站总访问量</span><span id="busuanzi_container_site_pv">  <span id="busuanzi_value_site_pv"></span> </span></i><i class="iconfont iconabout"><span>本站访客数</span><span id="busuanzi_container_site_uv">  <span id="busuanzi_value_site_uv"></span> </span></i></p></div></div></div><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></body></html>

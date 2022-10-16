@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Tong-H</title>
+  
+  <subtitle>welcome</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://mser.xyz/"/>
+  <updated>2022-07-10T10:02:26.746Z</updated>
+  <id>https://mser.xyz/</id>
+  
+  <author>
+    <name>Tong-H</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Service Worker 缓存静态资源</title>
+    <link href="https://mser.xyz/2022/07/09/service_worker/"/>
+    <id>https://mser.xyz/2022/07/09/service_worker/</id>
+    <published>2022-07-09T02:20:44.000Z</published>
+    <updated>2022-07-10T10:02:26.746Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;最近有用到 &lt;code&gt;Service Worker&lt;/code&gt; 和 &lt;code&gt;CacheStorage&lt;/code&gt; 做离线缓存,  一方面是因为项目资源包着实大, 另一方面也是因为之前没有用缓存, 这也是需要的优化。&lt;br&gt;相比起
+        
+      
+    
+    </summary>
+    
+      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+    
+    
+      <category term="Cache" scheme="https://mser.xyz/tags/Cache/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>(译)使用 Stream 构建高性能的 Node.js 应用</title>
+    <link href="https://mser.xyz/2022/03/25/translation-use-streams-to-build-high-performing-nodejs-applications/"/>
+    <id>https://mser.xyz/2022/03/25/translation-use-streams-to-build-high-performing-nodejs-applications/</id>
+    <published>2022-03-24T16:00:00.000Z</published>
+    <updated>2022-07-10T04:43:00.538Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;原文地址：&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+    
+    
+      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>(译)CSS 是魔法, 是时候试试 3D 了</title>
+    <link href="https://mser.xyz/2022/03/14/translation-effects-of-too-much-lazy-loading-on-web-performance/"/>
+    <id>https://mser.xyz/2022/03/14/translation-effects-of-too-much-lazy-loading-on-web-performance/</id>
+    <published>2022-03-13T16:00:00.000Z</published>
+    <updated>2022-06-26T09:11:43.889Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;原文地址：&lt;a href=&quot;https://blog.bitsrc.io/effects-of-too-much-lazy-loading-on-performance-4dbe8df33c37&quot;&gt;Effects of Too
+        
+      
+    
+    </summary>
+    
+      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+    
+    
+      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>(译)双向绑定会使你的 React 代码更棒</title>
+    <link href="https://mser.xyz/2022/01/27/translation-two-way-binding-will-make-your-react-code-better.md/"/>
+    <id>https://mser.xyz/2022/01/27/translation-two-way-binding-will-make-your-react-code-better.md/</id>
+    <published>2022-01-26T16:00:00.000Z</published>
+    <updated>2022-02-23T03:50:10.711Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;原文地址：&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+    
+    
+      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SVG 路径动画</title>
+    <link href="https://mser.xyz/2021/12/13/svg-1/"/>
+    <id>https://mser.xyz/2021/12/13/svg-1/</id>
+    <published>2021-12-13T08:54:34.000Z</published>
+    <updated>2022-05-13T13:24:29.667Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;简单百搭普普通通平平无奇 SVG 路径动画优化网站效果, 如何实现一个 SVG 进度条动画以及虚线走马灯动画&lt;/p&gt;
+&lt;p&gt;我习惯于使用 canvas 来做一些动画效果，数据展示或者图片处理之类的。SVG 和 Canvas
+        
+      
+    
+    </summary>
+    
+      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+    
+    
+      <category term="Svg" scheme="https://mser.xyz/tags/Svg/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git notes</title>
+    <link href="https://mser.xyz/2021/11/17/notes_git/"/>
+    <id>https://mser.xyz/2021/11/17/notes_git/</id>
+    <published>2021-11-17T08:54:34.000Z</published>
+    <updated>2022-10-01T06:46:36.582Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Config user name and email &lt;code&gt;git config  --global  user.name / user.email “”&lt;/code&gt;&lt;br&gt;&lt;code&gt;git config --list&lt;/code&gt; check git
+        
+      
+    
+    </summary>
+    
+      <category term="NOTES" scheme="https://mser.xyz/categories/NOTES/"/>
+    
+    
+      <category term="Git" scheme="https://mser.xyz/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>(译) 2021 年 Node.js 的发展趋势</title>
+    <link href="https://mser.xyz/2021/10/24/translation-Top-Node.js-Development-Trends-in-2021/"/>
+    <id>https://mser.xyz/2021/10/24/translation-Top-Node.js-Development-Trends-in-2021/</id>
+    <published>2021-10-23T16:00:00.000Z</published>
+    <updated>2022-03-04T22:21:37.725Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;原文地址：&lt;a href=&quot;https://javascript.plainenglish.io/top-node-js-development-trends-in-2021-807f27fdf1b8&quot;&gt;Top Node.js
+        
+      
+    
+    </summary>
+    
+      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+    
+    
+      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>(译)使用 TypeScript 时你会想念的 Python 特性</title>
+    <link href="https://mser.xyz/2021/09/13/translation-python-features-that-you-will-miss-in-typescript/"/>
+    <id>https://mser.xyz/2021/09/13/translation-python-features-that-you-will-miss-in-typescript/</id>
+    <published>2021-09-12T16:00:00.000Z</published>
+    <updated>2021-10-11T07:24:00.759Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;原文地址：&lt;a href=&quot;https://levelup.gitconnected.com/python-features-that-you-will-miss-in-typescript-78ecc440b8bc&quot;&gt;Python
+        
+      
+    
+    </summary>
+    
+      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+    
+    
+      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>(译)使用 PeerJS 轻松实现 P2P 通信</title>
+    <link href="https://mser.xyz/2021/08/17/translation-simplified-peer-to-peer-communication-with-peerjs/"/>
+    <id>https://mser.xyz/2021/08/17/translation-simplified-peer-to-peer-communication-with-peerjs/</id>
+    <published>2021-08-16T16:00:00.000Z</published>
+    <updated>2021-09-12T08:03:23.063Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;原文地址：&lt;a href=&quot;https://blog.bitsrc.io/simplified-peer-to-peer-communication-with-peerjs-e37244267723&quot;&gt;Simplified Peer
+        
+      
+    
+    </summary>
+    
+      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+    
+    
+      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>(译)可视化 JavaScript 引擎</title>
+    <link href="https://mser.xyz/2021/08/06/translation-javascript-visualized-the-javascript-engine/"/>
+    <id>https://mser.xyz/2021/08/06/translation-javascript-visualized-the-javascript-engine/</id>
+    <published>2021-08-05T16:00:00.000Z</published>
+    <updated>2021-10-11T07:24:03.512Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;原文地址：&lt;a href=&quot;https://javascript.plainenglish.io/javascript-visualized-the-javascript-engine-1e3fc5d5310d&quot;&gt;JavaScript
+        
+      
+    
+    </summary>
+    
+      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+    
+    
+      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>(译)CSS 是魔法, 是时候试试 3D 了</title>
+    <link href="https://mser.xyz/2021/07/28/translation-css-is-magic-its-time-you-try-3d/"/>
+    <id>https://mser.xyz/2021/07/28/translation-css-is-magic-its-time-you-try-3d/</id>
+    <published>2021-07-27T16:00:00.000Z</published>
+    <updated>2021-09-12T08:01:19.381Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;原文地址：&lt;a href=&quot;https://levelup.gitconnected.com/css-is-magic-its-time-you-try-3d-91a2dd49c781&quot;&gt;CSS is magic, its time
+        
+      
+    
+    </summary>
+    
+      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+    
+    
+      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>(译)用于 JavaScript 应用的前 5 大嵌入式数据库</title>
+    <link href="https://mser.xyz/2021/07/13/translation-top-5-embedded-databases-for-javascript-applications/"/>
+    <id>https://mser.xyz/2021/07/13/translation-top-5-embedded-databases-for-javascript-applications/</id>
+    <published>2021-07-12T16:00:00.000Z</published>
+    <updated>2021-10-11T07:24:15.320Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;原文地址：&lt;a href=&quot;https://blog.bitsrc.io/top-5-embedded-databases-for-javascript-applications-1c68496aebac&quot;&gt;Top 5
+        
+      
+    
+    </summary>
+    
+      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+    
+    
+      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>(译)面向具有 React 开发经验的开发者介绍 Svelte</title>
+    <link href="https://mser.xyz/2021/07/06/translation-svelte-for-the-experienced-react-dev/"/>
+    <id>https://mser.xyz/2021/07/06/translation-svelte-for-the-experienced-react-dev/</id>
+    <published>2021-07-05T16:00:00.000Z</published>
+    <updated>2021-10-11T07:23:53.191Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;原文地址：&lt;a href=&quot;https://css-tricks.com/svelte-for-the-experienced-react-dev/&quot;&gt;Svelte for the Experienced React
+        
+      
+    
+    </summary>
+    
+      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+    
+    
+      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>(译)一个编译成 JavaScript 接口框架的案例</title>
+    <link href="https://mser.xyz/2021/06/17/translation-A-Case-for-Compile-to-JavaScript-Interface-Frameworks/"/>
+    <id>https://mser.xyz/2021/06/17/translation-A-Case-for-Compile-to-JavaScript-Interface-Frameworks/</id>
+    <published>2021-06-16T16:00:00.000Z</published>
+    <updated>2021-10-11T07:24:10.790Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;原文地址：&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+    
+    
+      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>(译)提高 Firefox 在 Linux 上的稳定性</title>
+    <link href="https://mser.xyz/2021/05/29/translation-improving-firefox-stability-on-linux/"/>
+    <id>https://mser.xyz/2021/05/29/translation-improving-firefox-stability-on-linux/</id>
+    <published>2021-05-28T16:00:00.000Z</published>
+    <updated>2021-10-11T07:24:06.112Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;原文地址：&lt;a href=&quot;https://hacks.mozilla.org/2021/05/improving-firefox-stability-on-linux/&quot;&gt;Improving Firefox stability on
+        
+      
+    
+    </summary>
+    
+      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+    
+    
+      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>canvas绘制dom计算分页自定义打印</title>
+    <link href="https://mser.xyz/2021/03/15/canvasprint/"/>
+    <id>https://mser.xyz/2021/03/15/canvasprint/</id>
+    <published>2021-03-15T05:44:36.000Z</published>
+    <updated>2022-04-09T03:59:49.829Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;原生打印香吗？当然香啊，window.print() 页头页尾页码统统有，还能用 @media print 设置打印样式，没什么问题，棒棒的舒舒服服的；但是（没有但是也没这篇文章了🙃🙃🙃）分享分享一些我踩到的坑，以及我的解决方案&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+    
+    
+      <category term="canvas" scheme="https://mser.xyz/tags/canvas/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>实现自定义滚动条 ScrollBar</title>
+    <link href="https://mser.xyz/2019/08/15/ScrollBar/"/>
+    <id>https://mser.xyz/2019/08/15/ScrollBar/</id>
+    <published>2019-08-15T03:09:06.000Z</published>
+    <updated>2019-08-16T12:33:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h2&gt;&lt;p&gt;原生的滚动条很强大，但是各个浏览器对于滚动条开放的 api 不同，google 是相当有好的，样式几乎都可以修改，But
+        
+      
+    
+    </summary>
+    
+      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+    
+    
+      <category term="自定义滚动条" scheme="https://mser.xyz/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%BB%9A%E5%8A%A8%E6%9D%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js 拾遗：连续赋值 &amp;&amp; for 循环顺序对性能的影响</title>
+    <link href="https://mser.xyz/2019/08/09/js_one/"/>
+    <id>https://mser.xyz/2019/08/09/js_one/</id>
+    <published>2019-08-09T06:50:13.000Z</published>
+    <updated>2019-08-09T07:35:43.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;连续赋值&quot;&gt;&lt;a href=&quot;#连续赋值&quot; class=&quot;headerlink&quot; title=&quot;连续赋值&quot;&gt;&lt;/a&gt;连续赋值&lt;/h2&gt;&lt;p&gt;在掘金看到一段很有意思的 js 代码&lt;/p&gt;
+&lt;figure class=&quot;highlight
+        
+      
+    
+    </summary>
+    
+      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+    
+    
+      <category term="JS 拾遗" scheme="https://mser.xyz/tags/JS-%E6%8B%BE%E9%81%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo 接入 github issue 评论</title>
+    <link href="https://mser.xyz/2019/08/06/git_comment/"/>
+    <id>https://mser.xyz/2019/08/06/git_comment/</id>
+    <published>2019-08-06T04:50:05.000Z</published>
+    <updated>2022-07-10T04:50:01.449Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;更新，评论系统切换为-gitalk&quot;&gt;&lt;a href=&quot;#更新，评论系统切换为-gitalk&quot; class=&quot;headerlink&quot; title=&quot;更新，评论系统切换为 gitalk&quot;&gt;&lt;/a&gt;更新，评论系统切换为 &lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="OTHER" scheme="https://mser.xyz/categories/OTHER/"/>
+    
+    
+      <category term="gitment" scheme="https://mser.xyz/tags/gitment/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo 主题制作</title>
+    <link href="https://mser.xyz/2019/08/05/hexo_theme/"/>
+    <id>https://mser.xyz/2019/08/05/hexo_theme/</id>
+    <published>2019-08-05T09:42:48.000Z</published>
+    <updated>2022-07-10T04:50:01.448Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;背景介绍&quot;&gt;&lt;a href=&quot;#背景介绍&quot; class=&quot;headerlink&quot; title=&quot;背景介绍&quot;&gt;&lt;/a&gt;背景介绍&lt;/h2&gt;&lt;p&gt;hexo
+        
+      
+    
+    </summary>
+    
+      <category term="OTHER" scheme="https://mser.xyz/categories/OTHER/"/>
+    
+    
+      <category term="hexo" scheme="https://mser.xyz/tags/hexo/"/>
+    
+  </entry>
+  
+</feed>
