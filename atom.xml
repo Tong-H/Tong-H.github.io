@@ -182,11 +182,11 @@
   </entry>
   
   <entry>
-    <title>Git notes</title>
+    <title>notes_git</title>
     <link href="https://mser.xyz/2021/11/17/notes_git/"/>
     <id>https://mser.xyz/2021/11/17/notes_git/</id>
     <published>2021-11-17T08:54:34.000Z</published>
-    <updated>2022-12-30T04:18:57.630Z</updated>
+    <updated>2023-02-13T09:13:06.937Z</updated>
     
     <summary type="html">
     
@@ -210,11 +210,11 @@
   </entry>
   
   <entry>
-    <title>Linux</title>
+    <title>notes_Linux</title>
     <link href="https://mser.xyz/2021/11/17/notes_linux/"/>
     <id>https://mser.xyz/2021/11/17/notes_linux/</id>
     <published>2021-11-17T08:54:34.000Z</published>
-    <updated>2023-02-08T08:11:10.683Z</updated>
+    <updated>2023-02-13T09:12:27.844Z</updated>
     
     <summary type="html">
     
@@ -233,6 +233,57 @@
     
     
       <category term="Linux" scheme="https://mser.xyz/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>notes_words</title>
+    <link href="https://mser.xyz/2021/11/17/notes_words/"/>
+    <id>https://mser.xyz/2021/11/17/notes_words/</id>
+    <published>2021-11-17T08:54:34.000Z</published>
+    <updated>2023-02-13T09:12:23.995Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;techical-words&quot;&gt;&lt;a href=&quot;#techical-words&quot; class=&quot;headerlink&quot; title=&quot;techical words&quot;&gt;&lt;/a&gt;techical words&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Memory
+        
+      
+    
+    </summary>
+    
+      <category term="NOTES" scheme="https://mser.xyz/categories/NOTES/"/>
+    
+    
+      <category term="En" scheme="https://mser.xyz/tags/En/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>notes_js</title>
+    <link href="https://mser.xyz/2021/11/17/notes_js/"/>
+    <id>https://mser.xyz/2021/11/17/notes_js/</id>
+    <published>2021-11-17T08:54:34.000Z</published>
+    <updated>2023-02-13T09:12:32.708Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;CMD&quot;&gt;&lt;a href=&quot;#CMD&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="NOTES" scheme="https://mser.xyz/categories/NOTES/"/>
+    
     
   </entry>
   
@@ -512,59 +563,6 @@
     
     
       <category term="canvas" scheme="https://mser.xyz/tags/canvas/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>实现自定义滚动条 ScrollBar</title>
-    <link href="https://mser.xyz/2019/08/15/ScrollBar/"/>
-    <id>https://mser.xyz/2019/08/15/ScrollBar/</id>
-    <published>2019-08-15T03:09:06.000Z</published>
-    <updated>2021-11-24T01:45:53.066Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h2&gt;&lt;p&gt;原生的滚动条很强大，但是各个浏览器对于滚动条开放的 api 不同，google 是相当有好的，样式几乎都可以修改，But
-        
-      
-    
-    </summary>
-    
-      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
-    
-    
-      <category term="自定义滚动条" scheme="https://mser.xyz/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%BB%9A%E5%8A%A8%E6%9D%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>js 拾遗：连续赋值 &amp;&amp; for 循环顺序对性能的影响</title>
-    <link href="https://mser.xyz/2019/08/09/js_one/"/>
-    <id>https://mser.xyz/2019/08/09/js_one/</id>
-    <published>2019-08-09T06:50:13.000Z</published>
-    <updated>2021-11-24T01:45:53.072Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;连续赋值&quot;&gt;&lt;a href=&quot;#连续赋值&quot; class=&quot;headerlink&quot; title=&quot;连续赋值&quot;&gt;&lt;/a&gt;连续赋值&lt;/h2&gt;&lt;p&gt;在掘金看到一段很有意思的 js 代码&lt;/p&gt;
-&lt;figure class=&quot;highlight
-        
-      
-    
-    </summary>
-    
-      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
-    
-    
-      <category term="JS 拾遗" scheme="https://mser.xyz/tags/JS-%E6%8B%BE%E9%81%97/"/>
     
   </entry>
   

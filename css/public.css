@@ -4,7 +4,7 @@ body {
 	padding: 0;
 	color: #555;
 	line-height: 1.7;
-	font-family: -apple-system,system-ui,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial;
+	font-family: -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial;
 }
 .ellipse {
 	position: relative;
@@ -76,7 +76,7 @@ body {
 		#ffa883 calc(60% + 8%),
 		#fffcf4 calc(60% + 8%)
 	);
-	transition: all .4s;
+	transition: all 0.4s;
 	overflow-x: hidden;
 }
 .artititle {
@@ -124,7 +124,7 @@ body {
 	}
 	#sidebar {
 		margin-left: 30px;
-        height: calc(100vh - 120px);
+		height: calc(100vh - 120px);
 		position: fixed;
 		top: 69px;
 		z-index: 2;
@@ -157,17 +157,28 @@ body {
 	.header .search input {
 		width: calc(100% - 62px);
 	}
-	.maxwidth,
-	.rightside {
-		width: calc(100% - 32px);
+	.maxwidth {
 		padding: 0 16px;
 	}
 	.rightside {
 		background: #ffffffa3;
+		padding: 16px;
 	}
 	#sidebar {
-		width: calc(100% - 72px);
 		display: inline-block;
-		margin: 0 16px;
+		margin-bottom: 40px;
+		animation: none !important;
+	}
+	.header {
+		text-align: left;
+	}
+	.header .nav {
+		margin: 15px 0 !important;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.header .search {
+		display: none;
 	}
 }
