@@ -1,0 +1,343 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="没事儿,tong-h,Tong-H,tong-h blog"><meta name="descriptioon" content="personal blog by Tong-H"><meta name="renderer" content="wekit"><link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"><link rel="stylesheet" href="/css/public.css"><link rel="stylesheet" href="/css/reset.css"><link rel="stylesheet" href="/css/iconfont.css"><title>(译) 全面刨析 CSS-in-JS [ Tong-H ]</title><link rel="stylesheet" href="/css/partial/footer.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/partial/sidebar.css"><link rel="stylesheet" href="/css/post.css"><link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"><meta name="generator" content="Hexo 5.4.0"></head><body class="scroll"><link rel="stylesheet" href="/css/partial/header.css"><div class="header scroll"><div class="maxwidth"><div class="nav"><a id="artlist" href="/404"><i class="iconfont icon404"></i><span class="headhid">&nbsp;404</span></a><a id="artlist" href="/archives"><i class="iconfont iconarchives"></i><span class="headhid">&nbsp;Archives</span></a><a id="artlist" href="/link"><i class="iconfont iconlink"></i><span class="headhid">&nbsp;Link</span></a><a id="artlist" href="/about"><i class="iconfont iconabout"></i><span class="headhid">&nbsp;About</span></a></div><div class="search">TONG-H</div></div></div><div class="main"> <div class="maxwidth"><link rel="stylesheet" href="/css/partial/sidebar.css"><div class="scroll" id="sidebar"><div class="social"><a href="/archives" title="Home"><i class="iconfont iconHome"></i></a><a href="mailto:tongt0232@gmail.com" title="E-Mail"><i class="iconfont iconweibiaoti554"></i></a><a target="_blank" rel="noopener" href="https://github.com/tong-h" title="GitHub"><i class="iconfont iconGitHub"></i></a><a target="_blank" rel="noopener" href="https://juejin.cn/user/1204720474809741" title="juejin"><img src="/images/juejinicon-sidebar.png"></a><a target="_blank" rel="noopener" href="https://www.jianshu.com/u/20de04cc53de" title="jianshu"><img src="/images/jianicon-sidebar.png"></a></div><div class="structure category-list"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%A8%E9%9D%A2%E5%88%A8%E6%9E%90-CSS-in-JS"><span class="toc-number">1.</span> <span class="toc-text">全面刨析 CSS-in-JS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84-CSS-in-JS-%E5%8A%9F%E8%83%BD"><span class="toc-number">1.1.</span> <span class="toc-text">常见的 CSS-in-JS 功能</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Scoped-CSS"><span class="toc-number">1.1.1.</span> <span class="toc-text">Scoped CSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SSR-%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%B8%B2%E6%9F%93"><span class="toc-number">1.1.2.</span> <span class="toc-text">SSR (服务端渲染)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%95%E6%93%8E%E5%89%8D%E7%BC%80"><span class="toc-number">1.1.3.</span> <span class="toc-text">自动添加浏览器引擎前缀</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B2%A1%E6%9C%89%E5%86%85%E8%81%94%E6%A0%B7%E5%BC%8F"><span class="toc-number">1.1.4.</span> <span class="toc-text">没有内联样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E9%9D%A2%E7%9A%84-CSS-%E6%94%AF%E6%8C%81"><span class="toc-number">1.1.5.</span> <span class="toc-text">全面的 CSS 支持</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%AE%E5%BC%82%E5%8C%96%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-number">1.2.</span> <span class="toc-text">差异化的功能</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E5%AE%9A%E4%BA%8E-React-%E8%BF%98%E6%98%AF%E4%B8%8E%E6%A1%86%E6%9E%B6%E6%97%A0%E5%85%B3%EF%BC%9F"><span class="toc-number">1.2.1.</span> <span class="toc-text">特定于 React 还是与框架无关？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Styles-Component-co-location"><span class="toc-number">1.2.2.</span> <span class="toc-text">Styles&#x2F;Component co-location</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E5%BC%8F%E5%AE%9A%E4%B9%89%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="toc-number">1.2.3.</span> <span class="toc-text">样式定义的语法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">标签模板语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B7%E5%BC%8F%E5%AF%B9%E8%B1%A1%E8%AF%AD%E6%B3%95"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">样式对象语法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E5%BC%8F%E5%BA%94%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-number">1.2.4.</span> <span class="toc-text">样式应用方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-class-%E5%B1%9E%E6%80%A7-className-prop"><span class="toc-number">1.2.4.1.</span> <span class="toc-text">使用 class 属性 &#x2F; className prop</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E4%B8%80%E4%B8%AA-lt-Styled-gt-%E7%BB%84%E4%BB%B6"><span class="toc-number">1.2.4.2.</span> <span class="toc-text">使用一个 &lt;Styled &#x2F;&gt; 组件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-css-prop"><span class="toc-number">1.2.4.3.</span> <span class="toc-text">使用 css prop</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E5%BC%8F%E8%BE%93%E5%87%BA"><span class="toc-number">1.2.5.</span> <span class="toc-text">样式输出</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#lt-style-gt-DOM-%E6%A0%B7%E5%BC%8F%E6%B3%A8%E5%85%A5"><span class="toc-number">1.2.5.1.</span> <span class="toc-text">&lt;style&gt;- DOM 样式注入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%99%E6%80%81-css-%E6%96%87%E4%BB%B6%E6%8F%90%E5%8F%96"><span class="toc-number">1.2.5.2.</span> <span class="toc-text">静态 .css 文件提取</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Atomic-CSS%EF%BC%88%E5%8E%9F%E5%AD%90%E5%8C%96-CSS%EF%BC%89"><span class="toc-number">1.2.6.</span> <span class="toc-text">Atomic CSS（原子化 CSS）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AE%BA"><span class="toc-number">1.3.</span> <span class="toc-text">结论</span></a></li></ol></li></ol></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/NOTES/">NOTES</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/OTHER/">OTHER</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PYTHON/">PYTHON</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/WEB/">WEB</a><span class="category-list-count">42</span></li></ul><div class="tags"><a href="/tags/Cache/" style="font-size: 15px; color: #ec9d00">Cache</a> <a href="/tags/ECharts/" style="font-size: 12px; color: #ffac00">ECharts</a> <a href="/tags/Electron/" style="font-size: 12px; color: #ffac00">Electron</a> <a href="/tags/Git/" style="font-size: 12px; color: #ffac00">Git</a> <a href="/tags/JS-%E6%8B%BE%E9%81%97/" style="font-size: 12px; color: #ffac00">JS 拾遗</a> <a href="/tags/JSON/" style="font-size: 12px; color: #ffac00">JSON</a> <a href="/tags/Linux/" style="font-size: 12px; color: #ffac00">Linux</a> <a href="/tags/OTHER/" style="font-size: 12px; color: #ffac00">OTHER</a> <a href="/tags/Svg/" style="font-size: 12px; color: #ffac00">Svg</a> <a href="/tags/angular/" style="font-size: 15px; color: #ec9d00">angular</a> <a href="/tags/canvas/" style="font-size: 21px; color: #c77e00">canvas</a> <a href="/tags/cordova/" style="font-size: 21px; color: #c77e00">cordova</a> <a href="/tags/domain/" style="font-size: 12px; color: #ffac00">domain</a> <a href="/tags/ffmpeg/" style="font-size: 12px; color: #ffac00">ffmpeg</a> <a href="/tags/gitment/" style="font-size: 12px; color: #ffac00">gitment</a> <a href="/tags/hexo/" style="font-size: 18px; color: #da8d00">hexo</a> <a href="/tags/http/" style="font-size: 12px; color: #ffac00">http</a> <a href="/tags/markdown/" style="font-size: 12px; color: #ffac00">markdown</a> <a href="/tags/mpvue/" style="font-size: 12px; color: #ffac00">mpvue</a> <a href="/tags/mysql/" style="font-size: 12px; color: #ffac00">mysql</a> <a href="/tags/nginx/" style="font-size: 12px; color: #ffac00">nginx</a> <a href="/tags/nodejs/" style="font-size: 12px; color: #ffac00">nodejs</a> <a href="/tags/npm/" style="font-size: 12px; color: #ffac00">npm</a> <a href="/tags/python/" style="font-size: 12px; color: #ffac00">python</a> <a href="/tags/search/" style="font-size: 12px; color: #ffac00">search</a> <a href="/tags/server/" style="font-size: 12px; color: #ffac00">server</a> <a href="/tags/translation/" style="font-size: 24px; color: #b46e00">translation</a> <a href="/tags/typescript/" style="font-size: 12px; color: #ffac00">typescript</a> <a href="/tags/vue/" style="font-size: 12px; color: #ffac00">vue</a> <a href="/tags/yarn/" style="font-size: 12px; color: #ffac00">yarn</a> <a href="/tags/%E5%8E%9F%E5%9E%8B%E9%93%BE/" style="font-size: 12px; color: #ffac00">原型链</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/" style="font-size: 15px; color: #ec9d00">网络爬虫</a> <a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%BB%9A%E5%8A%A8%E6%9D%A1/" style="font-size: 12px; color: #ffac00">自定义滚动条</a> <a href="/tags/%E8%B7%A8%E5%9F%9F/" style="font-size: 12px; color: #ffac00">跨域</a></div></div><div class="post rightside"><div class="artititle">(译) 全面刨析 CSS-in-JS</div><div class="info"><i class="iconfont iconwenzi" title="字数">4.8k</i><i class="iconfont iconshijian" title="阅读时长">17</i><i class="iconfont iconarchives" title="文章分类"><span>WEB</span></i><i class="iconfont iconbiaoqian" title="文章标签"><span>translation</span></i><i class="iconfont iconshijian"><span title="文章发布时间">2022-11-27</span></i></div><div class="postDetail"><blockquote>
+<ul>
+<li>原文地址：<a target="_blank" rel="noopener" href="https://css-tricks.com/a-thorough-analysis-of-css-in-js/">A Thorough Analysis of CSS-in-JS</a></li>
+<li>原文作者：<a target="_blank" rel="noopener" href="https://css-tricks.com/author/andreipfeiffer/">Andrei Pfeiffer</a></li>
+<li>译文出自：<a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner">掘金翻译计划</a></li>
+<li>本文永久链接：<a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner/blob/master/article/2022/a-thorough-analysis-of-css-in-js.md">https://github.com/xitu/gold-miner/blob/master/article/2022/a-thorough-analysis-of-css-in-js.md</a></li>
+<li>译者：<a target="_blank" rel="noopener" href="https://github.com/Tong-H">tong-h</a></li>
+<li>校对者：</li>
+</ul>
+</blockquote>
+<h1 id="全面刨析-CSS-in-JS"><a href="#全面刨析-CSS-in-JS" class="headerlink" title="全面刨析 CSS-in-JS"></a>全面刨析 CSS-in-JS</h1><p>比选择一个 JavaScript 框架更有挑战的是什么呢？你猜对了：选择一个 CSS-in-JS 方案。为什么？因为现在已经有 <a target="_blank" rel="noopener" href="http://michelebertoli.github.io/css-in-js/">50 个以上的库</a>，而且每个库都有独一无二的特色。</p>
+<p>我们测试了 <a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#overview">10 个不同的库</a>（排列没有特定的顺序）：<a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#styled-jsx">Styled JSX</a>，<a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#styled-components">styled-components</a>，<a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#emotion">Emotion</a>，<a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#treat">Treat</a>，<a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#typestyle">TypeStyle</a>，<a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#fela">Fela</a>，<a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#stitches">Stitches</a>，<a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#jss">JSS</a>，<a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#goober">Goober</a>，以及 <a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#compiled">Compiled</a>。我们发现，尽管每一个库都提供了一系列不同的功能，但事实上很多功能和其他的库是一样的。</p>
+<p>所以比起单独评估每一个库，我们会分析最突出的功能。这可以帮助我们更好的理解，在特定的使用场景下哪一个库最适合。</p>
+<p><strong>注意</strong>：在这篇文章里，我们假定你已经熟悉 CSS-in-JS 了。如果你想寻找一篇更基础的文章，可以看下 <a target="_blank" rel="noopener" href="https://webdesign.tutsplus.com/articles/an-introduction-to-css-in-js-examples-pros-and-cons--cms-33574">CSS-in-JS 简介</a></p>
+<h2 id="常见的-CSS-in-JS-功能"><a href="#常见的-CSS-in-JS-功能" class="headerlink" title="常见的 CSS-in-JS 功能"></a>常见的 CSS-in-JS 功能</h2><p>大多数积极维护的 CSS-in-JS 库都支持以下功能，所以我们可以把这些功能视为事实。</p>
+<h3 id="Scoped-CSS"><a href="#Scoped-CSS" class="headerlink" title="Scoped CSS"></a>Scoped CSS</h3><p><strong>CSS 模块</strong>开创的一项技术，所有的 CSS-in-JS 库都会生成独一无二的 CSS class 名。在不影响其他定义于组件之外的样式的情况下的组件样式封装，使其样式只作用于各自的组件。</p>
+<p>有了这个内建功能，我们再也不用担心 CSS 类名重名，特性冲突，或者为了想一个整个代码库中独特的类名而耗费时间。</p>
+<p>这个功能对基于组件的开发非常宝贵。</p>
+<h3 id="SSR-服务端渲染"><a href="#SSR-服务端渲染" class="headerlink" title="SSR (服务端渲染)"></a>SSR (服务端渲染)</h3><p>在单页面应用（SPAs）里，HTTP 服务只提供基础的空白 HTML 页面，所有的渲染都由浏览器执行。相比之下，在服务端渲染可能不是很有用。但任何需要被搜索引擎<strong>解析和索引</strong>的网站或应用都必须有 SSR 页面，而样式也需要在服务端生成。</p>
+<p>与适用于静态网站生成器（SSG）的原则一样，页面会与CSS代码在打包时一起预先生成，用作静态 HTML 文件。</p>
+<p>好消息是<strong>我们测试过的所有库都支持 SSR</strong>，这使得它们几乎适用于所有类型的项目。</p>
+<h3 id="自动添加浏览器引擎前缀"><a href="#自动添加浏览器引擎前缀" class="headerlink" title="自动添加浏览器引擎前缀"></a>自动添加浏览器引擎前缀</h3><p>由于复杂的 <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=TQ7NqpFMbFs">CSS 标准化流程</a>，新的 CSS 功能可能需要几年时间才能在所有流行的浏览器中使用。在非标准的 CSS 语法前添加<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix">浏览器引擎前缀</a>是一种使我们提前使用实验性功能的方法：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* WebKit 浏览器：Chrome, Safari, most iOS browsers, 等等 */</span></span><br><span class="line">-webkit-<span class="attribute">transition</span>: all <span class="number">1s</span> ease;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Firefox */</span></span><br><span class="line">-moz-<span class="attribute">transition</span>: all <span class="number">1s</span> ease;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Internet Explorer 和 Microsoft Edge */</span></span><br><span class="line">-ms-<span class="attribute">transition</span>: all <span class="number">1s</span> ease;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Opera 的旧 pre-WebKit 版本 */</span></span><br><span class="line">-o-<span class="attribute">transition</span>: all <span class="number">1s</span> ease;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 标准格式 */</span></span><br><span class="line"><span class="attribute">transition</span>: all <span class="number">1s</span> ease; </span><br></pre></td></tr></table></figure>
+
+<p>然而，<a target="_blank" rel="noopener" href="https://css-tricks.com/is-vendor-prefixing-dead/">添加浏览器引擎前缀这种方式仍然是问题重重</a>，CSS 工作组打算在未来停止使用这种方式。如果我们想要完全支持那些没有实施标准规范的旧浏览器，那我们需要知道<a target="_blank" rel="noopener" href="http://shouldiprefix.com/">哪些功能要求添加浏览器引擎前缀</a>。</p>
+<p>幸运的是，有一些工具通过自动生成携带浏览器引擎前缀的 CSS 属性，让我们可以在源代码中使用标准语法。<strong>所有的 CSS-in-JS 库都提供该功能，开箱即用</strong>。</p>
+<h3 id="没有内联样式"><a href="#没有内联样式" class="headerlink" title="没有内联样式"></a>没有内联样式</h3><p>一些 CSS-in-JS 库，比如Radium 或 Glamor，将所有样式的定义以内联样式的方式输出。这种技术有巨大的局限性，因为无法通过内联样式来定义伪类、伪元素或者媒体查询。所以，这些库不得不通过添加 DOM 事件监听以及从 JavaScript 中触发样式更新的方式来处理这些功能，基本上是重新创建类似 <code>:hover</code>、 <code>:focus</code> 之类的原生 CSS 功能。</p>
+<p>这也是一个普遍的认知，内联样式比 class <a target="_blank" rel="noopener" href="https://esbench.com/bench/5908f78199634800a0347e94">性能更差</a>。使用内联样式作为主要的方式为组件定义样式，这通常是<a target="_blank" rel="noopener" href="https://reactjs.org/docs/dom-elements.html#style">不鼓励的做法</a> .</p>
+<p><strong>目前所有的 CSS-in-JS 库都不再使用内联样式</strong>，而是采用 CSS class 的方式来定义样式。</p>
+<h3 id="全面的-CSS-支持"><a href="#全面的-CSS-支持" class="headerlink" title="全面的 CSS 支持"></a>全面的 CSS 支持</h3><p>使用 CSS class 而不是内联样式的结果是，关于 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">CSS 属性</a> 的使用没有限制。在分析期间，我们主要感兴趣的是：</p>
+<ul>
+<li>伪类和伪元素</li>
+<li>媒体查询</li>
+<li>CSS 动画</li>
+</ul>
+<p>*我们解析过的所有库都全面支持所有的 CSS 属性。**</p>
+<h2 id="差异化的功能"><a href="#差异化的功能" class="headerlink" title="差异化的功能"></a>差异化的功能</h2><p>这就是变得更有趣的地方。几乎每个库都提供了一套独具特色的功能，在为特定项目选择合适的解决方案时，这些功能会大大的影响我们的决定。一些库开创了一个特别的功能，而其他库可以选择借用甚至改进某些功能。</p>
+<h3 id="特定于-React-还是与框架无关？"><a href="#特定于-React-还是与框架无关？" class="headerlink" title="特定于 React 还是与框架无关？"></a>特定于 React 还是与框架无关？</h3><p>CSS-in-JS 在 React 生态圈中更流行，这并不是秘密。 这也是为什么有些库是 <strong>特别为 React 构建</strong>：<a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#styled-jsx"><strong>Styled JSX</strong></a>，<a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#styled-components"><strong>styled-components</strong></a>，以及 <a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#stitches"><strong>Stitches</strong></a>。</p>
+<p>但也有很多库是 <strong>无关框架的</strong>，这使得它们可以应用于所有项目： <a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#emotion"><strong>Emotion</strong></a>，<a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#treat"><strong>Treat</strong></a>，<a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#typestyle"><strong>TypeStyle</strong></a>，<a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#fela"><strong>Fela</strong></a>，<a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#jss"><strong>JSS</strong></a> 或 <a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#goober"><strong>Goober</strong></a>。</p>
+<p>如果我们需要支持原生 JavaScript 代码或者其他非 React 的框架，那决定就很简单：我们应该选择一个无关框架的库。但针对 React 应用，我们有更广泛的选择，那做决定就比较困难了。那就让我们来探索一下其他标准吧。</p>
+<h3 id="Styles-Component-co-location"><a href="#Styles-Component-co-location" class="headerlink" title="Styles/Component co-location"></a>Styles/Component co-location</h3><p>跟随组件定义样式是非常便利的功能，这样就不需要在两个不同的文件中反复切换：包含样式的 <code>.css</code> 或 <code>.less</code> / <code>.scss</code> 文件，与包含指令和行为的组件文件。</p>
+<p><a target="_blank" rel="noopener" href="https://reactnative.dev/docs/stylesheet">React Native StyleSheets</a>，<a target="_blank" rel="noopener" href="https://vuejs.org/v2/guide/single-file-components.html">Vue.js SFCs</a>，或者 <a target="_blank" rel="noopener" href="https://angular.io/guide/component-styles">Angular Components</a> 默认支持样式的共同定位，不论是开发还是维护阶段都能真正从中受益。我们依然可以选择将样式提取到一个单独的文件中，以防我们觉得它们掩盖了代码的其他部分。</p>
+<p><img src="https://i0.wp.com/css-tricks.com/wp-content/uploads/2021/05/aKsPahlPZ8qr6R8aVCancNsC_LOuKlcpBo-Ys44a1ya3QDvoLabbiBTYf36xX90hAfgMxgvBjMxxuBgIGnzH-_NId-71NfK7hh-ZFBJizZF6l3A4sLgb2vyYKgwnod86YBoLsE4.png?resize=800,589&ssl=1"></p>
+<p>几乎所有的 CSS-in-JS 库都支持样式的共同定位。我们遇到的唯一一个例外是 <a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#treat"><strong>Treat</strong></a>，类似于 CSS Modules 的工作原理，它要求我们在一个单独的 <code>.treat.ts</code> 文件中定义样式。</p>
+<h3 id="样式定义的语法"><a href="#样式定义的语法" class="headerlink" title="样式定义的语法"></a>样式定义的语法</h3><p>我们可以用两种不同的方式来定义我们的样式。有些库只支持一种方法，而有些库则相当灵活，同时支持这两种方法。</p>
+<h4 id="标签模板语法"><a href="#标签模板语法" class="headerlink" title="标签模板语法"></a>标签模板语法</h4><p><strong>标签模板</strong>语法让我们可以将样式定义为标准 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">ES 模板字面量</a>内的一串普通 CSS 代码。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将 &quot;css &quot; 视作一个通用的 CSS-in-JS 库的 API</span></span><br><span class="line"><span class="keyword">const</span> heading = css`<span class="css"></span></span><br><span class="line"><span class="css">  <span class="attribute">font-size</span>: <span class="number">2em</span>;</span></span><br><span class="line"><span class="css">  <span class="attribute">color</span>: </span><span class="subst">$&#123;myTheme.color&#125;</span><span class="css">;</span></span><br><span class="line"><span class="css">`</span>;</span><br></pre></td></tr></table></figure>
+
+<p>我们可以发现：</p>
+<ul>
+<li>CSS 属性就像普通的 CSS 一样用 kebab-case （短横线命名）编写。</li>
+<li>可以对 JavaScript 值进行插值替换。</li>
+<li>我们可以很容易地迁移现有的CSS代码，而不需要重写它。</li>
+</ul>
+<p>需要记住：</p>
+<ul>
+<li>为了获得<strong>语法高亮和</strong>代码提示**，还需要一个额外的编辑器插件。这个插件通常可用于流行的编辑器，如VSCode、WebStorm 等等。</li>
+<li>由于最终的代码必须由 JavaScript 执行，所以样式定义需要被<strong>解析并转换为 JavaScript 代码</strong>。运行时或者构建时都可以完成，这会在包大小或计算上产生少量的开销。</li>
+</ul>
+<h4 id="样式对象语法"><a href="#样式对象语法" class="headerlink" title="样式对象语法"></a>样式对象语法</h4><p><strong>样式对象</strong> 语法使我们可以像定义普通 JavaScript 对象一样定义样式：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将 &quot;css &quot; 视作一个通用的 CSS-in-JS 库的 API</span></span><br><span class="line"><span class="keyword">const</span> heading = css(&#123;</span><br><span class="line">  <span class="attr">fontSize</span>: <span class="string">&quot;2em&quot;</span>,</span><br><span class="line">  <span class="attr">color</span>: myTheme.color,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>我们可以发现：</p>
+<ul>
+<li>CSS属性用 camel-case （驼峰命令）书写，字符串值必须用引号包裹。</li>
+<li>JavaScript 值可以像预期的那样被引用。</li>
+<li><strong>样式</strong>定义的语法有点差异，感觉好像不是在写 CSS，但又与CSS中的属性名和值相同（不要被这个吓到，你很快就会习惯的）。</li>
+<li>迁移现有的 CSS 需要用这种新的语法重写。</li>
+</ul>
+<p>需要记住：</p>
+<ul>
+<li><strong>语法高亮</strong> 是开箱即用的功能，因为我们实际上是在写 JavaScript 代码.</li>
+<li>*为了<strong>代码补全</strong>功能，该库必须装载 CSS 类型定义，其中大部分是扩展了通用的类型包 <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/csstype">CSSType</a>。</li>
+<li>因为样式已经是用 JavaScript 写好了，所以不需要额外的解析或转换。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>库</th>
+<th>标签模板</th>
+<th>样式对象</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>styled-components</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Emotion</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Goober</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Compiled</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Fela</td>
+<td>🟠</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>JSS</td>
+<td>🟠</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Treat</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>TypeStyle</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Stitches</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Styled JSX</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>✅  全面支持         🟠  插件要求          ❌  不支持</p>
+</blockquote>
+<h3 id="样式应用方式"><a href="#样式应用方式" class="headerlink" title="样式应用方式"></a>样式应用方式</h3><p>现在我们知道有哪些可用的样式定义选项，让我们看看如何将它们应用于我们的组件和元素。</p>
+<h4 id="使用-class-属性-className-prop"><a href="#使用-class-属性-className-prop" class="headerlink" title="使用 class 属性 / className prop"></a>使用 class 属性 / className prop</h4><p>最简单和最直观的应用样式的方式是将它们与 class 名关联。支持这种方法的库提供一个API，返回生成的唯一的 class 名。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将 &quot;css &quot; 视作一个通用的 CSS-in-JS 库的 API</span></span><br><span class="line"><span class="keyword">const</span> heading_style = css(&#123;</span><br><span class="line">  <span class="attr">color</span>: <span class="string">&quot;blue&quot;</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><code>heading_style</code> 包含一串自动生成的 CSS class 名，接下来我们可以把 <code>heading_style</code> 应用于我们的 HTML 元素。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 原生 DOM 使用方式</span></span><br><span class="line"><span class="keyword">const</span> heading = <span class="string">`&lt;h1 class=&quot;<span class="subst">$&#123;heading_style&#125;</span>&quot;&gt;Title&lt;/h1&gt;`</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 特定于 React 的 JSX 使用方式</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Heading</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">className</span>=<span class="string">&#123;heading_style&#125;</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>正如我们所看到的，这种方法与传统的样式使用方法非常相似：首先我们定义样式，然后在我们需要的地方使用。这对于以前写过 CSS 的人来说，学习曲线很低。</p>
+<h4 id="使用一个-lt-Styled-gt-组件"><a href="#使用一个-lt-Styled-gt-组件" class="headerlink" title="使用一个 &lt;Styled /&gt; 组件"></a>使用一个 <code>&lt;Styled /&gt;</code> 组件</h4><p>另一种流行的方法是由 <a target="_blank" rel="noopener" href="https://styled-components.com/docs/basics#getting-started">styled-components</a> 库首先引入的（并以其命名），它采取了一种不同的方法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将 &quot;styled &quot; 视作一个通用的 CSS-in-JS 库的 API</span></span><br><span class="line"><span class="keyword">const</span> Heading = styled(<span class="string">&quot;h1&quot;</span>)(&#123;</span><br><span class="line">  <span class="attr">color</span>: <span class="string">&quot;blue&quot;</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>比起单独定义样式并将它们添加到现有的组件或 HTML 元素上，我们倾向于通过指定要创建的元素类型和要添加的样式来使用一个特殊的 API。</p>
+<p>这个 API 将 <strong>返回一个已经应用了类名的新组件</strong>，我们可以像渲染我们的应用程序中的其他组件一样进行渲染。这基本上就删除了组件和其样式之间的映射关系。</p>
+<h4 id="使用-css-prop"><a href="#使用-css-prop" class="headerlink" title="使用 css prop"></a>使用 <code>css</code> prop</h4><p>一种较新的方法，由 <a target="_blank" rel="noopener" href="https://emotion.sh/docs/css-prop">Emotion</a> 推广，使我们可以将样式传递给一个特殊的 prop，通常名为 <code>css</code>。这个 API 只适用于基于 JSX 的语法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 针对于 React JSX 语法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Heading</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">css</span>=<span class="string">&#123;&#123;</span> <span class="attr">color:</span> &quot;<span class="attr">blue</span>&quot; &#125;&#125;&gt;</span>Title<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这种方法有一定的人性化优势，因为我们不需要从库导入和使用任何特殊的API。我们可以简单地将样式传递给这个 <code>css</code> prop，就像我们使用内联样式一样。</p>
+<p>请注意，这个自定义的 <code>css</code> prop 不是一个标准的 HTML 属性，需要通过库提供的单独的 Babel 插件来启用和支持。</p>
+<table>
+<thead>
+<tr>
+<th>库</th>
+<th>标签模板</th>
+<th>对象样式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>styled-components</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Emotion</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Goober</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Compiled</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Fela</td>
+<td>🟠</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>JSS</td>
+<td>🟠</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Treat</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>TypeStyle</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Stitches</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Styled JSX</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>✅  全面支持         🟠  插件要求          ❌  不支持</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>库</th>
+<th><code>className</code></th>
+<th><code>&lt;Styled /&gt;</code></th>
+<th><code>css</code> prop</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>styled-components</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Emotion</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Goober</td>
+<td>✅</td>
+<td>✅</td>
+<td>🟠 2</td>
+</tr>
+<tr>
+<td>Compiled</td>
+<td>🟠 1</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Fela</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>JSS</td>
+<td>✅</td>
+<td>🟠 2</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Treat</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>TypeStyle</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Stitches</td>
+<td>✅</td>
+<td>✅</td>
+<td>🟠 1</td>
+</tr>
+<tr>
+<td>Styled JSX</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>✅  全面支持         🟠 1  支持受限          🟠 2  插件要求          ❌  不支持</p>
+</blockquote>
+<h3 id="样式输出"><a href="#样式输出" class="headerlink" title="样式输出"></a>样式输出</h3><p>这里有两种互斥的方法可以生成并向浏览器发送样式。这两种方法都有好处和坏处，所以让我们详细分析一下。</p>
+<h4 id="lt-style-gt-DOM-样式注入"><a href="#lt-style-gt-DOM-样式注入" class="headerlink" title="&lt;style&gt;- DOM 样式注入"></a><code>&lt;style&gt;</code>- DOM 样式注入</h4><p>大部分 CSS-in-JS 库会在运行时向 DOM 注入样式，使用一个或多个 <a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#1-using-style-tags"><code>&lt;style&gt;</code> 标签</a>，或使用 <a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#2-using-cssstylesheet-api"><code>CSSStyleSheet</code></a> API 直接在 CSSOM 中管理样式。在 SSR 中，样式总是作为 <code>&lt;style&gt;</code> 标签添加在需要渲染的 HTML 页面的 <code>&lt;head&gt;</code> 中。</p>
+<p>这种方法有几个<strong>关键优势</strong>和<strong>首选用例</strong>：</p>
+<ol>
+<li>在 SSR 中内嵌样式可以 <a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#2-style-tag-injected-styles">提高网页加载性能指标</a>，比如 <strong>FCP</strong> (First Contentful Paint)，因为从服务器上获取单独的 <code>.css</code> 文件不会阻碍渲染。</li>
+<li>SSR 项目中，通过内联初始 HTML 渲染所需的样式，达到了开箱即用的<a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#-critical-css-extraction"><strong>关键 CSS 提取</strong></a>，。它还删除了动态样式，从而通过下载更少的代码进一步改善加载时间。</li>
+<li><strong>动态样式</strong>通常更容易实现，这种方法似乎更适用于高交互性的用户界面和<strong>单页应用（SPA）</strong>，因为 SPA 应用中的大多数组件都是**客户端渲染。</li>
+</ol>
+<p>弊端一般与总包大小有关：</p>
+<ul>
+<li>需要一个额外的<strong>运行时库</strong>来处理浏览器中的动态样式。</li>
+<li>内联的 SSR 样式不会被直接缓存，它们需要在每次请求时被传送到浏览器，因为它们属于服务器渲染的 <code>.html</code> 文件的一部分。</li>
+<li>在 <code>.html</code> 页面中内联的 SSR 样式将在 <a target="_blank" rel="noopener" href="https://developers.google.com/web/updates/2019/02/rendering-on-the-web#rehydration-issues">rehydration</a> 过程中作为 JavaScript 资源再次发送到浏览器。</li>
+</ul>
+<h4 id="静态-css-文件提取"><a href="#静态-css-文件提取" class="headerlink" title="静态 .css 文件提取"></a>静态 <code>.css</code> 文件提取</h4><p>有极少数的库采取了完全不同的方法。相比于往 DOM 中注入样式，他们选择去生成静态的 <code>.css</code> 文件。从加载性能的角度来看，优缺点与编写普通 CSS 文件是一样的。</p>
+<p>1.由于不再需要额外的运行时代码或 Rehydration 开销，所以<strong>传输的代码总量要小很多</strong>。<br>2.静态的 <code>.css</code> 文件受益于浏览器内部开箱即用的缓存，因此同一页面的后续请求不会再次去服务器请求该样式。<br>3.这种方法对 <strong>SSR 页面</strong>或<strong>静态生成的页面</strong>似乎更有帮助，因为它们受益于默认的缓存机制。</p>
+<p>然而，有一些重要的弊端我们需要注意一下：</p>
+<ul>
+<li>和前面提到的几种方法相比，使用这个方法，在没有缓存的情况下第一次访问该页面会有较长的 <a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#1-css-file-extraction"><strong>FCP</strong></a>。因此，是为<strong>首次访问的用户</strong>还是为<strong>再次访问的用户</strong>进行优化，这个因素对是否选择这种方法起到至关重要的作用。</li>
+<li>所有会在页面上使用的动态样式都将包含在预先生成的包中，这可能会导致前台需要加载更大的 <code>.css</code> 资源。</li>
+</ul>
+<p>我们测试过的所有库，几乎都实施了第一种方法，将样式注入到 DOM 中，其中唯一支持静态 <code>.css</code> 文件提取的库是 <a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#treat">Treat</a>。也有些其他的支持这个功能的库，比如 <a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#astroturf">Astroturf</a>，<a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#linaria">Linaria</a>，和没有包含在我们最后分析中的 <a target="_blank" rel="noopener" href="https://github.com/andreipfeiffer/css-in-js/blob/main/README.md#style9">style9</a>。</p>
+<h3 id="Atomic-CSS（原子化-CSS）"><a href="#Atomic-CSS（原子化-CSS）" class="headerlink" title="Atomic CSS（原子化 CSS）"></a>Atomic CSS（原子化 CSS）</h3><p>有些库为了进一步优化，实现了一种技术叫做 <a target="_blank" rel="noopener" href="https://sebastienlorber.com/atomic-css-in-js"><strong>Atomic CSS-in-JS（原子化 CSS）</strong></a>，其灵感来自 <a target="_blank" rel="noopener" href="https://tachyons.io/">Tachyons</a> 或 <a target="_blank" rel="noopener" href="https://tailwindcss.com/">Tailwind</a>这样的框架。</p>
+<p>相比于为某个的标签定义一个包含所有属性的 CSS class，Atomic CSS 为每一个的 CSS 键值对生成一个唯一的 CSS class。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 非 Atomic CSS class */</span></span><br><span class="line">._wqdGktJ &#123;</span><br><span class="line">  <span class="attribute">color</span>: blue;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">1em</span> <span class="number">2em</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Atomic CSS class */</span></span><br><span class="line">._ktJqdG &#123; <span class="attribute">color</span>: blue; &#125;</span><br><span class="line">._garIHZ &#123; <span class="attribute">display</span>: block; &#125;</span><br><span class="line"><span class="comment">/* 简写的属性通常会被展开 */</span></span><br><span class="line">._kZbibd &#123; <span class="attribute">padding-right</span>: <span class="number">2em</span>; &#125;</span><br><span class="line">._jcgYzk &#123; <span class="attribute">padding-left</span>: <span class="number">2em</span>; &#125;</span><br><span class="line">._ekAjen &#123; <span class="attribute">padding-bottom</span>: <span class="number">1em</span>; &#125;</span><br><span class="line">._ibmHGN &#123; <span class="attribute">padding-top</span>: <span class="number">1em</span>; &#125;</span><br></pre></td></tr></table></figure>
+
+<p>每一个单独的 CSS class 都可以在代码库任何地方复用，这大大提高了复用率。</p>
+<p>理论上，这个方法很适合大型应用。为什么？因为整个应用所需的 CSS 属性是有限的，所以增长规模是<strong>对数型</strong>，而非线性。因此 Atomic CSS 比非 Atomic CSS 输出的 CSS 代码更少。</p>
+<p><img src="https://i0.wp.com/css-tricks.com/wp-content/uploads/2021/05/kwyuFPAdFlkMaYo7vYFufdUG3WP4mp7_bbAsQnU7sVCnGH31dDmSgYp5KHqX4tQQR60KfzWV890kBXDPC68H4rLuYvMeVEhItg_oBFt59mCJmsN8giiB6HogBD9F7h6p2aMbs7Q.png?resize=800,449&ssl=1"></p>
+<p>但是这里有个隐患：单独的 class 名必须应用于每一个需要它们的元素，这会导致 HTML 文件更大些：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 非 Atomic CSS class --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;_wqdGktJ&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Atomic CSS class --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;_ktJqdG _garIHZ _kZbibd _jcgYzk _ekAjen _ibmHGN&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>所以基本上，我们是把代码从 CSS 转移到 HTML 。由此产生的大小差异取决于太多方面，我们无法得出一个明确的结论。但总的来说，Atomic CSS <strong>应该会减少</strong>传输给浏览器的总字节量。</p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>CSS-in-JS 将极大地改变我们编写 CSS 的方式，可以提供许多好处以及改善我们的整体开发体验。</p>
+<p>然而，选择采用哪个库并不简单，所有的选择都伴随着许多技术上的妥协。为了识别最适合我们需求的库，我们必须了解项目要求以及库的使用情况：</p>
+<ul>
+<li><strong>我们是否使用 React？</strong> React 应用有更广泛的选择，而非 React 的解决方案需要使用无关框架的库。</li>
+<li><strong>我们是否在处理一个高互动性的应用，并在客户端进行渲染？</strong> 在这种情况下，我们可能不是很关心 Rehydration 的开销以及静态的 <code>.css</code> 文件的提取。</li>
+<li><strong>我们是否要用 SSR 建立一个动态网站？</strong> 那么，静态 <code>.css</code> 文件提取可能是一个更好的选择，因为它可以让我们从缓存中受益。</li>
+<li><strong>我们需要迁移现有的CSS代码吗？</strong> 使用支持标签模板的库会使迁移更快更容易。</li>
+<li><strong>我们要优化首次访问或再次访问的用户体验吗？</strong> 通过资源缓存，静态的 <code>.css</code> 文件为再次访问的用户提供最好的体验，但首次访问需要一个额外的 HTTP 请求，这会阻碍页面渲染。</li>
+<li>*<strong>我们是否频繁更新样式？</strong> 如果我们频繁更新样式，导致缓存失效，那么 <code>.css</code> 文件缓存就毫无价值。</li>
+<li><strong>我们是否重复使用大量的样式和组件？</strong> 如果我们在代码库中重复使用大量的 CSS 属性，Atomic CSS 将大放异彩。</li>
+</ul>
+<p>回答上述问题可以帮助我们明确，在选择 CSS-in-JS 的解决方案时应该关注哪些功能，使我们能够做出更有根据的决定。</p>
+<blockquote>
+<p>如果发现译文存在错误或其他需要改进的地方，欢迎到 <a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner">掘金翻译计划</a> 对译文进行修改并 PR，也可获得相应奖励积分。文章开头的 <strong>本文永久链接</strong> 即为本文在 GitHub 上的 MarkDown 链接。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner">掘金翻译计划</a> 是一个翻译优质互联网技术文章的社区，文章来源为 <a target="_blank" rel="noopener" href="https://juejin.im/">掘金</a> 上的英文分享文章。内容覆盖 <a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner#android">Android</a>、<a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner#ios">iOS</a>、<a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner#%E5%89%8D%E7%AB%AF">前端</a>、<a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner#%E5%90%8E%E7%AB%AF">后端</a>、<a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner#%E5%8C%BA%E5%9D%97%E9%93%BE">区块链</a>、<a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner#%E4%BA%A7%E5%93%81">产品</a>、<a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner#%E8%AE%BE%E8%AE%A1">设计</a>、<a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner#%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD">人工智能</a>等领域，想要查看更多优质译文请持续关注 <a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner">掘金翻译计划</a>、<a target="_blank" rel="noopener" href="http://weibo.com/juejinfanyi">官方微博</a>、<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/juejinfanyi">知乎专栏</a>。</p>
+</blockquote>
+</div></div><link rel="stylesheet" href="/css/partial/footer.css"><div class="footer"><p><span>Copyright © 2017 - 2023</span><a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/">蜀ICP备19024124号</a></p><p><i class="iconfont iconchakan"><span>本站总访问量</span><span id="busuanzi_container_site_pv">  <span id="busuanzi_value_site_pv"></span> </span></i><i class="iconfont iconabout"><span>本站访客数</span><span id="busuanzi_container_site_uv">  <span id="busuanzi_value_site_uv"></span> </span></i></p></div></div></div><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></body></html>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://mser.xyz/"/>
-  <updated>2022-07-10T10:02:26.746Z</updated>
+  <updated>2023-02-13T09:01:58.764Z</updated>
   <id>https://mser.xyz/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>(译) 全面刨析 CSS-in-JS</title>
+    <link href="https://mser.xyz/2022/11/27/translation-a-thorough-analysis-of-css-in-js/"/>
+    <id>https://mser.xyz/2022/11/27/translation-a-thorough-analysis-of-css-in-js/</id>
+    <published>2022-11-26T16:00:00.000Z</published>
+    <updated>2023-02-13T09:01:58.764Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;原文地址：&lt;a href=&quot;https://css-tricks.com/a-thorough-analysis-of-css-in-js/&quot;&gt;A Thorough Analysis of
+        
+      
+    
+    </summary>
+    
+      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+    
+    
+      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Service Worker 缓存静态资源</title>
     <link href="https://mser.xyz/2022/07/09/service_worker/"/>
     <id>https://mser.xyz/2022/07/09/service_worker/</id>
     <published>2022-07-09T02:20:44.000Z</published>
-    <updated>2022-07-10T10:02:26.746Z</updated>
+    <updated>2022-09-26T01:35:20.978Z</updated>
     
     <summary type="html">
     
@@ -44,10 +72,10 @@
   
   <entry>
     <title>(译)使用 Stream 构建高性能的 Node.js 应用</title>
-    <link href="https://mser.xyz/2022/03/25/translation-use-streams-to-build-high-performing-nodejs-applications/"/>
-    <id>https://mser.xyz/2022/03/25/translation-use-streams-to-build-high-performing-nodejs-applications/</id>
+    <link href="https://mser.xyz/2022/03/25/translation-use-streams-to-build-high-performing-nodejs-applications%20copy/"/>
+    <id>https://mser.xyz/2022/03/25/translation-use-streams-to-build-high-performing-nodejs-applications copy/</id>
     <published>2022-03-24T16:00:00.000Z</published>
-    <updated>2022-07-10T04:43:00.538Z</updated>
+    <updated>2022-09-26T01:35:20.987Z</updated>
     
     <summary type="html">
     
@@ -75,7 +103,7 @@
     <link href="https://mser.xyz/2022/03/14/translation-effects-of-too-much-lazy-loading-on-web-performance/"/>
     <id>https://mser.xyz/2022/03/14/translation-effects-of-too-much-lazy-loading-on-web-performance/</id>
     <published>2022-03-13T16:00:00.000Z</published>
-    <updated>2022-06-26T09:11:43.889Z</updated>
+    <updated>2022-06-27T03:12:10.321Z</updated>
     
     <summary type="html">
     
@@ -103,7 +131,7 @@
     <link href="https://mser.xyz/2022/01/27/translation-two-way-binding-will-make-your-react-code-better.md/"/>
     <id>https://mser.xyz/2022/01/27/translation-two-way-binding-will-make-your-react-code-better.md/</id>
     <published>2022-01-26T16:00:00.000Z</published>
-    <updated>2022-02-23T03:50:10.711Z</updated>
+    <updated>2022-02-14T01:22:42.372Z</updated>
     
     <summary type="html">
     
@@ -131,7 +159,7 @@
     <link href="https://mser.xyz/2021/12/13/svg-1/"/>
     <id>https://mser.xyz/2021/12/13/svg-1/</id>
     <published>2021-12-13T08:54:34.000Z</published>
-    <updated>2022-05-13T13:24:29.667Z</updated>
+    <updated>2022-05-13T07:45:33.726Z</updated>
     
     <summary type="html">
     
@@ -158,7 +186,7 @@
     <link href="https://mser.xyz/2021/11/17/notes_git/"/>
     <id>https://mser.xyz/2021/11/17/notes_git/</id>
     <published>2021-11-17T08:54:34.000Z</published>
-    <updated>2022-10-01T06:46:36.582Z</updated>
+    <updated>2022-12-30T04:18:57.630Z</updated>
     
     <summary type="html">
     
@@ -166,7 +194,9 @@
       
         
         
-          &lt;p&gt;Config user name and email &lt;code&gt;git config  --global  user.name / user.email “”&lt;/code&gt;&lt;br&gt;&lt;code&gt;git config --list&lt;/code&gt; check git
+          &lt;h2 id=&quot;tag&quot;&gt;&lt;a href=&quot;#tag&quot; class=&quot;headerlink&quot; title=&quot;tag&quot;&gt;&lt;/a&gt;tag&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git tag -d &amp;lt;tag name&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git
         
       
     
@@ -180,11 +210,38 @@
   </entry>
   
   <entry>
+    <title>Linux</title>
+    <link href="https://mser.xyz/2021/11/17/notes_linux/"/>
+    <id>https://mser.xyz/2021/11/17/notes_linux/</id>
+    <published>2021-11-17T08:54:34.000Z</published>
+    <updated>2023-02-08T08:11:10.683Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;as root user: &lt;code&gt;sudo su&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;File-access&quot;&gt;&lt;a href=&quot;#File-access&quot; class=&quot;headerlink&quot; title=&quot;File access&quot;&gt;&lt;/a&gt;File
+        
+      
+    
+    </summary>
+    
+      <category term="NOTES" scheme="https://mser.xyz/categories/NOTES/"/>
+    
+    
+      <category term="Linux" scheme="https://mser.xyz/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>(译) 2021 年 Node.js 的发展趋势</title>
     <link href="https://mser.xyz/2021/10/24/translation-Top-Node.js-Development-Trends-in-2021/"/>
     <id>https://mser.xyz/2021/10/24/translation-Top-Node.js-Development-Trends-in-2021/</id>
     <published>2021-10-23T16:00:00.000Z</published>
-    <updated>2022-03-04T22:21:37.725Z</updated>
+    <updated>2022-03-07T01:04:08.662Z</updated>
     
     <summary type="html">
     
@@ -212,7 +269,7 @@
     <link href="https://mser.xyz/2021/09/13/translation-python-features-that-you-will-miss-in-typescript/"/>
     <id>https://mser.xyz/2021/09/13/translation-python-features-that-you-will-miss-in-typescript/</id>
     <published>2021-09-12T16:00:00.000Z</published>
-    <updated>2021-10-11T07:24:00.759Z</updated>
+    <updated>2021-11-24T01:45:53.079Z</updated>
     
     <summary type="html">
     
@@ -240,7 +297,7 @@
     <link href="https://mser.xyz/2021/08/17/translation-simplified-peer-to-peer-communication-with-peerjs/"/>
     <id>https://mser.xyz/2021/08/17/translation-simplified-peer-to-peer-communication-with-peerjs/</id>
     <published>2021-08-16T16:00:00.000Z</published>
-    <updated>2021-09-12T08:03:23.063Z</updated>
+    <updated>2021-11-24T01:45:53.079Z</updated>
     
     <summary type="html">
     
@@ -268,7 +325,7 @@
     <link href="https://mser.xyz/2021/08/06/translation-javascript-visualized-the-javascript-engine/"/>
     <id>https://mser.xyz/2021/08/06/translation-javascript-visualized-the-javascript-engine/</id>
     <published>2021-08-05T16:00:00.000Z</published>
-    <updated>2021-10-11T07:24:03.512Z</updated>
+    <updated>2021-11-24T01:45:53.079Z</updated>
     
     <summary type="html">
     
@@ -296,7 +353,7 @@
     <link href="https://mser.xyz/2021/07/28/translation-css-is-magic-its-time-you-try-3d/"/>
     <id>https://mser.xyz/2021/07/28/translation-css-is-magic-its-time-you-try-3d/</id>
     <published>2021-07-27T16:00:00.000Z</published>
-    <updated>2021-09-12T08:01:19.381Z</updated>
+    <updated>2021-11-24T01:45:53.079Z</updated>
     
     <summary type="html">
     
@@ -324,7 +381,7 @@
     <link href="https://mser.xyz/2021/07/13/translation-top-5-embedded-databases-for-javascript-applications/"/>
     <id>https://mser.xyz/2021/07/13/translation-top-5-embedded-databases-for-javascript-applications/</id>
     <published>2021-07-12T16:00:00.000Z</published>
-    <updated>2021-10-11T07:24:15.320Z</updated>
+    <updated>2021-11-24T01:45:53.080Z</updated>
     
     <summary type="html">
     
@@ -352,7 +409,7 @@
     <link href="https://mser.xyz/2021/07/06/translation-svelte-for-the-experienced-react-dev/"/>
     <id>https://mser.xyz/2021/07/06/translation-svelte-for-the-experienced-react-dev/</id>
     <published>2021-07-05T16:00:00.000Z</published>
-    <updated>2021-10-11T07:23:53.191Z</updated>
+    <updated>2021-11-24T01:45:53.080Z</updated>
     
     <summary type="html">
     
@@ -380,7 +437,7 @@
     <link href="https://mser.xyz/2021/06/17/translation-A-Case-for-Compile-to-JavaScript-Interface-Frameworks/"/>
     <id>https://mser.xyz/2021/06/17/translation-A-Case-for-Compile-to-JavaScript-Interface-Frameworks/</id>
     <published>2021-06-16T16:00:00.000Z</published>
-    <updated>2021-10-11T07:24:10.790Z</updated>
+    <updated>2021-11-24T01:45:53.078Z</updated>
     
     <summary type="html">
     
@@ -408,7 +465,7 @@
     <link href="https://mser.xyz/2021/05/29/translation-improving-firefox-stability-on-linux/"/>
     <id>https://mser.xyz/2021/05/29/translation-improving-firefox-stability-on-linux/</id>
     <published>2021-05-28T16:00:00.000Z</published>
-    <updated>2021-10-11T07:24:06.112Z</updated>
+    <updated>2021-11-24T01:45:53.079Z</updated>
     
     <summary type="html">
     
@@ -436,7 +493,7 @@
     <link href="https://mser.xyz/2021/03/15/canvasprint/"/>
     <id>https://mser.xyz/2021/03/15/canvasprint/</id>
     <published>2021-03-15T05:44:36.000Z</published>
-    <updated>2022-04-09T03:59:49.829Z</updated>
+    <updated>2022-03-30T02:27:29.812Z</updated>
     
     <summary type="html">
     
@@ -463,7 +520,7 @@
     <link href="https://mser.xyz/2019/08/15/ScrollBar/"/>
     <id>https://mser.xyz/2019/08/15/ScrollBar/</id>
     <published>2019-08-15T03:09:06.000Z</published>
-    <updated>2019-08-16T12:33:06.000Z</updated>
+    <updated>2021-11-24T01:45:53.066Z</updated>
     
     <summary type="html">
     
@@ -489,7 +546,7 @@
     <link href="https://mser.xyz/2019/08/09/js_one/"/>
     <id>https://mser.xyz/2019/08/09/js_one/</id>
     <published>2019-08-09T06:50:13.000Z</published>
-    <updated>2019-08-09T07:35:43.000Z</updated>
+    <updated>2021-11-24T01:45:53.072Z</updated>
     
     <summary type="html">
     
@@ -508,58 +565,6 @@
     
     
       <category term="JS 拾遗" scheme="https://mser.xyz/tags/JS-%E6%8B%BE%E9%81%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo 接入 github issue 评论</title>
-    <link href="https://mser.xyz/2019/08/06/git_comment/"/>
-    <id>https://mser.xyz/2019/08/06/git_comment/</id>
-    <published>2019-08-06T04:50:05.000Z</published>
-    <updated>2022-07-10T04:50:01.449Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;更新，评论系统切换为-gitalk&quot;&gt;&lt;a href=&quot;#更新，评论系统切换为-gitalk&quot; class=&quot;headerlink&quot; title=&quot;更新，评论系统切换为 gitalk&quot;&gt;&lt;/a&gt;更新，评论系统切换为 &lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="OTHER" scheme="https://mser.xyz/categories/OTHER/"/>
-    
-    
-      <category term="gitment" scheme="https://mser.xyz/tags/gitment/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo 主题制作</title>
-    <link href="https://mser.xyz/2019/08/05/hexo_theme/"/>
-    <id>https://mser.xyz/2019/08/05/hexo_theme/</id>
-    <published>2019-08-05T09:42:48.000Z</published>
-    <updated>2022-07-10T04:50:01.448Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;背景介绍&quot;&gt;&lt;a href=&quot;#背景介绍&quot; class=&quot;headerlink&quot; title=&quot;背景介绍&quot;&gt;&lt;/a&gt;背景介绍&lt;/h2&gt;&lt;p&gt;hexo
-        
-      
-    
-    </summary>
-    
-      <category term="OTHER" scheme="https://mser.xyz/categories/OTHER/"/>
-    
-    
-      <category term="hexo" scheme="https://mser.xyz/tags/hexo/"/>
     
   </entry>
   
