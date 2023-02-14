@@ -80,7 +80,7 @@ body {
 	overflow-x: hidden;
 }
 .artititle {
-	font-size: 20px;
+	font-size: 18px;
 	vertical-align: middle;
 	font-weight: 900;
 	text-align: center;
@@ -103,7 +103,6 @@ body {
 	.maxwidth {
 		width: 100vw;
 		max-width: 1300px;
-		min-width: 1000px;
 		margin: auto;
 	}
 	.header {
@@ -112,9 +111,8 @@ body {
 		z-index: 4;
 	}
 	.header .maxwidth {
-		padding: 0 8vw;
-		max-width: 84vw;
-		min-width: calc(1000px - 16vw);
+		padding: 0 6vw;
+		max-width: 88vw;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -137,13 +135,8 @@ body {
 	}
 	.rightside {
 		padding: 30px;
-		display: inline-block;
 		background: rgb(255 255 255 / 90%);
-		margin: 76px 30px 0 297px;
-		width: calc(100% - 327px);
-	}
-	body {
-		min-width: 1000px;
+		margin: 76px 20px 0 297px;
 	}
 }
 @media (max-width: 600px) {
@@ -169,16 +162,15 @@ body {
 		margin-bottom: 40px;
 		animation: none !important;
 	}
-	.header {
-		text-align: left;
-	}
 	.header .nav {
-		margin: 15px 0 !important;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 	}
 	.header .search {
 		display: none;
+	}
+	.header .focuspage {
+		border-radius: 4px;
 	}
 }
