@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://mser.xyz/"/>
-  <updated>2023-02-13T09:01:58.764Z</updated>
+  <updated>2023-07-18T09:48:49.913Z</updated>
   <id>https://mser.xyz/</id>
   
   <author>
@@ -15,6 +15,61 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>i18n-plan 前端多语言方案</title>
+    <link href="https://mser.xyz/2023/06/06/i18n/"/>
+    <id>https://mser.xyz/2023/06/06/i18n/</id>
+    <published>2023-06-06T06:50:05.000Z</published>
+    <updated>2023-07-18T09:48:49.913Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;想要给大家介绍一个 i18n 插件，写这个插件的起源也是因为项目中对 i18n 的需求，这个插件覆盖了我们项目中遇到的大部分 i18n 需求，说不定也能覆盖你的，try 一 try 不后悔&lt;/p&gt;
+&lt;p&gt;集成 &lt;strong&gt;ChatGPT 和
+        
+      
+    
+    </summary>
+    
+      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+    
+    
+      <category term="国际化" scheme="https://mser.xyz/tags/%E5%9B%BD%E9%99%85%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>(译)使用 GPT 基于个人文档建立聊天机器人的逐步教程</title>
+    <link href="https://mser.xyz/2023/03/27/translation-a-step-by-step-guide-to-building-a-chatbot-based-on-your-own-documents-with-gpt/"/>
+    <id>https://mser.xyz/2023/03/27/translation-a-step-by-step-guide-to-building-a-chatbot-based-on-your-own-documents-with-gpt/</id>
+    <published>2023-03-26T16:00:00.000Z</published>
+    <updated>2023-03-27T08:13:03.212Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;原文地址：&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+    
+    
+      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
+    
+  </entry>
   
   <entry>
     <title>(译) 全面刨析 CSS-in-JS</title>
@@ -186,7 +241,7 @@
     <link href="https://mser.xyz/2021/11/17/notes_git/"/>
     <id>https://mser.xyz/2021/11/17/notes_git/</id>
     <published>2021-11-17T08:54:34.000Z</published>
-    <updated>2023-02-13T09:13:06.937Z</updated>
+    <updated>2023-07-10T05:37:54.146Z</updated>
     
     <summary type="html">
     
@@ -194,9 +249,8 @@
       
         
         
-          &lt;h2 id=&quot;tag&quot;&gt;&lt;a href=&quot;#tag&quot; class=&quot;headerlink&quot; title=&quot;tag&quot;&gt;&lt;/a&gt;tag&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;git tag -d &amp;lt;tag name&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git
+          &lt;h2 id=&quot;rebase&quot;&gt;&lt;a href=&quot;#rebase&quot; class=&quot;headerlink&quot; title=&quot;rebase&quot;&gt;&lt;/a&gt;rebase&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git rebase -i HEAD~&amp;lt;number&amp;gt;&lt;/code&gt;
         
       
     
@@ -214,7 +268,7 @@
     <link href="https://mser.xyz/2021/11/17/notes_linux/"/>
     <id>https://mser.xyz/2021/11/17/notes_linux/</id>
     <published>2021-11-17T08:54:34.000Z</published>
-    <updated>2023-02-13T09:12:27.844Z</updated>
+    <updated>2023-06-16T02:25:35.525Z</updated>
     
     <summary type="html">
     
@@ -268,7 +322,7 @@
     <link href="https://mser.xyz/2021/11/17/notes_js/"/>
     <id>https://mser.xyz/2021/11/17/notes_js/</id>
     <published>2021-11-17T08:54:34.000Z</published>
-    <updated>2023-02-13T09:12:32.708Z</updated>
+    <updated>2023-06-16T08:38:01.885Z</updated>
     
     <summary type="html">
     
@@ -276,7 +330,38 @@
       
         
         
-          &lt;h1 id=&quot;CMD&quot;&gt;&lt;a href=&quot;#CMD&quot; class=&quot;headerlink&quot;
+          &lt;style&gt;
+  html body strong {
+    color: #0a95ff ;
+    background: rgb(10 149 255 / 10%)
+  }
+  mark strong {
+    color: red !important;
+   
+        
+      
+    
+    </summary>
+    
+      <category term="NOTES" scheme="https://mser.xyz/categories/NOTES/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>notes_graphic</title>
+    <link href="https://mser.xyz/2021/11/17/node_graphic/"/>
+    <id>https://mser.xyz/2021/11/17/node_graphic/</id>
+    <published>2021-11-17T08:54:34.000Z</published>
+    <updated>2023-06-28T03:44:43.629Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;three-js&quot;&gt;&lt;a href=&quot;#three-js&quot; class=&quot;headerlink&quot;
         
       
     
@@ -480,89 +565,6 @@
     
     
       <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>(译)一个编译成 JavaScript 接口框架的案例</title>
-    <link href="https://mser.xyz/2021/06/17/translation-A-Case-for-Compile-to-JavaScript-Interface-Frameworks/"/>
-    <id>https://mser.xyz/2021/06/17/translation-A-Case-for-Compile-to-JavaScript-Interface-Frameworks/</id>
-    <published>2021-06-16T16:00:00.000Z</published>
-    <updated>2021-11-24T01:45:53.078Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;原文地址：&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
-    
-    
-      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>(译)提高 Firefox 在 Linux 上的稳定性</title>
-    <link href="https://mser.xyz/2021/05/29/translation-improving-firefox-stability-on-linux/"/>
-    <id>https://mser.xyz/2021/05/29/translation-improving-firefox-stability-on-linux/</id>
-    <published>2021-05-28T16:00:00.000Z</published>
-    <updated>2021-11-24T01:45:53.079Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;原文地址：&lt;a href=&quot;https://hacks.mozilla.org/2021/05/improving-firefox-stability-on-linux/&quot;&gt;Improving Firefox stability on
-        
-      
-    
-    </summary>
-    
-      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
-    
-    
-      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>canvas绘制dom计算分页自定义打印</title>
-    <link href="https://mser.xyz/2021/03/15/canvasprint/"/>
-    <id>https://mser.xyz/2021/03/15/canvasprint/</id>
-    <published>2021-03-15T05:44:36.000Z</published>
-    <updated>2022-03-30T02:27:29.812Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;原生打印香吗？当然香啊，window.print() 页头页尾页码统统有，还能用 @media print 设置打印样式，没什么问题，棒棒的舒舒服服的；但是（没有但是也没这篇文章了🙃🙃🙃）分享分享一些我踩到的坑，以及我的解决方案&lt;/p&gt;
-&lt;h2
-        
-      
-    
-    </summary>
-    
-      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
-    
-    
-      <category term="canvas" scheme="https://mser.xyz/tags/canvas/"/>
     
   </entry>
   
