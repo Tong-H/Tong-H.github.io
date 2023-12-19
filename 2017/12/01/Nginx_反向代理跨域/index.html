@@ -41,4 +41,15 @@
 <p>原理：是可以跨域的，而且在跨域脚本中可以直接回调当前脚本的函数</p>
 <p>script标签是可以加载异域的JavaScript并执行的，通过预先设定好的callback函数来实现和母页面的交互。它有一个大名，叫做JSONP跨域，JSONP是JSON with Padding的略称。它是一个非官方的协议，明明是加载script，为啥和JSON扯上关系呢？原来就是这个callback函数，对它的使用有一个典型的方式，就是通过JSON来传参，即将JSON数据填充进回调函数，这就是JSONP的JSON+Padding的含义。JSONP只支持GET请求。</p>
 <p>欢迎留言交流  (´▽`ʃ♡ƪ)</p>
-</div></div><link rel="stylesheet" href="/css/partial/footer.css"><div class="footer"><p><span>Copyright © 2017 - 2023</span><a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/">蜀ICP备19024124号</a></p><p><i class="iconfont iconchakan"><span>本站总访问量</span><span id="busuanzi_container_site_pv">  <span id="busuanzi_value_site_pv"></span> </span></i><i class="iconfont iconabout"><span>本站访客数</span><span id="busuanzi_container_site_uv">  <span id="busuanzi_value_site_uv"></span> </span></i></p></div></div></div><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></body></html>
+</div><div id="comment"><div id="vcomments-container" data-valine="{&quot;enable&quot;:true,&quot;cdn&quot;:&quot;//unpkg.com/valine/dist/Valine.min.js&quot;,&quot;appId&quot;:&quot;v86BuJAckrV3va028n5MjUgT-gzGzoHsz&quot;,&quot;appKey&quot;:&quot;fePVEsb9ln4ahed1LffU2Oco&quot;}"></div><script id="Valine-script"></script><script>(() => {
+    const el = document.getElementById("Valine-script")
+    const config = JSON.parse(document.getElementById('vcomments-container').dataset.valine)
+    console.log(this)
+    el.src=config.cdn
+    el.onload = () => {
+        new Valine({
+            el: '#vcomments-container',
+            ...config
+        })
+    }
+})()</script></div></div><link rel="stylesheet" href="/css/partial/footer.css"><div class="footer"><p><span>Copyright © 2017 - 2023</span><a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/">蜀ICP备19024124号</a></p><p><i class="iconfont iconchakan"><span>本站总访问量</span><span id="busuanzi_container_site_pv">  <span id="busuanzi_value_site_pv"></span> </span></i><i class="iconfont iconabout"><span>本站访客数</span><span id="busuanzi_container_site_uv">  <span id="busuanzi_value_site_uv"></span> </span></i></p></div></div></div><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></body></html>

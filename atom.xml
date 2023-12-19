@@ -104,7 +104,7 @@
     <link href="https://mser.xyz/2022/07/09/service_worker/"/>
     <id>https://mser.xyz/2022/07/09/service_worker/</id>
     <published>2022-07-09T02:20:44.000Z</published>
-    <updated>2022-09-26T01:35:20.978Z</updated>
+    <updated>2023-11-14T02:38:06.980Z</updated>
     
     <summary type="html">
     
@@ -237,11 +237,11 @@
   </entry>
   
   <entry>
-    <title>notes_git</title>
-    <link href="https://mser.xyz/2021/11/17/notes_git/"/>
-    <id>https://mser.xyz/2021/11/17/notes_git/</id>
+    <title>notes_graphic</title>
+    <link href="https://mser.xyz/2021/11/17/node_graphic/"/>
+    <id>https://mser.xyz/2021/11/17/node_graphic/</id>
     <published>2021-11-17T08:54:34.000Z</published>
-    <updated>2023-07-10T05:37:54.146Z</updated>
+    <updated>2023-09-08T08:43:49.999Z</updated>
     
     <summary type="html">
     
@@ -249,8 +249,31 @@
       
         
         
-          &lt;h2 id=&quot;rebase&quot;&gt;&lt;a href=&quot;#rebase&quot; class=&quot;headerlink&quot; title=&quot;rebase&quot;&gt;&lt;/a&gt;rebase&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;git rebase -i HEAD~&amp;lt;number&amp;gt;&lt;/code&gt;
+          &lt;h1 id=&quot;three-js&quot;&gt;&lt;a href=&quot;#three-js&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="NOTES" scheme="https://mser.xyz/categories/NOTES/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>notes_git</title>
+    <link href="https://mser.xyz/2021/11/17/notes_git/"/>
+    <id>https://mser.xyz/2021/11/17/notes_git/</id>
+    <published>2021-11-17T08:54:34.000Z</published>
+    <updated>2023-11-08T08:34:21.748Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;to-avoid-being-ask-Enter-passphrase-for-key&quot;&gt;&lt;a href=&quot;#to-avoid-being-ask-Enter-passphrase-for-key&quot; class=&quot;headerlink&quot; title=&quot;to
         
       
     
@@ -268,7 +291,7 @@
     <link href="https://mser.xyz/2021/11/17/notes_linux/"/>
     <id>https://mser.xyz/2021/11/17/notes_linux/</id>
     <published>2021-11-17T08:54:34.000Z</published>
-    <updated>2023-06-16T02:25:35.525Z</updated>
+    <updated>2023-09-21T08:36:27.947Z</updated>
     
     <summary type="html">
     
@@ -277,7 +300,9 @@
         
         
           &lt;p&gt;as root user: &lt;code&gt;sudo su&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&quot;File-access&quot;&gt;&lt;a href=&quot;#File-access&quot; class=&quot;headerlink&quot; title=&quot;File access&quot;&gt;&lt;/a&gt;File
+&lt;p&gt;&lt;code&gt;CTRL + L&lt;/code&gt; clear terminal&lt;/p&gt;
+&lt;p&gt;~ is the home directory of user&lt;/p&gt;
+&lt;h2
         
       
     
@@ -322,7 +347,7 @@
     <link href="https://mser.xyz/2021/11/17/notes_js/"/>
     <id>https://mser.xyz/2021/11/17/notes_js/</id>
     <published>2021-11-17T08:54:34.000Z</published>
-    <updated>2023-06-16T08:38:01.885Z</updated>
+    <updated>2023-12-13T06:08:23.301Z</updated>
     
     <summary type="html">
     
@@ -338,30 +363,6 @@
   mark strong {
     color: red !important;
    
-        
-      
-    
-    </summary>
-    
-      <category term="NOTES" scheme="https://mser.xyz/categories/NOTES/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>notes_graphic</title>
-    <link href="https://mser.xyz/2021/11/17/node_graphic/"/>
-    <id>https://mser.xyz/2021/11/17/node_graphic/</id>
-    <published>2021-11-17T08:54:34.000Z</published>
-    <updated>2023-06-28T03:44:43.629Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;three-js&quot;&gt;&lt;a href=&quot;#three-js&quot; class=&quot;headerlink&quot;
         
       
     

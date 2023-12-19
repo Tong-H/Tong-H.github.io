@@ -55,8 +55,19 @@
 <p>A:因为全局模式安装,包可以供所有的程序使用。本地安装则不可以。 npm 默认会把包安装到当前目录下。这反映了 npm 不同的设计哲学。如 果把包安装到全局,可以提高程序的重复利用程度,避免同样的内容的多 份副本,但坏处是难以处理不同的版本依赖。如果把包安装到当前目录, 或者说本地,则不会有不同程序依赖不同版本的包的冲突问题,同时还减 轻了包作者的 API 兼容性压力,但缺陷则是同一个包可能会被安装许多次。</p>
 <p>Q:为什么进行了全局安装还要进行本地安装</p>
 <p>A:为什么进行了全局安装还要进行本地安装</p>
-<p> 1、在js实例代码中，默认下node.js会在NODE_PATH和目前js所在项目下的node_modules文件夹下去寻找模块，因此，如果只是全局安装，不能直接通过require()的方式去引用模块，需要手动解决包路径的配置问题，当然你也可以复制全局安装的node_modules文件夹到项目下，还有办法可以选择将环境变量的NODE_PATH设置为C:\Program Files\nodejs。 2.对于包的更新不好管理，可能你需要为每个包重新命名，如<a href="mailto:&#x67;&#x75;&#x6c;&#x70;&#64;&#51;&#46;&#x38;&#x2e;&#x31;">&#x67;&#x75;&#x6c;&#x70;&#64;&#51;&#46;&#x38;&#x2e;&#x31;</a>、gulp@3.9.1…，为了区别不同项目使用指定的包，保证模块之间的相互依赖，区别每个项目正常运行</p>
+<p> 1、在js实例代码中，默认下node.js会在NODE_PATH和目前js所在项目下的node_modules文件夹下去寻找模块，因此，如果只是全局安装，不能直接通过require()的方式去引用模块，需要手动解决包路径的配置问题，当然你也可以复制全局安装的node_modules文件夹到项目下，还有办法可以选择将环境变量的NODE_PATH设置为C:\Program Files\nodejs。 2.对于包的更新不好管理，可能你需要为每个包重新命名，如<a href="mailto:&#103;&#117;&#x6c;&#112;&#64;&#x33;&#46;&#x38;&#x2e;&#49;">&#103;&#117;&#x6c;&#112;&#64;&#x33;&#46;&#x38;&#x2e;&#49;</a>、gulp@3.9.1…，为了区别不同项目使用指定的包，保证模块之间的相互依赖，区别每个项目正常运行</p>
 <p>Q：如何在package.JSON的dependencies和devDependencies写入信息</p>
 <p>A:npm install –save babel-cli和npm install -dev babel-cli使用这两个命令安装后可自动写入文件</p>
 <p>npm install –save-dev babel-cli也可以在一起用</p>
-</div></div><link rel="stylesheet" href="/css/partial/footer.css"><div class="footer"><p><span>Copyright © 2017 - 2023</span><a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/">蜀ICP备19024124号</a></p><p><i class="iconfont iconchakan"><span>本站总访问量</span><span id="busuanzi_container_site_pv">  <span id="busuanzi_value_site_pv"></span> </span></i><i class="iconfont iconabout"><span>本站访客数</span><span id="busuanzi_container_site_uv">  <span id="busuanzi_value_site_uv"></span> </span></i></p></div></div></div><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></body></html>
+</div><div id="comment"><div id="vcomments-container" data-valine="{&quot;enable&quot;:true,&quot;cdn&quot;:&quot;//unpkg.com/valine/dist/Valine.min.js&quot;,&quot;appId&quot;:&quot;v86BuJAckrV3va028n5MjUgT-gzGzoHsz&quot;,&quot;appKey&quot;:&quot;fePVEsb9ln4ahed1LffU2Oco&quot;}"></div><script id="Valine-script"></script><script>(() => {
+    const el = document.getElementById("Valine-script")
+    const config = JSON.parse(document.getElementById('vcomments-container').dataset.valine)
+    console.log(this)
+    el.src=config.cdn
+    el.onload = () => {
+        new Valine({
+            el: '#vcomments-container',
+            ...config
+        })
+    }
+})()</script></div></div><link rel="stylesheet" href="/css/partial/footer.css"><div class="footer"><p><span>Copyright © 2017 - 2023</span><a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/">蜀ICP备19024124号</a></p><p><i class="iconfont iconchakan"><span>本站总访问量</span><span id="busuanzi_container_site_pv">  <span id="busuanzi_value_site_pv"></span> </span></i><i class="iconfont iconabout"><span>本站访客数</span><span id="busuanzi_container_site_uv">  <span id="busuanzi_value_site_uv"></span> </span></i></p></div></div></div><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></body></html>

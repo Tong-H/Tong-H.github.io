@@ -17,11 +17,15 @@
 
 <p>其中 redirect_uri 是当前页面的 url，url 的域名和你注册时填写的 Authorization Callback URL 的域名一定要一致，我检查才发现我填的时 <a target="_blank" rel="noopener" href="http://tong-h.github.io/">http://tong-h.github.io</a>, 但实际请求的却是https</p>
 <h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p>添加Gitment评论系统踩过的坑 <a target="_blank" rel="noopener" href="http://xichen.pub/2018/01/31/2018-01-31-gitment/">http://xichen.pub/2018/01/31/2018-01-31-gitment/</a><br>Hexo博客框架下Gitment取代多说评论 <a target="_blank" rel="noopener" href="https://zonghongyan.github.io/2017/06/29/201706292034/">https://zonghongyan.github.io/2017/06/29/201706292034/</a></p>
-</div><style>.copyright {
-    padding: 6px 20px;
-    color: #ff9537;
-    border-radius: 4px;
-    background: white;
-    font-weight: 600;
-    margin: 20px 0;
-}</style><div class="copyright"><p>更新时间：2019-08-06</p>转载请注明来源，欢迎指出任何有错误或不够清晰的表达</div></div><link rel="stylesheet" href="/css/partial/footer.css"><div class="footer"><p><span>Copyright © 2017 - 2023</span><a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/">蜀ICP备19024124号</a></p><p><i class="iconfont iconchakan"><span>本站总访问量</span><span id="busuanzi_container_site_pv">  <span id="busuanzi_value_site_pv"></span> </span></i><i class="iconfont iconabout"><span>本站访客数</span><span id="busuanzi_container_site_uv">  <span id="busuanzi_value_site_uv"></span> </span></i></p></div></div></div><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></body></html>
+</div><div class="copyright"><p>更新时间：2019-08-06</p>转载请注明来源，欢迎指出任何有错误或不够清晰的表达</div><div id="comment"><div id="vcomments-container" data-valine="{&quot;enable&quot;:true,&quot;cdn&quot;:&quot;//unpkg.com/valine/dist/Valine.min.js&quot;,&quot;appId&quot;:&quot;v86BuJAckrV3va028n5MjUgT-gzGzoHsz&quot;,&quot;appKey&quot;:&quot;fePVEsb9ln4ahed1LffU2Oco&quot;}"></div><script id="Valine-script"></script><script>(() => {
+    const el = document.getElementById("Valine-script")
+    const config = JSON.parse(document.getElementById('vcomments-container').dataset.valine)
+    console.log(this)
+    el.src=config.cdn
+    el.onload = () => {
+        new Valine({
+            el: '#vcomments-container',
+            ...config
+        })
+    }
+})()</script></div></div><link rel="stylesheet" href="/css/partial/footer.css"><div class="footer"><p><span>Copyright © 2017 - 2023</span><a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/">蜀ICP备19024124号</a></p><p><i class="iconfont iconchakan"><span>本站总访问量</span><span id="busuanzi_container_site_pv">  <span id="busuanzi_value_site_pv"></span> </span></i><i class="iconfont iconabout"><span>本站访客数</span><span id="busuanzi_container_site_uv">  <span id="busuanzi_value_site_uv"></span> </span></i></p></div></div></div><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></body></html>

@@ -13,10 +13,10 @@
 
 图示：
 123456789101112131415161718  浏览器发起请求        |       ...</p></div><div class="meta"><i class="iconfont iconshijian" title="阅读时长">5</i><i class="iconfont iconwenzi" title="字数">1.6k</i><i class="iconfont iconshijian" title="创建时间">2019-05-14</i></div></article><article><a class="artititle" href="/2019/04/23/canvas-fontparticle/">canvas 文字粒子特效</a><div class="content ellipse"><p>一个文字粒子效果,折腾了一些时间，纯粹觉得好玩 点这里看效果
-随机初始化部分粒子1、首先要明白每个粒子都是一个对象，都有自己的移动轨迹，起点，移动速度，终点
+随机初始化部分粒子1、首先要明白每个粒子都是一个对象，都有自己的起点，移动速度，移动轨迹，终点
 2、粒子活动轨迹：初始化 —- 聚合拼合文字形状 —- 散开 —- 再聚合 —- 散开…
-3、我们需要根据动画时间调整粒子移动的速度来安排他们的位置
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546class Point&#123;    constructor() &#123;        this.startx = Math.floor(Math.random() * docsize[0]),   // 初始起点        this.starty = Math.floor(Math.random() *...</p></div><div class="meta"><i class="iconfont iconshijian" title="阅读时长">4</i><i class="iconfont iconwenzi" title="字数">990</i><i class="iconfont iconshijian" title="创建时间">2019-04-23</i></div></article><article><a class="artititle" href="/2019/04/21/webworker/">Web Worker &amp;&amp; postMessage &amp;&amp; onMessage 使用教程</a><div class="content ellipse"><p>最近使用 iframe 的时候想要获取 iframe 文档信息的时候遇到了跨域问题，最后使用 postmessage 做父子页面通信解决需求也顺便学习了下 webworker 的使用webWoker 使用依赖 postMessage() 和 onMessage(), 所以先说这两个吧
+3、根据动画时间调整粒子的移动速度来安排他们的位置
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546class Point&#123;    constructor() &#123;        this.startx = Math.floor(Math.random() * docsize[0]),   // 初始起点        this.starty = Math.floor(Math.random() * doc...</p></div><div class="meta"><i class="iconfont iconshijian" title="阅读时长">4</i><i class="iconfont iconwenzi" title="字数">1k</i><i class="iconfont iconshijian" title="创建时间">2019-04-23</i></div></article><article><a class="artititle" href="/2019/04/21/webworker/">Web Worker &amp;&amp; postMessage &amp;&amp; onMessage 使用教程</a><div class="content ellipse"><p>最近使用 iframe 的时候想要获取 iframe 文档信息的时候遇到了跨域问题，最后使用 postmessage 做父子页面通信解决需求也顺便学习了下 webworker 的使用webWoker 使用依赖 postMessage() 和 onMessage(), 所以先说这两个吧
 postMessage &amp;&amp; onMessage
 提供网页文档之间互相发送和接收信息的功能，可用于解决跨域访问的问题
 会在所有页面脚本执行完毕之后(包括方法之后或者之前设置的 timeout 事件)再执行
@@ -25,10 +25,10 @@ postMessage &amp;&amp; onMessage
 postMessage 语法： otherWindow.postMessage(message, targetOrigin, [transfer]);&emsp;&emsp;message: 发送的数据，不限类型，因为他自己会序列化&emsp;&emsp...</p></div><div class="meta"><i class="iconfont iconshijian" title="阅读时长">6</i><i class="iconfont iconwenzi" title="字数">1.4k</i><i class="iconfont iconshijian" title="创建时间">2019-04-21</i></div></article><article><a class="artititle" href="/2019/03/25/ts-1/">typescript 学习之基础篇</a><div class="content ellipse"><p>vue-cli已经内置了 TypeScript 工具支持，在 Vue  (3.x) 中也计划了相当多的 TypeScript 支持改进，很多大佬以及用过的人也都在推荐入坑，而且目前也比较成熟，资源也很丰富，值得入坑
 ? typescript官方介绍 TypeScript 是 JavaScript 的类型的超集，它可以编译成纯 JavaScript。编译出来的 JavaScript 可以运行在任何浏览器上我的理解是 TypeScript扩展了JavaScript的语法，为 js 增加了类型机制，引入类，接口，枚举，泛型，方法重载等一系列的概念和方法，丰富了js的使用，而且和 VScode 搭配写起来是真的舒服
 全局安装：npm install -g typescript编译命令：tsc hello.ts
-TypeScript 编写的文件以 .ts 为后缀，用 TypeScript 编写...</p></div><div class="meta"><i class="iconfont iconshijian" title="阅读时长">10</i><i class="iconfont iconwenzi" title="字数">2.6k</i><i class="iconfont iconshijian" title="创建时间">2019-03-25</i></div></article><article><a class="artititle" href="/2019/03/18/canvas-3/">canvas性能优化篇</a><div class="content ellipse"><p>看了很多大佬的文章，自己也对项目做了一些优化，其实有很多地方平常码代码的时候稍微注意一下就能节约很多性能开销
+TypeScript 编写的文件以 .ts 为后缀，用 TypeScript 编写...</p></div><div class="meta"><i class="iconfont iconshijian" title="阅读时长">10</i><i class="iconfont iconwenzi" title="字数">2.6k</i><i class="iconfont iconshijian" title="创建时间">2019-03-25</i></div></article><article><a class="artititle" href="/2019/03/18/canvas-3/">canvas 性能优化篇</a><div class="content ellipse"><p>看了很多大佬的文章，自己也对项目做了一些优化，其实有很多地方平常码代码的时候稍微注意一下就能节约很多性能开销
 1.离屏渲染在离屏canvas上预渲染相似的图形或重复的对象，通俗的解释是将离屏canvas当成预渲染，在离屏canvas上绘制好一整块图形，绘制好后在放到视图canvas中，适合每一帧画图运算复杂的图形
 比如你想把一张图片放到canvas上，使用drawImage()方法，有三种写法
-123456// 将image放到目标canvas指定位置void ctx.drawImage(image, dx, dy); // 将image放到目标canvas指定位置，指定宽高渲染void ctx.drawImage(image, dx, dy, dWidth, dHeight);// 将image裁剪之后放到目标canvas指定位置，指定宽高渲染void ctx.drawImage(...</p></div><div class="meta"><i class="iconfont iconshijian" title="阅读时长">5</i><i class="iconfont iconwenzi" title="字数">1.3k</i><i class="iconfont iconshijian" title="创建时间">2019-03-18</i></div></article><article><a class="artititle" href="/2019/03/07/canvas-2/">canvas动画篇</a><div class="content ellipse"><p>最近用canvas蛮多的，canvas写动画也蛮好使的
+123456// 将image放到目标canvas指定位置void ctx.drawImage(image, dx, dy); // 将image放到目标canvas指定位置，指定宽高渲染void ctx.drawImage(image, dx, dy, dWidth, dHeight);// 将image裁剪之后放到目标canvas指定位置，指定宽高渲染void ctx.drawImage(...</p></div><div class="meta"><i class="iconfont iconshijian" title="阅读时长">5</i><i class="iconfont iconwenzi" title="字数">1.3k</i><i class="iconfont iconshijian" title="创建时间">2019-03-18</i></div></article><article><a class="artititle" href="/2019/03/07/canvas-2/">canvas 动画篇</a><div class="content ellipse"><p>最近用canvas蛮多的，canvas写动画也蛮好使的
 canvas 由 js 来控制，但用 js 写动画通常3种方法控制时间
 setInterval( function, delay ) 在指定的毫秒数下循环调用函数或表达式，直到使用clearInterval清除
 
@@ -36,7 +36,7 @@ setTimeout( function, delay ) 在指定的毫秒数后调用函数或计算表�
 
 
 前两个是平时会用得会比较多的，setInterval 和 setTimeout的本质是将回调函数添加到任务队列的尾部等待执行，但是前面的任务到底需要多少时间执行完是不确定的，如果前面堵塞了那么后面就无法执行尤其setInterval指定的是”开始执行”之间的间隔，并不考虑每次任务执行本身所消耗的时间，下一个回调开始执行的时间 = 指定时间 - 回调函数执行的时间，因此实际上，两次执行之间的间隔会小于指定的时间
-下面的写...</p></div><div class="meta"><i class="iconfont iconshijian" title="阅读时长">2</i><i class="iconfont iconwenzi" title="字数">640</i><i class="iconfont iconshijian" title="创建时间">2019-03-07</i></div></article><article><a class="artititle" href="/2019/03/01/notes_google/">notes_google</a><div class="content ellipse"><p>已经被弃用的：+、~、inpostauthor:、allinpostauthor:、inposttitle:、link:、info:、daterange:、phonebook:、#
+下面的写...</p></div><div class="meta"><i class="iconfont iconshijian" title="阅读时长">2</i><i class="iconfont iconwenzi" title="字数">641</i><i class="iconfont iconshijian" title="创建时间">2019-03-07</i></div></article><article><a class="artititle" href="/2019/03/01/notes_google/">notes_google</a><div class="content ellipse"><p>已经被弃用的：+、~、inpostauthor:、allinpostauthor:、inposttitle:、link:、info:、daterange:、phonebook:、#
 被弃用边缘，搜索结果不是非常准确的
 
 
@@ -72,7 +72,7 @@ loc:san francisco
 查找给定区域的结果
 
 
-以下是谷歌最新的常用搜索语法，帮助你更快找到你要的信息...</p></div><div class="meta"><i class="iconfont iconshijian" title="阅读时长">2</i><i class="iconfont iconwenzi" title="字数">571</i><i class="iconfont iconshijian" title="创建时间">2019-03-01</i></div></article><article><a class="artititle" href="/2019/02/21/canvas-1/">cannvas的imagedata对象</a><div class="content ellipse"><p>背景介绍ImageData 是canvas的图像数据，由** ImageData() 构造函数返回一个实例化的对象， 三个可读属性 ** 
+以下是谷歌最新的常用搜索语法，帮助你更快找到你要的信息...</p></div><div class="meta"><i class="iconfont iconshijian" title="阅读时长">2</i><i class="iconfont iconwenzi" title="字数">571</i><i class="iconfont iconshijian" title="创建时间">2019-03-01</i></div></article><article><a class="artititle" href="/2019/02/21/canvas-1/">canvas 的 imagedata 对象</a><div class="content ellipse"><p>背景介绍ImageData 是canvas的图像数据，由** ImageData() 构造函数返回一个实例化的对象， 三个可读属性 ** 
 
 data：一个 Uint8ClampedArray 类型的一维数组，包含RGBA 顺序的数据，每4个元素表示一个RGBA 值即对应一个像素, 左上角在数组的索引0位置，像素从左到右被处理，然后往下，遍历整个数组
 
