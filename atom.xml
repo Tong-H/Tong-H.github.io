@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://mser.xyz/"/>
-  <updated>2023-07-18T09:48:49.913Z</updated>
+  <updated>2024-05-07T08:18:18.060Z</updated>
   <id>https://mser.xyz/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>notes_jp</title>
+    <link href="https://mser.xyz/2023/11/17/notes_jp/"/>
+    <id>https://mser.xyz/2023/11/17/notes_jp/</id>
+    <published>2023-11-17T08:54:34.000Z</published>
+    <updated>2024-05-07T08:18:18.060Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;style&gt;
+  html  {
+    background: dark
+  }
+  html body strong {
+    color: #22a0ff ;
+    background: rgb(10 149 255 / 10%);
+   
+        
+      
+    
+    </summary>
+    
+      <category term="NOTES" scheme="https://mser.xyz/categories/NOTES/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>i18n-plan 前端多语言方案</title>
     <link href="https://mser.xyz/2023/06/06/i18n/"/>
     <id>https://mser.xyz/2023/06/06/i18n/</id>
     <published>2023-06-06T06:50:05.000Z</published>
-    <updated>2023-07-18T09:48:49.913Z</updated>
+    <updated>2023-08-19T07:13:44.698Z</updated>
     
     <summary type="html">
     
@@ -48,7 +79,7 @@
     <link href="https://mser.xyz/2023/03/27/translation-a-step-by-step-guide-to-building-a-chatbot-based-on-your-own-documents-with-gpt/"/>
     <id>https://mser.xyz/2023/03/27/translation-a-step-by-step-guide-to-building-a-chatbot-based-on-your-own-documents-with-gpt/</id>
     <published>2023-03-26T16:00:00.000Z</published>
-    <updated>2023-03-27T08:13:03.212Z</updated>
+    <updated>2023-03-30T07:32:29.980Z</updated>
     
     <summary type="html">
     
@@ -76,7 +107,7 @@
     <link href="https://mser.xyz/2022/11/27/translation-a-thorough-analysis-of-css-in-js/"/>
     <id>https://mser.xyz/2022/11/27/translation-a-thorough-analysis-of-css-in-js/</id>
     <published>2022-11-26T16:00:00.000Z</published>
-    <updated>2023-02-13T09:01:58.764Z</updated>
+    <updated>2023-03-19T05:19:27.779Z</updated>
     
     <summary type="html">
     
@@ -104,7 +135,7 @@
     <link href="https://mser.xyz/2022/07/09/service_worker/"/>
     <id>https://mser.xyz/2022/07/09/service_worker/</id>
     <published>2022-07-09T02:20:44.000Z</published>
-    <updated>2023-11-14T02:38:06.980Z</updated>
+    <updated>2024-02-09T07:36:16.099Z</updated>
     
     <summary type="html">
     
@@ -130,7 +161,7 @@
     <link href="https://mser.xyz/2022/03/25/translation-use-streams-to-build-high-performing-nodejs-applications%20copy/"/>
     <id>https://mser.xyz/2022/03/25/translation-use-streams-to-build-high-performing-nodejs-applications copy/</id>
     <published>2022-03-24T16:00:00.000Z</published>
-    <updated>2022-09-26T01:35:20.987Z</updated>
+    <updated>2022-11-24T01:24:34.369Z</updated>
     
     <summary type="html">
     
@@ -158,7 +189,7 @@
     <link href="https://mser.xyz/2022/03/14/translation-effects-of-too-much-lazy-loading-on-web-performance/"/>
     <id>https://mser.xyz/2022/03/14/translation-effects-of-too-much-lazy-loading-on-web-performance/</id>
     <published>2022-03-13T16:00:00.000Z</published>
-    <updated>2022-06-27T03:12:10.321Z</updated>
+    <updated>2022-06-26T09:11:43.889Z</updated>
     
     <summary type="html">
     
@@ -186,7 +217,7 @@
     <link href="https://mser.xyz/2022/01/27/translation-two-way-binding-will-make-your-react-code-better.md/"/>
     <id>https://mser.xyz/2022/01/27/translation-two-way-binding-will-make-your-react-code-better.md/</id>
     <published>2022-01-26T16:00:00.000Z</published>
-    <updated>2022-02-14T01:22:42.372Z</updated>
+    <updated>2022-02-23T03:50:10.711Z</updated>
     
     <summary type="html">
     
@@ -214,7 +245,7 @@
     <link href="https://mser.xyz/2021/12/13/svg-1/"/>
     <id>https://mser.xyz/2021/12/13/svg-1/</id>
     <published>2021-12-13T08:54:34.000Z</published>
-    <updated>2022-05-13T07:45:33.726Z</updated>
+    <updated>2022-05-13T13:24:29.667Z</updated>
     
     <summary type="html">
     
@@ -241,7 +272,7 @@
     <link href="https://mser.xyz/2021/11/17/node_graphic/"/>
     <id>https://mser.xyz/2021/11/17/node_graphic/</id>
     <published>2021-11-17T08:54:34.000Z</published>
-    <updated>2023-09-08T08:43:49.999Z</updated>
+    <updated>2024-02-09T07:36:16.094Z</updated>
     
     <summary type="html">
     
@@ -265,7 +296,7 @@
     <link href="https://mser.xyz/2021/11/17/notes_git/"/>
     <id>https://mser.xyz/2021/11/17/notes_git/</id>
     <published>2021-11-17T08:54:34.000Z</published>
-    <updated>2023-11-08T08:34:21.748Z</updated>
+    <updated>2024-04-21T01:18:05.219Z</updated>
     
     <summary type="html">
     
@@ -291,7 +322,7 @@
     <link href="https://mser.xyz/2021/11/17/notes_linux/"/>
     <id>https://mser.xyz/2021/11/17/notes_linux/</id>
     <published>2021-11-17T08:54:34.000Z</published>
-    <updated>2023-09-21T08:36:27.947Z</updated>
+    <updated>2024-02-09T07:36:16.099Z</updated>
     
     <summary type="html">
     
@@ -316,38 +347,11 @@
   </entry>
   
   <entry>
-    <title>notes_words</title>
-    <link href="https://mser.xyz/2021/11/17/notes_words/"/>
-    <id>https://mser.xyz/2021/11/17/notes_words/</id>
-    <published>2021-11-17T08:54:34.000Z</published>
-    <updated>2023-02-13T09:12:23.995Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;techical-words&quot;&gt;&lt;a href=&quot;#techical-words&quot; class=&quot;headerlink&quot; title=&quot;techical words&quot;&gt;&lt;/a&gt;techical words&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;Memory
-        
-      
-    
-    </summary>
-    
-      <category term="NOTES" scheme="https://mser.xyz/categories/NOTES/"/>
-    
-    
-      <category term="En" scheme="https://mser.xyz/tags/En/"/>
-    
-  </entry>
-  
-  <entry>
     <title>notes_js</title>
     <link href="https://mser.xyz/2021/11/17/notes_js/"/>
     <id>https://mser.xyz/2021/11/17/notes_js/</id>
     <published>2021-11-17T08:54:34.000Z</published>
-    <updated>2023-12-13T06:08:23.301Z</updated>
+    <updated>2024-05-08T11:15:31.756Z</updated>
     
     <summary type="html">
     
@@ -360,7 +364,7 @@
     color: #0a95ff ;
     background: rgb(10 149 255 / 10%)
   }
-  mark strong {
+  html body em {
     color: red !important;
    
         
@@ -378,7 +382,7 @@
     <link href="https://mser.xyz/2021/10/24/translation-Top-Node.js-Development-Trends-in-2021/"/>
     <id>https://mser.xyz/2021/10/24/translation-Top-Node.js-Development-Trends-in-2021/</id>
     <published>2021-10-23T16:00:00.000Z</published>
-    <updated>2022-03-07T01:04:08.662Z</updated>
+    <updated>2022-03-04T22:21:37.725Z</updated>
     
     <summary type="html">
     
@@ -406,7 +410,7 @@
     <link href="https://mser.xyz/2021/09/13/translation-python-features-that-you-will-miss-in-typescript/"/>
     <id>https://mser.xyz/2021/09/13/translation-python-features-that-you-will-miss-in-typescript/</id>
     <published>2021-09-12T16:00:00.000Z</published>
-    <updated>2021-11-24T01:45:53.079Z</updated>
+    <updated>2021-10-11T07:24:00.759Z</updated>
     
     <summary type="html">
     
@@ -434,7 +438,7 @@
     <link href="https://mser.xyz/2021/08/17/translation-simplified-peer-to-peer-communication-with-peerjs/"/>
     <id>https://mser.xyz/2021/08/17/translation-simplified-peer-to-peer-communication-with-peerjs/</id>
     <published>2021-08-16T16:00:00.000Z</published>
-    <updated>2021-11-24T01:45:53.079Z</updated>
+    <updated>2021-09-12T08:03:23.063Z</updated>
     
     <summary type="html">
     
@@ -462,7 +466,7 @@
     <link href="https://mser.xyz/2021/08/06/translation-javascript-visualized-the-javascript-engine/"/>
     <id>https://mser.xyz/2021/08/06/translation-javascript-visualized-the-javascript-engine/</id>
     <published>2021-08-05T16:00:00.000Z</published>
-    <updated>2021-11-24T01:45:53.079Z</updated>
+    <updated>2021-10-11T07:24:03.512Z</updated>
     
     <summary type="html">
     
@@ -490,7 +494,7 @@
     <link href="https://mser.xyz/2021/07/28/translation-css-is-magic-its-time-you-try-3d/"/>
     <id>https://mser.xyz/2021/07/28/translation-css-is-magic-its-time-you-try-3d/</id>
     <published>2021-07-27T16:00:00.000Z</published>
-    <updated>2021-11-24T01:45:53.079Z</updated>
+    <updated>2021-09-12T08:01:19.381Z</updated>
     
     <summary type="html">
     
@@ -518,7 +522,7 @@
     <link href="https://mser.xyz/2021/07/13/translation-top-5-embedded-databases-for-javascript-applications/"/>
     <id>https://mser.xyz/2021/07/13/translation-top-5-embedded-databases-for-javascript-applications/</id>
     <published>2021-07-12T16:00:00.000Z</published>
-    <updated>2021-11-24T01:45:53.080Z</updated>
+    <updated>2021-10-11T07:24:15.320Z</updated>
     
     <summary type="html">
     
@@ -546,7 +550,7 @@
     <link href="https://mser.xyz/2021/07/06/translation-svelte-for-the-experienced-react-dev/"/>
     <id>https://mser.xyz/2021/07/06/translation-svelte-for-the-experienced-react-dev/</id>
     <published>2021-07-05T16:00:00.000Z</published>
-    <updated>2021-11-24T01:45:53.080Z</updated>
+    <updated>2021-10-11T07:23:53.191Z</updated>
     
     <summary type="html">
     
