@@ -87,7 +87,7 @@ body {
 }
 @keyframes bounce-in {
 	0% {
-		transform: translate(50vw, 0);
+		/* transform: translate(50vw, 0); */
 		opacity: 0;
 	}
 	100% {
@@ -112,7 +112,7 @@ body {
 	}
 	.header .maxwidth {
 		padding: 0 6vw;
-		max-width: 88vw;
+		/* max-width: 88vw; */
 		display: flex;
 		align-items: center;
 		justify-content: space-between;

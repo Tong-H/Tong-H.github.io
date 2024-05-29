@@ -12,11 +12,13 @@
 存在，通过Cache-Control、Expires判断后未失效，那么继续使用缓存状态码为 304
 
 图示：
-123456789101112131415161718  浏览器发起请求        |       ...</p></div><div class="meta"><i class="iconfont iconshijian" title="阅读时长">5</i><i class="iconfont iconwenzi" title="字数">1.6k</i><i class="iconfont iconshijian" title="创建时间">2019-05-14</i></div></article><article><a class="artititle" href="/2019/04/23/canvas-fontparticle/">canvas 文字粒子特效</a><div class="content ellipse"><p>一个文字粒子效果,折腾了一些时间，纯粹觉得好玩 点这里看效果
+123456789101112131415161718  浏览器发起请求        |       ...</p></div><div class="meta"><i class="iconfont iconshijian" title="阅读时长">5</i><i class="iconfont iconwenzi" title="字数">1.6k</i><i class="iconfont iconshijian" title="创建时间">2019-05-14</i></div></article><article><a class="artititle" href="/2019/04/23/canvas-fontparticle/">canvas 文字粒子特效</a><div class="content ellipse"><p>three.js 3D版本update
+
+一个文字粒子效果,折腾了一些时间，纯粹觉得好玩 点这里看效果
 随机初始化部分粒子1、首先要明白每个粒子都是一个对象，都有自己的起点，移动速度，移动轨迹，终点
 2、粒子活动轨迹：初始化 —- 聚合拼合文字形状 —- 散开 —- 再聚合 —- 散开…
 3、根据动画时间调整粒子的移动速度来安排他们的位置
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546class Point&#123;    constructor() &#123;        this.startx = Math.floor(Math.random() * docsize[0]),   // 初始起点        this.starty = Math.floor(Math.random() * doc...</p></div><div class="meta"><i class="iconfont iconshijian" title="阅读时长">4</i><i class="iconfont iconwenzi" title="字数">1k</i><i class="iconfont iconshijian" title="创建时间">2019-04-23</i></div></article><article><a class="artititle" href="/2019/04/21/webworker/">Web Worker &amp;&amp; postMessage &amp;&amp; onMessage 使用教程</a><div class="content ellipse"><p>最近使用 iframe 的时候想要获取 iframe 文档信息的时候遇到了跨域问题，最后使用 postmessage 做父子页面通信解决需求也顺便学习了下 webworker 的使用webWoker 使用依赖 postMessage() 和 onMessage(), 所以先说这两个吧
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546class Point&#123;    constructor() &#123;        this.startx = Math.floor(Math.random() * docsize[0]),   // 初始起点        this.starty = Math.floo...</p></div><div class="meta"><i class="iconfont iconshijian" title="阅读时长">4</i><i class="iconfont iconwenzi" title="字数">1k</i><i class="iconfont iconshijian" title="创建时间">2019-04-23</i></div></article><article><a class="artititle" href="/2019/04/21/webworker/">Web Worker &amp;&amp; postMessage &amp;&amp; onMessage 使用教程</a><div class="content ellipse"><p>最近使用 iframe 的时候想要获取 iframe 文档信息的时候遇到了跨域问题，最后使用 postmessage 做父子页面通信解决需求也顺便学习了下 webworker 的使用webWoker 使用依赖 postMessage() 和 onMessage(), 所以先说这两个吧
 postMessage &amp;&amp; onMessage
 提供网页文档之间互相发送和接收信息的功能，可用于解决跨域访问的问题
 会在所有页面脚本执行完毕之后(包括方法之后或者之前设置的 timeout 事件)再执行

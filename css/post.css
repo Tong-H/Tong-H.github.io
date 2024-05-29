@@ -29,9 +29,7 @@
 .postDetail h3,
 .postDetail h4,
 .postDetail h5 {
-	border-left: 4px solid;
 	margin: 30px 0;
-	padding: 0px 6px;
 }
 .postDetail h1,
 .postDetail h2 {

@@ -3,16 +3,15 @@
     padding: 16px;
     transition: all 1s;
     box-shadow: #ffac00 0 0 0 8px, #ffac008f 0 0 0 16px;
-    animation: sidebarC 1.8s;
+    animation: sidebarC 4s;
 }
 @keyframes sidebarC {
     0% {
-        height: 0;
+        height: 0px;
         opacity: 0;
     }
-    40% {
-        height: 0;
-        opacity: 0;
+    10% {
+        opacity: 1;
     }
     100% {
         opacity: 1;
