@@ -351,7 +351,7 @@
     <link href="https://mser.xyz/2021/11/17/notes_js/"/>
     <id>https://mser.xyz/2021/11/17/notes_js/</id>
     <published>2021-11-17T08:54:34.000Z</published>
-    <updated>2024-05-29T11:05:40.162Z</updated>
+    <updated>2024-06-04T02:08:36.985Z</updated>
     
     <summary type="html">
     
@@ -360,13 +360,12 @@
         
         
           &lt;style&gt;
-  html body strong {
+  .postDetail strong {
     color: #0a95ff ;
     background: rgb(10 149 255 / 10%);
     padding: 0px 2px;
-    border-radius: 3px
-  }
- 
+    border-radius: 3px;
+  
         
       
     

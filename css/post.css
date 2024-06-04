@@ -22,8 +22,6 @@
 }
 .postDetail {
 	word-break: break-word;
-	line-height: 1.75;
-	font-weight: 400;
 	overflow-x: hidden;
 }
 .postDetail h3,
@@ -98,9 +96,10 @@ code {
 }
 .postDetail code {
 	padding: 0px 2px;
-	word-wrap: break-word;
-	background: rgb(255 242 206);
-	border-radius: 3px;
+    font-size: 90%;
+    white-space: break-spaces;
+    background-color: rgba(175, 184, 193, 0.2);
+    border-radius: 6px;
 }
 .postDetail pre {
 	padding: 10px;
