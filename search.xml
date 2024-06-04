@@ -7,7 +7,7 @@
 <p>nrm ls 查看当前nrm内置的npm源</p>
 <p>nrm use cnpm 切换源</p>
 <h2 id="方法二：可能版本有问题（对我没有用）"><a href="#方法二：可能版本有问题（对我没有用）" class="headerlink" title="方法二：可能版本有问题（对我没有用）"></a>方法二：可能版本有问题（对我没有用）</h2><p>npm view cordova-android   查看可选版本</p>
-<p>cordova platform add <a href="mailto:&#97;&#110;&#x64;&#x72;&#111;&#105;&#x64;&#64;&#55;&#x2e;&#48;&#x2e;&#x30;">&#97;&#110;&#x64;&#x72;&#111;&#105;&#x64;&#64;&#55;&#x2e;&#48;&#x2e;&#x30;</a>  切换版本</p>
+<p>cordova platform add <a href="mailto:&#x61;&#110;&#100;&#114;&#111;&#105;&#100;&#x40;&#55;&#46;&#48;&#46;&#48;">&#x61;&#110;&#100;&#114;&#111;&#105;&#100;&#x40;&#55;&#46;&#48;&#46;&#48;</a>  切换版本</p>
 <h2 id="方法三：卸载cordva重新安装（对我没有用）"><a href="#方法三：卸载cordva重新安装（对我没有用）" class="headerlink" title="方法三：卸载cordva重新安装（对我没有用）"></a>方法三：卸载cordva重新安装（对我没有用）</h2><p>运行命令：npm uninstall cordova -g<br>删除文件夹：C：\ Users \ your-name \ .cordova<br>重新安装cordova：npm install -g cordova<br>现在转到项目文件夹，然后再试一次：cordova platform add android<br>方法四：修改环境变量（解决）<br>在环境变量path内加入C:\Windows\System32</p>
 <h1 id="如果以上方法对你没有用，可以用cordova-d-platform-add-android调试看下提示信息"><a href="#如果以上方法对你没有用，可以用cordova-d-platform-add-android调试看下提示信息" class="headerlink" title="如果以上方法对你没有用，可以用cordova -d platform add android调试看下提示信息"></a>如果以上方法对你没有用，可以用cordova -d platform add android调试看下提示信息</h1><p>相关博文：Android SDK 环境配置/Cordova环境搭建打包apk各种踩坑报错系列</p>
 <p>欢迎留言交流  (´▽`ʃ♡ƪ)</p>
@@ -17,6 +17,100 @@
       </categories>
       <tags>
         <tag>cordova</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JSON是什么，如何处理转义？</title>
+    <url>/2018/01/04/JSON/</url>
+    <content><![CDATA[<h1 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h1><p>JSON一种数据交换格式。在JSON出现之前， 大家一直用XML来传递数据。因为XML是一种纯文本格式，所以它适合在网络上交换数据。XML本身不算复杂，但是， 加上DTD、XSD、XPath、XSLT等一大堆复杂的规范以后，即使你努力钻研几个月，也未必搞得清楚XML的规范。</p>
+<p>终于，在2002年的一天，道格拉斯·克罗克福特发明了JSON这种超轻量级的数据交换格式。</p>
+<p>由于JSON非常简单，很快就风靡Web世界。而在JavaScript中，我们可 以直接使用JSON，因为JavaScript内置了JSON的解析。把任何JavaScript对象变成JSON，就是把这个对象序列化成一个JSON 格式的字符串，这样才能够通过网络传递给其他计算机。如果我们收到一个JSON格式的字符串，只需要把它反序列化成一个JavaS cript对象，就可以在JavaScript中直接使用这个对象了。</p>
+<h1 id="知识剖析"><a href="#知识剖析" class="headerlink" title="知识剖析"></a>知识剖析</h1><p>JSON语法</p>
+<p>数据在名称/值对中</p>
+<p>数据由逗号分隔</p>
+<p>大括号保存对象</p>
+<p>中括号保存数组</p>
+<p>JSON值</p>
+<p>数字(整数/浮点数)</p>
+<p>字符串(双引号)</p>
+<p>布尔值(true/false)</p>
+<p>数组(中括号中)</p>
+<p>对象(大括号中)</p>
+<p>null</p>
+<p>实例</p>
+<p>JSON 数据的书写格式是：名称/值对。</p>
+<p>名称/值对组合中的名称写在前面（在双引号中），值对写在后面，中间用冒号隔开，</p>
+<p>其中 值 可以是：数字（整数或浮点数）、字符串（在双引号中）、逻辑值（true或false）、数组（在方括号中）、对象（在花括号中）、null</p>
+<p>使用方式：</p>
+<p>varjson= {“name”:”myname”,”password”:123456}</p>
+<p>或者是嵌套使用</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">  myObj = &#123;</span><br><span class="line"></span><br><span class="line">      <span class="string">&quot;name&quot;</span>:<span class="string">&quot;runoob&quot;</span>,</span><br><span class="line"></span><br><span class="line">      <span class="string">&quot;alexa&quot;</span>:<span class="number">10000</span>,</span><br><span class="line"></span><br><span class="line">      <span class="string">&quot;sites&quot;</span>: &#123;</span><br><span class="line"></span><br><span class="line">          <span class="string">&quot;site1&quot;</span>:<span class="string">&quot;www.runoob.com&quot;</span>,</span><br><span class="line"></span><br><span class="line">          <span class="string">&quot;site2&quot;</span>:<span class="string">&quot;m.runoob.com&quot;</span>,</span><br><span class="line"></span><br><span class="line">          <span class="string">&quot;site3&quot;</span>:<span class="string">&quot;c.runoob.com&quot;</span></span><br><span class="line"></span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">console</span>.log(myObj)</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出结果：</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span> &#123;<span class="attr">name</span>: <span class="string">&quot;runoob&quot;</span>, <span class="attr">alexa</span>: <span class="number">10000</span>, <span class="attr">sites</span>: <span class="built_in">Object</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>转义概述</p>
+<p>为什么需要转义？在js中我们使用的js对象进行处理，但是在与后端数据交换的时候，我们发送规定的json格式的字符串，所以在给后端发送或接受数据的时候，需要</p>
+<p>{name:”myname”,password:123456} &lt;–&gt; “{“name”:”myname”,”password”:123456}”</p>
+<p>其中json字符串转js对象，调用parse方法：</p>
+<p>js对象 = JSON.parse(json字符串);</p>
+<p>js对象转json字符串，调用stringify方法：</p>
+<p>json字符串 = JSON.stringify(js对象);</p>
+<h1 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><p>除了以上两种方法还有什么可以转化</p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">用eval_r(<span class="string">&#x27;(&#x27;</span>+<span class="type">json</span>字符串+<span class="string">&#x27;)&#x27;</span>)这个方法可以实现<span class="type">json</span>计算</span><br><span class="line"></span><br><span class="line">var <span class="keyword">value</span> = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">var js = <span class="string">&#x27;&#123;&quot;data1&quot;:&quot;hello&quot;,&quot;data2&quot;:value++&#125;&#x27;</span>;</span><br><span class="line"></span><br><span class="line">console.log(js);</span><br><span class="line"></span><br><span class="line">var data1 = eval(&quot;(&quot;+js+&quot;)&quot;);</span><br><span class="line"></span><br><span class="line">console.log(data1);</span><br><span class="line"></span><br><span class="line">var data2=<span class="type">JSON</span>.stringify(js);</span><br><span class="line"></span><br><span class="line">console.log(data2);</span><br><span class="line">````</span><br><span class="line">eval_r获取的<span class="type">json</span>对象的值中，如果有执行代码，也将照样执行！所以若不能保证数据的安全性，不要使用eval_r方法进行转义。</span><br><span class="line"># 扩展思考</span><br><span class="line">我们常看到&#123;<span class="type">name</span>:&quot;myname&quot;,<span class="keyword">password</span>:<span class="number">123456</span>&#125;和&#123;&quot;name&quot;:&quot;myname&quot;,&quot;password&quot;:<span class="number">123456</span>&#125;这样两种格式，即js对象和<span class="type">json</span>，然而js对象和<span class="type">json</span>有什么不一样的地方？</span><br><span class="line"></span><br><span class="line">一个栗子大家可以自己在浏览器上运行一下</span><br></pre></td></tr></table></figure>
+<script>
+
+var jso1={
+
+a:"name","b":"age"
+
+};
+
+var jso2={
+
+"a":"name","b":"age"
+
+};
+
+console.log(jso1.a === jso2.a);
+
+console.log(jso1.b === jso2.b);
+
+console.log(jso1 === jso2);
+
+console.log(jso1);
+
+console.log(jso2);
+
+var jso3=JSON.stringify(jso1);
+
+console.log(jso3);
+
+var jso4=JSON.parse({
+
+'a':"name","b":"age"
+
+});
+
+var jso4=JSON.parse('{\"a\":\"name\", \"b\":\"age\"}');
+
+console.log(jso4);
+
+</script>
+<p>````</p>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>参考一：百度百科</p>
+<p>参考二：Json对象和Json字符串的区别</p>
+<p>参考三：json属性名必须加引号的讨论</p>
+<h1 id="更多讨论"><a href="#更多讨论" class="headerlink" title="更多讨论"></a>更多讨论</h1><p>Q：JSON对象有什么遍历方法，如何做</p>
+<p>A：用jq方法$.each遍历json对象</p>
+<p>Q：angularjs如何转换字符串和对象</p>
+<p>A：angular.fromJson( );</p>
+<pre><code>angular.toJson();
+</code></pre>
+<p>Q：json和jisonp有什么区别</p>
+<p>A：json返回的是一串数据；而jsonp返回的是脚本代码（包含一个函数调用）</p>
+]]></content>
+      <categories>
+        <category>WEB</category>
+      </categories>
+      <tags>
+        <tag>JSON</tag>
       </tags>
   </entry>
   <entry>
@@ -148,7 +242,7 @@
 <p>A:因为全局模式安装,包可以供所有的程序使用。本地安装则不可以。 npm 默认会把包安装到当前目录下。这反映了 npm 不同的设计哲学。如 果把包安装到全局,可以提高程序的重复利用程度,避免同样的内容的多 份副本,但坏处是难以处理不同的版本依赖。如果把包安装到当前目录, 或者说本地,则不会有不同程序依赖不同版本的包的冲突问题,同时还减 轻了包作者的 API 兼容性压力,但缺陷则是同一个包可能会被安装许多次。</p>
 <p>Q:为什么进行了全局安装还要进行本地安装</p>
 <p>A:为什么进行了全局安装还要进行本地安装</p>
-<p> 1、在js实例代码中，默认下node.js会在NODE_PATH和目前js所在项目下的node_modules文件夹下去寻找模块，因此，如果只是全局安装，不能直接通过require()的方式去引用模块，需要手动解决包路径的配置问题，当然你也可以复制全局安装的node_modules文件夹到项目下，还有办法可以选择将环境变量的NODE_PATH设置为C:\Program Files\nodejs。 2.对于包的更新不好管理，可能你需要为每个包重新命名，如<a href="mailto:&#x67;&#x75;&#108;&#112;&#x40;&#x33;&#x2e;&#x38;&#46;&#x31;">&#x67;&#x75;&#108;&#112;&#x40;&#x33;&#x2e;&#x38;&#46;&#x31;</a>、gulp@3.9.1…，为了区别不同项目使用指定的包，保证模块之间的相互依赖，区别每个项目正常运行</p>
+<p> 1、在js实例代码中，默认下node.js会在NODE_PATH和目前js所在项目下的node_modules文件夹下去寻找模块，因此，如果只是全局安装，不能直接通过require()的方式去引用模块，需要手动解决包路径的配置问题，当然你也可以复制全局安装的node_modules文件夹到项目下，还有办法可以选择将环境变量的NODE_PATH设置为C:\Program Files\nodejs。 2.对于包的更新不好管理，可能你需要为每个包重新命名，如<a href="mailto:&#103;&#117;&#x6c;&#112;&#64;&#51;&#46;&#56;&#x2e;&#x31;">&#103;&#117;&#x6c;&#112;&#64;&#51;&#46;&#56;&#x2e;&#x31;</a>、gulp@3.9.1…，为了区别不同项目使用指定的包，保证模块之间的相互依赖，区别每个项目正常运行</p>
 <p>Q：如何在package.JSON的dependencies和devDependencies写入信息</p>
 <p>A:npm install –save babel-cli和npm install -dev babel-cli使用这两个命令安装后可自动写入文件</p>
 <p>npm install –save-dev babel-cli也可以在一起用</p>
@@ -212,100 +306,6 @@
       </categories>
       <tags>
         <tag>nginx</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JSON是什么，如何处理转义？</title>
-    <url>/2018/01/04/JSON/</url>
-    <content><![CDATA[<h1 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h1><p>JSON一种数据交换格式。在JSON出现之前， 大家一直用XML来传递数据。因为XML是一种纯文本格式，所以它适合在网络上交换数据。XML本身不算复杂，但是， 加上DTD、XSD、XPath、XSLT等一大堆复杂的规范以后，即使你努力钻研几个月，也未必搞得清楚XML的规范。</p>
-<p>终于，在2002年的一天，道格拉斯·克罗克福特发明了JSON这种超轻量级的数据交换格式。</p>
-<p>由于JSON非常简单，很快就风靡Web世界。而在JavaScript中，我们可 以直接使用JSON，因为JavaScript内置了JSON的解析。把任何JavaScript对象变成JSON，就是把这个对象序列化成一个JSON 格式的字符串，这样才能够通过网络传递给其他计算机。如果我们收到一个JSON格式的字符串，只需要把它反序列化成一个JavaS cript对象，就可以在JavaScript中直接使用这个对象了。</p>
-<h1 id="知识剖析"><a href="#知识剖析" class="headerlink" title="知识剖析"></a>知识剖析</h1><p>JSON语法</p>
-<p>数据在名称/值对中</p>
-<p>数据由逗号分隔</p>
-<p>大括号保存对象</p>
-<p>中括号保存数组</p>
-<p>JSON值</p>
-<p>数字(整数/浮点数)</p>
-<p>字符串(双引号)</p>
-<p>布尔值(true/false)</p>
-<p>数组(中括号中)</p>
-<p>对象(大括号中)</p>
-<p>null</p>
-<p>实例</p>
-<p>JSON 数据的书写格式是：名称/值对。</p>
-<p>名称/值对组合中的名称写在前面（在双引号中），值对写在后面，中间用冒号隔开，</p>
-<p>其中 值 可以是：数字（整数或浮点数）、字符串（在双引号中）、逻辑值（true或false）、数组（在方括号中）、对象（在花括号中）、null</p>
-<p>使用方式：</p>
-<p>varjson= {“name”:”myname”,”password”:123456}</p>
-<p>或者是嵌套使用</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">  myObj = &#123;</span><br><span class="line"></span><br><span class="line">      <span class="string">&quot;name&quot;</span>:<span class="string">&quot;runoob&quot;</span>,</span><br><span class="line"></span><br><span class="line">      <span class="string">&quot;alexa&quot;</span>:<span class="number">10000</span>,</span><br><span class="line"></span><br><span class="line">      <span class="string">&quot;sites&quot;</span>: &#123;</span><br><span class="line"></span><br><span class="line">          <span class="string">&quot;site1&quot;</span>:<span class="string">&quot;www.runoob.com&quot;</span>,</span><br><span class="line"></span><br><span class="line">          <span class="string">&quot;site2&quot;</span>:<span class="string">&quot;m.runoob.com&quot;</span>,</span><br><span class="line"></span><br><span class="line">          <span class="string">&quot;site3&quot;</span>:<span class="string">&quot;c.runoob.com&quot;</span></span><br><span class="line"></span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">console</span>.log(myObj)</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出结果：</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span> &#123;<span class="attr">name</span>: <span class="string">&quot;runoob&quot;</span>, <span class="attr">alexa</span>: <span class="number">10000</span>, <span class="attr">sites</span>: <span class="built_in">Object</span>&#125;</span><br></pre></td></tr></table></figure>
-<p>转义概述</p>
-<p>为什么需要转义？在js中我们使用的js对象进行处理，但是在与后端数据交换的时候，我们发送规定的json格式的字符串，所以在给后端发送或接受数据的时候，需要</p>
-<p>{name:”myname”,password:123456} &lt;–&gt; “{“name”:”myname”,”password”:123456}”</p>
-<p>其中json字符串转js对象，调用parse方法：</p>
-<p>js对象 = JSON.parse(json字符串);</p>
-<p>js对象转json字符串，调用stringify方法：</p>
-<p>json字符串 = JSON.stringify(js对象);</p>
-<h1 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><p>除了以上两种方法还有什么可以转化</p>
-<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">用eval_r(<span class="string">&#x27;(&#x27;</span>+<span class="type">json</span>字符串+<span class="string">&#x27;)&#x27;</span>)这个方法可以实现<span class="type">json</span>计算</span><br><span class="line"></span><br><span class="line">var <span class="keyword">value</span> = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">var js = <span class="string">&#x27;&#123;&quot;data1&quot;:&quot;hello&quot;,&quot;data2&quot;:value++&#125;&#x27;</span>;</span><br><span class="line"></span><br><span class="line">console.log(js);</span><br><span class="line"></span><br><span class="line">var data1 = eval(&quot;(&quot;+js+&quot;)&quot;);</span><br><span class="line"></span><br><span class="line">console.log(data1);</span><br><span class="line"></span><br><span class="line">var data2=<span class="type">JSON</span>.stringify(js);</span><br><span class="line"></span><br><span class="line">console.log(data2);</span><br><span class="line">````</span><br><span class="line">eval_r获取的<span class="type">json</span>对象的值中，如果有执行代码，也将照样执行！所以若不能保证数据的安全性，不要使用eval_r方法进行转义。</span><br><span class="line"># 扩展思考</span><br><span class="line">我们常看到&#123;<span class="type">name</span>:&quot;myname&quot;,<span class="keyword">password</span>:<span class="number">123456</span>&#125;和&#123;&quot;name&quot;:&quot;myname&quot;,&quot;password&quot;:<span class="number">123456</span>&#125;这样两种格式，即js对象和<span class="type">json</span>，然而js对象和<span class="type">json</span>有什么不一样的地方？</span><br><span class="line"></span><br><span class="line">一个栗子大家可以自己在浏览器上运行一下</span><br></pre></td></tr></table></figure>
-<script>
-
-var jso1={
-
-a:"name","b":"age"
-
-};
-
-var jso2={
-
-"a":"name","b":"age"
-
-};
-
-console.log(jso1.a === jso2.a);
-
-console.log(jso1.b === jso2.b);
-
-console.log(jso1 === jso2);
-
-console.log(jso1);
-
-console.log(jso2);
-
-var jso3=JSON.stringify(jso1);
-
-console.log(jso3);
-
-var jso4=JSON.parse({
-
-'a':"name","b":"age"
-
-});
-
-var jso4=JSON.parse('{\"a\":\"name\", \"b\":\"age\"}');
-
-console.log(jso4);
-
-</script>
-<p>````</p>
-<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>参考一：百度百科</p>
-<p>参考二：Json对象和Json字符串的区别</p>
-<p>参考三：json属性名必须加引号的讨论</p>
-<h1 id="更多讨论"><a href="#更多讨论" class="headerlink" title="更多讨论"></a>更多讨论</h1><p>Q：JSON对象有什么遍历方法，如何做</p>
-<p>A：用jq方法$.each遍历json对象</p>
-<p>Q：angularjs如何转换字符串和对象</p>
-<p>A：angular.fromJson( );</p>
-<pre><code>angular.toJson();
-</code></pre>
-<p>Q：json和jisonp有什么区别</p>
-<p>A：json返回的是一串数据；而jsonp返回的是脚本代码（包含一个函数调用）</p>
-]]></content>
-      <categories>
-        <category>WEB</category>
-      </categories>
-      <tags>
-        <tag>JSON</tag>
       </tags>
   </entry>
   <entry>
@@ -679,51 +679,6 @@ console.log(jso4);
       </tags>
   </entry>
   <entry>
-    <title>canvas 性能优化篇</title>
-    <url>/2019/03/18/canvas-3/</url>
-    <content><![CDATA[<p>看了很多大佬的文章，自己也对项目做了一些优化，其实有很多地方平常码代码的时候稍微注意一下就能节约很多性能开销</p>
-<h1 id="1-离屏渲染"><a href="#1-离屏渲染" class="headerlink" title="1.离屏渲染"></a>1.离屏渲染</h1><p>在离屏canvas上预渲染相似的图形或重复的对象，通俗的解释是将离屏canvas当成预渲染，在离屏canvas上绘制好一整块图形，绘制好后在放到视图canvas中，适合每一帧画图运算复杂的图形</p>
-<p>比如你想把一张图片放到canvas上，使用drawImage()方法，有三种写法</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 将image放到目标canvas指定位置</span></span><br><span class="line"><span class="keyword">void</span> ctx.drawImage(image, dx, dy); </span><br><span class="line"><span class="comment">// 将image放到目标canvas指定位置，指定宽高渲染</span></span><br><span class="line"><span class="keyword">void</span> ctx.drawImage(image, dx, dy, dWidth, dHeight);</span><br><span class="line"><span class="comment">// 将image裁剪之后放到目标canvas指定位置，指定宽高渲染</span></span><br><span class="line"><span class="keyword">void</span> ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);</span><br></pre></td></tr></table></figure>
-<p>第一种只是把图片原样放到canvas里，第二章指定宽高就意味着放大或者缩小图片后再放进去，带三种是裁剪后再放大或者缩小放到canvas中，这三种写法操作依次增加，性能开销也是依次提高<br>而离屏渲染就可以让我们先把图片裁剪成想要的尺寸内容保存起来，绘制的时候就可以使用第一种写法简单的把图片放进去就完了</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 在离屏 canvas 上绘制</span></span><br><span class="line"><span class="keyword">var</span> offscreencanvas = <span class="built_in">document</span>.createElement(<span class="string">&#x27;canvas&#x27;</span>);</span><br><span class="line"><span class="comment">// 宽高赋值为想要的图片尺寸</span></span><br><span class="line">offscreencanvas.width = dWidth;</span><br><span class="line">offscreencanvas.height = dHeight;</span><br><span class="line"><span class="comment">// 裁剪</span></span><br><span class="line">offscreencanvas.getContext(<span class="string">&#x27;2d&#x27;</span>).drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);</span><br><span class="line"><span class="comment">// 在视图canvas中绘制</span></span><br><span class="line">viewcontext.drawImage(canvas, x, y);</span><br></pre></td></tr></table></figure>
-
-<h1 id="2-分层画布"><a href="#2-分层画布" class="headerlink" title="2.分层画布"></a>2.分层画布</h1><p>多个相互重叠的canvas根据变化程度分开渲染，越复杂的场景越适合</p>
-<p>比如一个简单的游戏场景，游戏背景始终不变或者变化次数较少但是人物游戏的主体是一直在根据玩家的指挥不停的改变，</p>
-<p>场景：最近写的一个画板，比如这样一个简单的画圆，可以看到有原来的绘画的痕迹，那就要 渲染没画圆之前的画布 -&gt; 再画圆，鼠标移动的时候不断的执行这个渲染过程</p>
-<p><img src="/2019/03/18/canvas-3/canvas-3.gif" alt="示例画圆gif"></p>
-<p>这个时候就可以使用分层画布，画画在一个上层canvas上，原来绘画痕迹在下层canvas上，那么画圆的过程就是清空 -&gt; 画圆，画好之后再放到下层canvas上，这样就不需要去渲染之前的画布，就能节约性能开销</p>
-<h1 id="3-一次性绘制"><a href="#3-一次性绘制" class="headerlink" title="3.一次性绘制"></a>3.一次性绘制</h1><p>绘制操作的性能开销较高，可以创建一个包含所有线条的路径，然后通过单个绘制路径调用进行绘制</p>
-<p>从这样</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; points.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">var</span> p1 = points[i];</span><br><span class="line">  <span class="keyword">var</span> p2 = points[i+<span class="number">1</span>];</span><br><span class="line">  context.beginPath();</span><br><span class="line">  context.moveTo(p1.x, p1.y);</span><br><span class="line">  context.lineTo(p2.x, p2.y);</span><br><span class="line">  context.stroke();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>变成这样，在绘制复杂路径时，最好将所有点都放入路径中，而不是分别呈现各个片段</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">context.beginPath();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; points.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">var</span> p1 = points[i];</span><br><span class="line">  <span class="keyword">var</span> p2 = points[i+<span class="number">1</span>];</span><br><span class="line">  context.moveTo(p1.x, p1.y);</span><br><span class="line">  context.lineTo(p2.x, p2.y);</span><br><span class="line">&#125;</span><br><span class="line">context.stroke();</span><br></pre></td></tr></table></figure>
-
-<h1 id="4-使用requestAnimationFrame执行动画"><a href="#4-使用requestAnimationFrame执行动画" class="headerlink" title="4.使用requestAnimationFrame执行动画"></a>4.使用requestAnimationFrame执行动画</h1><p>canvas动画的本质是不断地擦除和重绘，再结合一些时间控制的方法达到动画的目的<br>显示器刷新频率是60Hz，最平滑动画的最佳循环间隔是1000ms/60，约等于16.6ms<br>而requestAnimationFrame就是根据显示器刷新频率来的，这是浏览器专门为动画提供的API，在运行时浏览器会自动优化方法的调用，节省系统资源，提高系统性能，如果页面不是激活状态下的话，requestAnimationFrame() 会被暂停调用以提升性能和电池寿命</p>
-<p>详细看<a href="https://tong-h.github.io/2019/03/07/canvas-2/#more">这儿</a></p>
-<h1 id="5-清空画布"><a href="#5-清空画布" class="headerlink" title="5.清空画布"></a>5.清空画布</h1><p>三种方法性能，性能依次提高</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">context.fillRect()</span><br><span class="line">context.clearRect()</span><br><span class="line">canvas.width = canvas.width; <span class="comment">// 一种画布专用的技巧</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="6-减少调用canvas的api"><a href="#6-减少调用canvas的api" class="headerlink" title="6.减少调用canvas的api"></a>6.减少调用canvas的api</h1><p>比如像背景可以使用css属性设置或者img标签加一些定位什么的</p>
-<p>画布的缩放可以使用CSS transforms，不要将小画布放大，而是去将大画布缩小</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> scaleX = canvas.width / <span class="built_in">window</span>.innerWidth;</span><br><span class="line"><span class="keyword">var</span> scaleY = canvas.height / <span class="built_in">window</span>.innerHeight;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> scaleToFit = <span class="built_in">Math</span>.min(scaleX, scaleY);</span><br><span class="line"><span class="keyword">var</span> scaleToCover = <span class="built_in">Math</span>.max(scaleX, scaleY);</span><br><span class="line"></span><br><span class="line">stage.style.transformOrigin = <span class="string">&#x27;0 0&#x27;</span>; <span class="comment">//scale from top left</span></span><br><span class="line">stage.style.transform = <span class="string">&#x27;scale(&#x27;</span> + scaleToFit + <span class="string">&#x27;)&#x27;</span>;</span><br></pre></td></tr></table></figure>
-
-<h1 id="其他注意点"><a href="#其他注意点" class="headerlink" title="其他注意点"></a>其他注意点</h1><ul>
-<li>尽可能使用计算代替canvas渲染，通常情况下，渲染比计算的开销大很多（3~4 个量级）</li>
-<li>减少改变 context 的状态以及不要赋一些乱七八糟类型的值，比如人家要一个number你要给一个string，浏览器会用一些额外时间来处理这些非法输入，可能会造成三四倍的时间开销</li>
-<li>避免使用浮点数坐标，使用非整数的坐标绘制内容，系统会自动使用抗锯齿功能，尝试对线条进行平滑处理，这又是一种性能消耗。可以调用 Math.round 四舍五入取整</li>
-<li>减少使用 shadowBlur 效果，和很多图像环境渲染一样，阴影渲染的性能开销通常比较高</li>
-</ul>
-<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas">https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas</a><br><a href="https://www.html5rocks.com/zh/tutorials/canvas/performance/">https://www.html5rocks.com/zh/tutorials/canvas/performance/</a><br><a href="http://taobaofed.org/blog/2016/02/22/canvas-performance/">http://taobaofed.org/blog/2016/02/22/canvas-performance/</a></p>
-]]></content>
-      <categories>
-        <category>WEB</category>
-      </categories>
-      <tags>
-        <tag>canvas</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>canvas 动画篇</title>
     <url>/2019/03/07/canvas-2/</url>
     <content><![CDATA[<p>最近用canvas蛮多的，canvas写动画也蛮好使的</p>
@@ -797,6 +752,51 @@ console.log(jso4);
       </tags>
   </entry>
   <entry>
+    <title>canvas 性能优化篇</title>
+    <url>/2019/03/18/canvas-3/</url>
+    <content><![CDATA[<p>看了很多大佬的文章，自己也对项目做了一些优化，其实有很多地方平常码代码的时候稍微注意一下就能节约很多性能开销</p>
+<h1 id="1-离屏渲染"><a href="#1-离屏渲染" class="headerlink" title="1.离屏渲染"></a>1.离屏渲染</h1><p>在离屏canvas上预渲染相似的图形或重复的对象，通俗的解释是将离屏canvas当成预渲染，在离屏canvas上绘制好一整块图形，绘制好后在放到视图canvas中，适合每一帧画图运算复杂的图形</p>
+<p>比如你想把一张图片放到canvas上，使用drawImage()方法，有三种写法</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 将image放到目标canvas指定位置</span></span><br><span class="line"><span class="keyword">void</span> ctx.drawImage(image, dx, dy); </span><br><span class="line"><span class="comment">// 将image放到目标canvas指定位置，指定宽高渲染</span></span><br><span class="line"><span class="keyword">void</span> ctx.drawImage(image, dx, dy, dWidth, dHeight);</span><br><span class="line"><span class="comment">// 将image裁剪之后放到目标canvas指定位置，指定宽高渲染</span></span><br><span class="line"><span class="keyword">void</span> ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);</span><br></pre></td></tr></table></figure>
+<p>第一种只是把图片原样放到canvas里，第二章指定宽高就意味着放大或者缩小图片后再放进去，带三种是裁剪后再放大或者缩小放到canvas中，这三种写法操作依次增加，性能开销也是依次提高<br>而离屏渲染就可以让我们先把图片裁剪成想要的尺寸内容保存起来，绘制的时候就可以使用第一种写法简单的把图片放进去就完了</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 在离屏 canvas 上绘制</span></span><br><span class="line"><span class="keyword">var</span> offscreencanvas = <span class="built_in">document</span>.createElement(<span class="string">&#x27;canvas&#x27;</span>);</span><br><span class="line"><span class="comment">// 宽高赋值为想要的图片尺寸</span></span><br><span class="line">offscreencanvas.width = dWidth;</span><br><span class="line">offscreencanvas.height = dHeight;</span><br><span class="line"><span class="comment">// 裁剪</span></span><br><span class="line">offscreencanvas.getContext(<span class="string">&#x27;2d&#x27;</span>).drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);</span><br><span class="line"><span class="comment">// 在视图canvas中绘制</span></span><br><span class="line">viewcontext.drawImage(canvas, x, y);</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-分层画布"><a href="#2-分层画布" class="headerlink" title="2.分层画布"></a>2.分层画布</h1><p>多个相互重叠的canvas根据变化程度分开渲染，越复杂的场景越适合</p>
+<p>比如一个简单的游戏场景，游戏背景始终不变或者变化次数较少但是人物游戏的主体是一直在根据玩家的指挥不停的改变，</p>
+<p>场景：最近写的一个画板，比如这样一个简单的画圆，可以看到有原来的绘画的痕迹，那就要 渲染没画圆之前的画布 -&gt; 再画圆，鼠标移动的时候不断的执行这个渲染过程</p>
+<p><img src="/2019/03/18/canvas-3/canvas-3.gif" alt="示例画圆gif"></p>
+<p>这个时候就可以使用分层画布，画画在一个上层canvas上，原来绘画痕迹在下层canvas上，那么画圆的过程就是清空 -&gt; 画圆，画好之后再放到下层canvas上，这样就不需要去渲染之前的画布，就能节约性能开销</p>
+<h1 id="3-一次性绘制"><a href="#3-一次性绘制" class="headerlink" title="3.一次性绘制"></a>3.一次性绘制</h1><p>绘制操作的性能开销较高，可以创建一个包含所有线条的路径，然后通过单个绘制路径调用进行绘制</p>
+<p>从这样</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; points.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">var</span> p1 = points[i];</span><br><span class="line">  <span class="keyword">var</span> p2 = points[i+<span class="number">1</span>];</span><br><span class="line">  context.beginPath();</span><br><span class="line">  context.moveTo(p1.x, p1.y);</span><br><span class="line">  context.lineTo(p2.x, p2.y);</span><br><span class="line">  context.stroke();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>变成这样，在绘制复杂路径时，最好将所有点都放入路径中，而不是分别呈现各个片段</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">context.beginPath();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; points.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">var</span> p1 = points[i];</span><br><span class="line">  <span class="keyword">var</span> p2 = points[i+<span class="number">1</span>];</span><br><span class="line">  context.moveTo(p1.x, p1.y);</span><br><span class="line">  context.lineTo(p2.x, p2.y);</span><br><span class="line">&#125;</span><br><span class="line">context.stroke();</span><br></pre></td></tr></table></figure>
+
+<h1 id="4-使用requestAnimationFrame执行动画"><a href="#4-使用requestAnimationFrame执行动画" class="headerlink" title="4.使用requestAnimationFrame执行动画"></a>4.使用requestAnimationFrame执行动画</h1><p>canvas动画的本质是不断地擦除和重绘，再结合一些时间控制的方法达到动画的目的<br>显示器刷新频率是60Hz，最平滑动画的最佳循环间隔是1000ms/60，约等于16.6ms<br>而requestAnimationFrame就是根据显示器刷新频率来的，这是浏览器专门为动画提供的API，在运行时浏览器会自动优化方法的调用，节省系统资源，提高系统性能，如果页面不是激活状态下的话，requestAnimationFrame() 会被暂停调用以提升性能和电池寿命</p>
+<p>详细看<a href="https://tong-h.github.io/2019/03/07/canvas-2/#more">这儿</a></p>
+<h1 id="5-清空画布"><a href="#5-清空画布" class="headerlink" title="5.清空画布"></a>5.清空画布</h1><p>三种方法性能，性能依次提高</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">context.fillRect()</span><br><span class="line">context.clearRect()</span><br><span class="line">canvas.width = canvas.width; <span class="comment">// 一种画布专用的技巧</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="6-减少调用canvas的api"><a href="#6-减少调用canvas的api" class="headerlink" title="6.减少调用canvas的api"></a>6.减少调用canvas的api</h1><p>比如像背景可以使用css属性设置或者img标签加一些定位什么的</p>
+<p>画布的缩放可以使用CSS transforms，不要将小画布放大，而是去将大画布缩小</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> scaleX = canvas.width / <span class="built_in">window</span>.innerWidth;</span><br><span class="line"><span class="keyword">var</span> scaleY = canvas.height / <span class="built_in">window</span>.innerHeight;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> scaleToFit = <span class="built_in">Math</span>.min(scaleX, scaleY);</span><br><span class="line"><span class="keyword">var</span> scaleToCover = <span class="built_in">Math</span>.max(scaleX, scaleY);</span><br><span class="line"></span><br><span class="line">stage.style.transformOrigin = <span class="string">&#x27;0 0&#x27;</span>; <span class="comment">//scale from top left</span></span><br><span class="line">stage.style.transform = <span class="string">&#x27;scale(&#x27;</span> + scaleToFit + <span class="string">&#x27;)&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h1 id="其他注意点"><a href="#其他注意点" class="headerlink" title="其他注意点"></a>其他注意点</h1><ul>
+<li>尽可能使用计算代替canvas渲染，通常情况下，渲染比计算的开销大很多（3~4 个量级）</li>
+<li>减少改变 context 的状态以及不要赋一些乱七八糟类型的值，比如人家要一个number你要给一个string，浏览器会用一些额外时间来处理这些非法输入，可能会造成三四倍的时间开销</li>
+<li>避免使用浮点数坐标，使用非整数的坐标绘制内容，系统会自动使用抗锯齿功能，尝试对线条进行平滑处理，这又是一种性能消耗。可以调用 Math.round 四舍五入取整</li>
+<li>减少使用 shadowBlur 效果，和很多图像环境渲染一样，阴影渲染的性能开销通常比较高</li>
+</ul>
+<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas">https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas</a><br><a href="https://www.html5rocks.com/zh/tutorials/canvas/performance/">https://www.html5rocks.com/zh/tutorials/canvas/performance/</a><br><a href="http://taobaofed.org/blog/2016/02/22/canvas-performance/">http://taobaofed.org/blog/2016/02/22/canvas-performance/</a></p>
+]]></content>
+      <categories>
+        <category>WEB</category>
+      </categories>
+      <tags>
+        <tag>canvas</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>cordova之相机拍照以及本地图片获取上传</title>
     <url>/2018/08/27/cordova_%E5%9B%BE%E7%89%87%E8%8E%B7%E5%8F%96%E4%B8%8A%E4%BC%A0/</url>
     <content><![CDATA[<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line">图片获取</span><br><span class="line">此插件定义了一个全局navigator.camera对象，该对象提供用于拍摄照片和从系统图像库中选择图像的API</span><br><span class="line">支持平台：<span class="keyword">Android、BlackBerry、Browser、Firefox、FireOS、iOS、Windows、WP8、Ubuntu</span></span><br><span class="line"><span class="keyword"></span>cordova plugin <span class="keyword">add </span>cordova-plugin-camera</span><br><span class="line"></span><br><span class="line">图片上传</span><br><span class="line">这个插件定义了全局FileTransfer，FileUploadOptions构造函数，用于传输文件</span><br><span class="line">看你上传的方式如果你使用<span class="keyword">bs64就可以不用这个插件</span></span><br><span class="line"><span class="keyword"></span>支持平台：Amazon Fire OS、<span class="keyword">Android、BlackBerry </span><span class="number">10</span>、<span class="keyword">Browser、Firefox </span>OS**、iOS、Windows Phone <span class="number">7</span> <span class="keyword">and </span><span class="number">8</span>*、Windows</span><br><span class="line">cordova plugin <span class="keyword">add </span>cordova-plugin-file-transfer</span><br></pre></td></tr></table></figure>
@@ -823,6 +823,69 @@ console.log(jso4);
 <h2 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h2><p>options：可选参数（Object）<br>  fileKey：表单元素的名称。默认为file<br>  fileName：在服务器上保存文件时使用的文件名。默认为image.jpg<br>  httpMethod：要使用的HTTP方法 - PUT或者POST。默认为POST<br>  mimeType：要上载的数据的mime类型。默认为image/jpeg<br>  params：一组可选的键/值对，用于传递HTTP请求。（对象，键/值 - DOMString）<br>  chunkedMode：是否以分块流模式上传数据。默认为true。（布尔）<br>  headers：标题名称/标题值的映射。使用数组指定多个值。在iOS，FireOS和Android上，如果存在名为Content-Type的标题，则不会使用多部分表单数据</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> ft = <span class="keyword">new</span> FileTransfer()</span><br><span class="line">ft.upload(fileURL,<span class="built_in">encodeURI</span>(<span class="string">&quot;http://some.server.com/upload.php&quot;</span>), successCallback, errorCallback, options)</span><br><span class="line">参数：文件地址，上传接口，成功回调，失败回调，上传需设置的可选参数</span><br></pre></td></tr></table></figure>
 <h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> ft = <span class="keyword">new</span> FileTransfer();</span><br><span class="line">fileTransfer.download(uri, fileURL,successCallback successCallback, errorCallback,<span class="literal">false</span>,&#123;</span><br><span class="line">        <span class="attr">headers</span>: &#123;</span><br><span class="line">            <span class="string">&quot;Authorization&quot;</span>: <span class="string">&quot;Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA==&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">)</span><br><span class="line">参数：服务器url，设备上文件的文件系统URL，成功回调，失败回调，上传需设置的可选参数，是否接受所有安全证书，可选参数目前只支持header</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>WEB</category>
+      </categories>
+      <tags>
+        <tag>cordova</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>cordova之HybirdApp热更新</title>
+    <url>/2018/08/30/cordova_%E7%83%AD%E6%9B%B4%E6%96%B0/</url>
+    <content><![CDATA[<h1 id="关于热更新"><a href="#关于热更新" class="headerlink" title="关于热更新"></a>关于热更新</h1><p>热更新App常用的更新方式。简单来说，就是在用户通过App Store下载App之后，打开App时遇到的即时更新</p>
+<p>热更新就是动态下发代码，它可以使开发者在不发布新版本的情况下，修复 BUG 和发布功能，也可以绕开App Store和各种商店的审核机制，避免长时间的审核等待以及多次被拒造成的成本，也能针对顽固用户进行强制更新</p>
+<h1 id="关于插件"><a href="#关于插件" class="headerlink" title="关于插件"></a>关于插件</h1><p>cordova插件</p>
+<figure class="highlight gauss"><table><tr><td class="code"><pre><span class="line">cordova plugin add cordova-hot-<span class="built_in">code</span>-<span class="keyword">push</span>-plugin --<span class="keyword">save</span></span><br></pre></td></tr></table></figure>
+<p>添加Cordova Hot Code Push Plugin CLI客户端<a href="https://github.com/nordnet/cordova-hot-code-push-cli">github文档链接</a><br>用处：自动生成Hot Code Push插件（chcp.json和chcp.manifest）所需的配置文件<br>&emsp;运行本地服务器检测内容变更部署到服务器（关于自动部署看到有大佬说因为国内网络问题。。。但是我没试过因为没有aws服务器）</p>
+<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line">npm install -g cordova-hot-code-<span class="keyword">push</span>-<span class="keyword">cli</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="更新流程"><a href="#更新流程" class="headerlink" title="更新流程"></a>更新流程</h1><p>1、根据Update method的设置（后面会提到改配置，假设是resume）恢复应用程序（从后台移动到前台状态）或启动时</p>
+<p>2、插件初始化，在后台加载更新模块（Update loader）</p>
+<p>3、Update loader 从cordova项目配置文件config.xml中获取config-file也就是插件配置文件chcp.json 的加载路径，然后加载chcp.json获取到release 版本号，对比当前的版本号，若二者不同，说明有新版本</p>
+<p>4、有新版本时Update loader会从chcp.json中获取rcontent_url并从中下载web静态文件</p>
+<h1 id="自动化更新"><a href="#自动化更新" class="headerlink" title="自动化更新"></a>自动化更新</h1><h2 id="1、初始化"><a href="#1、初始化" class="headerlink" title="1、初始化"></a>1、初始化</h2><p>插件添加成功后在项目根目录执行init命令进行初始化生成配置文件</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">cordova-hcp <span class="keyword">init</span></span><br></pre></td></tr></table></figure>
+<p>执行时会需要填写一些首选项除了第一个project name项目名称和最后一个为必填以外其他都可以回车<br>** 最后一个参数 ** “Enter full URL to directory where cordova-hcp build result will be uploaded:”这个是服务器的url，也就是更新时app从服务器下载资源的路径</p>
+<p>** 关于倒数第二个参数 ** ：Update method - 何时执行更新，默认为resume</p>
+<ul>
+<li>start - 启动应用程序时安装更新</li>
+<li>resume - 恢复应用程序（从后台移动到前台状态）或启动时安装更新</li>
+<li>now - 从服务器加载后立即安装更新</li>
+</ul>
+<p>执行成功后可以看到项目根目录多出一个cordova-hcp.json文件</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;dzbp&quot;</span>,   <span class="comment">// 项目名称</span></span><br><span class="line">  <span class="attr">&quot;ios_identifier&quot;</span>: <span class="string">&quot;&quot;</span>,   <span class="comment">// android</span></span><br><span class="line">  <span class="attr">&quot;android_identifier&quot;</span>: <span class="string">&quot;&quot;</span>,   <span class="comment">//  App Store上的应用程序ID。用于将用户重定向到商店的应用程序页面。</span></span><br><span class="line">  <span class="attr">&quot;update&quot;</span>: <span class="string">&quot;resume&quot;</span>, <span class="comment">// 在Google Play上引用应用的应用包名称</span></span><br><span class="line">  <span class="attr">&quot;content_url&quot;</span>: <span class="string">&quot;https：//www&quot;</span>  <span class="comment">// web静态资源在服务器的地址</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2、构建命令"><a href="#2、构建命令" class="headerlink" title="2、构建命令"></a>2、构建命令</h2><figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">cordova</span>-hcp build<span class="meta"> [Web项目路径不指定默认为www目录]</span></span><br></pre></td></tr></table></figure>
+<p>执行完成后会在你的web目录下会生成两个配置文件</p>
+<ul>
+<li>chcp.json : 持有发布相关信息</li>
+<li>chcp.manifest : 保存有关Web项目文件的信息：它们的名称（相对路径）和哈希值, 根据它插件查知道文件的增删改</li>
+</ul>
+<h2 id="3、修改配置"><a href="#3、修改配置" class="headerlink" title="3、修改配置"></a>3、修改配置</h2><p>在config配置中加入chcp.json文件在服务器的地址</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">chcp</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">config-file</span> <span class="attr">url</span>=<span class="string">&quot;http://www/chcp.json&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">chcp</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>最后使用<code>cordova build</code>打包</p>
+<p>app的配置就完成了，每次代码修改后只需要把代码放到服务器上，app会自动检测</p>
+<h1 id="用户选择性进行更新？"><a href="#用户选择性进行更新？" class="headerlink" title="用户选择性进行更新？"></a>用户选择性进行更新？</h1><p>在项目配置文件config.xml中添加</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">chcp</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">auto-download</span> <span class="attr">enabled</span>=<span class="string">&quot;false&quot;</span> /&gt;</span> // 取消自动下载</span><br><span class="line">    <span class="tag">&lt;<span class="name">auto-install</span> <span class="attr">enabled</span>=<span class="string">&quot;false&quot;</span> /&gt;</span>  // 取消自动安装</span><br><span class="line">    <span class="tag">&lt;<span class="name">config-file</span> <span class="attr">url</span>=<span class="string">&quot;http://120.24.77.175:8080/ehospital/views/MSUI/chcp.json&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">chcp</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="下面是一个完整的代码示例，用到了3个api"><a href="#下面是一个完整的代码示例，用到了3个api" class="headerlink" title="下面是一个完整的代码示例，用到了3个api"></a>下面是一个完整的代码示例，用到了3个api</h2><p>** chcp.fetchUpdate(Callback，options)  检查更新 **</p>
+<ul>
+<li>Callback接收两个参数：<br>&emsp;error：若存在不为null表示没有更新版本，或者在更新检查期间发生错误<br>&emsp;data：从本机端发送的其他数据</li>
+<li>options：请求的其他选项。如果未设置 - 使用首选项config.xml</li>
+</ul>
+<p>** chcp.isUpdateAvailableForInstallation(Callback) 检查是否已加载更新并可以安装 **</p>
+<ul>
+<li>Callback接收两个参数：<br>&emsp;&emsp;error：若存在不为null表示没有加载更新或者无需安装<br>&emsp;&emsp;data：{<br>&emsp;&emsp;&emsp;&emsp;CURRENTVERSION：当前版本<br>&emsp;&emsp;&emsp;&emsp;readyToInstallVersion：准备安装版本<br>&emsp;&emsp;}</li>
+</ul>
+<p>** chcp.installUpdate(Callback) 检查是否已加载更新并可以安装 **</p>
+<ul>
+<li>Callback只有一个参数那就是error，若不为null表示安装失败包含失败信息否则便是成功</li>
+</ul>
+<p><a href="https://github.com/nordnet/cordova-hot-code-push/wiki/Error-codes">错误代码详情</a>&emsp;&emsp;<a href="https://github.com/nordnet/cordova-hot-code-push/wiki/JavaScript-module">jsAPI</a></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">&quot;deviceready&quot;</span>, onDeviceReady, <span class="literal">false</span>)</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">onDeviceReady</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> chcp = <span class="built_in">window</span>.chcp</span><br><span class="line">    chcp.fetchUpdate(<span class="function">(<span class="params">error, data</span>) =&gt;</span> &#123; <span class="comment">// 检查更新</span></span><br><span class="line">    alert(data)</span><br><span class="line">    <span class="keyword">if</span> (error) &#123; </span><br><span class="line">      alert(<span class="string">&#x27;error&#x27;</span>, error.code, error.description) <span class="comment">// 表示没有更新版本，或者其他错误</span></span><br><span class="line">    &#125; <span class="keyword">else</span> chcp.isUpdateAvailableForInstallation(<span class="function">(<span class="params">error, data</span>) =&gt;</span> &#123; <span class="comment">// 检查是否已加载更新并准备安装</span></span><br><span class="line">        <span class="keyword">if</span> (error) &#123;</span><br><span class="line">          alert(<span class="string">&#x27;No update was loaded =&gt; nothing to install&#x27;</span>)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="keyword">if</span> ( <span class="built_in">window</span>.confirm(<span class="string">&#x27;检测到新版本，是否更新&#x27;</span>) ) &#123;</span><br><span class="line">            chcp.installUpdate(<span class="function">(<span class="params">error</span>) =&gt;</span> &#123;  <span class="comment">// 安装更新</span></span><br><span class="line">              <span class="keyword">if</span> (error) &#123;</span><br><span class="line">                alert(<span class="string">&#x27;Failed to install the update with error code: &#x27;</span> + error.code)</span><br><span class="line">                alert(error.description)</span><br><span class="line">              &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                alert(<span class="string">&#x27;Update installed!&#x27;</span>)</span><br><span class="line">              &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">window</span>.alert(<span class="string">&#x27;您已拒绝更新&#x27;</span>)</span><br><span class="line">          &#125;</span><br><span class="line">          alert(<span class="string">&#x27;Current content version: &#x27;</span> + data.currentVersion)</span><br><span class="line">          alert(<span class="string">&#x27;Ready to be installed:&#x27;</span> + data.readyToInstallVersion)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p>Cordova Hot Code Push Plugin CLI client <a href="https://github.com/nordnet/cordova-hot-code-push-cli">https://github.com/nordnet/cordova-hot-code-push-cli</a></p>
+<p>cordova-hot-code-push wiki <a href="https://github.com/nordnet/cordova-hot-code-push/wiki/Update-workflow">https://github.com/nordnet/cordova-hot-code-push/wiki/Update-workflow</a></p>
+<p>Cordova 代码热更新 <a href="https://www.jianshu.com/p/55fd5e9f96ea">https://www.jianshu.com/p/55fd5e9f96ea</a></p>
 ]]></content>
       <categories>
         <category>WEB</category>
@@ -901,69 +964,6 @@ console.log(jso4);
       </categories>
       <tags>
         <tag>canvas</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>cordova之HybirdApp热更新</title>
-    <url>/2018/08/30/cordova_%E7%83%AD%E6%9B%B4%E6%96%B0/</url>
-    <content><![CDATA[<h1 id="关于热更新"><a href="#关于热更新" class="headerlink" title="关于热更新"></a>关于热更新</h1><p>热更新App常用的更新方式。简单来说，就是在用户通过App Store下载App之后，打开App时遇到的即时更新</p>
-<p>热更新就是动态下发代码，它可以使开发者在不发布新版本的情况下，修复 BUG 和发布功能，也可以绕开App Store和各种商店的审核机制，避免长时间的审核等待以及多次被拒造成的成本，也能针对顽固用户进行强制更新</p>
-<h1 id="关于插件"><a href="#关于插件" class="headerlink" title="关于插件"></a>关于插件</h1><p>cordova插件</p>
-<figure class="highlight gauss"><table><tr><td class="code"><pre><span class="line">cordova plugin add cordova-hot-<span class="built_in">code</span>-<span class="keyword">push</span>-plugin --<span class="keyword">save</span></span><br></pre></td></tr></table></figure>
-<p>添加Cordova Hot Code Push Plugin CLI客户端<a href="https://github.com/nordnet/cordova-hot-code-push-cli">github文档链接</a><br>用处：自动生成Hot Code Push插件（chcp.json和chcp.manifest）所需的配置文件<br>&emsp;运行本地服务器检测内容变更部署到服务器（关于自动部署看到有大佬说因为国内网络问题。。。但是我没试过因为没有aws服务器）</p>
-<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line">npm install -g cordova-hot-code-<span class="keyword">push</span>-<span class="keyword">cli</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="更新流程"><a href="#更新流程" class="headerlink" title="更新流程"></a>更新流程</h1><p>1、根据Update method的设置（后面会提到改配置，假设是resume）恢复应用程序（从后台移动到前台状态）或启动时</p>
-<p>2、插件初始化，在后台加载更新模块（Update loader）</p>
-<p>3、Update loader 从cordova项目配置文件config.xml中获取config-file也就是插件配置文件chcp.json 的加载路径，然后加载chcp.json获取到release 版本号，对比当前的版本号，若二者不同，说明有新版本</p>
-<p>4、有新版本时Update loader会从chcp.json中获取rcontent_url并从中下载web静态文件</p>
-<h1 id="自动化更新"><a href="#自动化更新" class="headerlink" title="自动化更新"></a>自动化更新</h1><h2 id="1、初始化"><a href="#1、初始化" class="headerlink" title="1、初始化"></a>1、初始化</h2><p>插件添加成功后在项目根目录执行init命令进行初始化生成配置文件</p>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">cordova-hcp <span class="keyword">init</span></span><br></pre></td></tr></table></figure>
-<p>执行时会需要填写一些首选项除了第一个project name项目名称和最后一个为必填以外其他都可以回车<br>** 最后一个参数 ** “Enter full URL to directory where cordova-hcp build result will be uploaded:”这个是服务器的url，也就是更新时app从服务器下载资源的路径</p>
-<p>** 关于倒数第二个参数 ** ：Update method - 何时执行更新，默认为resume</p>
-<ul>
-<li>start - 启动应用程序时安装更新</li>
-<li>resume - 恢复应用程序（从后台移动到前台状态）或启动时安装更新</li>
-<li>now - 从服务器加载后立即安装更新</li>
-</ul>
-<p>执行成功后可以看到项目根目录多出一个cordova-hcp.json文件</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;dzbp&quot;</span>,   <span class="comment">// 项目名称</span></span><br><span class="line">  <span class="attr">&quot;ios_identifier&quot;</span>: <span class="string">&quot;&quot;</span>,   <span class="comment">// android</span></span><br><span class="line">  <span class="attr">&quot;android_identifier&quot;</span>: <span class="string">&quot;&quot;</span>,   <span class="comment">//  App Store上的应用程序ID。用于将用户重定向到商店的应用程序页面。</span></span><br><span class="line">  <span class="attr">&quot;update&quot;</span>: <span class="string">&quot;resume&quot;</span>, <span class="comment">// 在Google Play上引用应用的应用包名称</span></span><br><span class="line">  <span class="attr">&quot;content_url&quot;</span>: <span class="string">&quot;https：//www&quot;</span>  <span class="comment">// web静态资源在服务器的地址</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="2、构建命令"><a href="#2、构建命令" class="headerlink" title="2、构建命令"></a>2、构建命令</h2><figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">cordova</span>-hcp build<span class="meta"> [Web项目路径不指定默认为www目录]</span></span><br></pre></td></tr></table></figure>
-<p>执行完成后会在你的web目录下会生成两个配置文件</p>
-<ul>
-<li>chcp.json : 持有发布相关信息</li>
-<li>chcp.manifest : 保存有关Web项目文件的信息：它们的名称（相对路径）和哈希值, 根据它插件查知道文件的增删改</li>
-</ul>
-<h2 id="3、修改配置"><a href="#3、修改配置" class="headerlink" title="3、修改配置"></a>3、修改配置</h2><p>在config配置中加入chcp.json文件在服务器的地址</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">chcp</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">config-file</span> <span class="attr">url</span>=<span class="string">&quot;http://www/chcp.json&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">chcp</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>最后使用<code>cordova build</code>打包</p>
-<p>app的配置就完成了，每次代码修改后只需要把代码放到服务器上，app会自动检测</p>
-<h1 id="用户选择性进行更新？"><a href="#用户选择性进行更新？" class="headerlink" title="用户选择性进行更新？"></a>用户选择性进行更新？</h1><p>在项目配置文件config.xml中添加</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">chcp</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">auto-download</span> <span class="attr">enabled</span>=<span class="string">&quot;false&quot;</span> /&gt;</span> // 取消自动下载</span><br><span class="line">    <span class="tag">&lt;<span class="name">auto-install</span> <span class="attr">enabled</span>=<span class="string">&quot;false&quot;</span> /&gt;</span>  // 取消自动安装</span><br><span class="line">    <span class="tag">&lt;<span class="name">config-file</span> <span class="attr">url</span>=<span class="string">&quot;http://120.24.77.175:8080/ehospital/views/MSUI/chcp.json&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">chcp</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="下面是一个完整的代码示例，用到了3个api"><a href="#下面是一个完整的代码示例，用到了3个api" class="headerlink" title="下面是一个完整的代码示例，用到了3个api"></a>下面是一个完整的代码示例，用到了3个api</h2><p>** chcp.fetchUpdate(Callback，options)  检查更新 **</p>
-<ul>
-<li>Callback接收两个参数：<br>&emsp;error：若存在不为null表示没有更新版本，或者在更新检查期间发生错误<br>&emsp;data：从本机端发送的其他数据</li>
-<li>options：请求的其他选项。如果未设置 - 使用首选项config.xml</li>
-</ul>
-<p>** chcp.isUpdateAvailableForInstallation(Callback) 检查是否已加载更新并可以安装 **</p>
-<ul>
-<li>Callback接收两个参数：<br>&emsp;&emsp;error：若存在不为null表示没有加载更新或者无需安装<br>&emsp;&emsp;data：{<br>&emsp;&emsp;&emsp;&emsp;CURRENTVERSION：当前版本<br>&emsp;&emsp;&emsp;&emsp;readyToInstallVersion：准备安装版本<br>&emsp;&emsp;}</li>
-</ul>
-<p>** chcp.installUpdate(Callback) 检查是否已加载更新并可以安装 **</p>
-<ul>
-<li>Callback只有一个参数那就是error，若不为null表示安装失败包含失败信息否则便是成功</li>
-</ul>
-<p><a href="https://github.com/nordnet/cordova-hot-code-push/wiki/Error-codes">错误代码详情</a>&emsp;&emsp;<a href="https://github.com/nordnet/cordova-hot-code-push/wiki/JavaScript-module">jsAPI</a></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">&quot;deviceready&quot;</span>, onDeviceReady, <span class="literal">false</span>)</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">onDeviceReady</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> chcp = <span class="built_in">window</span>.chcp</span><br><span class="line">    chcp.fetchUpdate(<span class="function">(<span class="params">error, data</span>) =&gt;</span> &#123; <span class="comment">// 检查更新</span></span><br><span class="line">    alert(data)</span><br><span class="line">    <span class="keyword">if</span> (error) &#123; </span><br><span class="line">      alert(<span class="string">&#x27;error&#x27;</span>, error.code, error.description) <span class="comment">// 表示没有更新版本，或者其他错误</span></span><br><span class="line">    &#125; <span class="keyword">else</span> chcp.isUpdateAvailableForInstallation(<span class="function">(<span class="params">error, data</span>) =&gt;</span> &#123; <span class="comment">// 检查是否已加载更新并准备安装</span></span><br><span class="line">        <span class="keyword">if</span> (error) &#123;</span><br><span class="line">          alert(<span class="string">&#x27;No update was loaded =&gt; nothing to install&#x27;</span>)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="keyword">if</span> ( <span class="built_in">window</span>.confirm(<span class="string">&#x27;检测到新版本，是否更新&#x27;</span>) ) &#123;</span><br><span class="line">            chcp.installUpdate(<span class="function">(<span class="params">error</span>) =&gt;</span> &#123;  <span class="comment">// 安装更新</span></span><br><span class="line">              <span class="keyword">if</span> (error) &#123;</span><br><span class="line">                alert(<span class="string">&#x27;Failed to install the update with error code: &#x27;</span> + error.code)</span><br><span class="line">                alert(error.description)</span><br><span class="line">              &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                alert(<span class="string">&#x27;Update installed!&#x27;</span>)</span><br><span class="line">              &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">window</span>.alert(<span class="string">&#x27;您已拒绝更新&#x27;</span>)</span><br><span class="line">          &#125;</span><br><span class="line">          alert(<span class="string">&#x27;Current content version: &#x27;</span> + data.currentVersion)</span><br><span class="line">          alert(<span class="string">&#x27;Ready to be installed:&#x27;</span> + data.readyToInstallVersion)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p>Cordova Hot Code Push Plugin CLI client <a href="https://github.com/nordnet/cordova-hot-code-push-cli">https://github.com/nordnet/cordova-hot-code-push-cli</a></p>
-<p>cordova-hot-code-push wiki <a href="https://github.com/nordnet/cordova-hot-code-push/wiki/Update-workflow">https://github.com/nordnet/cordova-hot-code-push/wiki/Update-workflow</a></p>
-<p>Cordova 代码热更新 <a href="https://www.jianshu.com/p/55fd5e9f96ea">https://www.jianshu.com/p/55fd5e9f96ea</a></p>
-]]></content>
-      <categories>
-        <category>WEB</category>
-      </categories>
-      <tags>
-        <tag>cordova</tag>
       </tags>
   </entry>
   <entry>
@@ -1386,6 +1386,46 @@ console.log(jso4);
       </tags>
   </entry>
   <entry>
+    <title>mpvue小程序以及微信直播踩坑总结</title>
+    <url>/2018/08/07/mpvue/</url>
+    <content><![CDATA[<p>前段时间刚写完一个mpvue的小程序，现在得闲必须赶紧记录和总结一下，不然很多东西又要忘了</p>
+<p>我是比较熟悉vue的语法，但是也犹豫过是用原生还是用mpvue，因为那时候原生小程序已经相当成熟而mpvue才刚出来（踩坑和填坑的前人还很少）</p>
+<p>所以我学习了几天原生的框架和语法，果断选择了mpvue，真的是没有对比就没有伤害，对比原生体验不要太好</p>
+<p>mpvue是一个使用 Vue.js 开发小程序的前端框架，他是将我们写的vue文件重新编译成wxml等文件，最后的底层实现还是用的小程序语法，所以原生小程序语法也是比较重要的，而且像很多下拉刷新，到底部请求下一页什么的等等很多地方也是要用到小程序api的，所以建议大家在入坑之前还是了解一些小程序语法比较好</p>
+<p>附上<a href="http://mpvue.com/#_1">官方文档</a></p>
+<h1 id="项目配置"><a href="#项目配置" class="headerlink" title="项目配置"></a>项目配置</h1><p>使用官方的5分钟上手，生成一个基本框架，后来开发也没有手动修改过他的配置</p>
+<p>用到了4个插件</p>
+<h2 id="mpvue-weui-ui库，相当方便轻量好使"><a href="#mpvue-weui-ui库，相当方便轻量好使" class="headerlink" title="mpvue-weui    ui库，相当方便轻量好使"></a>mpvue-weui    ui库，相当方便轻量好使</h2><p>官网地址：<a href="http://kuangpf.com/mpvue-weui/#/">http://kuangpf.com/mpvue-weui/#/</a></p>
+<h2 id="mpvue-toast-一个基于mpvue的简单弹窗组件"><a href="#mpvue-toast-一个基于mpvue的简单弹窗组件" class="headerlink" title="mpvue-toast  一个基于mpvue的简单弹窗组件"></a>mpvue-toast  一个基于mpvue的简单弹窗组件</h2><p>因为mpvue目前还不支持全局的组件，所以没有办法像vue组件引入一次就能在所有页面使用，但是mpvue团队已经在考虑新增全局组件功能了</p>
+<p>github地址：<a href="https://github.com/linrui1994/mpvue-toast">https://github.com/linrui1994/mpvue-toast</a> </p>
+<h2 id="sass-不多介绍"><a href="#sass-不多介绍" class="headerlink" title="sass  不多介绍"></a>sass  不多介绍</h2><p>全局安装：npm install sass-loader node-sass –save-dev </p>
+<p>在style节点加上lang=”scss”，这样就可以愉快地使用sass进行开发了</p>
+<h2 id="mpvue-router-patch-在mpvue-中使用-vue-router-兼容的路由写法"><a href="#mpvue-router-patch-在mpvue-中使用-vue-router-兼容的路由写法" class="headerlink" title="mpvue-router-patch   在mpvue 中使用 vue-router 兼容的路由写法"></a>mpvue-router-patch   在mpvue 中使用 vue-router 兼容的路由写法</h2><p>当知道mpvue不支持vue-router的时候我还是非常难受，还好mpvue团队后面发布了这个插件，非常简单好用</p>
+<p>github地址：<a href="https://github.com/F-loat/mpvue-router-patch">https://github.com/F-loat/mpvue-router-patch</a></p>
+<p>接下来的3个插件我没有用过但是和mpvue-router-patch一样是mpvue团队发布的，感觉应该也不差，也推荐给大家如果需要可以花时间了解一下</p>
+<h2 id="mpvue-echarts-适用于-Mpvue-的-ECharts-组件"><a href="#mpvue-echarts-适用于-Mpvue-的-ECharts-组件" class="headerlink" title="mpvue-echarts    适用于 Mpvue 的 ECharts 组件"></a>mpvue-echarts    适用于 Mpvue 的 ECharts 组件</h2><p>github地址：<a href="https://github.com/F-loat/mpvue-echarts">https://github.com/F-loat/mpvue-echarts</a></p>
+<h2 id="微信小程序富文本解析组件-适用于-Mpvue-的微信小程序富文本解析自定义组件"><a href="#微信小程序富文本解析组件-适用于-Mpvue-的微信小程序富文本解析自定义组件" class="headerlink" title="微信小程序富文本解析组件  适用于 Mpvue 的微信小程序富文本解析自定义组件"></a>微信小程序富文本解析组件  适用于 Mpvue 的微信小程序富文本解析自定义组件</h2><p>github地址：<a href="https://github.com/F-loat/mpvue-wxParse">https://github.com/F-loat/mpvue-wxParse</a></p>
+<h2 id="mpvue-entry自动生成各页面的入口文件-集中式页面配置，自动生成各页面的入口文件，优化目录结构，支持新增页面热更新"><a href="#mpvue-entry自动生成各页面的入口文件-集中式页面配置，自动生成各页面的入口文件，优化目录结构，支持新增页面热更新" class="headerlink" title="mpvue-entry自动生成各页面的入口文件  集中式页面配置，自动生成各页面的入口文件，优化目录结构，支持新增页面热更新"></a>mpvue-entry自动生成各页面的入口文件  集中式页面配置，自动生成各页面的入口文件，优化目录结构，支持新增页面热更新</h2><p>github地址：<a href="https://github.com/F-loat/mpvue-entry">https://github.com/F-loat/mpvue-entry</a></p>
+<h2 id="关于ajax请求封装，拿走不谢"><a href="#关于ajax请求封装，拿走不谢" class="headerlink" title="关于ajax请求封装，拿走不谢"></a>关于ajax请求封装，拿走不谢</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> urlPath = <span class="string">&#x27;&#x27;</span> <span class="comment">// 项目的域名</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">post</span>(<span class="params">url, data</span>) </span>&#123;</span><br><span class="line">  wx.showLoading(&#123;</span><br><span class="line">    <span class="attr">title</span>: <span class="string">&#x27;努力加载中&#x27;</span>,</span><br><span class="line">  &#125;)</span><br><span class="line"><span class="comment">// 由于微信不会保存后端用于登陆验证的cookie，这里需要自己从登陆返回的数据里取到cookie，然后本地缓存，请求时在header里带上cookie</span></span><br><span class="line">  <span class="keyword">let</span> header = &#123;&#125; </span><br><span class="line">  url === <span class="string">&#x27;user/loginworker&#x27;</span> <span class="comment">// 通过传进来的url判断是否是登陆页</span></span><br><span class="line">    ? header = &#123;&#125; </span><br><span class="line">    : header = &#123;</span><br><span class="line">      <span class="string">&#x27;content-type&#x27;</span>: <span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;cookie&#x27;</span>: wx.getStorageSync(<span class="string">&quot;sessionid&quot;</span>)</span><br><span class="line">    &#125; </span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    wx.request(&#123;</span><br><span class="line">      <span class="attr">url</span>: urlPath + url,</span><br><span class="line">      <span class="attr">data</span>: data,</span><br><span class="line">      <span class="attr">method</span>: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">      <span class="attr">header</span>: header, <span class="function"><span class="title">success</span>(<span class="params">res</span>)</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(res)</span><br><span class="line">        <span class="keyword">if</span> (res.statusCode === <span class="number">200</span>) &#123;</span><br><span class="line">          <span class="keyword">if</span> (res.data === <span class="number">9999</span>) &#123; <span class="comment">// 后端返回9999表示cookie失效</span></span><br><span class="line">            wx.showModal(&#123;</span><br><span class="line">              <span class="attr">content</span>: <span class="string">&#x27;登陆超时请重新登陆&#x27;</span>,</span><br><span class="line">              <span class="attr">showCancel</span>: <span class="literal">false</span>,</span><br><span class="line">              <span class="attr">success</span>: <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (res.confirm) &#123;</span><br><span class="line">                  wx.navigateTo(&#123;</span><br><span class="line">                    <span class="attr">url</span>: <span class="string">&#x27;../../pages/login/main&#x27;</span>,</span><br><span class="line">                  &#125;)</span><br><span class="line">                &#125;</span><br><span class="line">              &#125;</span><br><span class="line">            &#125;)</span><br><span class="line">          &#125; <span class="keyword">else</span> <span class="keyword">if</span> (res.data.code &amp;&amp; res.data.code !== <span class="number">200</span>) &#123; <span class="comment">// 若返回coode码且不等于200表示传入参数有问题</span></span><br><span class="line">            res.message = res.data.message, reject(res)</span><br><span class="line">          &#125; <span class="keyword">else</span> resolve(res)</span><br><span class="line">            <span class="comment">// 存储cookie</span></span><br><span class="line">          res.data.message === <span class="string">&#x27;登录成功。&#x27;</span> ? wx.setStorageSync(<span class="string">&quot;sessionid&quot;</span>, res.header[<span class="string">&quot;Set-Cookie&quot;</span>]) : <span class="string">&quot;&quot;</span></span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">          res.message = <span class="string">&#x27;服务器错误请求失败&#x27;</span></span><br><span class="line">          reject(res)</span><br><span class="line">        &#125;</span><br><span class="line">        wx.hideLoading()</span><br><span class="line">      &#125;, <span class="function"><span class="title">fail</span>(<span class="params">err</span>)</span> &#123;</span><br><span class="line">        err.message = <span class="string">&#x27;请求超时请稍后再试&#x27;</span></span><br><span class="line">        reject (err)</span><br><span class="line">        wx.hideLoading()</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="生命周期钩子"><a href="#生命周期钩子" class="headerlink" title="生命周期钩子"></a>生命周期钩子</h2><p>created是vue的生命周期在mpvue里所有页面的created函数会在项目加载的时候被一起调用，可用性不大，可以使用onShow()代替，但是onShow()只有在隐藏又显示后才会显示,也就是第一次加载不会执行</p>
+<p> created() {<br>    console.log(‘created’)<br>  },<br>  mounted() {<br>    console.log(‘mounted’)<br>  },<br>  onLoad() {<br>    console.log(‘onLoad’)<br>  },<br>  onShow() {<br>    console.log(‘onShow’)<br>  },<br>  onUnload() {<br>    console.log(‘onUnload’)<br>  },<br>  onHide() {<br>    console.log(‘onHide’)<br>  },</p>
+<h2 id="页面跳转后并没有销毁页面实例"><a href="#页面跳转后并没有销毁页面实例" class="headerlink" title="页面跳转后并没有销毁页面实例"></a>页面跳转后并没有销毁页面实例</h2><p>比如一个搜索页面，页面第一次进来所有的数据都是空的，但你搜索一次之后，input框就有值了，这个时候再跳转到其他页面或者返回之后再进入这个页面那个值依然存在，页面跳转后并没有销毁页面实例，而是将其推入页面栈中，所以会保存之前的旧的数据，目前为止看到的比较统一的解决办法就是：在onShow()或者onLoad()手动清空</p>
+<h2 id="关于微信直播"><a href="#关于微信直播" class="headerlink" title="关于微信直播"></a>关于微信直播</h2><p>这个小程序需要引入监控相当于是直播功能，这个组件也是有点坑</p>
+<p>Live-player组件本身只能播放，如果想要在组件上加功能，像什么全屏静音播放暂停之类的功能需要使用wx.createLivePlayerContext()方法，而且由于live-player层级是最高的，如果你需要在组件上加功能比如点一下全屏再点下退出全屏或者加css样式，你必须写在 cover-view cover-image上面，直接加在live-player上是没用的</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;live-player id=<span class="string">&#x27;liveInfo&#x27;</span> src=<span class="string">&quot;&quot;</span> mode=<span class="string">&quot;live&quot;</span> autoplay=<span class="string">&#x27;false&#x27;</span> @bindstatechange=<span class="string">&quot;statechange&quot;</span> binderror=<span class="string">&quot;error&quot;</span>&gt;</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">cover-image</span> @<span class="attr">click</span>=<span class="string">&quot;requestFullScreen&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">cover-image</span>&gt;</span></span></span><br><span class="line">&lt;/live-player&gt;</span><br></pre></td></tr></table></figure>
+
+<p>你以为这样就完了嘛，不，如果你有一个直播列表，比如一个屏幕同时有一个以上的live-player组件那么你全屏的时候就会发现其余的组件因为层级的原因全部覆盖在你全屏的那个组件之上</p>
+<p>解决办法：全屏是v-if隐藏其余的组件，退出时再显示</p>
+<p>欢迎留言交流  (´▽`ʃ♡ƪ)</p>
+]]></content>
+      <categories>
+        <category>WEB</category>
+      </categories>
+      <tags>
+        <tag>mpvue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>notes_mysql</title>
     <url>/2018/10/10/mysql/</url>
     <content><![CDATA[<p>sql语法特点：</p>
@@ -1467,46 +1507,6 @@ console.log(jso4);
       </tags>
   </entry>
   <entry>
-    <title>mpvue小程序以及微信直播踩坑总结</title>
-    <url>/2018/08/07/mpvue/</url>
-    <content><![CDATA[<p>前段时间刚写完一个mpvue的小程序，现在得闲必须赶紧记录和总结一下，不然很多东西又要忘了</p>
-<p>我是比较熟悉vue的语法，但是也犹豫过是用原生还是用mpvue，因为那时候原生小程序已经相当成熟而mpvue才刚出来（踩坑和填坑的前人还很少）</p>
-<p>所以我学习了几天原生的框架和语法，果断选择了mpvue，真的是没有对比就没有伤害，对比原生体验不要太好</p>
-<p>mpvue是一个使用 Vue.js 开发小程序的前端框架，他是将我们写的vue文件重新编译成wxml等文件，最后的底层实现还是用的小程序语法，所以原生小程序语法也是比较重要的，而且像很多下拉刷新，到底部请求下一页什么的等等很多地方也是要用到小程序api的，所以建议大家在入坑之前还是了解一些小程序语法比较好</p>
-<p>附上<a href="http://mpvue.com/#_1">官方文档</a></p>
-<h1 id="项目配置"><a href="#项目配置" class="headerlink" title="项目配置"></a>项目配置</h1><p>使用官方的5分钟上手，生成一个基本框架，后来开发也没有手动修改过他的配置</p>
-<p>用到了4个插件</p>
-<h2 id="mpvue-weui-ui库，相当方便轻量好使"><a href="#mpvue-weui-ui库，相当方便轻量好使" class="headerlink" title="mpvue-weui    ui库，相当方便轻量好使"></a>mpvue-weui    ui库，相当方便轻量好使</h2><p>官网地址：<a href="http://kuangpf.com/mpvue-weui/#/">http://kuangpf.com/mpvue-weui/#/</a></p>
-<h2 id="mpvue-toast-一个基于mpvue的简单弹窗组件"><a href="#mpvue-toast-一个基于mpvue的简单弹窗组件" class="headerlink" title="mpvue-toast  一个基于mpvue的简单弹窗组件"></a>mpvue-toast  一个基于mpvue的简单弹窗组件</h2><p>因为mpvue目前还不支持全局的组件，所以没有办法像vue组件引入一次就能在所有页面使用，但是mpvue团队已经在考虑新增全局组件功能了</p>
-<p>github地址：<a href="https://github.com/linrui1994/mpvue-toast">https://github.com/linrui1994/mpvue-toast</a> </p>
-<h2 id="sass-不多介绍"><a href="#sass-不多介绍" class="headerlink" title="sass  不多介绍"></a>sass  不多介绍</h2><p>全局安装：npm install sass-loader node-sass –save-dev </p>
-<p>在style节点加上lang=”scss”，这样就可以愉快地使用sass进行开发了</p>
-<h2 id="mpvue-router-patch-在mpvue-中使用-vue-router-兼容的路由写法"><a href="#mpvue-router-patch-在mpvue-中使用-vue-router-兼容的路由写法" class="headerlink" title="mpvue-router-patch   在mpvue 中使用 vue-router 兼容的路由写法"></a>mpvue-router-patch   在mpvue 中使用 vue-router 兼容的路由写法</h2><p>当知道mpvue不支持vue-router的时候我还是非常难受，还好mpvue团队后面发布了这个插件，非常简单好用</p>
-<p>github地址：<a href="https://github.com/F-loat/mpvue-router-patch">https://github.com/F-loat/mpvue-router-patch</a></p>
-<p>接下来的3个插件我没有用过但是和mpvue-router-patch一样是mpvue团队发布的，感觉应该也不差，也推荐给大家如果需要可以花时间了解一下</p>
-<h2 id="mpvue-echarts-适用于-Mpvue-的-ECharts-组件"><a href="#mpvue-echarts-适用于-Mpvue-的-ECharts-组件" class="headerlink" title="mpvue-echarts    适用于 Mpvue 的 ECharts 组件"></a>mpvue-echarts    适用于 Mpvue 的 ECharts 组件</h2><p>github地址：<a href="https://github.com/F-loat/mpvue-echarts">https://github.com/F-loat/mpvue-echarts</a></p>
-<h2 id="微信小程序富文本解析组件-适用于-Mpvue-的微信小程序富文本解析自定义组件"><a href="#微信小程序富文本解析组件-适用于-Mpvue-的微信小程序富文本解析自定义组件" class="headerlink" title="微信小程序富文本解析组件  适用于 Mpvue 的微信小程序富文本解析自定义组件"></a>微信小程序富文本解析组件  适用于 Mpvue 的微信小程序富文本解析自定义组件</h2><p>github地址：<a href="https://github.com/F-loat/mpvue-wxParse">https://github.com/F-loat/mpvue-wxParse</a></p>
-<h2 id="mpvue-entry自动生成各页面的入口文件-集中式页面配置，自动生成各页面的入口文件，优化目录结构，支持新增页面热更新"><a href="#mpvue-entry自动生成各页面的入口文件-集中式页面配置，自动生成各页面的入口文件，优化目录结构，支持新增页面热更新" class="headerlink" title="mpvue-entry自动生成各页面的入口文件  集中式页面配置，自动生成各页面的入口文件，优化目录结构，支持新增页面热更新"></a>mpvue-entry自动生成各页面的入口文件  集中式页面配置，自动生成各页面的入口文件，优化目录结构，支持新增页面热更新</h2><p>github地址：<a href="https://github.com/F-loat/mpvue-entry">https://github.com/F-loat/mpvue-entry</a></p>
-<h2 id="关于ajax请求封装，拿走不谢"><a href="#关于ajax请求封装，拿走不谢" class="headerlink" title="关于ajax请求封装，拿走不谢"></a>关于ajax请求封装，拿走不谢</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> urlPath = <span class="string">&#x27;&#x27;</span> <span class="comment">// 项目的域名</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">post</span>(<span class="params">url, data</span>) </span>&#123;</span><br><span class="line">  wx.showLoading(&#123;</span><br><span class="line">    <span class="attr">title</span>: <span class="string">&#x27;努力加载中&#x27;</span>,</span><br><span class="line">  &#125;)</span><br><span class="line"><span class="comment">// 由于微信不会保存后端用于登陆验证的cookie，这里需要自己从登陆返回的数据里取到cookie，然后本地缓存，请求时在header里带上cookie</span></span><br><span class="line">  <span class="keyword">let</span> header = &#123;&#125; </span><br><span class="line">  url === <span class="string">&#x27;user/loginworker&#x27;</span> <span class="comment">// 通过传进来的url判断是否是登陆页</span></span><br><span class="line">    ? header = &#123;&#125; </span><br><span class="line">    : header = &#123;</span><br><span class="line">      <span class="string">&#x27;content-type&#x27;</span>: <span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;cookie&#x27;</span>: wx.getStorageSync(<span class="string">&quot;sessionid&quot;</span>)</span><br><span class="line">    &#125; </span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    wx.request(&#123;</span><br><span class="line">      <span class="attr">url</span>: urlPath + url,</span><br><span class="line">      <span class="attr">data</span>: data,</span><br><span class="line">      <span class="attr">method</span>: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">      <span class="attr">header</span>: header, <span class="function"><span class="title">success</span>(<span class="params">res</span>)</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(res)</span><br><span class="line">        <span class="keyword">if</span> (res.statusCode === <span class="number">200</span>) &#123;</span><br><span class="line">          <span class="keyword">if</span> (res.data === <span class="number">9999</span>) &#123; <span class="comment">// 后端返回9999表示cookie失效</span></span><br><span class="line">            wx.showModal(&#123;</span><br><span class="line">              <span class="attr">content</span>: <span class="string">&#x27;登陆超时请重新登陆&#x27;</span>,</span><br><span class="line">              <span class="attr">showCancel</span>: <span class="literal">false</span>,</span><br><span class="line">              <span class="attr">success</span>: <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (res.confirm) &#123;</span><br><span class="line">                  wx.navigateTo(&#123;</span><br><span class="line">                    <span class="attr">url</span>: <span class="string">&#x27;../../pages/login/main&#x27;</span>,</span><br><span class="line">                  &#125;)</span><br><span class="line">                &#125;</span><br><span class="line">              &#125;</span><br><span class="line">            &#125;)</span><br><span class="line">          &#125; <span class="keyword">else</span> <span class="keyword">if</span> (res.data.code &amp;&amp; res.data.code !== <span class="number">200</span>) &#123; <span class="comment">// 若返回coode码且不等于200表示传入参数有问题</span></span><br><span class="line">            res.message = res.data.message, reject(res)</span><br><span class="line">          &#125; <span class="keyword">else</span> resolve(res)</span><br><span class="line">            <span class="comment">// 存储cookie</span></span><br><span class="line">          res.data.message === <span class="string">&#x27;登录成功。&#x27;</span> ? wx.setStorageSync(<span class="string">&quot;sessionid&quot;</span>, res.header[<span class="string">&quot;Set-Cookie&quot;</span>]) : <span class="string">&quot;&quot;</span></span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">          res.message = <span class="string">&#x27;服务器错误请求失败&#x27;</span></span><br><span class="line">          reject(res)</span><br><span class="line">        &#125;</span><br><span class="line">        wx.hideLoading()</span><br><span class="line">      &#125;, <span class="function"><span class="title">fail</span>(<span class="params">err</span>)</span> &#123;</span><br><span class="line">        err.message = <span class="string">&#x27;请求超时请稍后再试&#x27;</span></span><br><span class="line">        reject (err)</span><br><span class="line">        wx.hideLoading()</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="生命周期钩子"><a href="#生命周期钩子" class="headerlink" title="生命周期钩子"></a>生命周期钩子</h2><p>created是vue的生命周期在mpvue里所有页面的created函数会在项目加载的时候被一起调用，可用性不大，可以使用onShow()代替，但是onShow()只有在隐藏又显示后才会显示,也就是第一次加载不会执行</p>
-<p> created() {<br>    console.log(‘created’)<br>  },<br>  mounted() {<br>    console.log(‘mounted’)<br>  },<br>  onLoad() {<br>    console.log(‘onLoad’)<br>  },<br>  onShow() {<br>    console.log(‘onShow’)<br>  },<br>  onUnload() {<br>    console.log(‘onUnload’)<br>  },<br>  onHide() {<br>    console.log(‘onHide’)<br>  },</p>
-<h2 id="页面跳转后并没有销毁页面实例"><a href="#页面跳转后并没有销毁页面实例" class="headerlink" title="页面跳转后并没有销毁页面实例"></a>页面跳转后并没有销毁页面实例</h2><p>比如一个搜索页面，页面第一次进来所有的数据都是空的，但你搜索一次之后，input框就有值了，这个时候再跳转到其他页面或者返回之后再进入这个页面那个值依然存在，页面跳转后并没有销毁页面实例，而是将其推入页面栈中，所以会保存之前的旧的数据，目前为止看到的比较统一的解决办法就是：在onShow()或者onLoad()手动清空</p>
-<h2 id="关于微信直播"><a href="#关于微信直播" class="headerlink" title="关于微信直播"></a>关于微信直播</h2><p>这个小程序需要引入监控相当于是直播功能，这个组件也是有点坑</p>
-<p>Live-player组件本身只能播放，如果想要在组件上加功能，像什么全屏静音播放暂停之类的功能需要使用wx.createLivePlayerContext()方法，而且由于live-player层级是最高的，如果你需要在组件上加功能比如点一下全屏再点下退出全屏或者加css样式，你必须写在 cover-view cover-image上面，直接加在live-player上是没用的</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;live-player id=<span class="string">&#x27;liveInfo&#x27;</span> src=<span class="string">&quot;&quot;</span> mode=<span class="string">&quot;live&quot;</span> autoplay=<span class="string">&#x27;false&#x27;</span> @bindstatechange=<span class="string">&quot;statechange&quot;</span> binderror=<span class="string">&quot;error&quot;</span>&gt;</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">cover-image</span> @<span class="attr">click</span>=<span class="string">&quot;requestFullScreen&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">cover-image</span>&gt;</span></span></span><br><span class="line">&lt;/live-player&gt;</span><br></pre></td></tr></table></figure>
-
-<p>你以为这样就完了嘛，不，如果你有一个直播列表，比如一个屏幕同时有一个以上的live-player组件那么你全屏的时候就会发现其余的组件因为层级的原因全部覆盖在你全屏的那个组件之上</p>
-<p>解决办法：全屏是v-if隐藏其余的组件，退出时再显示</p>
-<p>欢迎留言交流  (´▽`ʃ♡ƪ)</p>
-]]></content>
-      <categories>
-        <category>WEB</category>
-      </categories>
-      <tags>
-        <tag>mpvue</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>nodejs之接收formdata表单</title>
     <url>/2018/10/09/node_fromdata/</url>
     <content><![CDATA[<p>最近在学习express，写一个vue+express+mysql的小demo，需要上传一张封面图和一些其他的表单字段….</p>
@@ -1552,6 +1552,102 @@ console.log(jso4);
       <tags>
         <tag>nodejs</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>notes_graphic</title>
+    <url>/2021/11/17/node_graphic/</url>
+    <content><![CDATA[<h1 id="three-js"><a href="#three-js" class="headerlink" title="three.js"></a>three.js</h1><p><strong>PBR</strong><br><strong>anti-aliasing</strong> 反锯齿<br><strong>multi-sample anti-aliasing</strong> 多重采样, this is a build-in WebGL method, depending on GPU</p>
+<h2 id="render"><a href="#render" class="headerlink" title="render"></a>render</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> renderer = <span class="keyword">new</span> WebGLRenderer(&#123;</span><br><span class="line">   <span class="attr">antialias</span>: <span class="literal">true</span>, <span class="comment">// turn on anti-aliasing, to blur the edges of square pixels.</span></span><br><span class="line"> &#125;);</span><br><span class="line"> renderer.physicallyCorrectLights = <span class="literal">true</span>; <span class="comment">// </span></span><br></pre></td></tr></table></figure>
+
+<h2 id="camera"><a href="#camera" class="headerlink" title="camera"></a>camera</h2><blockquote>
+<p>two types of camera</p>
+</blockquote>
+<ul>
+<li><strong>perspective projection 透视投影</strong>,  the area in between the <code>Near Clipping Plane</code> and <code>the Far Clipping Plane</code> is the <strong>camera’s viewing frustum</strong>.<ul>
+<li>field of view: how wide the camera’s view is, in degrees.</li>
+<li>aspect ratio</li>
+<li>near: defines the small end of the frustum. anything closer to the camera than this will be invisible.</li>
+<li>far: defines the large end of the frustum. anything further away from the camera than this will be invisible.</li>
+</ul>
+</li>
+<li><strong>orthographic projection 正投影</strong></li>
+</ul>
+<h2 id="light"><a href="#light" class="headerlink" title="light"></a>light</h2><p><strong>Direct lighting</strong>: light rays that come directly from the bulb and hit an object.<br><strong>Indirect lighting</strong>: light rays that have bounced off the walls and other objects in the room before hitting an object, changing color, and losing intensity with each bounce.</p>
+<blockquote>
+<p>four types of light</p>
+</blockquote>
+<ul>
+<li>DirectionalLight =&gt; Sunlight</li>
+<li>PointLight =&gt; Light Bulbs</li>
+<li>RectAreaLight =&gt; Strip lighting or bright windows</li>
+<li>SpotLight =&gt; Spotlights</li>
+</ul>
+<h2 id="transformation"><a href="#transformation" class="headerlink" title="transformation"></a>transformation</h2><h3 id="translating"><a href="#translating" class="headerlink" title="translating"></a>translating</h3><ul>
+<li>created from <code>Vector3</code> class, stored in the <code>.position</code> property</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">mesh.position.x = <span class="number">1</span>;</span><br><span class="line"><span class="comment">// or</span></span><br><span class="line">mesh.position.set(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="scaling"><a href="#scaling" class="headerlink" title="scaling"></a>scaling</h3><ul>
+<li><p>created from <code>Vector3</code> class, stored in the <code>.scale</code> property</p>
+</li>
+<li><p>Use a <code>negative value</code> will mirror the object</p>
+</li>
+<li><p>Cameras and Lights Cannot be Scaled</p>
+</li>
+<li><p><code>Uniform Scaling</code>, use the same value for all three axes</p>
+</li>
+<li><p><code>Non-Uniform Scaling</code>, to scale individual axes</p>
+<ul>
+<li><code>x</code>, the object will become wider or narrower</li>
+<li><code>y</code>, the object will become taller or shorter</li>
+<li><code>z</code>,  the depth of the object will be affected</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">mesh.scale.x = <span class="number">1</span>;</span><br><span class="line"><span class="comment">// or</span></span><br><span class="line">mesh.scale.set(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Rotation"><a href="#Rotation" class="headerlink" title="Rotation"></a>Rotation</h3><ul>
+<li><p>Two Rotation Class</p>
+<ul>
+<li>Using <code>Euler angles</code>, represented using the <code>Euler class</code> and stored in the <code>.rotation</code> property.</li>
+<li>Using <code>quaternions</code>, represented using the <code>Quaternion class</code> and stored in the <code>.quaternion</code> property.</li>
+<li>the both can be used interchangeably. but in particular, the former has some short comings(like<code>gimbal lock万向锁</code>), while the later is harder to use</li>
+</ul>
+</li>
+<li><p>Angles in three.js are specified using <code>radians</code>, not degrees, except <code>PerspectiveCamera.fov</code></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; MathUtils &#125; <span class="keyword">from</span> <span class="string">&#x27;three&#x27;</span>;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * convert from degrees to radians.</span></span><br><span class="line"><span class="comment"> * π = Math.PI</span></span><br><span class="line"><span class="comment"> * 360∘ = 2π</span></span><br><span class="line"><span class="comment"> * 90∘ = π/2</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">const</span> rads = MathUtils.degToRad(<span class="number">90</span>); <span class="comment">// 1.57079... = π/2</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="transformation-matrix"><a href="#transformation-matrix" class="headerlink" title="transformation matrix"></a>transformation matrix</h3><p>stored in the Object3D.matrix property</p>
+<ul>
+<li><p><code>local matrix and word matrix</code>, the former is relative to parent and stored in the <code>.matrix</code> property, while the later is relative to world space and stored in the <code>.matrixWorld</code> property</p>
+</li>
+<li><p><code>identity matrix</code>:  all ones on the main diagonal and zeros everywhere else</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span>  <span class="number">0</span>   <span class="number">0</span>   <span class="number">0</span></span><br><span class="line"><span class="number">0</span>   <span class="number">1</span>  <span class="number">0</span>   <span class="number">0</span></span><br><span class="line"><span class="number">0</span>   <span class="number">0</span>   <span class="number">1</span>  <span class="number">0</span></span><br><span class="line"><span class="number">0</span>   <span class="number">0</span>   <span class="number">0</span>  <span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>matrix of translating and scaling</code></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">mesh.position.x = Tx;</span><br><span class="line">mesh.position.y = Ty;</span><br><span class="line">mesh.position.z = Tz;</span><br><span class="line"></span><br><span class="line">mesh.scale.x = Sx;</span><br><span class="line">mesh.scale.y = Sy;</span><br><span class="line">mesh.scale.z = Sz;</span><br><span class="line"></span><br><span class="line">Sx  <span class="number">0</span>   <span class="number">0</span>   Tx</span><br><span class="line"><span class="number">0</span>   Sy  <span class="number">0</span>   Ty</span><br><span class="line"><span class="number">0</span>   <span class="number">0</span>   Sz  Tz</span><br><span class="line"><span class="number">0</span>   <span class="number">0</span>   <span class="number">0</span>   <span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>matrix of rotation</code><br>cos(degree) 余弦<br>sin(degree) 正弦</p>
+<ul>
+<li><p>x-axis</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span>       <span class="number">0</span>        <span class="number">0</span>      <span class="number">0</span></span><br><span class="line"><span class="number">0</span>      cos      sin     <span class="number">0</span></span><br><span class="line"><span class="number">0</span>     -sin      cos     <span class="number">0</span></span><br><span class="line"><span class="number">0</span>       <span class="number">0</span>        <span class="number">0</span>      <span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>y-axis</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">cos    <span class="number">0</span>       sin      <span class="number">0</span></span><br><span class="line"><span class="number">0</span>      <span class="number">1</span>        <span class="number">0</span>       <span class="number">0</span></span><br><span class="line">-sin   <span class="number">0</span>       cos      <span class="number">0</span></span><br><span class="line"><span class="number">0</span>      <span class="number">0</span>        <span class="number">0</span>       <span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>z-axis</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">cos  -sin   <span class="number">0</span>      <span class="number">0</span></span><br><span class="line">sin   cos   <span class="number">0</span>      <span class="number">0</span></span><br><span class="line"><span class="number">0</span>     <span class="number">0</span>     <span class="number">1</span>      <span class="number">0</span></span><br><span class="line"><span class="number">0</span>     <span class="number">0</span>     <span class="number">0</span>      <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Sine-Wave"><a href="#Sine-Wave" class="headerlink" title="Sine Wave"></a>Sine Wave</h2>]]></content>
+      <categories>
+        <category>NOTES</category>
+      </categories>
   </entry>
   <entry>
     <title>notes_git</title>
@@ -1699,102 +1795,6 @@ console.log(jso4);
       <tags>
         <tag>Git</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>notes_graphic</title>
-    <url>/2021/11/17/node_graphic/</url>
-    <content><![CDATA[<h1 id="three-js"><a href="#three-js" class="headerlink" title="three.js"></a>three.js</h1><p><strong>PBR</strong><br><strong>anti-aliasing</strong> 反锯齿<br><strong>multi-sample anti-aliasing</strong> 多重采样, this is a build-in WebGL method, depending on GPU</p>
-<h2 id="render"><a href="#render" class="headerlink" title="render"></a>render</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> renderer = <span class="keyword">new</span> WebGLRenderer(&#123;</span><br><span class="line">   <span class="attr">antialias</span>: <span class="literal">true</span>, <span class="comment">// turn on anti-aliasing, to blur the edges of square pixels.</span></span><br><span class="line"> &#125;);</span><br><span class="line"> renderer.physicallyCorrectLights = <span class="literal">true</span>; <span class="comment">// </span></span><br></pre></td></tr></table></figure>
-
-<h2 id="camera"><a href="#camera" class="headerlink" title="camera"></a>camera</h2><blockquote>
-<p>two types of camera</p>
-</blockquote>
-<ul>
-<li><strong>perspective projection 透视投影</strong>,  the area in between the <code>Near Clipping Plane</code> and <code>the Far Clipping Plane</code> is the <strong>camera’s viewing frustum</strong>.<ul>
-<li>field of view: how wide the camera’s view is, in degrees.</li>
-<li>aspect ratio</li>
-<li>near: defines the small end of the frustum. anything closer to the camera than this will be invisible.</li>
-<li>far: defines the large end of the frustum. anything further away from the camera than this will be invisible.</li>
-</ul>
-</li>
-<li><strong>orthographic projection 正投影</strong></li>
-</ul>
-<h2 id="light"><a href="#light" class="headerlink" title="light"></a>light</h2><p><strong>Direct lighting</strong>: light rays that come directly from the bulb and hit an object.<br><strong>Indirect lighting</strong>: light rays that have bounced off the walls and other objects in the room before hitting an object, changing color, and losing intensity with each bounce.</p>
-<blockquote>
-<p>four types of light</p>
-</blockquote>
-<ul>
-<li>DirectionalLight =&gt; Sunlight</li>
-<li>PointLight =&gt; Light Bulbs</li>
-<li>RectAreaLight =&gt; Strip lighting or bright windows</li>
-<li>SpotLight =&gt; Spotlights</li>
-</ul>
-<h2 id="transformation"><a href="#transformation" class="headerlink" title="transformation"></a>transformation</h2><h3 id="translating"><a href="#translating" class="headerlink" title="translating"></a>translating</h3><ul>
-<li>created from <code>Vector3</code> class, stored in the <code>.position</code> property</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">mesh.position.x = <span class="number">1</span>;</span><br><span class="line"><span class="comment">// or</span></span><br><span class="line">mesh.position.set(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
-
-<h3 id="scaling"><a href="#scaling" class="headerlink" title="scaling"></a>scaling</h3><ul>
-<li><p>created from <code>Vector3</code> class, stored in the <code>.scale</code> property</p>
-</li>
-<li><p>Use a <code>negative value</code> will mirror the object</p>
-</li>
-<li><p>Cameras and Lights Cannot be Scaled</p>
-</li>
-<li><p><code>Uniform Scaling</code>, use the same value for all three axes</p>
-</li>
-<li><p><code>Non-Uniform Scaling</code>, to scale individual axes</p>
-<ul>
-<li><code>x</code>, the object will become wider or narrower</li>
-<li><code>y</code>, the object will become taller or shorter</li>
-<li><code>z</code>,  the depth of the object will be affected</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">mesh.scale.x = <span class="number">1</span>;</span><br><span class="line"><span class="comment">// or</span></span><br><span class="line">mesh.scale.set(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
-
-<h3 id="Rotation"><a href="#Rotation" class="headerlink" title="Rotation"></a>Rotation</h3><ul>
-<li><p>Two Rotation Class</p>
-<ul>
-<li>Using <code>Euler angles</code>, represented using the <code>Euler class</code> and stored in the <code>.rotation</code> property.</li>
-<li>Using <code>quaternions</code>, represented using the <code>Quaternion class</code> and stored in the <code>.quaternion</code> property.</li>
-<li>the both can be used interchangeably. but in particular, the former has some short comings(like<code>gimbal lock万向锁</code>), while the later is harder to use</li>
-</ul>
-</li>
-<li><p>Angles in three.js are specified using <code>radians</code>, not degrees, except <code>PerspectiveCamera.fov</code></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; MathUtils &#125; <span class="keyword">from</span> <span class="string">&#x27;three&#x27;</span>;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * convert from degrees to radians.</span></span><br><span class="line"><span class="comment"> * π = Math.PI</span></span><br><span class="line"><span class="comment"> * 360∘ = 2π</span></span><br><span class="line"><span class="comment"> * 90∘ = π/2</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">const</span> rads = MathUtils.degToRad(<span class="number">90</span>); <span class="comment">// 1.57079... = π/2</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h3 id="transformation-matrix"><a href="#transformation-matrix" class="headerlink" title="transformation matrix"></a>transformation matrix</h3><p>stored in the Object3D.matrix property</p>
-<ul>
-<li><p><code>local matrix and word matrix</code>, the former is relative to parent and stored in the <code>.matrix</code> property, while the later is relative to world space and stored in the <code>.matrixWorld</code> property</p>
-</li>
-<li><p><code>identity matrix</code>:  all ones on the main diagonal and zeros everywhere else</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span>  <span class="number">0</span>   <span class="number">0</span>   <span class="number">0</span></span><br><span class="line"><span class="number">0</span>   <span class="number">1</span>  <span class="number">0</span>   <span class="number">0</span></span><br><span class="line"><span class="number">0</span>   <span class="number">0</span>   <span class="number">1</span>  <span class="number">0</span></span><br><span class="line"><span class="number">0</span>   <span class="number">0</span>   <span class="number">0</span>  <span class="number">1</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>matrix of translating and scaling</code></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">mesh.position.x = Tx;</span><br><span class="line">mesh.position.y = Ty;</span><br><span class="line">mesh.position.z = Tz;</span><br><span class="line"></span><br><span class="line">mesh.scale.x = Sx;</span><br><span class="line">mesh.scale.y = Sy;</span><br><span class="line">mesh.scale.z = Sz;</span><br><span class="line"></span><br><span class="line">Sx  <span class="number">0</span>   <span class="number">0</span>   Tx</span><br><span class="line"><span class="number">0</span>   Sy  <span class="number">0</span>   Ty</span><br><span class="line"><span class="number">0</span>   <span class="number">0</span>   Sz  Tz</span><br><span class="line"><span class="number">0</span>   <span class="number">0</span>   <span class="number">0</span>   <span class="number">1</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>matrix of rotation</code><br>cos(degree) 余弦<br>sin(degree) 正弦</p>
-<ul>
-<li><p>x-axis</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span>       <span class="number">0</span>        <span class="number">0</span>      <span class="number">0</span></span><br><span class="line"><span class="number">0</span>      cos      sin     <span class="number">0</span></span><br><span class="line"><span class="number">0</span>     -sin      cos     <span class="number">0</span></span><br><span class="line"><span class="number">0</span>       <span class="number">0</span>        <span class="number">0</span>      <span class="number">1</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>y-axis</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">cos    <span class="number">0</span>       sin      <span class="number">0</span></span><br><span class="line"><span class="number">0</span>      <span class="number">1</span>        <span class="number">0</span>       <span class="number">0</span></span><br><span class="line">-sin   <span class="number">0</span>       cos      <span class="number">0</span></span><br><span class="line"><span class="number">0</span>      <span class="number">0</span>        <span class="number">0</span>       <span class="number">1</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>z-axis</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">cos  -sin   <span class="number">0</span>      <span class="number">0</span></span><br><span class="line">sin   cos   <span class="number">0</span>      <span class="number">0</span></span><br><span class="line"><span class="number">0</span>     <span class="number">0</span>     <span class="number">1</span>      <span class="number">0</span></span><br><span class="line"><span class="number">0</span>     <span class="number">0</span>     <span class="number">0</span>      <span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="Sine-Wave"><a href="#Sine-Wave" class="headerlink" title="Sine Wave"></a>Sine Wave</h2>]]></content>
-      <categories>
-        <category>NOTES</category>
-      </categories>
   </entry>
   <entry>
     <title>notes_Linux</title>
@@ -1983,61 +1983,6 @@ console.log(jso4);
       </tags>
   </entry>
   <entry>
-    <title>python爬虫之selenium自动化测试让你爬虫更像用户</title>
-    <url>/2018/08/22/python_selenium/</url>
-    <content><![CDATA[<p>全程序自动化操作<br><img src="/2018/08/22/python_selenium/selenium.gif" alt="demo效果"></p>
-<p>先科普一下selenium，这是一个用于Web应用程序测试的工具，支持多种浏览器多种语言</p>
-<p>框架底层使用JavaScript模拟真实用户对浏览器进行操作，Selenium测试直接运行在浏览器中，代码执行时，可以自动打开浏览器/表单输入/按钮点击，就像真实用户在操作的一样</p>
-<p>真真是反爬虫的一大神器啊</p>
-<p>先附上文档了解一些基础知识：<a href="https://selenium-python.readthedocs.io/index.html">官方文档</a><a href="https://selenium-python-zh.readthedocs.io/en/latest/installation.html">中文文档</a></p>
-<h1 id="关于安装"><a href="#关于安装" class="headerlink" title="关于安装"></a>关于安装</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cmd命令：pip3 install selenium</span><br></pre></td></tr></table></figure>
-
-<p>下载谷歌驱动安装：<a href="https://sites.google.com/a/chromium.org/chromedriver/downloads">https://sites.google.com/a/chromium.org/chromedriver/downloads</a> </p>
-<p>放在谷歌文件夹C:\Program Files (x86)\Google\Chrome\Application下再把这路径加入环境变量</p>
-<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><p><em>Xpath是非常强大的元素查找方式，它可以定位到页面上的任意元素</em></p>
-<p>我这里只介绍了一些今天这个实例会用到的</p>
-<h2 id="首先先了解一下它的一些语法"><a href="#首先先了解一下它的一些语法" class="headerlink" title="首先先了解一下它的一些语法"></a><em>首先先了解一下它的一些语法</em></h2><p>// ： 相对路径，以这个开头表示从寻找文档的根节点开始查找元素，若出现在xpath路径中则表示寻找父节点下任意符合条件的子节点，不管嵌套了多少层级<br>/：绝对路径，表示寻找父节点下的第一层子元素也就是直接子元素<br>“//标签名[@属性名=’属性值’]”：表示从根目录查找和标签名、属性值相匹配的元素<br>几乎所有的Xpath路径都是以上面3种方法来组合的</p>
-<h2 id="精准定位"><a href="#精准定位" class="headerlink" title="精准定位"></a>精准定位</h2><p>以下面这个百度文库这段html举例</p>
-<p><img src="http://pe5zctnu4.bkt.clouddn.com/selenium.PNG" alt="shili"></p>
-<p>要获取输入框怎么写，写法不只一种哈，这地方你也可以直接使用input的id获取元素（一个页面正常来讲不会有相同的id）</p>
-<p>input = browser.find_element(By.XPATH, “//form[@name=’ftop’]//input[@id=’kw’]”)</p>
-<p>上面这行是用的是find_element是查找单个元素，api在下面可以先看下</p>
-<p>表示从根目录查找第一个匹配路径 name为flop的form标签 ，找到这个元素之后再去他所有子元素里面查找id为kw的input框</p>
-<p>假设这个页面有两个name为ftop的form标签（name一样的form标签讲道理一个页面是不会有两个现在只是假设，有可能你会遇到class名一样的div标签）</p>
-<p>那么获取第二个form标签：”//form[@name=’ftop’][2]//input[@id=’kw’]”, 就在大括号后面加上他的索引，索引是从1开始的</p>
-<h2 id="模糊定位"><a href="#模糊定位" class="headerlink" title="模糊定位"></a>模糊定位</h2><p>contains关键字：input = browser.find_element(By.XPATH, “//input[contains(@id, ‘kw’)]”)<br>表示寻找页面中id属性值包含kw所有input元素</p>
-<p>text关键字：input = browser.find_element(By.XPATH, “//button[contains(text(), ‘搜索’)]”)<br>表示寻找页面中文字中包含有搜索的所有button元素</p>
-<p>starts-with关键字：input = browser.find_element(By.XPATH, “//a[starts-with(@href,’http://‘)]”)<br>表示寻找页面中href属性以http://开头的a标签</p>
-<p>ends-with关键字：input = browser.find_element(By.XPATH, “//a[ends-with(@href,’com’)]”)<br>表示寻找页面中href属性以’com’结尾的a标签<br>关于ends-widh我在使用的时候会报错提示语法不正确而且网上关于ends-with介绍也很少所以我没有找到原因如果大家知道欢迎留言告诉我不胜感激 (´▽`ʃ♡ƪ)</p>
-<p><em>这是一个简单的关于用selenium和xpath来做模糊查询的小实例</em></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">chrome_options = Options()</span><br><span class="line"></span><br><span class="line">chrome_options.add_argument(<span class="string">&quot;--headless&quot;</span>)</span><br><span class="line"></span><br><span class="line">browser = webdriver.Chrome(chrome_options=chrome_options)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开百度网址</span></span><br><span class="line"></span><br><span class="line">browser.get(<span class="string">&quot;https://www.baidu.com/&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取第一个http链接</span></span><br><span class="line"></span><br><span class="line">element_contains = browser.find_element(By.XPATH, <span class="string">&quot;//a[contains(@href, &#x27;http://&#x27;)]&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(element_contains.text)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取第一个包含文字中包含&#x27;地图&#x27;的a标签</span></span><br><span class="line">element_text = browser.find_element(By.XPATH, <span class="string">&quot;//a[contains(text(), &#x27;地图&#x27;)]&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(element_text.text)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取第一个文字以&#x27;贴&#x27;开头的a标签</span></span><br><span class="line">element_starts = browser.find_element(By.XPATH, <span class="string">&quot;//a[starts-with(text(), &#x27;贴&#x27;)]&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(element_starts.text)</span><br><span class="line"></span><br><span class="line">browser.close()</span><br></pre></td></tr></table></figure>
-
-<h2 id="selenium的一些常用api"><a href="#selenium的一些常用api" class="headerlink" title="selenium的一些常用api"></a>selenium的一些常用api</h2><p><em>find_element和find_elements的使用</em></p>
-<p>browser.find_element(By.XPATH, ‘//button[text()=”Some text”]’)  //单个元素获取</p>
-<p>browser.find_elements(By.XPATH, ‘//button’) //多个元素获取</p>
-<p>ID = “id”<br>XPATH = “xpath”<br>LINK_TEXT = “link text”<br>PARTIAL_LINK_TEXT = “partial link text”<br>NAME = “name”<br>TAG_NAME = “tag name”<br>CLASS_NAME = “class name”<br>CSS_SELECTOR = “css selector”</p>
-<p><em>单个元素选取（多个元素选取：就是在element后面加一个s，比如find_elements_by_id）：</em></p>
-<p>find_element_by_id<br>find_element_by_name<br>find_element_by_xpath<br>find_element_by_link_text<br>find_element_by_partial_link_text<br>find_element_by_tag_name<br>find_element_by_class_name<br>find_element_by_css_selector</p>
-<p><em>获取到标签之后的界面交互：</em></p>
-<p>input.send_keys(“输入中”)  <br>input.clear()  清空输入框<br>button.click()  按钮点击</p>
-<p><em>常用的控制浏览器的api：</em></p>
-<p>browser.back() 浏览器后退<br>browser.forward() 浏览器前进<br>browser.get(“<a href="https://www.zhihu.com/explore&quot;">https://www.zhihu.com/explore&quot;</a>) 打开页面<br>browser.execute_script(“alert(‘To Button’)”)  执行js代码<br>print(browser.window_handles) 所有的标签<br>browser.switch_to_window(browser.window_handles[1]) 切换到指定标签页<br>browser.close() 关闭当前标签页</p>
-<h1 id="代码实例"><a href="#代码实例" class="headerlink" title="代码实例"></a>代码实例</h1><h2 id="关于页面模块引入"><a href="#关于页面模块引入" class="headerlink" title="关于页面模块引入"></a>关于页面模块引入</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 引入浏览器驱动</span></span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 这里我们需要引入浏览器内核才可以使用浏览器的无头模式，这里我引入的是chrome</span></span><br><span class="line"><span class="comment"># Gecko：是Firefox浏览器的内核</span></span><br><span class="line"><span class="comment"># Trident：是IE浏览器的内核</span></span><br><span class="line"><span class="comment"># Blink：是webkit的一个分支版本，由google开发</span></span><br><span class="line"><span class="comment"># 关于什么是无头模式：即headless browser，是一种没有界面的浏览器，主要是用作爬虫，用以捕捉Web上的各类数据</span></span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.chrome.options <span class="keyword">import</span> Options  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 主要用于使用两个私有方法find_element和find_elements</span></span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 调用键盘api</span></span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.keys <span class="keyword">import</span> Keys</span><br><span class="line"></span><br><span class="line"><span class="comment"># 用于时间延迟</span></span><br><span class="line"><span class="keyword">import</span> time</span><br></pre></td></tr></table></figure>
-
-<h2 id="功能代码"><a href="#功能代码" class="headerlink" title="功能代码"></a>功能代码</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">chrome_options = Options()</span><br><span class="line"></span><br><span class="line">chrome_options.add_argument(<span class="string">&quot;--headless&quot;</span>)</span><br><span class="line"></span><br><span class="line">browser = webdriver.Chrome()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开页面</span></span><br><span class="line">browser.get(<span class="string">&quot;https://wenku.baidu.com/&quot;</span>) </span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取搜索输入框</span></span><br><span class="line"><span class="built_in">input</span> = browser.find_element(ID, <span class="string">&#x27;kw&#x27;</span>) </span><br><span class="line"></span><br><span class="line"><span class="comment"># 输入内容</span></span><br><span class="line"><span class="built_in">input</span>.send_keys(<span class="string">&quot;IT/计算机&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 模拟回车</span></span><br><span class="line"><span class="built_in">input</span>.send_keys(Keys.ENTER) </span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取&#x27;我知道了&#x27;按钮</span></span><br><span class="line">btn = browser.find_element(By.XPATH, <span class="string">&quot;//div[@class=&#x27;new-filter-box fc5&#x27;]//span[@class=&#x27;btn-know&#x27;]&quot;</span>)</span><br><span class="line"></span><br><span class="line">btn.click()</span><br><span class="line"></span><br><span class="line">time.sleep(<span class="number">1</span>) <span class="comment"># 时间延迟</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 点击列表的第一条数据</span></span><br><span class="line">btn = browser.find_element(By.XPATH, <span class="string">&quot;//div[@class=&#x27;main&#x27;]//dl[1]//a[1]&quot;</span>)</span><br><span class="line"></span><br><span class="line">btn.click()</span><br><span class="line"></span><br><span class="line">time.sleep(<span class="number">4</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将browser页面切换至当前页面</span></span><br><span class="line">browser.switch_to_window(browser.window_handles[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭当前页面</span></span><br><span class="line">browser.close()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换至第一个页面</span></span><br><span class="line">browser.switch_to_window(browser.window_handles[<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line">time.sleep(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 点击列表的第二条数据</span></span><br><span class="line">btn = browser.find_element(By.XPATH, <span class="string">&quot;//div[@class=&#x27;main&#x27;]//dl[2]//a[1]&quot;</span>)</span><br><span class="line"></span><br><span class="line">btn.click()</span><br><span class="line"></span><br><span class="line">time.sleep(<span class="number">4</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 视图切换至第一个页面</span></span><br><span class="line">browser.switch_to_window(browser.window_handles[<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line">time.sleep(<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 去往百度页面</span></span><br><span class="line">browser.get(<span class="string">&quot;https://baidu.com/&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印所有标签</span></span><br><span class="line"><span class="built_in">print</span>(browser.window_handles)</span><br></pre></td></tr></table></figure>
-<p>开启无头模式<br>只需要修改一行代码</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">browser = webdriver.Chrome(chrome_options=chrome_options)</span><br></pre></td></tr></table></figure>
-
-<p>欢迎留言交流  (´▽`ʃ♡ƪ)</p>
-]]></content>
-      <categories>
-        <category>PYTHON</category>
-      </categories>
-      <tags>
-        <tag>网络爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>python爬虫之爬取掘金网首页存入mysql数据库</title>
     <url>/2018/08/07/python_%E7%88%AC%E8%99%AB/</url>
     <content><![CDATA[<p>博主是个前端小白，最近在学习爬虫，写个实战系列也是想记录自己学习的过程，以便后续回顾</p>
@@ -2086,6 +2031,61 @@ console.log(jso4);
 <p><img src="https://img-blog.csdn.net/20180807133445579?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1RvbmdfMTE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="参数"></p>
 <p>这是操作数据库的代码，获取到请求的数据后将数据return处理在传给juejin_sql函数，所以把这段代码放在上面那段代码后面 </p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">juejin_sql</span>(<span class="params">sql_data</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;连接数据库&#x27;</span>)</span><br><span class="line">    db = pymysql.connect(host=<span class="string">&#x27;localhost&#x27;</span>,</span><br><span class="line">                        port=<span class="number">3306</span>, <span class="comment"># 端口号</span></span><br><span class="line">                        user=<span class="string">&#x27;root&#x27;</span>, </span><br><span class="line">                        password=<span class="string">&#x27;123456&#x27;</span>, <span class="comment"># 密码</span></span><br><span class="line">                        database=<span class="string">&#x27;reptiledata&#x27;</span>) <span class="comment"># 数据库</span></span><br><span class="line">    cursor = db.cursor() <span class="comment"># 建立一个游标对象</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="comment">#判断表是否存在，若不存在则新建</span></span><br><span class="line">        cursor.execute(<span class="string">&quot;&quot;&quot;CREATE TABLE IF NOT EXISTS juejin(</span></span><br><span class="line"><span class="string">                    category  TEXT,</span></span><br><span class="line"><span class="string">                    title  TEXT,</span></span><br><span class="line"><span class="string">                    content  TEXT,</span></span><br><span class="line"><span class="string">                    originalUrl  TEXT,</span></span><br><span class="line"><span class="string">                    tags  TEXT,</span></span><br><span class="line"><span class="string">                    username TEXT)&quot;&quot;&quot;</span>)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Table &#x27;juejin&#x27; already exists&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    sql = <span class="string">&quot;&quot;&quot;insert into juejin(category, title, content, originalUrl, tags, username)</span></span><br><span class="line"><span class="string">            values (%s, %s, %s, %s, %s, %s)&quot;&quot;&quot;</span> <span class="comment"># sql语句</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;正在批量添加&#x27;</span>)</span><br><span class="line">    cursor.executemany(sql, sql_data) <span class="comment"># 批量添加</span></span><br><span class="line">    cursor.execute(<span class="string">&#x27;select count(*) from juejin&#x27;</span>)</span><br><span class="line">    results = cursor.fetchall() <span class="comment"># 查询全部总条数</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;数据库目前有%d条数据&#x27;</span> % results[<span class="number">0</span>][<span class="number">0</span>])</span><br><span class="line">    db.commit()  <span class="comment"># 对于数据增删改之后一定要提交操作</span></span><br><span class="line">    cursor.close()  <span class="comment"># 关闭游标</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;操作完成关闭数据库关闭游标&#x27;</span>)</span><br><span class="line">    db.close()  <span class="comment"># 关闭数据库连接</span></span><br><span class="line"></span><br><span class="line">juejin_sql(juejin_req(<span class="number">100</span>))</span><br></pre></td></tr></table></figure>
+<p>欢迎留言交流  (´▽`ʃ♡ƪ)</p>
+]]></content>
+      <categories>
+        <category>PYTHON</category>
+      </categories>
+      <tags>
+        <tag>网络爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python爬虫之selenium自动化测试让你爬虫更像用户</title>
+    <url>/2018/08/22/python_selenium/</url>
+    <content><![CDATA[<p>全程序自动化操作<br><img src="/2018/08/22/python_selenium/selenium.gif" alt="demo效果"></p>
+<p>先科普一下selenium，这是一个用于Web应用程序测试的工具，支持多种浏览器多种语言</p>
+<p>框架底层使用JavaScript模拟真实用户对浏览器进行操作，Selenium测试直接运行在浏览器中，代码执行时，可以自动打开浏览器/表单输入/按钮点击，就像真实用户在操作的一样</p>
+<p>真真是反爬虫的一大神器啊</p>
+<p>先附上文档了解一些基础知识：<a href="https://selenium-python.readthedocs.io/index.html">官方文档</a><a href="https://selenium-python-zh.readthedocs.io/en/latest/installation.html">中文文档</a></p>
+<h1 id="关于安装"><a href="#关于安装" class="headerlink" title="关于安装"></a>关于安装</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cmd命令：pip3 install selenium</span><br></pre></td></tr></table></figure>
+
+<p>下载谷歌驱动安装：<a href="https://sites.google.com/a/chromium.org/chromedriver/downloads">https://sites.google.com/a/chromium.org/chromedriver/downloads</a> </p>
+<p>放在谷歌文件夹C:\Program Files (x86)\Google\Chrome\Application下再把这路径加入环境变量</p>
+<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><p><em>Xpath是非常强大的元素查找方式，它可以定位到页面上的任意元素</em></p>
+<p>我这里只介绍了一些今天这个实例会用到的</p>
+<h2 id="首先先了解一下它的一些语法"><a href="#首先先了解一下它的一些语法" class="headerlink" title="首先先了解一下它的一些语法"></a><em>首先先了解一下它的一些语法</em></h2><p>// ： 相对路径，以这个开头表示从寻找文档的根节点开始查找元素，若出现在xpath路径中则表示寻找父节点下任意符合条件的子节点，不管嵌套了多少层级<br>/：绝对路径，表示寻找父节点下的第一层子元素也就是直接子元素<br>“//标签名[@属性名=’属性值’]”：表示从根目录查找和标签名、属性值相匹配的元素<br>几乎所有的Xpath路径都是以上面3种方法来组合的</p>
+<h2 id="精准定位"><a href="#精准定位" class="headerlink" title="精准定位"></a>精准定位</h2><p>以下面这个百度文库这段html举例</p>
+<p><img src="http://pe5zctnu4.bkt.clouddn.com/selenium.PNG" alt="shili"></p>
+<p>要获取输入框怎么写，写法不只一种哈，这地方你也可以直接使用input的id获取元素（一个页面正常来讲不会有相同的id）</p>
+<p>input = browser.find_element(By.XPATH, “//form[@name=’ftop’]//input[@id=’kw’]”)</p>
+<p>上面这行是用的是find_element是查找单个元素，api在下面可以先看下</p>
+<p>表示从根目录查找第一个匹配路径 name为flop的form标签 ，找到这个元素之后再去他所有子元素里面查找id为kw的input框</p>
+<p>假设这个页面有两个name为ftop的form标签（name一样的form标签讲道理一个页面是不会有两个现在只是假设，有可能你会遇到class名一样的div标签）</p>
+<p>那么获取第二个form标签：”//form[@name=’ftop’][2]//input[@id=’kw’]”, 就在大括号后面加上他的索引，索引是从1开始的</p>
+<h2 id="模糊定位"><a href="#模糊定位" class="headerlink" title="模糊定位"></a>模糊定位</h2><p>contains关键字：input = browser.find_element(By.XPATH, “//input[contains(@id, ‘kw’)]”)<br>表示寻找页面中id属性值包含kw所有input元素</p>
+<p>text关键字：input = browser.find_element(By.XPATH, “//button[contains(text(), ‘搜索’)]”)<br>表示寻找页面中文字中包含有搜索的所有button元素</p>
+<p>starts-with关键字：input = browser.find_element(By.XPATH, “//a[starts-with(@href,’http://‘)]”)<br>表示寻找页面中href属性以http://开头的a标签</p>
+<p>ends-with关键字：input = browser.find_element(By.XPATH, “//a[ends-with(@href,’com’)]”)<br>表示寻找页面中href属性以’com’结尾的a标签<br>关于ends-widh我在使用的时候会报错提示语法不正确而且网上关于ends-with介绍也很少所以我没有找到原因如果大家知道欢迎留言告诉我不胜感激 (´▽`ʃ♡ƪ)</p>
+<p><em>这是一个简单的关于用selenium和xpath来做模糊查询的小实例</em></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">chrome_options = Options()</span><br><span class="line"></span><br><span class="line">chrome_options.add_argument(<span class="string">&quot;--headless&quot;</span>)</span><br><span class="line"></span><br><span class="line">browser = webdriver.Chrome(chrome_options=chrome_options)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开百度网址</span></span><br><span class="line"></span><br><span class="line">browser.get(<span class="string">&quot;https://www.baidu.com/&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取第一个http链接</span></span><br><span class="line"></span><br><span class="line">element_contains = browser.find_element(By.XPATH, <span class="string">&quot;//a[contains(@href, &#x27;http://&#x27;)]&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(element_contains.text)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取第一个包含文字中包含&#x27;地图&#x27;的a标签</span></span><br><span class="line">element_text = browser.find_element(By.XPATH, <span class="string">&quot;//a[contains(text(), &#x27;地图&#x27;)]&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(element_text.text)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取第一个文字以&#x27;贴&#x27;开头的a标签</span></span><br><span class="line">element_starts = browser.find_element(By.XPATH, <span class="string">&quot;//a[starts-with(text(), &#x27;贴&#x27;)]&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(element_starts.text)</span><br><span class="line"></span><br><span class="line">browser.close()</span><br></pre></td></tr></table></figure>
+
+<h2 id="selenium的一些常用api"><a href="#selenium的一些常用api" class="headerlink" title="selenium的一些常用api"></a>selenium的一些常用api</h2><p><em>find_element和find_elements的使用</em></p>
+<p>browser.find_element(By.XPATH, ‘//button[text()=”Some text”]’)  //单个元素获取</p>
+<p>browser.find_elements(By.XPATH, ‘//button’) //多个元素获取</p>
+<p>ID = “id”<br>XPATH = “xpath”<br>LINK_TEXT = “link text”<br>PARTIAL_LINK_TEXT = “partial link text”<br>NAME = “name”<br>TAG_NAME = “tag name”<br>CLASS_NAME = “class name”<br>CSS_SELECTOR = “css selector”</p>
+<p><em>单个元素选取（多个元素选取：就是在element后面加一个s，比如find_elements_by_id）：</em></p>
+<p>find_element_by_id<br>find_element_by_name<br>find_element_by_xpath<br>find_element_by_link_text<br>find_element_by_partial_link_text<br>find_element_by_tag_name<br>find_element_by_class_name<br>find_element_by_css_selector</p>
+<p><em>获取到标签之后的界面交互：</em></p>
+<p>input.send_keys(“输入中”)  <br>input.clear()  清空输入框<br>button.click()  按钮点击</p>
+<p><em>常用的控制浏览器的api：</em></p>
+<p>browser.back() 浏览器后退<br>browser.forward() 浏览器前进<br>browser.get(“<a href="https://www.zhihu.com/explore&quot;">https://www.zhihu.com/explore&quot;</a>) 打开页面<br>browser.execute_script(“alert(‘To Button’)”)  执行js代码<br>print(browser.window_handles) 所有的标签<br>browser.switch_to_window(browser.window_handles[1]) 切换到指定标签页<br>browser.close() 关闭当前标签页</p>
+<h1 id="代码实例"><a href="#代码实例" class="headerlink" title="代码实例"></a>代码实例</h1><h2 id="关于页面模块引入"><a href="#关于页面模块引入" class="headerlink" title="关于页面模块引入"></a>关于页面模块引入</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 引入浏览器驱动</span></span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 这里我们需要引入浏览器内核才可以使用浏览器的无头模式，这里我引入的是chrome</span></span><br><span class="line"><span class="comment"># Gecko：是Firefox浏览器的内核</span></span><br><span class="line"><span class="comment"># Trident：是IE浏览器的内核</span></span><br><span class="line"><span class="comment"># Blink：是webkit的一个分支版本，由google开发</span></span><br><span class="line"><span class="comment"># 关于什么是无头模式：即headless browser，是一种没有界面的浏览器，主要是用作爬虫，用以捕捉Web上的各类数据</span></span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.chrome.options <span class="keyword">import</span> Options  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 主要用于使用两个私有方法find_element和find_elements</span></span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 调用键盘api</span></span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.keys <span class="keyword">import</span> Keys</span><br><span class="line"></span><br><span class="line"><span class="comment"># 用于时间延迟</span></span><br><span class="line"><span class="keyword">import</span> time</span><br></pre></td></tr></table></figure>
+
+<h2 id="功能代码"><a href="#功能代码" class="headerlink" title="功能代码"></a>功能代码</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">chrome_options = Options()</span><br><span class="line"></span><br><span class="line">chrome_options.add_argument(<span class="string">&quot;--headless&quot;</span>)</span><br><span class="line"></span><br><span class="line">browser = webdriver.Chrome()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开页面</span></span><br><span class="line">browser.get(<span class="string">&quot;https://wenku.baidu.com/&quot;</span>) </span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取搜索输入框</span></span><br><span class="line"><span class="built_in">input</span> = browser.find_element(ID, <span class="string">&#x27;kw&#x27;</span>) </span><br><span class="line"></span><br><span class="line"><span class="comment"># 输入内容</span></span><br><span class="line"><span class="built_in">input</span>.send_keys(<span class="string">&quot;IT/计算机&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 模拟回车</span></span><br><span class="line"><span class="built_in">input</span>.send_keys(Keys.ENTER) </span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取&#x27;我知道了&#x27;按钮</span></span><br><span class="line">btn = browser.find_element(By.XPATH, <span class="string">&quot;//div[@class=&#x27;new-filter-box fc5&#x27;]//span[@class=&#x27;btn-know&#x27;]&quot;</span>)</span><br><span class="line"></span><br><span class="line">btn.click()</span><br><span class="line"></span><br><span class="line">time.sleep(<span class="number">1</span>) <span class="comment"># 时间延迟</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 点击列表的第一条数据</span></span><br><span class="line">btn = browser.find_element(By.XPATH, <span class="string">&quot;//div[@class=&#x27;main&#x27;]//dl[1]//a[1]&quot;</span>)</span><br><span class="line"></span><br><span class="line">btn.click()</span><br><span class="line"></span><br><span class="line">time.sleep(<span class="number">4</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将browser页面切换至当前页面</span></span><br><span class="line">browser.switch_to_window(browser.window_handles[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭当前页面</span></span><br><span class="line">browser.close()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换至第一个页面</span></span><br><span class="line">browser.switch_to_window(browser.window_handles[<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line">time.sleep(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 点击列表的第二条数据</span></span><br><span class="line">btn = browser.find_element(By.XPATH, <span class="string">&quot;//div[@class=&#x27;main&#x27;]//dl[2]//a[1]&quot;</span>)</span><br><span class="line"></span><br><span class="line">btn.click()</span><br><span class="line"></span><br><span class="line">time.sleep(<span class="number">4</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 视图切换至第一个页面</span></span><br><span class="line">browser.switch_to_window(browser.window_handles[<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line">time.sleep(<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 去往百度页面</span></span><br><span class="line">browser.get(<span class="string">&quot;https://baidu.com/&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印所有标签</span></span><br><span class="line"><span class="built_in">print</span>(browser.window_handles)</span><br></pre></td></tr></table></figure>
+<p>开启无头模式<br>只需要修改一行代码</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">browser = webdriver.Chrome(chrome_options=chrome_options)</span><br></pre></td></tr></table></figure>
+
 <p>欢迎留言交流  (´▽`ʃ♡ƪ)</p>
 ]]></content>
       <categories>
@@ -2542,72 +2542,6 @@ console.log(jso4);
   </entry>
   <entry>
     <title>(译)CSS 是魔法, 是时候试试 3D 了</title>
-    <url>/2022/03/14/translation-effects-of-too-much-lazy-loading-on-web-performance/</url>
-    <content><![CDATA[<blockquote>
-<ul>
-<li>原文地址：<a href="https://blog.bitsrc.io/effects-of-too-much-lazy-loading-on-performance-4dbe8df33c37">Effects of Too Much Lazy Loading on Web Performance</a></li>
-<li>原文作者：<a href="https://medium.com/@yasassri">Yasas Sri Wickramasinghe</a></li>
-<li>译文出自：<a href="https://github.com/xitu/gold-miner">掘金翻译计划</a></li>
-<li>本文永久链接：<a href="https://github.com/xitu/gold-miner/blob/master/article/2022/effects-of-too-much-lazy-loading-on-web-performance.md">https://github.com/xitu/gold-miner/blob/master/article/2022/effects-of-too-much-lazy-loading-on-web-performance.md</a></li>
-<li>译者：<a href="https://github.com/Tong-H">tong-h</a></li>
-<li>校对者：<a href="https://github.com/Isildur46">Isildur46</a> <a href="https://github.com/xionglong58">xionglong58</a></li>
-</ul>
-</blockquote>
-<h1 id="过度使用懒加载对-Web-性能的影响"><a href="#过度使用懒加载对-Web-性能的影响" class="headerlink" title="过度使用懒加载对 Web 性能的影响"></a>过度使用懒加载对 Web 性能的影响</h1><p><img src="https://cdn-images-1.medium.com/max/5856/0*u6JBhsu5xQWO8ZfH.jpg"></p>
-<p>如今为了提升应用性能，懒加载被广泛使用于 Web 应用中。它帮助开发者减少网站加载时间，节省流量以及提升用户体验。</p>
-<p>但懒加载的过度使用会给应用性能带来负面影响。所以在这篇文章中，我会详述懒加载对性能的影响，来帮助你理解应该何时使用它。</p>
-<h2 id="什么是懒加载？"><a href="#什么是懒加载？" class="headerlink" title="什么是懒加载？"></a>什么是懒加载？</h2><p><img src="https://cdn-images-1.medium.com/max/4320/0*CUGBWo-mhr1DT-wY.png"></p>
-<p>懒加载是一种常见的技术，通过按需加载资源来减少网页的数据使用。</p>
-<p>如今懒加载已经是一种 Web 标准，大部分的主流浏览器都支持通过  <code>loading=&quot;lazy&quot;</code> 属性使用懒加载。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">// with img tag</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">src</span>=<span class="string">&quot;bits.jpeg&quot;</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">loading</span>=<span class="string">&quot;lazy&quot;</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">alt</span>=<span class="string">&quot;an image of a laptop&quot;</span> </span></span><br><span class="line"><span class="tag">/&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// with IFrame</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">iframe</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">src</span>=<span class="string">&quot;about-page.html&quot;</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">loading</span>=<span class="string">&quot;lazy&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>一旦启用懒加载，只有当用户滚动到需要该内容显示的地方才会去加载。</p>
-<p><img src="https://miro.medium.com/proxy/1*hG44JzeROyaiqZteU6Kr8A.gif" alt="**懒加载是如何工作的**"></p>
-<p>如你所见，懒加载肯定可以提升应用性能以及用户体验，这也是为什么它已成为开发者在开发应用时的首选优化措施。</p>
-<p>但懒加载并不总是保证提升应用性能。那么让我们看看懒加载对性能的影响到底是什么。</p>
-<h2 id="懒加载对性能的影响"><a href="#懒加载对性能的影响" class="headerlink" title="懒加载对性能的影响"></a>懒加载对性能的影响</h2><p>许多研究表明，开发者通过懒加载可以实现两种优势。</p>
-<ul>
-<li><strong>减少页面加载时间（PLT）：</strong>通过延迟资源加载减少首屏页面加载时间。</li>
-<li><strong>优化资源消耗：</strong>通过资源懒加载优化系统资源使用，这在内存以及处理能力较低的移动设备上效果比较好。</li>
-</ul>
-<p>在另一方面，过度使用懒加载会对性能产生一些明显的影响。</p>
-<h3 id="减慢快速滚动的速度"><a href="#减慢快速滚动的速度" class="headerlink" title="减慢快速滚动的速度"></a>减慢快速滚动的速度</h3><p>如果你有一个 Web 应用，比如在线商店，你需要让用户可以快速上下滚动以及导航。</p>
-<p>对这样的应用使用懒加载会减慢滚动速度，因为我们需要等待数据加载完成。这会降低应用性能以及引发用户体验问题。</p>
-<h3 id="因为内容变化而导致的延迟"><a href="#因为内容变化而导致的延迟" class="headerlink" title="因为内容变化而导致的延迟"></a>因为内容变化而导致的延迟</h3><p>如果你还没有为懒加载的图片定义的 <code>width</code> 和 <code>height</code> 属性，那么在图片渲染过程中会出现明显的延迟。因为资源在页面初始化时没有加载，浏览器不知道适用于页面布局的内容尺寸。</p>
-<p>一旦内容加载完成，而用户滚动到特定视图中，浏览器需要处理内容以及再一次改变页面布局。这会使其他元素移位，也会带来糟糕的用户体验。</p>
-<h3 id="内容缓冲"><a href="#内容缓冲" class="headerlink" title="内容缓冲"></a>内容缓冲</h3><p>如果你在应用中使用非必要的懒加载，这会导致内容缓冲。当用户快速向下滚动而资源却还在下载中时会发生这种情况。</p>
-<p>尤其是带宽连接较慢时会发生这种情况，这会影响网页渲染速度。</p>
-<h2 id="应该何时使用懒加载"><a href="#应该何时使用懒加载" class="headerlink" title="应该何时使用懒加载"></a>应该何时使用懒加载</h2><p>你现在肯定在想如何合理使用懒加载，使其发挥最大的效果从而创造更好的 Web 性能。</p>
-<p>下面的一些建议有助于找到最佳着手点。</p>
-<h3 id="1-在正确的地方懒加载正确的资源"><a href="#1-在正确的地方懒加载正确的资源" class="headerlink" title="1. 在正确的地方懒加载正确的资源"></a>1. 在正确的地方懒加载正确的资源</h3><p>如果你有一个需要很多资源的冗长的网页，那你可以考虑使用懒加载，但只能针对用户视图外或者被折叠的内容使用。</p>
-<p><img src="https://cdn-images-1.medium.com/max/2410/0*xq-umzzOZLKPagKn.png"></p>
-<p>确保你没有懒加载后台任务执行所需的资源，比如 JavaScript 组件，背景图片或者其他多媒体内容。而且，你一定不能延迟这些资源的加载。</p>
-<p>你可以使用谷歌浏览器的 Lighthouse 工具来检查，识别那些可添加懒加载属性的资源。</p>
-<h3 id="2-懒加载那些不妨碍网页使用的内容"><a href="#2-懒加载那些不妨碍网页使用的内容" class="headerlink" title="2. 懒加载那些不妨碍网页使用的内容"></a>2. 懒加载那些不妨碍网页使用的内容</h3><p>懒加载最好是用于不重要的非必需的 Web 资源。另外，如果资源没有像预期那样懒加载，那么不要忘记错误处理和提供良好的用户体验。</p>
-<p>请注意，原生懒加载依然没有被所有平台和浏览器普遍支持。而且，如果你在使用一个库或者自定义的 JavaScript 脚本，那么这不会对所有用户都生效。尤其，那些禁止 JavaScript 的浏览器会面临懒加载技术上的问题。</p>
-<h3 id="3-懒加载对搜索引擎优化（SEO）而言不重要的资源"><a href="#3-懒加载对搜索引擎优化（SEO）而言不重要的资源" class="headerlink" title="3. 懒加载对搜索引擎优化（SEO）而言不重要的资源"></a>3. 懒加载对搜索引擎优化（SEO）而言不重要的资源</h3><p>随着内容懒加载，网站将逐渐渲染，这也就是说，某些内容在首屏加载时并不可用。咋一听，好像是懒加载有助于提升 SEO 网页排名，因为它使页面加载速度大大加快。但如果你过度使用懒加载，会产生一些负面影响。</p>
-<p>当 SEO 索引时，搜索引擎爬行网站抓取数据以便索引页面，但由于懒加载，网络爬虫无法获取所有页面数据。除非用户与页面进行互动，这样 SEO 就不会忽略这些信息。</p>
-<p>但作为开发者，我们并不希望 SEO 遗漏我们重要的业务数据。所以我建议不要将懒加载用在针对 SEO 的内容上，比如关键词或者业务信息。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>懒加载可以提升网页使用率以及性能，对 Web 开发者而言是一个称手的工具。所谓“过度烹饪烧坏汤”，过度使用这项技术也会降低网站性能。</p>
-<p>在这篇文章中，我们关注懒加载对性能的影响，通过几个建议帮助你理解应该何时使用它。如果你谨慎的使用这项技术，明白何时何地使用它，你的网站会得到明显的性能提升。</p>
-<p>希望你有从中得到有用的知识点，感谢阅读！</p>
-<blockquote>
-<p>如果发现译文存在错误或其他需要改进的地方，欢迎到 <a href="https://github.com/xitu/gold-miner">掘金翻译计划</a> 对译文进行修改并 PR，也可获得相应奖励积分。文章开头的 <strong>本文永久链接</strong> 即为本文在 GitHub 上的 MarkDown 链接。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p><a href="https://github.com/xitu/gold-miner">掘金翻译计划</a> 是一个翻译优质互联网技术文章的社区，文章来源为 <a href="https://juejin.im/">掘金</a> 上的英文分享文章。内容覆盖 <a href="https://github.com/xitu/gold-miner#android">Android</a>、<a href="https://github.com/xitu/gold-miner#ios">iOS</a>、<a href="https://github.com/xitu/gold-miner#%E5%89%8D%E7%AB%AF">前端</a>、<a href="https://github.com/xitu/gold-miner#%E5%90%8E%E7%AB%AF">后端</a>、<a href="https://github.com/xitu/gold-miner#%E5%8C%BA%E5%9D%97%E9%93%BE">区块链</a>、<a href="https://github.com/xitu/gold-miner#%E4%BA%A7%E5%93%81">产品</a>、<a href="https://github.com/xitu/gold-miner#%E8%AE%BE%E8%AE%A1">设计</a>、<a href="https://github.com/xitu/gold-miner#%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD">人工智能</a>等领域，想要查看更多优质译文请持续关注 <a href="https://github.com/xitu/gold-miner">掘金翻译计划</a>、<a href="http://weibo.com/juejinfanyi">官方微博</a>、<a href="https://zhuanlan.zhihu.com/juejinfanyi">知乎专栏</a>。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>WEB</category>
-      </categories>
-      <tags>
-        <tag>translation</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(译)CSS 是魔法, 是时候试试 3D 了</title>
     <url>/2021/07/28/translation-css-is-magic-its-time-you-try-3d/</url>
     <content><![CDATA[<blockquote>
 <ul>
@@ -2715,54 +2649,56 @@ console.log(jso4);
       </tags>
   </entry>
   <entry>
-    <title>(译)可视化 JavaScript 引擎</title>
-    <url>/2021/08/06/translation-javascript-visualized-the-javascript-engine/</url>
+    <title>(译)CSS 是魔法, 是时候试试 3D 了</title>
+    <url>/2022/03/14/translation-effects-of-too-much-lazy-loading-on-web-performance/</url>
     <content><![CDATA[<blockquote>
 <ul>
-<li>原文地址：<a href="https://javascript.plainenglish.io/javascript-visualized-the-javascript-engine-1e3fc5d5310d">JavaScript Visualized: The JavaScript Engine</a></li>
-<li>原文作者：<a href="https://medium.com/@harsh-patel">Harsh Patel</a></li>
+<li>原文地址：<a href="https://blog.bitsrc.io/effects-of-too-much-lazy-loading-on-performance-4dbe8df33c37">Effects of Too Much Lazy Loading on Web Performance</a></li>
+<li>原文作者：<a href="https://medium.com/@yasassri">Yasas Sri Wickramasinghe</a></li>
 <li>译文出自：<a href="https://github.com/xitu/gold-miner">掘金翻译计划</a></li>
-<li>本文永久链接：<a href="https://github.com/xitu/gold-miner/blob/master/article/2021/javascript-visualized-the-javascript-engine.md">https://github.com/xitu/gold-miner/blob/master/article/2021/javascript-visualized-the-javascript-engine.md</a></li>
+<li>本文永久链接：<a href="https://github.com/xitu/gold-miner/blob/master/article/2022/effects-of-too-much-lazy-loading-on-web-performance.md">https://github.com/xitu/gold-miner/blob/master/article/2022/effects-of-too-much-lazy-loading-on-web-performance.md</a></li>
 <li>译者：<a href="https://github.com/Tong-H">tong-h</a></li>
-<li>校对者：<a href="https://github.com/KimYangOfCat">KimYangOfCat</a> <a href="https://github.com/Usualminds">Usualminds</a></li>
+<li>校对者：<a href="https://github.com/Isildur46">Isildur46</a> <a href="https://github.com/xionglong58">xionglong58</a></li>
 </ul>
 </blockquote>
-<h1 id="可视化-JavaScript-引擎"><a href="#可视化-JavaScript-引擎" class="headerlink" title="可视化 JavaScript 引擎"></a>可视化 JavaScript 引擎</h1><p><img src="https://cdn-images-1.medium.com/max/2000/0*XIjsf6eB35MwgNCg.png"></p>
-<p>作为 JavaScript 开发人员，我们通常不需要亲自与编译器打交道。但知晓 JavaScript 引擎的基础知识，以及了解它是如何处理我们各自不同的 JS 代码并将其转化为机器能理解的东西，也是很好的！🥳</p>
-<blockquote>
-<p><strong>注意：</strong> 这篇文章主要基于 Node.js 和以 Chromium 为基础的浏览器使用的 V8 引擎。</p>
-</blockquote>
-<hr>
-<p>HTML 解析器在你的代码中寻找 <code>script</code> 标签以及其对应的来源，并从其来源加载程序或代码。它可能来自 <strong>网络</strong>，<strong>临时存储</strong>，或者其它<strong>service worker</strong>。然后以<strong>字节流</strong>的格式响应，稍后该字节流将被字节流解码器接管！主要是<strong>字节流解码器</strong>会解码到来的流数据。</p>
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*cOoWhcaQqt7YIefpVMjTYw.gif"></p>
-<hr>
-<p>字节流解码器根据已解码的的字节流创建 token。比如，<code>0066</code> 解码为 <code>f</code>，<code>0075</code> 变<code> u</code>，<code>006e</code> 变 <code>n</code>，<code>0063</code> 变 <code>c</code>，<code>0074</code> 变 <code>t</code>，<code>0069</code> 变 <code>i</code>，<code>006f</code> 变 <code>o</code>，006e<code>变为</code>n` 和一个空格。看上去好像是你写了 function！这在 JavaScript 中是一个保留关键字，一个 token 被创建并发送给解析器（以及预解析器，这并没有涵盖在动图里但稍后会解释）。其余字节流的处理也一样。</p>
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*Eb2a3HrsWCQogSpEW9gHjA.gif"></p>
-<hr>
-<p>引擎使用两个解析器：预解析器（pre-parser）和解析器（parser）。为了减少网站加载花费的时间，引擎会尽量避免去解析不会被立即使用的代码。预解析器处理可能稍后会用到的代码，而解析器处理马上需要使用的代码。如果一个函数只会在用户点击按钮后被调用，那么没有必要一定要在网站加载时编译它。如果最终用户点击了按钮且需要这段代码，那么它会被发送给解析器。</p>
-<p>解析器根据从字节流解码器处接收的 token 来创建节点，并用这些节点来创建一个抽象语法树（AST）。🌳</p>
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*r4CyGfK7TWvm1sFl1jaOWQ.gif"></p>
-<hr>
-<p>下一步，解释器出场！解释器遍历 AST 并根据 AST 所包含的信息来生成字节码。一旦字节码生成完毕，AST 就会被删除从而清空内存空间。最后，我们就拥有了机器可以使用的东西。🎉</p>
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*5WJid_AePzCASZ0NTLZv-w.gif"></p>
-<hr>
-<p>尽管字节码很快，但它还可以更快。字节码运行时会生成一些信息。它可以检测到某些行为是否经常发生以及被使用的数据类型。可能某个函数你调用了几十次，那么是时候做优化了，使其运行速度更快。🏃🏽‍♀️</p>
-<p>字节码以及产生的类型反馈会一起发送给优化编译器。优化编译器接收字节码和类型反馈，并从中生成高度优化后的机器码。🚀</p>
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*xJ3kFQ776JaMquxron2-gQ.gif"></p>
-<hr>
-<p>JavaScript 是动态类型的语言，这代表数据类型可以不断改变。如果 JavaScript 引擎每次都需要检查某个值的数据类型，这会导致其运行速度非常缓慢。</p>
-<p>为了减少代码解释的时间，优化后的机器码只处理引擎在运行字节码时之前见过的情况。如果我们重复使用某段代码，该代码一遍又一遍的返回相同的数据类型，那么为了加快运行速度，就可以简单的再次使用优化后的机器码。然而，JavaScript 是动态类型，相同的代码可能会突然返回一个不同的数据类型。如果发生了这种情况，机器码性能会退化，引擎会退回到解释已产生的字节码的步骤。</p>
-<p>如果某块代码被调用 100 次，而且到目前为止返回相同的值。那么引擎会假设，当你第 101 次调用的时候依然返回该值。</p>
-<p>比如说我们有一个如下所示的求和函数，目前为止该函数每一次调用都会带有数字类型的参数。</p>
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*2VZ1b9rX099PDz_wDtwJSw.png"></p>
-<p>该函数会返回数字 3！当我们再次调用时，引擎会假定我们依然携带两个数字类型的参数。</p>
-<p>如果这是真的，那么就不需要动态检查，引擎可以再次使用优化后的机器码。反之，如果该假设不正确，那么引擎会退回到使用原来的字节码而不是优化的机器码。</p>
-<p>比如下一次调用它时我们传递的是字符串而不是数字。因为 JavaScript 是动态类型语言，我们可以这样做而且不会引发报错。</p>
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*7IlQ3bxyDA7cdl4Gn1lbCA.png"></p>
-<p>这意味着数字 <code>2</code> 将会强制转为字符串，而该函数将会返回字符串 <code>&quot;12&quot;</code>。引擎将回退去解释字节码以及更新类型反馈。</p>
-<hr>
-<p>我希望这篇文章对你有帮助！😊 当然，还有很多有关引擎的知识点在这篇文章内我没有介绍（JS 堆，调用栈等等），这些我可能稍后会涵盖。如果你对 Javascript 内部运作感兴趣，我非常鼓励开始自己做一些研究，V8 是开源的，而且有一些很棒的文档是关于它如何在后台工作的。🤖</p>
-<p>感谢阅读，祝你有美好的一天！❤</p>
+<h1 id="过度使用懒加载对-Web-性能的影响"><a href="#过度使用懒加载对-Web-性能的影响" class="headerlink" title="过度使用懒加载对 Web 性能的影响"></a>过度使用懒加载对 Web 性能的影响</h1><p><img src="https://cdn-images-1.medium.com/max/5856/0*u6JBhsu5xQWO8ZfH.jpg"></p>
+<p>如今为了提升应用性能，懒加载被广泛使用于 Web 应用中。它帮助开发者减少网站加载时间，节省流量以及提升用户体验。</p>
+<p>但懒加载的过度使用会给应用性能带来负面影响。所以在这篇文章中，我会详述懒加载对性能的影响，来帮助你理解应该何时使用它。</p>
+<h2 id="什么是懒加载？"><a href="#什么是懒加载？" class="headerlink" title="什么是懒加载？"></a>什么是懒加载？</h2><p><img src="https://cdn-images-1.medium.com/max/4320/0*CUGBWo-mhr1DT-wY.png"></p>
+<p>懒加载是一种常见的技术，通过按需加载资源来减少网页的数据使用。</p>
+<p>如今懒加载已经是一种 Web 标准，大部分的主流浏览器都支持通过  <code>loading=&quot;lazy&quot;</code> 属性使用懒加载。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">// with img tag</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">src</span>=<span class="string">&quot;bits.jpeg&quot;</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">loading</span>=<span class="string">&quot;lazy&quot;</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">alt</span>=<span class="string">&quot;an image of a laptop&quot;</span> </span></span><br><span class="line"><span class="tag">/&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// with IFrame</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">iframe</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">src</span>=<span class="string">&quot;about-page.html&quot;</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">loading</span>=<span class="string">&quot;lazy&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>一旦启用懒加载，只有当用户滚动到需要该内容显示的地方才会去加载。</p>
+<p><img src="https://miro.medium.com/proxy/1*hG44JzeROyaiqZteU6Kr8A.gif" alt="**懒加载是如何工作的**"></p>
+<p>如你所见，懒加载肯定可以提升应用性能以及用户体验，这也是为什么它已成为开发者在开发应用时的首选优化措施。</p>
+<p>但懒加载并不总是保证提升应用性能。那么让我们看看懒加载对性能的影响到底是什么。</p>
+<h2 id="懒加载对性能的影响"><a href="#懒加载对性能的影响" class="headerlink" title="懒加载对性能的影响"></a>懒加载对性能的影响</h2><p>许多研究表明，开发者通过懒加载可以实现两种优势。</p>
+<ul>
+<li><strong>减少页面加载时间（PLT）：</strong>通过延迟资源加载减少首屏页面加载时间。</li>
+<li><strong>优化资源消耗：</strong>通过资源懒加载优化系统资源使用，这在内存以及处理能力较低的移动设备上效果比较好。</li>
+</ul>
+<p>在另一方面，过度使用懒加载会对性能产生一些明显的影响。</p>
+<h3 id="减慢快速滚动的速度"><a href="#减慢快速滚动的速度" class="headerlink" title="减慢快速滚动的速度"></a>减慢快速滚动的速度</h3><p>如果你有一个 Web 应用，比如在线商店，你需要让用户可以快速上下滚动以及导航。</p>
+<p>对这样的应用使用懒加载会减慢滚动速度，因为我们需要等待数据加载完成。这会降低应用性能以及引发用户体验问题。</p>
+<h3 id="因为内容变化而导致的延迟"><a href="#因为内容变化而导致的延迟" class="headerlink" title="因为内容变化而导致的延迟"></a>因为内容变化而导致的延迟</h3><p>如果你还没有为懒加载的图片定义的 <code>width</code> 和 <code>height</code> 属性，那么在图片渲染过程中会出现明显的延迟。因为资源在页面初始化时没有加载，浏览器不知道适用于页面布局的内容尺寸。</p>
+<p>一旦内容加载完成，而用户滚动到特定视图中，浏览器需要处理内容以及再一次改变页面布局。这会使其他元素移位，也会带来糟糕的用户体验。</p>
+<h3 id="内容缓冲"><a href="#内容缓冲" class="headerlink" title="内容缓冲"></a>内容缓冲</h3><p>如果你在应用中使用非必要的懒加载，这会导致内容缓冲。当用户快速向下滚动而资源却还在下载中时会发生这种情况。</p>
+<p>尤其是带宽连接较慢时会发生这种情况，这会影响网页渲染速度。</p>
+<h2 id="应该何时使用懒加载"><a href="#应该何时使用懒加载" class="headerlink" title="应该何时使用懒加载"></a>应该何时使用懒加载</h2><p>你现在肯定在想如何合理使用懒加载，使其发挥最大的效果从而创造更好的 Web 性能。</p>
+<p>下面的一些建议有助于找到最佳着手点。</p>
+<h3 id="1-在正确的地方懒加载正确的资源"><a href="#1-在正确的地方懒加载正确的资源" class="headerlink" title="1. 在正确的地方懒加载正确的资源"></a>1. 在正确的地方懒加载正确的资源</h3><p>如果你有一个需要很多资源的冗长的网页，那你可以考虑使用懒加载，但只能针对用户视图外或者被折叠的内容使用。</p>
+<p><img src="https://cdn-images-1.medium.com/max/2410/0*xq-umzzOZLKPagKn.png"></p>
+<p>确保你没有懒加载后台任务执行所需的资源，比如 JavaScript 组件，背景图片或者其他多媒体内容。而且，你一定不能延迟这些资源的加载。</p>
+<p>你可以使用谷歌浏览器的 Lighthouse 工具来检查，识别那些可添加懒加载属性的资源。</p>
+<h3 id="2-懒加载那些不妨碍网页使用的内容"><a href="#2-懒加载那些不妨碍网页使用的内容" class="headerlink" title="2. 懒加载那些不妨碍网页使用的内容"></a>2. 懒加载那些不妨碍网页使用的内容</h3><p>懒加载最好是用于不重要的非必需的 Web 资源。另外，如果资源没有像预期那样懒加载，那么不要忘记错误处理和提供良好的用户体验。</p>
+<p>请注意，原生懒加载依然没有被所有平台和浏览器普遍支持。而且，如果你在使用一个库或者自定义的 JavaScript 脚本，那么这不会对所有用户都生效。尤其，那些禁止 JavaScript 的浏览器会面临懒加载技术上的问题。</p>
+<h3 id="3-懒加载对搜索引擎优化（SEO）而言不重要的资源"><a href="#3-懒加载对搜索引擎优化（SEO）而言不重要的资源" class="headerlink" title="3. 懒加载对搜索引擎优化（SEO）而言不重要的资源"></a>3. 懒加载对搜索引擎优化（SEO）而言不重要的资源</h3><p>随着内容懒加载，网站将逐渐渲染，这也就是说，某些内容在首屏加载时并不可用。咋一听，好像是懒加载有助于提升 SEO 网页排名，因为它使页面加载速度大大加快。但如果你过度使用懒加载，会产生一些负面影响。</p>
+<p>当 SEO 索引时，搜索引擎爬行网站抓取数据以便索引页面，但由于懒加载，网络爬虫无法获取所有页面数据。除非用户与页面进行互动，这样 SEO 就不会忽略这些信息。</p>
+<p>但作为开发者，我们并不希望 SEO 遗漏我们重要的业务数据。所以我建议不要将懒加载用在针对 SEO 的内容上，比如关键词或者业务信息。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>懒加载可以提升网页使用率以及性能，对 Web 开发者而言是一个称手的工具。所谓“过度烹饪烧坏汤”，过度使用这项技术也会降低网站性能。</p>
+<p>在这篇文章中，我们关注懒加载对性能的影响，通过几个建议帮助你理解应该何时使用它。如果你谨慎的使用这项技术，明白何时何地使用它，你的网站会得到明显的性能提升。</p>
+<p>希望你有从中得到有用的知识点，感谢阅读！</p>
 <blockquote>
 <p>如果发现译文存在错误或其他需要改进的地方，欢迎到 <a href="https://github.com/xitu/gold-miner">掘金翻译计划</a> 对译文进行修改并 PR，也可获得相应奖励积分。文章开头的 <strong>本文永久链接</strong> 即为本文在 GitHub 上的 MarkDown 链接。</p>
 </blockquote>
@@ -2823,6 +2759,70 @@ console.log(jso4);
 <p>我们为了崩溃分析而使用这个工具，也暴露了一些关于这个工具的限制，所以我们决定使用 Rust 重写，大量的依赖了由 Sentry 开发的优秀的 crates。相比原来的工具，重写的新工具的速度要快得多，使用少量的内存并且产生的结果更为精确。这是互利的：我们为他们的 crates （以及依赖）贡献了改善建议，而他们延伸了自己的 API 来处理我们的新的使用案例以及修复我们发现的问题。</p>
 <p>这项工作的另一个令人愉快的副作用是 Thunderbird 现在也从我们为 Firefox 做的提升中受益。</p>
 <p>这会持续展示在 FOSS 项目之间的协作不止有利于他们的用户，而且最终会提升整个生态系统以及更广泛的依赖于此的团体。<br>特别感谢 Calixte Denizet, Nicholas Nethercote, Jan Auer 以及其他对此有贡献的人！</p>
+<blockquote>
+<p>如果发现译文存在错误或其他需要改进的地方，欢迎到 <a href="https://github.com/xitu/gold-miner">掘金翻译计划</a> 对译文进行修改并 PR，也可获得相应奖励积分。文章开头的 <strong>本文永久链接</strong> 即为本文在 GitHub 上的 MarkDown 链接。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><a href="https://github.com/xitu/gold-miner">掘金翻译计划</a> 是一个翻译优质互联网技术文章的社区，文章来源为 <a href="https://juejin.im/">掘金</a> 上的英文分享文章。内容覆盖 <a href="https://github.com/xitu/gold-miner#android">Android</a>、<a href="https://github.com/xitu/gold-miner#ios">iOS</a>、<a href="https://github.com/xitu/gold-miner#%E5%89%8D%E7%AB%AF">前端</a>、<a href="https://github.com/xitu/gold-miner#%E5%90%8E%E7%AB%AF">后端</a>、<a href="https://github.com/xitu/gold-miner#%E5%8C%BA%E5%9D%97%E9%93%BE">区块链</a>、<a href="https://github.com/xitu/gold-miner#%E4%BA%A7%E5%93%81">产品</a>、<a href="https://github.com/xitu/gold-miner#%E8%AE%BE%E8%AE%A1">设计</a>、<a href="https://github.com/xitu/gold-miner#%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD">人工智能</a>等领域，想要查看更多优质译文请持续关注 <a href="https://github.com/xitu/gold-miner">掘金翻译计划</a>、<a href="http://weibo.com/juejinfanyi">官方微博</a>、<a href="https://zhuanlan.zhihu.com/juejinfanyi">知乎专栏</a>。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>WEB</category>
+      </categories>
+      <tags>
+        <tag>translation</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(译)可视化 JavaScript 引擎</title>
+    <url>/2021/08/06/translation-javascript-visualized-the-javascript-engine/</url>
+    <content><![CDATA[<blockquote>
+<ul>
+<li>原文地址：<a href="https://javascript.plainenglish.io/javascript-visualized-the-javascript-engine-1e3fc5d5310d">JavaScript Visualized: The JavaScript Engine</a></li>
+<li>原文作者：<a href="https://medium.com/@harsh-patel">Harsh Patel</a></li>
+<li>译文出自：<a href="https://github.com/xitu/gold-miner">掘金翻译计划</a></li>
+<li>本文永久链接：<a href="https://github.com/xitu/gold-miner/blob/master/article/2021/javascript-visualized-the-javascript-engine.md">https://github.com/xitu/gold-miner/blob/master/article/2021/javascript-visualized-the-javascript-engine.md</a></li>
+<li>译者：<a href="https://github.com/Tong-H">tong-h</a></li>
+<li>校对者：<a href="https://github.com/KimYangOfCat">KimYangOfCat</a> <a href="https://github.com/Usualminds">Usualminds</a></li>
+</ul>
+</blockquote>
+<h1 id="可视化-JavaScript-引擎"><a href="#可视化-JavaScript-引擎" class="headerlink" title="可视化 JavaScript 引擎"></a>可视化 JavaScript 引擎</h1><p><img src="https://cdn-images-1.medium.com/max/2000/0*XIjsf6eB35MwgNCg.png"></p>
+<p>作为 JavaScript 开发人员，我们通常不需要亲自与编译器打交道。但知晓 JavaScript 引擎的基础知识，以及了解它是如何处理我们各自不同的 JS 代码并将其转化为机器能理解的东西，也是很好的！🥳</p>
+<blockquote>
+<p><strong>注意：</strong> 这篇文章主要基于 Node.js 和以 Chromium 为基础的浏览器使用的 V8 引擎。</p>
+</blockquote>
+<hr>
+<p>HTML 解析器在你的代码中寻找 <code>script</code> 标签以及其对应的来源，并从其来源加载程序或代码。它可能来自 <strong>网络</strong>，<strong>临时存储</strong>，或者其它<strong>service worker</strong>。然后以<strong>字节流</strong>的格式响应，稍后该字节流将被字节流解码器接管！主要是<strong>字节流解码器</strong>会解码到来的流数据。</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*cOoWhcaQqt7YIefpVMjTYw.gif"></p>
+<hr>
+<p>字节流解码器根据已解码的的字节流创建 token。比如，<code>0066</code> 解码为 <code>f</code>，<code>0075</code> 变<code> u</code>，<code>006e</code> 变 <code>n</code>，<code>0063</code> 变 <code>c</code>，<code>0074</code> 变 <code>t</code>，<code>0069</code> 变 <code>i</code>，<code>006f</code> 变 <code>o</code>，006e<code>变为</code>n` 和一个空格。看上去好像是你写了 function！这在 JavaScript 中是一个保留关键字，一个 token 被创建并发送给解析器（以及预解析器，这并没有涵盖在动图里但稍后会解释）。其余字节流的处理也一样。</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*Eb2a3HrsWCQogSpEW9gHjA.gif"></p>
+<hr>
+<p>引擎使用两个解析器：预解析器（pre-parser）和解析器（parser）。为了减少网站加载花费的时间，引擎会尽量避免去解析不会被立即使用的代码。预解析器处理可能稍后会用到的代码，而解析器处理马上需要使用的代码。如果一个函数只会在用户点击按钮后被调用，那么没有必要一定要在网站加载时编译它。如果最终用户点击了按钮且需要这段代码，那么它会被发送给解析器。</p>
+<p>解析器根据从字节流解码器处接收的 token 来创建节点，并用这些节点来创建一个抽象语法树（AST）。🌳</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*r4CyGfK7TWvm1sFl1jaOWQ.gif"></p>
+<hr>
+<p>下一步，解释器出场！解释器遍历 AST 并根据 AST 所包含的信息来生成字节码。一旦字节码生成完毕，AST 就会被删除从而清空内存空间。最后，我们就拥有了机器可以使用的东西。🎉</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*5WJid_AePzCASZ0NTLZv-w.gif"></p>
+<hr>
+<p>尽管字节码很快，但它还可以更快。字节码运行时会生成一些信息。它可以检测到某些行为是否经常发生以及被使用的数据类型。可能某个函数你调用了几十次，那么是时候做优化了，使其运行速度更快。🏃🏽‍♀️</p>
+<p>字节码以及产生的类型反馈会一起发送给优化编译器。优化编译器接收字节码和类型反馈，并从中生成高度优化后的机器码。🚀</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*xJ3kFQ776JaMquxron2-gQ.gif"></p>
+<hr>
+<p>JavaScript 是动态类型的语言，这代表数据类型可以不断改变。如果 JavaScript 引擎每次都需要检查某个值的数据类型，这会导致其运行速度非常缓慢。</p>
+<p>为了减少代码解释的时间，优化后的机器码只处理引擎在运行字节码时之前见过的情况。如果我们重复使用某段代码，该代码一遍又一遍的返回相同的数据类型，那么为了加快运行速度，就可以简单的再次使用优化后的机器码。然而，JavaScript 是动态类型，相同的代码可能会突然返回一个不同的数据类型。如果发生了这种情况，机器码性能会退化，引擎会退回到解释已产生的字节码的步骤。</p>
+<p>如果某块代码被调用 100 次，而且到目前为止返回相同的值。那么引擎会假设，当你第 101 次调用的时候依然返回该值。</p>
+<p>比如说我们有一个如下所示的求和函数，目前为止该函数每一次调用都会带有数字类型的参数。</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*2VZ1b9rX099PDz_wDtwJSw.png"></p>
+<p>该函数会返回数字 3！当我们再次调用时，引擎会假定我们依然携带两个数字类型的参数。</p>
+<p>如果这是真的，那么就不需要动态检查，引擎可以再次使用优化后的机器码。反之，如果该假设不正确，那么引擎会退回到使用原来的字节码而不是优化的机器码。</p>
+<p>比如下一次调用它时我们传递的是字符串而不是数字。因为 JavaScript 是动态类型语言，我们可以这样做而且不会引发报错。</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*7IlQ3bxyDA7cdl4Gn1lbCA.png"></p>
+<p>这意味着数字 <code>2</code> 将会强制转为字符串，而该函数将会返回字符串 <code>&quot;12&quot;</code>。引擎将回退去解释字节码以及更新类型反馈。</p>
+<hr>
+<p>我希望这篇文章对你有帮助！😊 当然，还有很多有关引擎的知识点在这篇文章内我没有介绍（JS 堆，调用栈等等），这些我可能稍后会涵盖。如果你对 Javascript 内部运作感兴趣，我非常鼓励开始自己做一些研究，V8 是开源的，而且有一些很棒的文档是关于它如何在后台工作的。🤖</p>
+<p>感谢阅读，祝你有美好的一天！❤</p>
 <blockquote>
 <p>如果发现译文存在错误或其他需要改进的地方，欢迎到 <a href="https://github.com/xitu/gold-miner">掘金翻译计划</a> 对译文进行修改并 PR，也可获得相应奖励积分。文章开头的 <strong>本文永久链接</strong> 即为本文在 GitHub 上的 MarkDown 链接。</p>
 </blockquote>
@@ -5005,7 +5005,7 @@ console.log(jso4);
     background: rgb(10 149 255 / 10%);
     padding: 0px 2px;
     border-radius: 3px;
-    font-size: 90%
+    font-size: 88%
   }
   .postDetail em {
     background: #ffcf6b;
@@ -5026,6 +5026,9 @@ console.log(jso4);
 <li>integrating third-party components or services</li>
 </ul>
 <p><strong>QianKun</strong> is built upon <strong>single-spa</strong>, listening for <code>location</code> changes, and then matching and loading sub-applications accordingly. Each sub-application has its own entry file and DOM container. This approach is similar to using multiple entry files in <code>webpack</code>.</p>
+<h2 id="Design-Patterns"><a href="#Design-Patterns" class="headerlink" title="Design Patterns"></a>Design Patterns</h2><h3 id="method-chaining"><a href="#method-chaining" class="headerlink" title="method chaining"></a>method chaining</h3><p>a concept, one function returns the current(refer to <code>this</code> in js) object and another function can use values in <code>this</code>.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">chaining</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="title">Method1</span>(<span class="params">v</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.v = v</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="title">Method2</span>(<span class="params">v</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.v = v</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> chaining_obj = <span class="keyword">new</span> chaining()</span><br><span class="line">chaining_obj.Method1(<span class="number">1</span>).Method2(<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
 <h2 id="the-principles-of-component-design"><a href="#the-principles-of-component-design" class="headerlink" title="the principles of component design"></a>the principles of component design</h2><ol>
 <li><strong>single responsibility principle</strong>. to compose complex components by smaller specialized components.</li>
 <li><strong>conceals</strong> the construction of components, and only <strong>reveals</strong> the necessary information</li>
@@ -5656,14 +5659,14 @@ console.log(jso4);
 <li><p><strong>nested scope</strong>, a scope can be nested inside another scope.</p>
 </li>
 </ul>
-<h4 id="scope-chain"><a href="#scope-chain" class="headerlink" title="scope chain"></a>scope chain</h4><p>when the JavaScript engine try to find a variable, first it will seek in the current scope, if there is no result then it will go to the parent’s scope. finding layer by layer, that is <code>scope chain</code>.</p>
+<h4 id="scope-chain"><a href="#scope-chain" class="headerlink" title="scope chain"></a>scope chain</h4><p>when the JS engine try to find a variable, first it will seek in the current scope, if there is no result then it will go to the parent’s scope. finding layer by layer, that is <code>scope chain</code>.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">100</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">F1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> b = <span class="number">200</span>;</span><br><span class="line">	(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">var</span> c = <span class="number">300</span></span><br><span class="line">		<span class="built_in">console</span>.log(a, b, c)</span><br><span class="line">	&#125;)()</span><br><span class="line">&#125;</span><br><span class="line">F1()</span><br></pre></td></tr></table></figure>
 
 <h3 id="Memory-Management"><a href="#Memory-Management" class="headerlink" title="Memory Management"></a>Memory Management</h3><p><strong>life cycle</strong></p>
 <ul>
 <li><p>Allocate the memory</p>
 <ul>
-<li><p>JavaScript automatically allocate memory whenever a value is declared</p>
+<li><p>JS automatically allocate memory whenever a value is declared</p>
 </li>
 <li><p>function is considered as an object</p>
 </li>
@@ -5684,8 +5687,9 @@ console.log(jso4);
 </li>
 </ul>
 <h4 id="Garbage-Collection"><a href="#Garbage-Collection" class="headerlink" title="Garbage-Collection"></a>Garbage-Collection</h4><p>an object has a reference to its <code>prototype</code> (<code>implicit reference 隐式引用</code>) and to its properties values (<code>explicit reference 显示引用</code>).</p>
-<p><strong>Reference-counting Garbage-Collection 引用计数垃圾收集</strong></p>
-<ul>
+<h5 id="Reference-counting-Garbage-Collection"><a href="#Reference-counting-Garbage-Collection" class="headerlink" title="Reference-counting Garbage-Collection"></a>Reference-counting Garbage-Collection</h5><ul>
+<li><p>引用计数垃圾收集</p>
+</li>
 <li><p>An object is said to be <code>garbage</code>, if there are zero references pointing to it.</p>
 </li>
 <li><p><code>circular references</code> easily results in <code>memory leak</code>. two objects are reference to each other in a function scope. They will go out of the function scope after the function call has completed. they are useless after the function is called, but they will not be considered <code>garbage</code> since they still have at least one reference.</p>
@@ -5693,8 +5697,8 @@ console.log(jso4);
 
 </li>
 </ul>
-<p><strong>mark and sweep algorithm 标记-清除算法</strong></p>
-<ul>
+<h5 id="mark-and-sweep-algorithm"><a href="#mark-and-sweep-algorithm" class="headerlink" title="mark and sweep algorithm"></a>mark and sweep algorithm</h5><ul>
+<li>标记-清除算法</li>
 <li>An object is said to be <code>garbage</code>, if an object is unreachable. the garbage collector starts from the root which is the global object in js, and inspects all the children recursively. Starting from the roots, the garbage collector will find all reachable objects and mark them as active. Any memory not marked as active can now be considered garbage.</li>
 <li>with this algorithm, <code>circular references</code> is no longer a problem since the objects is unreachable after the function is completely.</li>
 </ul>
@@ -5718,12 +5722,9 @@ console.log(jso4);
 <li><p>closure.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// seems fixed in the newly v8</span></span><br><span class="line"><span class="keyword">var</span> theThing = <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">var</span> replaceThing = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="comment">// shared scope, shared with `unused` and `someMethod`. `unused` is never used, `someMethod` can be used through `theThing`. And as `someMethod` shares the closure scope with `unused`, even though `unused` is never used, its reference to `originalThing` forces it to stay active.</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> originalThing = theThing; <span class="comment">// holds the previous value of  `theThing`</span></span><br><span class="line">  <span class="keyword">var</span> unused = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="comment">// holds `originalThing`</span></span><br><span class="line">    <span class="keyword">if</span> (originalThing)</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&quot;hi&quot;</span>);</span><br><span class="line">  &#125;;</span><br><span class="line">  theThing = &#123;</span><br><span class="line">    <span class="attr">longStr</span>: <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1000000</span>).join(<span class="string">&#x27;*&#x27;</span>),</span><br><span class="line">    <span class="attr">someMethod</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(someMessage);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">setInterval</span>(replaceThing, <span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
 
-
 </li>
 </ul>
-<h3 id="closure"><a href="#closure" class="headerlink" title="closure"></a>closure</h3><blockquote>
-<p>closure is a combination created by binding a function to the lexical environment. it allows you to access the outside scope from the inner of a function.</p>
-</blockquote>
+<h3 id="closure"><a href="#closure" class="headerlink" title="closure"></a>closure</h3><p>closure is a combination created by binding a function to the <code>lexical environment</code>. it allows you to access the outside scope from the inner of a function.</p>
 <h4 id="advantages"><a href="#advantages" class="headerlink" title="advantages"></a>advantages</h4><ul>
 <li><p><code>data privacy</code>. it means that you can’t access the data of the inner scope from the outside.</p>
 </li>
@@ -5809,7 +5810,7 @@ console.log(jso4);
 </li>
 <li><p><code>deep copy</code>: copy data</p>
 </li>
-<li><p>the following methods deep copy only the first layer of an object.</p>
+<li><p>the following methods perform a <code>deep copy</code> only for the first layer of an object.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Object</span>.assign(&#123;&#125;, state)</span><br><span class="line">&#123;...state&#125;</span><br><span class="line"><span class="built_in">Array</span>.prototype.concat()</span><br><span class="line"><span class="built_in">Array</span>.prototype.slice()</span><br></pre></td></tr></table></figure>
 
 </li>
@@ -5834,21 +5835,28 @@ console.log(jso4);
 
 </li>
 </ul>
-<h3 id="event-loop"><a href="#event-loop" class="headerlink" title="event loop"></a>event loop</h3><ul>
-<li><p><code>Heap and Stack?</code><br><code>Heap</code> refers to where objects are stored<br><code>Stack</code> refers to where functions are waiting to execute.</p>
+<h3 id="Single-threaded"><a href="#Single-threaded" class="headerlink" title="Single-threaded"></a>Single-threaded</h3><p>a <code>thread</code> is a single unit of execution. one or more <code>thread</code>s can be exist in a <code>process</code>. a <code>Single-threaded</code> programming language which has a <code>single-threaded</code> runtime engine that runs tasks in a program sequentially.</p>
+<p>JS as a browser script, interacts with user and manipulates dom. two threads will bring synchronize problem, as if one thread changes a node, and another thread removes that node, which thread the browser should believe. therefore even in the <code>web worker</code>, manipulating dom is not allowed, and <code>web worker</code> is controlled by <code>main-thread</code></p>
+<h3 id="Event-Loop"><a href="#Event-Loop" class="headerlink" title="Event Loop"></a>Event Loop</h3><ul>
+<li><p><strong>Heap and Stack?</strong><br>both of them are two areas in memory where data is stored.<br><code>Heap</code>(dynamic memory allocation) stores objects which mutable and have a variable size.<br><code>Stack</code>(Static memory allocation) store Primitive values which is immutable and have a fixed size.</p>
 </li>
-<li><p><code>synchronous and asynchronous</code><br>they are two types of js tasks. <code>synchronous task</code> constitute <code>execution context stack(执行栈)</code> in the <code>Main-Thread</code>. <code>asynchronous task</code> wait in the <code>Task Queue</code>.</p>
+<li><p><strong>Call Stack</strong><br><code>Call Stack</code> is in the <code>Main-Thread</code> and is used to store functions for execution</p>
 </li>
-<li><p><code>Event Loop</code><br>after all the tasks of <code>Task Queue</code> are completed, the engine continuously scans <code>task queue</code> to find tasks that can transition waiting status to execution. once such tasks are found, the engine pushes it into <code>execution context stack</code>. this process where JavaScript engine constantly scans for tasks is called as <code>Event Loop</code>.</p>
+<li><p><strong>synchronous and asynchronous</strong><br>they are two types of js tasks.<br><code>synchronous tasks</code> are stored in the <code>Call Stack</code>, waiting for execution<br><code>asynchronous tasks</code> like <code>fetch</code> or <code>setTimeout</code> are handled by other <code>process</code> in the browser. JS is <code>Single-threaded</code>, but  browser is <code>Multi-process</code></p>
 </li>
-<li><p><code>Call Stack</code><br>every call of function will leave a <code>Call Frame（调用帧）</code>, which keeps the inner information about function including <strong>variables and the location where the function called</strong>,  those information will be deleted after the function is completed.</p>
+<li><p><strong>Task Queue(Callback Queue)</strong><br>following <code>FIFO(first in first out)</code><br><code>asynchronous tasks</code> are related with <code>callbacks</code>. if a <code>asynchronous task</code> is finished by browser, then it’s corresponding <code>callback</code> will push into the <code>Task Queue</code></p>
+</li>
+<li><p><strong>Event Loop</strong><br>if all the tasks in <code>Call Stack</code> are completed, then JS engine will continuously scans <code>Task Queue</code> to find tasks and push them into <code>Call Stack</code>. this process where JS engine constantly scans for tasks is called as <code>Event Loop</code>.<br>through <code>Event Loop</code>, JS engine can handle <code>asynchronous tasks</code>, and meanwhile keeps the responsive of the page</p>
+</li>
+<li><p><strong>Call Frame</strong><br>every call of function will leave a <code>Call Frame（调用帧）</code>, which keeps the inner information about function including <em>variables and the location where the function called</em>.  those information will be deleted after the function is completed.</p>
+<p>following <code>LIFO(last in first out)</code></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// put C into stack =&gt; B in =&gt; A in =&gt; A out =&gt; B out =&gt; C out</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">funA</span>(<span class="params"></span>) </span>&#123;  <span class="built_in">console</span>.log(<span class="string">&#x27;funA&#x27;</span>) &#125;;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">funB</span>(<span class="params"></span>) </span>&#123; funA() &#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">funC</span>(<span class="params"></span>) </span>&#123; funB() &#125;</span><br><span class="line">funC()</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><code>Task queue</code> have been divided into two types <code>Macro</code> and <code>Micro</code></p>
+<li><p><strong>two types of tasks in Task Queue, Macro and Micro</strong></p>
 <ul>
 <li><p><code>Macro tasks</code> include <code>setImmediate(Deprecated)</code> / <code>setTimeout</code> / <code>setInterval</code> / <code>MessageChannel</code> /<code>requestAnimationFrame</code> / <code>UI render</code>/ <code>I/O in node.js</code></p>
 </li>
-<li><p><code>Micro tasks</code> include the <code>onerror</code> and <code>then callback of Promise</code>.</p>
+<li><p><code>Micro tasks</code> include the <code>onerror</code> and <code>then</code> callback.</p>
 </li>
 <li><p>setImmediate -&gt; MessageChannel -&gt; setTimeout 0</p>
 </li>
@@ -5899,7 +5907,7 @@ console.log(jso4);
 <p><strong>Vue</strong></p>
 <ul>
 <li>considered easier to learn for beginners due to its simpler syntax and clear documentation.</li>
-<li>use a Single File Component (SFC) which contains a template section for HTML markup, a script section for JavaScript logic, and a style section for CSS.</li>
+<li>use a Single File Component (SFC) which contains a template section for HTML markup, a script section for JS logic, and a style section for CSS.</li>
 <li>has a growing community, most libraries are developed by the official team.</li>
 <li>has a powerful two-way data binding system, keeping data and the UI in sync.</li>
 </ul>
@@ -5908,7 +5916,7 @@ console.log(jso4);
 <p><strong>React</strong></p>
 <ul>
 <li>has a steeper learning curve due to its extensive ecosystem and more complex concepts.</li>
-<li>uses JSX (JavaScript XML), this allows to write HTML-like code in js files. JSX may be more powerful and expressive.</li>
+<li>uses JSX (JS XML), this allows to write HTML-like code in js files. JSX may be more powerful and expressive.</li>
 <li>has a larger ecosystem and community support, with many third-party libraries and tools available.</li>
 <li>follows a one-way data flow, explicitly manage state and re-render components when needed.</li>
 <li>data flows in a one-way direction, from outside to inside, and from top to bottom. this ensures a simple and predictable data flow</li>
@@ -6635,11 +6643,7 @@ console.log(jso4);
 </ul>
 </li>
 </ul>
-<h2 id="Vscode"><a href="#Vscode" class="headerlink" title="Vscode"></a>Vscode</h2><p>vscode setting</p>
-<p><a href="https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md#md005">markdown lint config</a></p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">&quot;security.workspace.trust.untrustedFiles&quot;</span>: <span class="string">&quot;open&quot;</span>,</span><br><span class="line">	<span class="attr">&quot;editor.tabCompletion&quot;</span>: <span class="string">&quot;on&quot;</span>,</span><br><span class="line">	<span class="attr">&quot;editor.insertSpaces&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">	<span class="attr">&quot;editor.tabSize&quot;</span>: <span class="number">4</span>,</span><br><span class="line">	<span class="attr">&quot;editor.detectIndentation&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">	<span class="attr">&quot;files.autoSave&quot;</span>: <span class="string">&quot;onFocusChange&quot;</span>,</span><br><span class="line">	<span class="attr">&quot;php.validate.executablePath&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">	<span class="attr">&quot;editor.defaultFormatter&quot;</span>: <span class="string">&quot;esbenp.prettier-vscode&quot;</span>,</span><br><span class="line">	<span class="attr">&quot;editor.formatOnSave&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">	<span class="attr">&quot;prettier.jsxSingleQuote&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">	<span class="attr">&quot;prettier.semi&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">	<span class="attr">&quot;prettier.useTabs&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">	<span class="attr">&quot;prettier.tabWidth&quot;</span>: <span class="number">4</span>,</span><br><span class="line">	<span class="attr">&quot;prettier.jsxBracketSameLine&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">	<span class="attr">&quot;prettier.printWidth&quot;</span>: <span class="number">200</span>,</span><br><span class="line">	<span class="attr">&quot;workbench.colorTheme&quot;</span>: <span class="string">&quot;Blackboard&quot;</span>,</span><br><span class="line">	<span class="attr">&quot;javascript.updateImportsOnFileMove.enabled&quot;</span>: <span class="string">&quot;always&quot;</span>,</span><br><span class="line">	<span class="attr">&quot;leek-fund.statusBarStock&quot;</span>: [<span class="string">&quot;sh000001&quot;</span>],</span><br><span class="line">	<span class="attr">&quot;settingsSync.ignoredExtensions&quot;</span>: [],</span><br><span class="line">	<span class="attr">&quot;markdown-preview-enhanced.previewTheme&quot;</span>: <span class="string">&quot;vue.css&quot;</span>,</span><br><span class="line">	<span class="attr">&quot;[markdown]&quot;</span>: &#123;</span><br><span class="line">		<span class="attr">&quot;editor.defaultFormatter&quot;</span>: <span class="string">&quot;yzhang.markdown-all-in-one&quot;</span></span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="attr">&quot;markdownlint.config&quot;</span>: &#123;</span><br><span class="line">		<span class="attr">&quot;MD025&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">		<span class="attr">&quot;MD007&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">		<span class="attr">&quot;MD010&quot;</span>: <span class="literal">false</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<table>
+<h2 id="Vscode"><a href="#Vscode" class="headerlink" title="Vscode"></a>Vscode</h2><table>
 <thead>
 <tr>
 <th>short key</th>
@@ -6833,8 +6837,8 @@ console.log(jso4);
 </tr>
 </tbody></table>
 <h2 id="records"><a href="#records" class="headerlink" title="records"></a>records</h2><h3 id="2023-7-19"><a href="#2023-7-19" class="headerlink" title="2023/7/19"></a>2023/7/19</h3><ul>
-<li>CSS filters can form <code>stacking context</code></li>
-<li>the property <code>hidden</code> of input does not work in Safari</li>
+<li><code>CSS filter</code> can form <code>stacking context</code></li>
+<li><code>input</code>‘s’ property <code>hidden</code> does not work in Safari</li>
 </ul>
 ]]></content>
       <categories>

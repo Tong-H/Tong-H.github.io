@@ -85,12 +85,14 @@ Canvas 和 SVG 的区别
 canvas 以像素点为单位，而 SVG 是矢量图形，即放大图像不会失真，不依赖分辨率，对于 ui 同学来说大概就是 photoshop 与 illustrator 的区别了。
 
 canvas 依赖分辨率，适合图片处理，可以做一些图片裁剪合成之类的功能。
-SVG 放大不失真的图形展示当然很好，但矢量图之所以不会失真是因为保存了图形的线条和图块，所以渲染速度会和图形的复杂度成正比，这也表示 svg 非常适合用来绘制扁平化的图像，比如常用的 icon 或者扁平风格的...</p></div><div class="meta"><i class="iconfont iconshijian" title="阅读时长">4</i><i class="iconfont iconwenzi" title="字数">1.2k</i><i class="iconfont iconshijian" title="创建时间">2021-12-13</i></div></article><article><a class="artititle" href="/2021/11/17/notes_git/">notes_git</a><div class="content ellipse"><p>to avoid being ask Enter passphrase for keyauto-launching-ssh-agent-on-git-for-windows
-rebase
-git rebase -i HEAD~&lt;number&gt; or git rebase -i &lt;commit number&gt;  for using other commands, just change the pick word to the command name
-edit multiple commit messages:
-git rebase -i HEAD~&lt;number&gt; or git rebase -i &lt;commit number&gt; modify pick to edit,  then save and exit
-git commit -...</p></div><div class="meta"><i class="iconfont iconshijian" title="阅读时长">8</i><i class="iconfont iconwenzi" title="字数">1.3k</i><i class="iconfont iconshijian" title="创建时间">2021-11-17</i></div></article><div id="paginator"><span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/7/">7</a><a class="extend next" rel="next" href="/archives/page/2/">Next</a></div></div><script>document.getElementById('arshow').onclick = function() {
+SVG 放大不失真的图形展示当然很好，但矢量图之所以不会失真是因为保存了图形的线条和图块，所以渲染速度会和图形的复杂度成正比，这也表示 svg 非常适合用来绘制扁平化的图像，比如常用的 icon 或者扁平风格的...</p></div><div class="meta"><i class="iconfont iconshijian" title="阅读时长">4</i><i class="iconfont iconwenzi" title="字数">1.2k</i><i class="iconfont iconshijian" title="创建时间">2021-12-13</i></div></article><article><a class="artititle" href="/2021/11/17/node_graphic/">notes_graphic</a><div class="content ellipse"><p>three.jsPBRanti-aliasing 反锯齿multi-sample anti-aliasing 多重采样, this is a build-in WebGL method, depending on GPU
+render1234const renderer = new WebGLRenderer(&#123;   antialias: true, // turn on anti-aliasing, to blur the edges of square pixels. &#125;); renderer.physicallyCorrectLights = true; // 
+
+camera
+two types of camera
+
+
+perspective projection 透视投影,  the area in between the Near Clipping P...</p></div><div class="meta"><i class="iconfont iconshijian" title="阅读时长">3</i><i class="iconfont iconwenzi" title="字数">555</i><i class="iconfont iconshijian" title="创建时间">2021-11-17</i></div></article><div id="paginator"><span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/7/">7</a><a class="extend next" rel="next" href="/archives/page/2/">Next</a></div></div><script>document.getElementById('arshow').onclick = function() {
     document.getElementById('list_archives').style = 'opacity: 0;display: none'
     document.getElementById('normalposts').style = 'opacity: 0;display: block'
     setTimeout(() => {

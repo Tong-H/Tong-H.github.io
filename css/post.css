@@ -125,6 +125,19 @@ code {
 }
 .highlight {
 	border-radius: 1px;
+	font-size: 90%;
+}
+.highlight::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+.highlight::-webkit-scrollbar-thumb {
+	border-radius: 4px;
+	background: #eee;
+}
+.highlight::-webkit-scrollbar-track {
+	border-radius: 0;
+	background: #383838
 }
 .highlight pre {
 	border: none;

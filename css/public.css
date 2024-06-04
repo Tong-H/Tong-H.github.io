@@ -2,12 +2,12 @@ html,
 body {
 	color: #555;
 	line-height: 1.7;
-	overflow-x: hidden;
 	font-family: -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial;
 }
 html {
 	min-height: 100vh;
 	min-width: 100vw;
+	overflow-x: hidden;
 	background: linear-gradient(
 		-48deg,
 		#ffa883 0%,
@@ -96,7 +96,7 @@ body::-webkit-scrollbar-track {
 }
 @media (min-width: 600px) {
 	.maxwidth {
-		max-width: 1300px;
+		max-width: 1400px;
 	}
 	.main .maxwidth {
 		display: flex;
@@ -105,7 +105,7 @@ body::-webkit-scrollbar-track {
 		height: calc(100vh - 120px);
 		z-index: 2;
 		overflow: auto;
-		width: 250px;
+		width: 300px;
 		box-sizing: border-box;
 		position: sticky;
         top: 76px;
@@ -121,7 +121,7 @@ body::-webkit-scrollbar-track {
 }
 @media (max-width: 600px) {
 	.rightside {
-		padding: 16px;
+		padding: 8px;
 		min-height: 80vh;
 	}
 	#sidebar {

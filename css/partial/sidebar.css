@@ -112,8 +112,8 @@
 }
 .structure .toc .toc-item {
     position: relative;
-    margin: 6px 0 6px 8px ;
+    margin: 4px 0 4px 8px ;
 }
 .structure .toc > li {
-    margin-left: 6px !important;
+    margin-left: 4px !important;
 }
