@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://mser.xyz/"/>
-  <updated>2024-09-17T01:40:25.136Z</updated>
+  <updated>2024-12-07T06:41:20.363Z</updated>
   <id>https://mser.xyz/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://mser.xyz/2023/11/17/notes_jp/"/>
     <id>https://mser.xyz/2023/11/17/notes_jp/</id>
     <published>2023-11-17T08:54:34.000Z</published>
-    <updated>2024-09-17T01:40:25.136Z</updated>
+    <updated>2024-12-07T06:41:20.363Z</updated>
     
     <summary type="html">
     
@@ -30,13 +30,12 @@
         
         
           &lt;style&gt;
-  html  {
-    background: dark
-  }
-  html body strong {
-    color: #22a0ff ;
+  .postDetail strong {
+    color: #0a95ff ;
     background: rgb(10 149 255 / 10%);
-   
+    padding: 0px 2px;
+    border-radius: 3px;
+  
         
       
     
@@ -296,7 +295,7 @@
     <link href="https://mser.xyz/2021/11/17/notes_git/"/>
     <id>https://mser.xyz/2021/11/17/notes_git/</id>
     <published>2021-11-17T08:54:34.000Z</published>
-    <updated>2024-09-17T01:40:25.134Z</updated>
+    <updated>2024-12-07T06:18:30.865Z</updated>
     
     <summary type="html">
     
@@ -304,8 +303,8 @@
       
         
         
-          &lt;p&gt;git config –global push.autoSetupRemote true&lt;/p&gt;
-&lt;h2 id=&quot;stash&quot;&gt;&lt;a href=&quot;#stash&quot; class=&quot;headerlink&quot;
+          &lt;p&gt;git config –global push.autoSetupRemote true&lt;br&gt;git rm -r –cached .&lt;/p&gt;
+&lt;h2 id=&quot;bisect&quot;&gt;&lt;a href=&quot;#bisect&quot; class=&quot;headerlink&quot;
         
       
     
@@ -352,7 +351,7 @@
     <link href="https://mser.xyz/2021/11/17/notes_js/"/>
     <id>https://mser.xyz/2021/11/17/notes_js/</id>
     <published>2021-11-17T08:54:34.000Z</published>
-    <updated>2024-09-17T01:40:25.143Z</updated>
+    <updated>2024-12-07T06:18:30.869Z</updated>
     
     <summary type="html">
     

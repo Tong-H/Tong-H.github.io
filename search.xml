@@ -1652,7 +1652,8 @@ console.log(jso4);
   <entry>
     <title>notes_git</title>
     <url>/2021/11/17/notes_git/</url>
-    <content><![CDATA[<p>git config –global push.autoSetupRemote true</p>
+    <content><![CDATA[<p>git config –global push.autoSetupRemote true<br>git rm -r –cached .</p>
+<h2 id="bisect"><a href="#bisect" class="headerlink" title="bisect"></a>bisect</h2><p><code>git bisect start &lt;end point&gt; &lt;start point&gt;</code> repeatedly checking out the midpoint commit between two endpoints, and then narrowing down the search space based on whether the bug is present or not.</p>
 <h2 id="stash"><a href="#stash" class="headerlink" title="stash"></a>stash</h2><p><code>git stash</code> is for temporarily storing changes, <code>git add</code> is for preparing changes for the next commit<br><code>git stash list</code><br><code>git stash apply</code> apply stashed changes to the working directory<br><code>git stash pop</code> apply stashed changes to the working directory and remove that changes from the stash list</p>
 <h2 id="to-avoid-Enter-passphrase-for-key"><a href="#to-avoid-Enter-passphrase-for-key" class="headerlink" title="to avoid Enter passphrase for key"></a>to avoid <code>Enter passphrase for key</code></h2><p><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases#auto-launching-ssh-agent-on-git-for-windows">auto-launching-ssh-agent-on-git-for-windows</a></p>
 <h2 id="rebase"><a href="#rebase" class="headerlink" title="rebase"></a>rebase</h2><ul>
@@ -1667,9 +1668,11 @@ console.log(jso4);
 <li><code>squash commits</code>, change commits you want merged to <code>squash</code> or <code>fixup(this will discard the commit messages)</code>. (only consecutive commits can be squashed, while the commits order in editor is changeable)</li>
 </ul>
 <h2 id="tag"><a href="#tag" class="headerlink" title="tag"></a>tag</h2><ul>
-<li><code>git tag -d &lt;tag name&gt;</code></li>
-<li><code>git push origin :refs/tags/&lt;tag name&gt;</code> <code>git push origin --delete &lt;tag name&gt;</code> push the delete operation to the remote</li>
-<li><code>git tag -a &lt;tag name&gt; &lt;commit number&gt; -m &lt;tag commit message&gt;</code></li>
+<li><code>git tag &lt;tag name&gt;</code> create</li>
+<li><code>git tag -a &lt;tag name&gt; &lt;commit number&gt; -m &lt;tag commit message&gt;</code>  create</li>
+<li><code>git tag -d &lt;tag name&gt;</code> delete</li>
+<li><code>git push origin tag &lt;tag name&gt;</code> </li>
+<li><code>git push origin --delete &lt;tag name&gt;</code> push the delete operation to the remote</li>
 <li><code>git show &lt;tag name&gt;</code> to display the tag info along with the commit info</li>
 </ul>
 <h2 id="basic"><a href="#basic" class="headerlink" title="basic"></a>basic</h2><p>Config user name and email <code>git config  --global  user.name / user.email “”</code><br><code>git config --list</code> check git config list<br><code>pwd show</code><br><code>git init</code><br>SSH binding computer <code>ssh-keygen -t rsa -C &quot;your email@example.com&quot;</code></p>
@@ -1775,6 +1778,7 @@ console.log(jso4);
 <li><code>git merge &lt;branch name or a commit num&gt;</code> to merge with the given branch or commit  </li>
 <li><code>git merge &lt;branch name&gt; --allow-unrelated-histories</code> to merge two branches no common bases</li>
 <li><code>git merge-base &lt;target branch&gt; &lt;refer branch&gt;</code> compare the two branches and show the common base</li>
+<li><code>git push -o merge_request.create -o merge_request.assign=branchname</code> </li>
 </ul>
 <h2 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h2><ul>
 <li><code>git clean -f</code> remove untracked files</li>
@@ -3629,61 +3633,30 @@ console.log(jso4);
     <title>notes_jp</title>
     <url>/2023/11/17/notes_jp/</url>
     <content><![CDATA[<style>
-  html  {
-    background: dark
-  }
-  html body strong {
-    color: #22a0ff ;
+  .postDetail strong {
+    color: #0a95ff ;
     background: rgb(10 149 255 / 10%);
-    font-weight: 600;   
-    padding: 4px 8px;
+    padding: 0px 2px;
+    border-radius: 3px;
+    font-size: 88%
   }
-  html body code {
-    color: red;
-    background: rgb(255 0 0 / 10%);
-    font-size: inherit !important;
-    padding: 0;
-    font-weight: 600;
-  }
-  html body em {
+  .postDetail em {
     background: #44ff0a1f;
     color: #3de708;
-    font-weight: 600;
-  }
-  html body h2 {
-    font-size: 2em !important;
-  }
-  html body h4 {
-    font-size: 1.1em !important;
   }
   blockquote {
     border-left: 1px solid #d6d6d6 !important;
     border: 1px solid #d6d6d6;
     border-radius: 4px;
-    padding: 8px 15px !important;
-    background-color: #f5f5f5 !important;
+    background-color: rgb(245 245 245 / 95%) !important;
     color: #818181 !important;
- }
- html body ul li {
-  margin: 16px 0px;
- }
-  html body ul ul li {
-  margin: 5px 0px;
- }
+  }
  html body hr {
   height: 1px !important;
  }
- pre[class*=language-] {
-    background: #f5f5f5;
- }
- .token.deleted {
-    background-color: #ffecec;
-    color: #bd2c00;
- }
- .token.inserted {
-    background-color: #eaffea;
-    color: #55a532;
- }
+ .postDetail li {
+    list-style: circle !important;
+  }
 </style>
 
 <h2 id="quick-summary"><a href="#quick-summary" class="headerlink" title="quick summary"></a>quick summary</h2><ul>
@@ -3696,7 +3669,7 @@ console.log(jso4);
 <li><p>26</p>
 <ul>
 <li>use a clause as a noun, <a href="#clause-as-a-part-of-speech">clause as a part of speech</a></li>
-<li>express possibilaity, <a href="#possibility">possibility</a><ul>
+<li>express possibility, <a href="#possibility">possibility</a><ul>
 <li>でしょう</li>
 <li>かもしれません</li>
 <li>もしかしたら</li>
@@ -3709,7 +3682,7 @@ console.log(jso4);
 <li>clause + 時 = when, 在…时候，indicates a specific point in time when something happens or a condition is met</li>
 <li>ながら = while, 一边做…一边做…, two actions are happening simultaneously</li>
 <li>でしょう <a href="#possibility">other usages</a>, seeking agreement or confirmation</li>
-<li><a href="#%E3%81%A6%E5%BD%A2%E3%81%84%E3%81%BE%E3%81%99">「て形」います</a> expressing someting happening regularly</li>
+<li><a href="#%E3%81%A6%E5%BD%A2%E3%81%84%E3%81%BE%E3%81%99">「て形」います</a> expressing something happening regularly</li>
 <li><a href="#%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">について</a></li>
 <li>と会います</li>
 </ul>
@@ -3735,11 +3708,6 @@ console.log(jso4);
 </ul>
 </li>
 </ul>
-<p>いち：電気を　消せ<br>に：次の文章を読んで、質問に答えなさい<br>さん：ここに　車を止めるな<br>よう：このマークは「タバコをすうな」という意味です</p>
-<p>さっき部長は　なんと言いましたか<br>「書類を早く提出しろ」と言いました</p>
-<p>  誠、早くお風呂に入りなさい<br>  今宿題しているんだ。お母さん先に入ってよ</p>
-<p>すみません、これはなんと読みますか<br>「立入禁止」と読みます。「ここに入るな」という意味です</p>
-<p>この花の名前は　していますか？<br>それは　フジという花です</p>
 </li>
 <li><p>30</p>
 <ul>
@@ -3747,17 +3715,6 @@ console.log(jso4);
 <li>ので <a href="#BecauseandTherefore">BecauseandTherefore</a></li>
 <li>と思います、と思っています</li>
 </ul>
-<blockquote>
-<p>もう11「じゅういち」時だから、寝よう<br>今日、会社を　休もうと思います。<br>明日、病院へ　行こうと思っています<br>荷物が重いので、宅配便が送ります</p>
-</blockquote>
-<blockquote>
-<p>仕事が終わって、行こうと思います<br>ごめん、明日早いから、ちょうと….  </p>
-</blockquote>
-<blockquote>
-<p>もう遅いので、そろそろ帰ろうと思います<br>  お疲れ様です。気を付けて</p>
-</blockquote>
-<p>もうすぐゴールデンウイークですね。何か予定がありますか<br>長江下りを　しようと思っています</p>
-<p>土曜日も仕事ですね<br>ええ。香港から客さんが来るので。空港へ迎えに行きます</p>
 </li>
 <li><p>31</p>
 <ul>
@@ -3766,26 +3723,21 @@ console.log(jso4);
 <li>でしょうか，to be polite</li>
 <li>adj as adverb</li>
 </ul>
-<p>朝ご飯は毎日きちんと食べますか<br>ええ。でも、たまに食べないことがあります</p>
 </li>
-<li><p>32</p>
+<li><p>32　99</p>
 <ul>
-<li>辞書形／ない形 + <strong>つまりです</strong>、<a href="#%E3%81%A8%E6%80%9D%E3%81%84%E3%81%BE%E3%81%99">same as と思っています</a></li>
+<li>辞書形／ない形 + <strong>つもりです</strong>、plan to, <a href="#%E3%81%A8%E6%80%9D%E3%81%84%E3%81%BE%E3%81%99">same as と思っています</a></li>
 <li>ことにします／ことにしました, decide to do sth</li>
-<li>ことになりました, Express a change caused by external reasons</li>
-<li><a href="#clauseAsPartOfSpeech">clause + そうです</a></li>
+<li>ことになりました = It has been decided. indicates that something has been decided or arranged. It conveys a sense of formality and finality about the situation.</li>
+<li><a href="#conjecture">clause + そうです</a></li>
 </ul>
 </li>
 <li><p>33</p>
 <ul>
 <li>自动词/他动词</li>
 <li><a href="#%E3%81%A6%E5%BD%A2">「て形」しまいます</a></li>
-<li>[いadj(remove い)/さadj/verb(remove ます)] + そうです<ul>
-<li>to infer status beasd on one’s feelings</li>
-<li>negative form, adj + そうではありません、verb + そうにありません</li>
-<li>なさそうです＝ない＋そうです、よさそうです = いい＋そうです</li>
-</ul>
-</li>
+<li><a href="#conjecture">[いadj(remove い)/さadj/verb(remove ます)] + そうです</a></li>
+<li>かしら</li>
 </ul>
 </li>
 <li><p>34 p125</p>
@@ -3816,30 +3768,115 @@ console.log(jso4);
 <ul>
 <li><a href="#%E3%81%B0%E5%BD%A2">ば形</a></li>
 <li>なら<a href="#conditionalform">conditionalform</a></li>
-<li>とか～とか、simalar to <del>や</del>など, the later can only connect nouns</li>
+<li><a href="#connectPoints">とか～とか</a>、similar to <del>や</del>など, the later can only connect nouns</li>
 </ul>
 </li>
 <li><p>38</p>
 <ul>
-<li><a href="#%E3%81%8B%E3%81%AE%E3%81%86%E5%BD%A2">かのう形</a></li>
+<li><a href="#%E5%8F%AF%E8%83%BD%E5%BD%A2%E3%81%8B%E3%81%AE%E3%81%86%E3%81%91%E3%81%84">可能形かのうけい</a></li>
 <li><a href="#becauseandtherefore">ように</a></li>
 </ul>
 </li>
 <li><p>39 181</p>
 <ul>
-<li>て形　+　いきます<ul>
+<li><strong>て形　+　いきます</strong><ul>
 <li>an action that continues or happens away from the speaker’s current location or context.</li>
 </ul>
 </li>
-<li>て形　+　きます<ul>
+<li><strong>て形　+　きます</strong><ul>
 <li>in the speaking language, this can refert to an action that occurs toward the speaker, or is completed and then returned to the current context.</li>
 </ul>
 </li>
 <li><a href="#becauseandtherefore">ために、のために</a></li>
-<li>遠く、近くare noun, diferent from other いadj</li>
+<li><strong>遠く、近く</strong>are noun, diferent from other いadj</li>
+</ul>
+</li>
+<li><p>40 191</p>
+<ul>
+<li>ところです, going to do sth, about to do sth, 正要去<ul>
+<li>ているところです, emphasizes being in the middle of an action right now.</li>
+<li>たところです, an action just finished</li>
+</ul>
+</li>
+<li>ばかり, alomst same as たところです, but it is preferred when the action has been completed after a long time.”</li>
+<li>ます形 + 続けます,  the action will continue or has been continuing over a period of time.</li>
+</ul>
+</li>
+<li><p>41 207</p>
+<ul>
+<li><a href="#%E5%8F%97%E8%BA%AB%E5%BD%A2%E3%81%86%E3%81%91%E3%81%BF%E3%81%91%E3%81%84">受身形</a></li>
+<li><a href="#Quantifier">~とも</a></li>
+</ul>
+</li>
+<li><p>42 217</p>
+<ul>
+<li><a href="#conditionalform">た形／ない形＋まま</a></li>
+<li><a href="#possibility">はずです</a></li>
+<li>はずがありません</li>
+<li>のに、can refer to “even though /  after all”, when the subclause is contrast or unexpected outcome<ul>
+<li>さadj + なのに</li>
+<li><blockquote>
+<p>目覚[めざ] ましを<code>かけておいたのに</code>、今朝は起きられませんでした</p>
+</blockquote>
+</li>
 </ul>
 </li>
 </ul>
+</li>
+<li><p>43</p>
+<ul>
+<li><a href="#%E5%8F%97%E8%BA%AB%E5%BD%A2%E3%81%86%E3%81%91%E3%81%BF%E3%81%91%E3%81%84">受身形うけみけい</a></li>
+<li><a href="#thinking">のではないでしょうか</a></li>
+<li><a href="#thinking">と考える</a></li>
+</ul>
+</li>
+<li><p>44 </p>
+<ul>
+<li><a href="#conjecture">ようです</a>, It seems” or “It appears”</li>
+<li><a href="#conjecture">みたいです</a>, “It looks like” or “It seems like”</li>
+<li><a href="#conjecture">らしいです</a>, “I heard that” or “It seems that”</li>
+</ul>
+</li>
+<li><p>45 253</p>
+<ul>
+<li>～ていきます/てきました</li>
+<li><a href="#connectPoints">～し～し</a></li>
+<li>ば形＋「辞書形／」＋ほど<ul>
+<li><blockquote>
+<p>商品は<code>安ければ安いほど</code>売れるでしょう</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>46</p>
+<ul>
+<li><a href="#conjecture">いかにも noun らしい</a> </li>
+<li><a href="#conjecture">まるで noun みたいです / ようです</a></li>
+<li>までに、すえ</li>
+</ul>
+</li>
+<li><p>47 273</p>
+<ul>
+<li><a href="#%E5%B0%8A%E6%95%AC%E8%AA%9E">尊敬語</a></li>
+</ul>
+</li>
+<li><p>48 283</p>
+<ul>
+<li><a href="#%E8%87%AA%E8%AC%99%E8%AA%9E">自謙語</a></li>
+<li>verbて形＋みたい</li>
+<li><a href="#%E5%B0%8A%E6%95%AC%E8%AA%9E">noun/adj convert to 尊敬語</a></li>
+</ul>
+</li>
+<li><p>49 </p>
+<ul>
+<li>とは、というのは、verb + ということは、noun + というものは</li>
+<li>~ は ~ の１つです、one of the~~~</li>
+</ul>
+</li>
+</ul>
+<p>n3 qualification: the overall score should be above 95 out of a total of 180, with each section exceeding 19</p>
 <h2 id="particles"><a href="#particles" class="headerlink" title="particles"></a>particles</h2><h3 id="と"><a href="#と" class="headerlink" title="と"></a>と</h3><ul>
 <li>辞書形／ない形 + と<ul>
 <li>express a <em>constant or natural status</em></li>
@@ -3872,7 +3909,7 @@ console.log(jso4);
 </li>
 <li><p>To emphasize the noun before</p>
 <ul>
-<li>can be understood “for china or in china”. without “に”, the focus shifts from empthizing china as the place where the action takes place to simply stating that in relation to China</li>
+<li>can be understood “for china or in china”. without “に”, the focus shifts from empathizing china as the place where the action takes place to simply stating that in relation to China</li>
 <li><blockquote>
 <p><code>中国には</code> 日本のうたが好きな人が たくさんいます</p>
 </blockquote>
@@ -3887,15 +3924,6 @@ console.log(jso4);
 <ul>
 <li><blockquote>
 <p>Q:　この写真は<code>何に</code>使いますか？A:　パスポートの<code>申請に</code>使います</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="や"><a href="#や" class="headerlink" title="や"></a>や</h3><ul>
-<li>same as と, = and<ul>
-<li><blockquote>
-<p>太極拳や　ラジオ体操を　していました</p>
 </blockquote>
 </li>
 </ul>
@@ -3941,7 +3969,7 @@ console.log(jso4);
 <h2 id="こそあど"><a href="#こそあど" class="headerlink" title="こそあど"></a>こそあど</h2><ul>
 <li>thing: これ    それ    あれ    どれ／どの　だれ／どなた</li>
 <li>relative pronouns(連体詞): この    その    あの    どの<ul>
-<li>relative pronouns＋方 = polite form to show respect forwoards someone</li>
+<li>relative pronouns＋方 = polite form to show respect forwards someone</li>
 </ul>
 </li>
 <li>location: ここ    そこ    あそこ    どこ</li>
@@ -3952,15 +3980,15 @@ console.log(jso4);
 <li>副词:    こう    そう    ああ    どう</li>
 </ul>
 <h2 id="長音"><a href="#長音" class="headerlink" title="長音"></a>長音</h2><p>長音「ちょうおん」, add vowel[あ (a), い (i), う (u), え (e), and お (o)] which is  on the same stage as the last sound</p>
-<h2 id="Quantifier-13"><a href="#Quantifier-13" class="headerlink" title="Quantifier(13)"></a>Quantifier(13)</h2><ul>
+<h2 id="Quantifier"><a href="#Quantifier" class="headerlink" title="Quantifier"></a>Quantifier</h2><ul>
 <li><p>Noun <em>を</em> Quantifier action = <strong>use with action</strong></p>
 <ul>
-<li>とりあえず　生ビールを　３「みっ」つ　お願いします</li>
+<li>とりあえず　生ビールを　３<sup>みっ</sup>つ　お願いします</li>
 </ul>
 </li>
 <li><p>Noun <em>が</em> Quantifier <em>います／あります</em> = <strong>express existence</strong></p>
 <ul>
-<li>机の上に　本が　三冊「さんさつ」あります</li>
+<li>机の上に　本が　三冊<sup>さんさつ</sup>あります</li>
 </ul>
 </li>
 <li><p>Quantifier *で = 以个为单位的销售</p>
@@ -3973,10 +4001,21 @@ console.log(jso4);
 <p>昨日は<code>一人で</code>映画館に行った</p>
 </blockquote>
 </li>
+<li><p>~とも、used after quantifiers, express the idea of “both” or “together,”</p>
+<ul>
+<li><blockquote>
+<p>週末にキャンプにいきました。２日<sup>ふつか</sup>とも雨が降<sup>ふ</sup>られて、大変でしたよ</p>
+</blockquote>
+</li>
+</ul>
+</li>
 </ul>
 <p><strong>Query</strong></p>
 <ul>
-<li>ぐらい／くらい</li>
+<li>ぐらい／くらい<ul>
+<li>can express “a extent” “to the extent”</li>
+</ul>
+</li>
 </ul>
 <h2 id="Location-lesson-4"><a href="#Location-lesson-4" class="headerlink" title="Location (lesson 4)"></a>Location (lesson 4)</h2><ul>
 <li>Location へ = <strong>Modify the location as the destination of movement</strong></li>
@@ -4229,7 +4268,7 @@ console.log(jso4);
 <p>これは　<code>明日会議使う</code>資料です<br>私が　<code>明日乗る</code>飛行機は　中国航空です</p>
 </blockquote>
 <p><strong>[辞書形] 前に =  before the action happened</strong></p>
-<h3 id="ます形"><a href="#ます形" class="headerlink" title="ます形"></a>ます形</h3><p>transform from 辞書形　to ます形</p>
+<h3 id="ます形"><a href="#ます形" class="headerlink" title="ます形"></a>ます形</h3><p>transform from 辞書形 to ます形</p>
 <ul>
 <li><p><strong>1verb</strong>, replace the last pronunciation with the corresponding <em>い sound(2)</em></p>
 </li>
@@ -4282,7 +4321,7 @@ console.log(jso4);
 </li>
 </ul>
 <hr>
-<h4 id="て形-います"><a href="#て形-います" class="headerlink" title="て形+います"></a>て形+います</h4><ul>
+<h4 id="て形います"><a href="#て形います" class="headerlink" title="て形います"></a>て形います</h4><ul>
 <li><p>express progressive tense</p>
 </li>
 <li><p>express special state leaded by actions, <em>知ります／持ちます</em> (16)</p>
@@ -4346,6 +4385,8 @@ console.log(jso4);
 <h4 id="て形-しまいます"><a href="#て形-しまいます" class="headerlink" title="て形+しまいます"></a>て形+しまいます</h4><p>to  express that something is completed, done unintentionally, often implying regret</p>
 <h3 id="た形"><a href="#た形" class="headerlink" title="た形"></a>た形</h3><p>Replace the [て／で] of [て形] with た／だ</p>
 <ul>
+<li><p>です　＝＞　だった</p>
+</li>
 <li><p>[た形]ことが　あります = <strong>express a past action</strong></p>
 <blockquote>
 <p>わたしは　すき焼きを　<code>食べたことが　あります</code></p>
@@ -4368,19 +4409,24 @@ console.log(jso4);
 <p><code>中国で買ったＣＤ</code>は　友達に　貸しました</p>
 </blockquote>
 <h3 id="ない形"><a href="#ない形" class="headerlink" title="ない形"></a>ない形</h3><ul>
-<li>い：replace the ending word with the corresponding <em>あ sound(1)</em>(except い=&gt; わ) + replace ますto ない</li>
-<li>え：replace ますto ない</li>
-<li>三类：きます=&gt;こない、します＝＞しない</li>
+<li>い：replace the ending word with the corresponding <em>あ sound(1)</em>(except い=&gt; わ) + ます =&gt;  ない</li>
+<li>え：ます =&gt;  ない</li>
+<li>きます=&gt;こない、します＝＞しない</li>
 </ul>
-<h4 id="express-imperative-mood"><a href="#express-imperative-mood" class="headerlink" title="express imperative mood"></a>express imperative mood</h4><ul>
+<h4 id="express-imperative-mood"><a href="#express-imperative-mood" class="headerlink" title="express imperative mood"></a>express imperative mood</h4><p>give commands, make requests</p>
+<ul>
 <li>「ない形」と　いけません <strong>double negative</strong>, abbr 「ない形」と</li>
-<li>「ない形」＝＞なければなりません <strong>polite form</strong>, abbr 「ない形」なければ</li>
+<li>「ない形」＝＞なければなりません <strong>polite form</strong>, abbr 「ない形」なければ, something is necessary or required. “must,” “have to,” or “should”</li>
 </ul>
 <h4 id="It’s-fine-for-not-doing-something"><a href="#It’s-fine-for-not-doing-something" class="headerlink" title="It’s fine for not doing something"></a>It’s fine for not doing something</h4><ul>
 <li>なくてもいいです</li>
 <li>[ない形] ほうが　いいです</li>
 </ul>
 <h4 id="ないでください"><a href="#ないでください" class="headerlink" title="ないでください"></a>ないでください</h4><p>please do not do something</p>
+<h4 id="ずに"><a href="#ずに" class="headerlink" title="ずに"></a>ずに</h4><blockquote>
+<p>a negative conjunction that means “without doing something” or “instead of doing something.”</p>
+</blockquote>
+<p>する　＝＞　せずに</p>
 <h3 id="Imperative-Form"><a href="#Imperative-Form" class="headerlink" title="Imperative-Form"></a>Imperative-Form</h3><h4 id="命令形-めいれいけ"><a href="#命令形-めいれいけ" class="headerlink" title="命令形(めいれいけ)"></a>命令形(めいれいけ)</h4><p>a general way, which is used to give commands or make requests</p>
 <ul>
 <li>replace the last one to <em>え sound(4)</em></li>
@@ -4389,9 +4435,10 @@ console.log(jso4);
 </ul>
 <h4 id="なさい"><a href="#なさい" class="headerlink" title="なさい"></a>なさい</h4><p>a polite and gentle way to give commands</p>
 <p><strong>ます-stem + なさい</strong></p>
-<h4 id="ない形-で-で-form"><a href="#ない形-で-で-form" class="headerlink" title="ない形 + で, で form"></a>ない形 + で, で form</h4><p>more casual tha</p>
-<h3 id="Negative-Imperative-Form"><a href="#Negative-Imperative-Form" class="headerlink" title="Negative-Imperative-Form"></a>Negative-Imperative-Form</h3><p><strong>辞書形 + な</strong> indicating a prohibition or command not to do something</p>
+<h4 id="ない形-で-で-form"><a href="#ない形-で-で-form" class="headerlink" title="ない形 + で, で form"></a>ない形 + で, で form</h4><p>more casual</p>
+<h4 id="Negative-Imperative-Form"><a href="#Negative-Imperative-Form" class="headerlink" title="Negative-Imperative-Form"></a>Negative-Imperative-Form</h4><p><strong>辞書形 + な</strong> indicating a prohibition or command not to do something</p>
 <h3 id="意志形"><a href="#意志形" class="headerlink" title="意志形"></a>意志形</h3><p>いしけい, expresses the speaker’s will, intention, or suggestion</p>
+<p><strong>Formation</strong></p>
 <ul>
 <li>replace the last sound to <em>お sound(5)う</em></li>
 <li>replace <em>る  to よう</em></li>
@@ -4399,12 +4446,13 @@ console.log(jso4);
 </ul>
 <p>意志形 + と思います, express one’s intention<br>意志形 + と思っています(て形＋います), express one’s intention that is prolonged or continuing for a while</p>
 <h3 id="ば形"><a href="#ば形" class="headerlink" title="ば形"></a>ば形</h3><p>condition form, similar to “if”</p>
+<p><strong>Formation</strong></p>
 <ul>
 <li>replace the last one to <em>え sound(4)</em> and add <em>ば</em></li>
 <li>replace <em>る  to れば</em></li>
 <li>する =&gt; <em>すれば</em>、くる =&gt; <em>くれば</em></li>
 </ul>
-<h3 id="かのう形"><a href="#かのう形" class="headerlink" title="かのう形"></a>かのう形</h3><p>express the ability or potential to do something,, similar with “ことができます”</p>
+<h3 id="可能形かのうけい"><a href="#可能形かのうけい" class="headerlink" title="可能形かのうけい"></a>可能形かのうけい</h3><p>express the ability or potential to do something,, similar with “ことができます”</p>
 <ul>
 <li>を switch to が<ul>
 <li><blockquote>
@@ -4417,13 +4465,108 @@ console.log(jso4);
 </li>
 </ul>
 </li>
-<li>可能形の辞書形<ul>
+<li>can infer to other verb forms, ない形、た形、なかった形</li>
+</ul>
+<p><strong>Formation</strong></p>
+<ul>
 <li>replace the last one to <em>え sound(4)</em> and <em>add る</em></li>
 <li>replace <em>る  to られる</em></li>
 <li>する =&gt; <em>できる</em>、くる =&gt; <em>くられる</em></li>
 </ul>
+<h3 id="受身形うけみけい"><a href="#受身形うけみけい" class="headerlink" title="受身形うけみけい"></a>受身形うけみけい</h3><p><strong>passive form, based on ない形</strong></p>
+<ul>
+<li><p>simlar with <a href="#giveandaccept">give and accept</a>, both can contain the meaning of making someone do something for me. while 受身形 is stronger </p>
 </li>
-<li>can infer to other verb forms, ない形、た形、なかった形</li>
+<li><p>ない =&gt; れる</p>
+</li>
+<li><p>ない =&gt; られる, same with <a href="#%E3%81%8B%E3%81%AE%E3%81%86%E5%BD%A2">可能形</a></p>
+</li>
+<li><p>する =&gt; される、くる =&gt; こられる</p>
+</li>
+</ul>
+<p><strong>sentence structure</strong></p>
+<ul>
+<li>[object] は [doer] に [verb 受身形] = <del>被</del></li>
+<li>[object] は [doer]<em>によって</em> [verb 受身形] = <del>被</del>, clearly indicates the doer<ul>
+<li><blockquote>
+<p>万有引力<sup>ばんゆういんりょく</sup>の法則<sup>ほうそく</sup>は<code>ニュートンによって</code>発見<sup>はっけん</sup>されました</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>[subject] は [doer] に [object] を [verb 受身形] = when <em>object</em> is a thing, <em>subject</em> is the owner of <em>object</em>, action is preformed by <em>doer</em>.  emphasizes what happened to <em>subject</em><ul>
+<li>馬さんは李さんにカメラを壊されました</li>
+</ul>
+</li>
+</ul>
+<h3 id="使役形しえきけい"><a href="#使役形しえきけい" class="headerlink" title="使役形しえきけい"></a>使役形しえきけい</h3><ul>
+<li>to “make,” “have,” or “let” someone do something</li>
+<li>noun は (noun に) noun を使役形<ul>
+<li><blockquote>
+<p>陳さんは　息子さんを　アメリカに留学させます</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>部長は　大田さんに　レポートを　書かさせます</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Formation</strong></p>
+<ul>
+<li>based on ない形</li>
+<li>replace <em>ない  =&gt; せる</em></li>
+<li>replace <em>ない  =&gt; させる</em></li>
+<li>する =&gt; <em>させる</em>、くる =&gt; <em>こさせる</em></li>
+</ul>
+<h2 id="敬語"><a href="#敬語" class="headerlink" title="敬語"></a>敬語</h2><h3 id="自謙語"><a href="#自謙語" class="headerlink" title="自謙語"></a>自謙語</h3><p>自謙語<sup>じけんご</sup>, refers to “self-deprecating language” or “humble language”, used to lower one’s own status or achievements in conversation, often to show humility or politeness.</p>
+<h3 id="尊敬語"><a href="#尊敬語" class="headerlink" title="尊敬語"></a>尊敬語</h3><ul>
+<li>Politeness refers to the general practice of showing respect and consideration toward others in communication</li>
+<li>尊敬語<sup>そんけいご</sup> honorifics usually towards the people who you are not familar with</li>
+<li><strong>noun / adj transform to 尊敬語</strong><ul>
+<li>漢字 words and fixed phrases are start from ご, while the rest are start from お</li>
+<li>ご利用、ご家族、お忙しい、お暇</li>
+</ul>
+</li>
+<li><a href="#%E5%8F%97%E8%BA%AB%E5%BD%A2%E3%81%86%E3%81%91%E3%81%BF%E3%81%91%E3%81%84">受身形</a> can be used as 尊敬語<ul>
+<li><blockquote>
+<p>周先生<sup>しゅうせんせい</sup>は明日日本へ行かれます</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>~ください<ul>
+<li>お＋い／え verb(remove ます)＋ください<ul>
+<li><blockquote>
+<p>どうぞ、お座りください</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>ご＋さ verb(remove ます)＋ください</li>
+<li>words like 見ます, 寝ます, and います, which have only <em>one syllable left after removing ます</em>cannot apply this transformation.</li>
+</ul>
+</li>
+</ul>
+<h3 id="辞書形-1"><a href="#辞書形-1" class="headerlink" title="辞書形"></a>辞書形</h3><ul>
+<li>お＋い／え verb(remove ます)＋になる</li>
+<li>ご＋さ verb(remove ます)＋になる</li>
+<li>some verbs have a special honorific form<ul>
+<li>a few words which is ending with あいうえお are very likely transform to しゃる</li>
+<li>食べる =&gt; 召し上がる（い verb, 召し上がります）</li>
+<li>行く=&gt; いらっしゃる（いらっしゃいます）</li>
+<li>する =&gt; なさる </li>
+</ul>
+</li>
+</ul>
+<h3 id="ます形-1"><a href="#ます形-1" class="headerlink" title="ます形"></a>ます形</h3><ul>
+<li>お＋い／え verb(remove ます)＋になります</li>
+<li>words like 見ます, 寝ます, and います, which have only <em>one syllable left after removing ます</em>, and <em>さ verb</em> cannot apply this transformation.</li>
+<li><blockquote>
+<p>お客様はもうお帰りになりました</p>
+</blockquote>
+</li>
 </ul>
 <h2 id="普通形"><a href="#普通形" class="headerlink" title="普通形"></a>普通形</h2><p>22 lesson<br>equal to 简体形</p>
 <ul>
@@ -4462,8 +4605,6 @@ console.log(jso4);
 <li>李さんは　絵を描くのが　好きですか</li>
 </ul>
 </li>
-<li><p>clause + <strong>そうです</strong>, express information that was heard from others</p>
-</li>
 </ul>
 <h2 id="BecauseandTherefore"><a href="#BecauseandTherefore" class="headerlink" title="BecauseandTherefore"></a>BecauseandTherefore</h2><ul>
 <li><strong>どうしてですか？</strong> = why</li>
@@ -4485,6 +4626,14 @@ console.log(jso4);
 <p>荷物が重いので、宅配便で送ります</p>
 </blockquote>
 </li>
+<li><p><strong>ですもの</strong>、softer, sometimes emotional、compare to ですから</p>
+<ul>
+<li><blockquote>
+<p>森：ええ、おかしいな。そんな<code>はずはないです</code>。<br>  李：そうですよ。おととい送ったん<code>ですもの</code>れ</p>
+</blockquote>
+</li>
+</ul>
+</li>
 <li><p><strong>「辞書形」のです（polite form）／んです</strong></p>
 <blockquote>
 <p>すみません、頭が　いたいんです</p>
@@ -4503,16 +4652,16 @@ console.log(jso4);
 <li><p>ために、のために</p>
 </li>
 </ul>
-<h3 id="express-purposes-or-goals"><a href="#express-purposes-or-goals" class="headerlink" title="express purposes or goals"></a>express purposes or goals</h3><ul>
-<li><p>ように, express a wish, a desired outcome, or a more general aim.</p>
-<ul>
+<h3 id="express-purposes-or-goals"><a href="#express-purposes-or-goals" class="headerlink" title="express purposes or goals"></a>express purposes or goals</h3><h4 id="ように"><a href="#ように" class="headerlink" title="ように"></a>ように</h4><ul>
+<li>express a wish, a desired outcome, or a more general aim.<ul>
 <li>after ない形、辞書形、可能形</li>
 <li>ようになります, express a change</li>
 <li>ようにします, indicates to make an effort or try to achieve a certain behavior or outcome.</li>
 </ul>
 </li>
-<li><p>ために, indicates that the action is done in order to achieve something</p>
-<ul>
+</ul>
+<h4 id="ために"><a href="#ために" class="headerlink" title="ために"></a>ために</h4><ul>
+<li>indicates that the action is done in order to achieve something<ul>
 <li>after 辞書形</li>
 <li><blockquote>
 <p>日本へ留学する<code>ために</code>、お金「かね」をためています</p>
@@ -4557,7 +4706,7 @@ console.log(jso4);
 </ul>
 </li>
 </ul>
-<h2 id="Want-17"><a href="#Want-17" class="headerlink" title="Want(17)"></a>Want(17)</h2><ul>
+<h2 id="Want"><a href="#Want" class="headerlink" title="Want"></a>Want</h2><ul>
 <li><p><strong>Noun が 欲しいです</strong>= want something</p>
 <ul>
 <li>私は　あたらしいようふくが　欲しいです</li>
@@ -4568,8 +4717,16 @@ console.log(jso4);
 <li>私は　えいがを　みたいです</li>
 </ul>
 </li>
+<li><p>verbて形＋みたい = want <em>to do</em> something</p>
+<ul>
+<li><blockquote>
+<p>社長：そうだよ。事務所へ 直行<sup>ちょっこ</sup>しょうか。早く 見てみたいからな</p>
+</blockquote>
+</li>
 </ul>
-<h2 id="give-advices"><a href="#give-advices" class="headerlink" title="give advices"></a>give advices</h2><ul>
+</li>
+</ul>
+<h2 id="advising"><a href="#advising" class="headerlink" title="advising"></a>advising</h2><ul>
 <li><p><strong>Verb ませんか</strong>= how about to do ….？去做…怎么样？</p>
 <ul>
 <li><em>Verb ません</em> = negative form of verb</li>
@@ -4604,7 +4761,7 @@ console.log(jso4);
 </li>
 </ul>
 </li>
-<li><p><strong>くれます(28), from the speaker’s perspective, the speaker is receiving something from someone</strong>，<em>giver は/が</em>, taker に, thing を</p>
+<li><p><strong>くれます(28), the speaker is receiving something from someone</strong>particularly from the speaker’s perspective, <em>giver は/が</em>, taker に, thing を</p>
 <ul>
 <li>someone does something for the benefit of the speaker</li>
 <li><blockquote>
@@ -4693,7 +4850,16 @@ console.log(jso4);
 </li>
 </ul>
 </li>
-<li><p>かな</p>
+<li><p><strong>かな</strong></p>
+</li>
+<li><p><strong>辞書形 + はずです</strong> = should / is supposed to</p>
+<ul>
+<li>会議は５時<sup>「ごじ」</sup>まですすから、もうすぐ終わる<code>はずです</code></li>
+<li><strong>negative forms of はずです</strong> = should not based on context or reasoning<ul>
+<li>張さんは入院中ですから、旅行にいく<code>はずがありません</code></li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 <h2 id="limitations"><a href="#limitations" class="headerlink" title="limitations"></a>limitations</h2><ul>
@@ -4726,8 +4892,7 @@ console.log(jso4);
 </ul>
 </li>
 </ul>
-<h2 id="conditionalForm"><a href="#conditionalForm" class="headerlink" title="conditionalForm"></a>conditionalForm</h2><ul>
-<li><p><strong>たら</strong><br> can be used in a <em>wider range</em> of contexts, including past, present, and future conditions.</p>
+<h2 id="conditionalForm"><a href="#conditionalForm" class="headerlink" title="conditionalForm"></a>conditionalForm</h2><h3 id="たら"><a href="#たら" class="headerlink" title="たら"></a>たら</h3><p>can be used in a <em>wider range</em> of contexts, including past, present, and future conditions.</p>
 <ul>
 <li><em>verbs, adj and noun</em>: replace た to たら in the past form</li>
 <li><em>special</em>: remove は from  the past negative of さ adj and noun</li>
@@ -4736,18 +4901,99 @@ console.log(jso4);
 </ul>
 </li>
 </ul>
-</li>
-<li><p><strong>なら</strong>, Implies that the speaker is considering or responding to a specific scenario or assumption which has been mentioned. It is commonly used to offer advice, make suggestions, or give opinions based on the condition.</p>
-</li>
-<li><p><strong>~と</strong>, implies a <em>natural result</em> if the condition is meet</p>
-<ul>
+<h3 id="なら"><a href="#なら" class="headerlink" title="なら"></a>なら</h3><ul>
+<li>Used for <em>hypothetical or conditional</em> statements </li>
+<li>implies that the speaker assumes the listener is already aware of the condition. It is commonly used to offer advice, make suggestions, or give opinions based on the known condition.</li>
+</ul>
+<h3 id="ば形-1"><a href="#ば形-1" class="headerlink" title="ば形"></a><a href="#%E3%81%B0%E5%BD%A2">ば形</a></h3><p>Used for <em>hypothetical or conditional</em> statements that may not always be true but depend on certain conditions being met.</p>
+<h3 id="まま"><a href="#まま" class="headerlink" title="まま"></a>まま</h3><ul>
+<li><strong>た形／ない形＋まま</strong>、perform an action while something remains unchanged</li>
+</ul>
+<h3 id="と-1"><a href="#と-1" class="headerlink" title="~と"></a>~と</h3><ul>
+<li>implies a <em>natural result</em> if a condition is meet<ul>
 <li><blockquote>
 <p>早く帰らないと、ごごの会議が始まります</p>
 </blockquote>
 </li>
 </ul>
 </li>
-<li><p><strong><a href="#%E3%81%B0%E5%BD%A2">ば形</a></strong>, Used for <em>hypothetical or conditional</em> statements that may not always be true but depend on certain conditions being met.</p>
+</ul>
+<h2 id="thinking"><a href="#thinking" class="headerlink" title="thinking"></a>thinking</h2><h3 id="と思います"><a href="#と思います" class="headerlink" title="と思います"></a>と思います</h3><ul>
+<li><p>add だ for modifing nouns</p>
+</li>
+<li><p>普通形 of さ adj</p>
+</li>
+<li><p>query</p>
+<blockquote>
+<p>どう思いますか？</p>
+</blockquote>
+</li>
+<li><p>[辞書形 / adj 原型]<strong>と思います</strong>　＝＞ my idea</p>
+<blockquote>
+<p>李さんは　もうすぐ　<code>くると　おもいます</code></p>
+</blockquote>
+</li>
+<li><p>[辞書形]<strong>と思っています</strong> =&gt; other people’s idea</p>
+</li>
+<li><p>意志形 + と思います, express one’s intention</p>
+</li>
+<li><p>意志形 + と思っています(て形＋います), express one’s intention that is prolonged or continuing for a while</p>
+</li>
+<li><p>辞書形／ない形 + つもりです, plan to, same as と思っています</p>
+</li>
+</ul>
+<h3 id="と考える"><a href="#と考える" class="headerlink" title="と考える"></a>と考える</h3><ul>
+<li><p>implies deeply think, to consider, to ponder</p>
+</li>
+<li><p><strong>のではないでしょうか</strong> Isn’t it…?” or “Don’t you think…?”</p>
+<ul>
+<li>compare to どう思いますか, this refer to a polite or tentative opinion, suggestion, or assumption</li>
+<li><blockquote>
+<p>アルファベットは分かりにくいので、避けた<sub>さ</sub>ほうがいい<code>のではないでしょうか</code></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="conjecture"><a href="#conjecture" class="headerlink" title="conjecture"></a>conjecture</h2><h3 id="ようです"><a href="#ようです" class="headerlink" title="ようです"></a>ようです</h3><ul>
+<li>“It seems” or “It appears”, based on <strong>objective observation</strong>;<ul>
+<li>after clasue / noun + の</li>
+</ul>
+</li>
+<li>まるで noun ようです = just like, as if, <ul>
+<li><blockquote>
+<p>これは 柔らかく[やわらかい] 、まるで 本物[ほんもの]の 毛皮[けがわ]のようです</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="らしいです"><a href="#らしいです" class="headerlink" title="らしいです"></a>らしいです</h3><ul>
+<li>“I heard that” or “They say that” Based on <strong>hearsay</strong>,  the information that one has heard from others or rumors.<ul>
+<li>after clasue</li>
+</ul>
+</li>
+<li>いかにも noun らしい = it’s truly truly or indeed, emphasizing authenticity or classical.</li>
+</ul>
+<h3 id="みたいです"><a href="#みたいです" class="headerlink" title="みたいです"></a>みたいです</h3><ul>
+<li>express both <strong>hearsay and objective observation</strong>,  casual form<ul>
+<li>after clasue</li>
+</ul>
+</li>
+<li>まるで noun みたいです = just like, as if, <ul>
+<li><blockquote>
+<p>これは 柔らかく[やわらかい] 、まるで 本物[ほんもの]の 毛皮[けがわ]のようです</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="そうです"><a href="#そうです" class="headerlink" title="そうです"></a>そうです</h3><ul>
+<li>clause + <strong>そうです</strong>, report <strong>indirect information</strong> that you’ve heard or read from others</li>
+<li>[いadj(remove い)/さadj/verb(remove ます)] + そうです, to infer status based on <strong>objective observation</strong><ul>
+<li>negative form, adj + そうではありません、verb + そうにありません</li>
+<li>なさそうです＝ない＋そうです、よさそうです = いい＋そうです</li>
+</ul>
 </li>
 </ul>
 <h2 id="と言いました"><a href="#と言いました" class="headerlink" title="と言いました"></a>と言いました</h2><ul>
@@ -4775,30 +5021,6 @@ console.log(jso4);
 <li><p>repeatedly forward someone’s words  <strong>と　言って　います</strong></p>
 </li>
 </ul>
-<h2 id="と思います"><a href="#と思います" class="headerlink" title="と思います"></a>と思います</h2><ul>
-<li><p>add だ for modifing nouns</p>
-</li>
-<li><p>普通形 of さ adj</p>
-</li>
-<li><p>query</p>
-<blockquote>
-<p>どう思いますか？</p>
-</blockquote>
-</li>
-<li><p>[辞書形 / adj 原型]<strong>と思います</strong>　＝＞ my idea</p>
-<blockquote>
-<p>李さんは　もうすぐ　<code>くると　おもいます</code></p>
-</blockquote>
-</li>
-<li><p>[辞書形]<strong>と思っています</strong> =&gt; other people’s idea</p>
-</li>
-<li><p>意志形 + と思います, express one’s intention</p>
-</li>
-<li><p>意志形 + と思っています(て形＋います), express one’s intention that is prolonged or continuing for a while</p>
-</li>
-<li><p>辞書形／ない形 + つまりです、same as と思っています</p>
-</li>
-</ul>
 <h2 id="と会います"><a href="#と会います" class="headerlink" title="と会います"></a>と会います</h2><p>に会います</p>
 <h2 id="という-29"><a href="#という-29" class="headerlink" title="という(29)"></a>という(29)</h2><p>expressing a quote = named or called</p>
 <h2 id="できます"><a href="#できます" class="headerlink" title="できます"></a>できます</h2><ul>
@@ -4810,6 +5032,43 @@ console.log(jso4);
 <li><p><em>done. finish</em></p>
 <blockquote>
 <p>吉田課長、原稿が　できました。<br>箱根の記事ですね。ちょっと　見せて　ください</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="connectPoints"><a href="#connectPoints" class="headerlink" title="connectPoints"></a>connectPoints</h2><h3 id="～たり～たり"><a href="#～たり～たり" class="headerlink" title="～たり～たり"></a>～たり～たり</h3><p>有时… 有时…., 既有….还有…</p>
+<ul>
+<li><p>[た形]<em>たり</em>　[た形]<em>たり します</em>、 <em>replace た to たり</em></p>
+<blockquote>
+<p>休みの日、<code>散歩したり</code>、買い物に<code>行ったり</code>　します<br>しゅうまつは　なにを　しましたか？<br>—- スケートを　<code>したり</code>、ボーリングを　<code>したり</code>　しました</p>
+</blockquote>
+</li>
+<li><p>[イAdj] <em>かったり</em>　[イAdj] <em>かったり</em></p>
+<blockquote>
+<p>北京まで、飛行機のチケット　は　いくらぐらいですか？<br>季節<em>によって</em>、<code>高かったり、安かったり</code>です</p>
+</blockquote>
+</li>
+<li><p>[サAdj／Noun] [<em>だったり</em>　サAdj／Noun] <em>だったり</em></p>
+<blockquote>
+<p>日本せんせいは　中<code>国人だったり、日本人だったり</code>です</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="～し～し"><a href="#～し～し" class="headerlink" title="～し～し"></a>～し～し</h3><ul>
+<li>list reasons or attributes (similar to “and” or “also”).</li>
+<li><blockquote>
+<p>おいしいし、手軽だし、わたしは 冷凍<sup>れいとう</sup>食品をよく食べます</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="～や～や-など"><a href="#～や～や-など" class="headerlink" title="～や～や~など"></a>～や～や~など</h3><ul>
+<li><blockquote>
+<p>太極拳や　ラジオ体操を　していました</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="～と～と"><a href="#～と～と" class="headerlink" title="～と～と"></a>～と～と</h3><h3 id="とか～とか"><a href="#とか～とか" class="headerlink" title="~とか～とか"></a>~とか～とか</h3><ul>
+<li><blockquote>
+<p>テレビ<code>とか</code>写真集<code>とか</code>で見たことがありますが、実際<sup>じっさい</sup>に見ると、本当に規模<sup>きぼ</sup>が大きいですれ。</p>
 </blockquote>
 </li>
 </ul>
@@ -4828,9 +5087,10 @@ console.log(jso4);
 </ul>
 </li>
 <li>ずいぶん = very, quite</li>
-<li>よく = “very, much”, also can express “well in a skill”, or “oftern” / “frequently”</li>
+<li>すっかり = completely</li>
+<li>よく = “very, much”, also can express “well in a skill”, or “often” / “frequently”</li>
 <li>いちばん = number one, the most</li>
-<li>本当に = really, truely, indeed</li>
+<li>本当に = really, truly, indeed</li>
 <li>ほとんど = mostly, almost</li>
 </ul>
 <h3 id="many"><a href="#many" class="headerlink" title="many"></a>many</h3><ul>
@@ -4882,33 +5142,15 @@ console.log(jso4);
 <blockquote>
 <p>清水：太田、　今度　中国へ　転勤だって。<br>小野：本当に？いつ　いくの？</p>
 </blockquote>
-<h3 id="によって-により"><a href="#によって-により" class="headerlink" title="によって / により"></a>によって / により</h3><p>according to<br><em>に　より</em> is the normal form, add ます can be used at the end of a sentence</p>
+<h3 id="により"><a href="#により" class="headerlink" title="により"></a>により</h3><p>according to, て形 <code>によって</code></p>
 <blockquote>
-<p>北京まで、飛行機のチケット　は　いくらぐらいですか？<br>季節<code>に　よって</code>、高かったり、安かったりです</p>
-<p>李さん、しごとは　忙しいですか<br>日<code>に　よって</code>、ひまだったり、忙しかったりです</p>
+<p>北京まで、飛行機のチケット　は　いくらぐらいですか？<br>季節<code>によって</code>、高かったり、安かったりです</p>
+<p>李さん、しごとは　忙しいですか<br>日<code>によって</code>、ひまだったり、忙しかったりです</p>
 </blockquote>
 <h3 id="について"><a href="#について" class="headerlink" title="について"></a>について</h3><p>about…</p>
 <blockquote>
-<p>日本の音楽<code>に　ついて</code>　どう思いますか<br>すばらしいと　思います</p>
+<p>日本の音楽<code>について</code>　どう思いますか<br>すばらしいと思います</p>
 </blockquote>
-<h3 id="～たり～たり"><a href="#～たり～たり" class="headerlink" title="～たり～たり"></a>～たり～たり</h3><p>有时… 有时….<br>既有….还有…</p>
-<ul>
-<li><p>[た形]<em>たり</em>　[た形]<em>たり します</em>、 <em>replace た to たり</em></p>
-<blockquote>
-<p>休みの日、<code>散歩したり</code>、買い物に<code>行ったり</code>　します<br>しゅうまつは　なにを　しましたか？<br>—- スケートを　<code>したり</code>、ボーリングを　<code>したり</code>　しました</p>
-</blockquote>
-</li>
-<li><p>[イAdj] <em>かったり</em>　[イAdj] <em>かったり</em></p>
-<blockquote>
-<p>北京まで、飛行機のチケット　は　いくらぐらいですか？<br>季節<em>に　よって</em>、<code>高かったり、安かったり</code>です</p>
-</blockquote>
-</li>
-<li><p>[サAdj／Noun] [<em>だったり</em>　サAdj／Noun] <em>だったり</em></p>
-<blockquote>
-<p>日本せんせいは　中<code>国人だったり、日本人だったり</code>です</p>
-</blockquote>
-</li>
-</ul>
 <h3 id="～かどうか"><a href="#～かどうか" class="headerlink" title="～かどうか"></a>～かどうか</h3><p>to express the unknown status</p>
 <ul>
 <li>辞書形 of verb + か　どうか<blockquote>
@@ -4923,15 +5165,15 @@ console.log(jso4);
 <h3 id="方をする"><a href="#方をする" class="headerlink" title="~方をする"></a>~方をする</h3><p>express how the action is made</p>
 <p>言い方を　します = what’s it said</p>
 <h3 id="action-collocations"><a href="#action-collocations" class="headerlink" title="action collocations"></a>action collocations</h3><ul>
-<li>[sport noun] を　します</li>
-<li>テレビを　けします</li>
+<li>[sport noun] をします</li>
+<li>テレビをけします</li>
 </ul>
 <blockquote>
 <p>しゅうまつは　なにを　しましたか？<br><code>スケートを　したり、ボーリングを　したり</code>　しました</p>
 </blockquote>
 <ul>
-<li><strong>温泉に　入ります</strong></li>
-<li>電話を　かけ「かける」て　ください</li>
+<li>温泉に入ります</li>
+<li>電話をかける</li>
 </ul>
 <h2 id="Pronoun"><a href="#Pronoun" class="headerlink" title="Pronoun"></a>Pronoun</h2><ul>
 <li><strong>わたし</strong>, me, first person<ul>
@@ -5462,6 +5704,12 @@ console.log(jso4);
 <li>integrating third-party components or services</li>
 </ul>
 <p><strong>QianKun</strong> is built upon <strong>single-spa</strong>, listening for <code>location</code> changes, and then matching and loading sub-applications accordingly. Each sub-application has its own entry file and DOM container. This approach is similar to using multiple entry files in <code>webpack</code>.</p>
+<h2 id="Time-Complexity"><a href="#Time-Complexity" class="headerlink" title="Time Complexity"></a>Time Complexity</h2><p>the growth rate of the runtime as the input size increases.</p>
+<ul>
+<li>O(1): Constant time – the execution time does not change with the input size.</li>
+<li>O(n): Linear time – the execution time grows linearly with the input size.</li>
+<li>O(log n)</li>
+</ul>
 <h2 id="Design-Patterns"><a href="#Design-Patterns" class="headerlink" title="Design Patterns"></a>Design Patterns</h2><h3 id="method-chaining"><a href="#method-chaining" class="headerlink" title="method chaining"></a>method chaining</h3><p>a concept, one function returns the current(refer to <code>this</code> in js) object and another function can use values in <code>this</code>.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">chaining</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="title">Method1</span>(<span class="params">v</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.v = v</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="title">Method2</span>(<span class="params">v</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.v = v</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> chaining_obj = <span class="keyword">new</span> chaining()</span><br><span class="line">chaining_obj.Method1(<span class="number">1</span>).Method2(<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
 
@@ -5476,6 +5724,7 @@ console.log(jso4);
 <li><strong>isolate the impure code</strong> from the pure</li>
 <li><strong>straightforward to test</strong></li>
 <li><strong>a meaningful name</strong>. If a component’s usage is highly specific, its name may contain more words, like <code>&lt;HeaderMenu&gt;</code> <code>&lt;Header&gt;</code></li>
+<li><strong>Open Closed principle</strong>，software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification</li>
 </ol>
 <p><strong>the levels of a component based on its usage</strong><br>    1. Reading name and props; <strong>best</strong><br>    2. Consulting documentation; <strong>good</strong><br>    3. Exploring the code; <strong>admissible</strong><br>    4. Asking the author. <strong>avoid</strong></p>
 <h2 id="performance-optimization"><a href="#performance-optimization" class="headerlink" title="performance optimization"></a>performance optimization</h2><ul>
@@ -5495,7 +5744,7 @@ console.log(jso4);
 <li>browser obtains the IP address from the domain name through <code>DNS(domain name system) analysis</code></li>
 <li>send a http request to that IP address</li>
 <li>server receives the request and responds with html content</li>
-<li>the browser parses html string and create a dom tree, and then proceeds to analyzes CSS, forming CSS rule trees</li>
+<li>the browser parses html strings and create a dom tree, and then proceeds to analyzes CSS, forming CSS rule trees</li>
 <li>structure the rendering tree(only the nodes necessary for display)</li>
 </ul>
 <p><strong>GUI rendering thread and JS engine thread</strong></p>
@@ -5517,14 +5766,14 @@ console.log(jso4);
 
 <h3 id="path"><a href="#path" class="headerlink" title="path"></a>path</h3><p><strong>M</strong>: move to</p>
 <p><strong>L</strong>: line to</p>
-<p><strong>H</strong>: draw a horizontal line</p>
-<p><strong>V</strong>: draw a vertical line</p>
+<p><strong>H</strong>: a horizontal line</p>
+<p><strong>V</strong>: a vertical line</p>
 <p><strong>Z</strong>: close path, combine the start and the end</p>
 <p><strong>C</strong>: curve, x1 y1 x2 y2 x y, the last set x y specify where the line should end and the line start at  the point where the last operation ended, the first two are control points.</p>
   <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">svg</span> <span class="attr">className</span>=<span class="string">&quot;selected-round-btm&quot;</span> <span class="attr">viewBox</span>=<span class="string">&quot;0 0 8 8&quot;</span> <span class="attr">width</span>=<span class="string">&quot;8&quot;</span> <span class="attr">height</span>=<span class="string">&quot;8&quot;</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2000/svg&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 0,8 L 8,8 L 8,0 C 8,0 8,8 0,8 &quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#fff&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;0&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;0&quot;</span> <span class="attr">r</span>=<span class="string">&quot;8&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;#e4e4e4&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>S</strong>: smooth curveto</p>
-<p><strong>A</strong>: <code>rx ry x-axis-rotation large-arc-flag sweep-flag x y</code>, draw an arc</p>
+<p><strong>A</strong>: an arc, <code>rx ry x-axis-rotation large-arc-flag sweep-flag x y</code></p>
 <ul>
 <li><p><code>rx ry</code> radius x and radius y</p>
 </li>
@@ -5561,7 +5810,10 @@ console.log(jso4);
 </ul>
 </li>
 </ul>
-<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><h2 id="css-anchor-position"><a href="#css-anchor-position" class="headerlink" title="css anchor position"></a>css anchor position</h2><h3 id="stacking-context"><a href="#stacking-context" class="headerlink" title="stacking context"></a>stacking context</h3><p>Special properties like <code>z-index</code> will cause elements to form a <code>stacking context 层叠上下文</code>, as those properties can change the render order of elements on the page if their values are set to something other than <code>none</code></p>
+<h3 id="animation"><a href="#animation" class="headerlink" title="animation"></a>animation</h3><ul>
+<li>SVG animation is not css animation,  it’s part of the <code>SVG animation specification</code>, specifically within the <code>SMIL (Synchronized Multimedia Integration Language)</code> animations in SVG.<br>it runs on the browser’s <code>compositor thread</code>, reducing the load on the main JavaScript thread.</li>
+</ul>
+<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><h3 id="anchor-position"><a href="#anchor-position" class="headerlink" title="anchor position"></a>anchor position</h3><h3 id="stacking-context"><a href="#stacking-context" class="headerlink" title="stacking context"></a>stacking context</h3><p>Special properties like <code>z-index</code> will cause elements to form a <code>stacking context 层叠上下文</code>, as those properties can change the render order of elements on the page if their values are set to something other than <code>none</code></p>
 <p>position, opacity, filter, transform, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context#description">detailed list of such special properties</a></p>
 <h3 id="selector"><a href="#selector" class="headerlink" title="selector"></a>selector</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* nth-of-type and nth-child, the former according to the order of a given type, while the latter according to the order of children*/</span></span><br><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:nth-of-type</span>(<span class="number">2</span>) &#123; &#125;</span><br><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:nth-of-type</span>(odd) &#123; &#125;</span><br><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:nth-of-type</span>(even) &#123; &#125;</span><br><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:nth-of-type</span>(<span class="number">3</span>n) &#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* select p which is behind h1*/</span></span><br><span class="line"><span class="selector-tag">h1</span> + <span class="selector-tag">p</span> &#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*select all the children of container*/</span></span><br><span class="line"><span class="selector-class">.container</span> &gt; * &#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* according to element&#x27;s attributes */</span></span><br><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type=<span class="string">&quot;button&quot;</span>]</span> &#123; &#125;</span><br></pre></td></tr></table></figure>
 
@@ -5932,8 +6184,8 @@ console.log(jso4);
 <li><p><strong>while</strong>, the expression inside the brackets can be an assigning expression</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">var</span> bb = <span class="number">1</span></span><br><span class="line"> <span class="keyword">while</span> (aa = bb) &#123; <span class="comment">// assigning the value of bb to aa, and judge aa is false or not</span></span><br><span class="line"><span class="built_in">console</span>.log(aa)</span><br><span class="line">bb++</span><br><span class="line"><span class="keyword">if</span> (bb === <span class="number">5</span>) bb = <span class="literal">null</span> <span class="comment">// bb = null, then aa = null</span></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><strong>break   continue   return</strong>, <code>break</code> is used in <code>switch/while/if/for</code> to break one layer of the loop</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line"><span class="keyword">if</span> (i === <span class="number">3</span>) <span class="keyword">continue</span></span><br><span class="line"><span class="built_in">console</span>.log(i)</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<li><p><strong>break   continue   return</strong>, <code>continue</code> is used to break one layer of the loop</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line"><span class="keyword">if</span> (i === <span class="number">3</span>) <span class="keyword">break</span></span><br><span class="line"><span class="built_in">console</span>.log(i) <span class="comment">// 0 1 2</span></span><br><span class="line"> &#125;</span><br><span class="line">   <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line"><span class="keyword">if</span> (i === <span class="number">3</span>) <span class="keyword">continue</span></span><br><span class="line"><span class="built_in">console</span>.log(i)  <span class="comment">// 0 1 2 4</span></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>es6</code> <strong>set</strong> similar to Array, but each item in <code>set</code> is unique</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> items = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">5</span>, <span class="number">5</span>, <span class="number">5</span>]);</span><br><span class="line">items.size <span class="comment">// the length is 5, and the repeated value aren&#x27;t be counted</span></span><br><span class="line">items.add(<span class="number">6</span>) <span class="comment">// add item</span></span><br></pre></td></tr></table></figure>
@@ -6272,7 +6524,7 @@ console.log(jso4);
 </li>
 </ul>
 <h3 id="Single-threaded"><a href="#Single-threaded" class="headerlink" title="Single-threaded"></a>Single-threaded</h3><p>a <code>thread</code> is a single unit of execution. one or more <code>thread</code>s can be exist in a <code>process</code>. a <code>Single-threaded</code> programming language which has a <code>single-threaded</code> runtime engine that runs tasks in a program sequentially.</p>
-<p>JS as a browser script, interacts with user and manipulates dom. two threads will bring synchronize problem, as if one thread changes a node, and another thread removes that node, which thread the browser should believe. therefore even in the <code>web worker</code>, manipulating dom is not allowed, and <code>web worker</code> is controlled by <code>main-thread</code></p>
+<p>JS as a browser script, interacts with user and manipulates dom. <strong>two threads will bring synchronize problem</strong>, as if one thread changes a node, and another thread removes that node, which thread the browser should believe. therefore even in the <code>web worker</code>, manipulating dom is not allowed, and <code>web worker</code> is controlled by <code>main-thread</code></p>
 <h3 id="Event-Loop"><a href="#Event-Loop" class="headerlink" title="Event Loop"></a>Event Loop</h3><ul>
 <li><p><strong>Heap and Stack?</strong><br>both of them are two areas in memory where data is stored.<br><code>Heap</code>(dynamic memory allocation) stores objects which mutable and have a variable size.<br><code>Stack</code>(Static memory allocation) store Primitive values which is immutable and have a fixed size.</p>
 </li>
@@ -6384,7 +6636,7 @@ console.log(jso4);
 <h2 id="Typescript"><a href="#Typescript" class="headerlink" title="Typescript"></a>Typescript</h2><h3 id="references"><a href="#references" class="headerlink" title="references"></a>references</h3><p>setting tsconfig for specific file</p>
 <h3 id="diff-with-js"><a href="#diff-with-js" class="headerlink" title="diff with js"></a>diff with js</h3><p><strong>pro</strong></p>
 <ul>
-<li>object-orient langua==ge static type checking.  it can find low level bugs, like spelling mistake, incorrect or instanceof variable properties</li>
+<li>object-orient language static type checking.  it can find low level bugs, like spelling mistake, incorrect or instanceof variable properties</li>
 <li>type infer.</li>
 <li>optional parameters</li>
 <li>enum support</li>
@@ -6484,7 +6736,7 @@ console.log(jso4);
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">type PropEventSource&lt;Type&gt; = &#123;</span><br><span class="line"> on(eventName: <span class="string">`<span class="subst">$&#123;string &amp; keyof Type&#125;</span>Changed`</span>, <span class="attr">callback</span>: <span class="function">(<span class="params">newValue: any</span>) =&gt;</span> <span class="keyword">void</span>): <span class="keyword">void</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>type assertion, <code>as</code> or <code>&lt;&gt;</code> syntax</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> value: unknown = <span class="string">&quot;Foo&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> len: number = (value <span class="keyword">as</span> string).length;</span><br><span class="line"><span class="keyword">let</span> len: number = (&lt;string&gt;value).length;</span><br><span class="line"><span class="comment">// the respones is changed in the interceptor, so the first type parameter &lt;unknown&gt; indicates that the response type is not known or specified.</span></span><br><span class="line">client.post&lt;unknown, EquipmentUptime&gt;(api.insert, data);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> value: unknown = <span class="string">&quot;Foo&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> len: number = (value <span class="keyword">as</span> string).length;</span><br><span class="line"><span class="keyword">let</span> len: number = (&lt;string&gt;value).length;</span><br><span class="line"><span class="comment">// response is changed in the interceptor, so the first type parameter &lt;unknown&gt; indicates that the response type is not known or specified.</span></span><br><span class="line">client.post&lt;unknown, EquipmentUptime&gt;(api.insert, data);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>is</code></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">arg: string</span>): <span class="title">arg</span> <span class="title">is</span> <span class="title">MyType</span> </span>&#123;</span><br><span class="line"> <span class="keyword">return</span> ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -6495,7 +6747,7 @@ console.log(jso4);
 <li><p><code>this</code></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"> <span class="class"><span class="keyword">class</span> <span class="title">Box</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">value?: T;</span><br><span class="line"></span><br><span class="line">hasValue(): <span class="built_in">this</span> is &#123; <span class="attr">value</span>: T &#125; &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">this</span>.value !== <span class="literal">undefined</span>;</span><br><span class="line">&#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><code>as const</code><br>to infer in an explictly way, infer 1 to 1 instead of number, infer false to false instead of boolean</p>
+<li><p><code>as const</code><br>to infer in an explicitly way, infer 1 to 1 instead of number, infer false to false instead of boolean</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> x = [<span class="number">0</span>, <span class="number">1</span>] <span class="keyword">as</span> <span class="keyword">const</span>; <span class="comment">// let x: [0,1]</span></span><br><span class="line"><span class="comment">// another write pattern:   let x = &lt;const&gt;[0, 1];</span></span><br><span class="line"><span class="keyword">let</span> x = [<span class="number">0</span>,<span class="number">1</span>] <span class="comment">// let x: number[]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> y = [<span class="number">10</span>, <span class="number">20</span>] <span class="keyword">as</span> <span class="keyword">const</span>; <span class="comment">// Type &#x27;readonly [10, 20]&#x27;</span></span><br><span class="line"><span class="keyword">let</span> z = &#123; <span class="attr">text</span>: <span class="string">&quot;hello&quot;</span> &#125; <span class="keyword">as</span> <span class="keyword">const</span>; <span class="comment">// Type &#x27;&#123; readonly text: &quot;hello&quot; &#125;&#x27;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>any</code> <code>extends object</code> instead of <code>any</code> when reference to an object</p>
@@ -6557,65 +6809,109 @@ console.log(jso4);
 <h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><h3 id="life-cycle"><a href="#life-cycle" class="headerlink" title="life cycle"></a>life cycle</h3><ul>
 <li><p><strong>Mount Phase</strong></p>
 <ul>
-<li><p>initialize<br><code>constructor</code><br>inside the function</p>
+<li><p>initialize</p>
+<ul>
+<li>class: <code>constructor</code></li>
+<li>fun: inside the function</li>
+</ul>
 </li>
-<li><p>before render<br><code>getDerivedStateFromProps</code>, React will call it right before calling render, both on the initial mount and on subsequent updates. It should return an object to update the state, or null to update nothing.<br>inside the function to compare the state and then return what you want</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ScrollView</span>(<span class="params">&#123;row&#125;</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [isScrollingDown, setIsScrollingDown] = useState(<span class="literal">false</span>);</span><br><span class="line">  <span class="keyword">const</span> [prevRow, setPrevRow] = useState(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (row !== prevRow) &#123;</span><br><span class="line">	  setIsScrollingDown(prevRow !== <span class="literal">null</span> &amp;&amp; row &gt; prevRow);</span><br><span class="line">	  setPrevRow(row);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="string">`Scrolling down: <span class="subst">$&#123;isScrollingDown&#125;</span>`</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><p>before render</p>
+<ul>
+<li><p>class: <code>getDerivedStateFromProps</code>, React will call it right before calling render, both on the initial mount and on subsequent updates. It should return an object to update the state, or null to update nothing.</p>
+</li>
+<li><p>fun: compare the state and then return the appropriate result within the function</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ScrollView</span>(<span class="params">&#123;row&#125;</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [isScrollingDown, setIsScrollingDown] = useState(<span class="literal">false</span>);</span><br><span class="line">  <span class="keyword">const</span> [prevRow, setPrevRow] = useState(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (row !== prevRow) &#123;</span><br><span class="line">	  setIsScrollingDown(prevRow !== <span class="literal">null</span> &amp;&amp; row &gt; prevRow);</span><br><span class="line">	  setPrevRow(row);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="string">`Scrolling down: <span class="subst">$&#123;isScrollingDown&#125;</span>`</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 </li>
 <li><p>rendering</p>
 </li>
-<li><p>after render<br><code>componentDidMount</code><br><code>useEffect()</code> with empty dependency array</p>
+<li><p>after render</p>
+<ul>
+<li>class: <code>componentDidMount</code></li>
+<li>fun: <code>useEffect()</code> with an empty dependency array</li>
+</ul>
 </li>
 </ul>
 </li>
 <li><p><strong>Update Phase</strong></p>
 <ul>
-<li><p><code>getDerivedStateFromProps</code></p>
+<li><p>before update</p>
+<ul>
+<li><p>class: <code>getDerivedStateFromProps</code> =&gt; <code>shouldComponentUpdate</code></p>
 </li>
-<li><p><code>shouldComponentUpdate</code><br>use <code>useMemo</code> to shallowly compare</p>
+<li><p>fun:  <code>useMemo</code> for shallowly comparing</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// MyComponent will only re-render if the value prop changes</span></span><br><span class="line">  <span class="keyword">const</span> MyComponent = React.memo(<span class="function">(<span class="params">&#123; value &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// Component logic</span></span><br><span class="line">      <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;value&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>render</p>
-</li>
-<li><p><code>getSnapshotBeforeUpdate</code>(1.contain state before update and after update，2.used to comparative calculations，3. in the end, it could return a value as the third argument of - DidUpdate)<br>use <code>useRef</code> to get the old and new state</p>
-</li>
-<li><p><code>componentDidUpdate</code><br><code>useEffect()</code> with watched data</p>
-</li>
 </ul>
 </li>
-<li><p><strong>unmount stage</strong><br><code>componentWillUnmount</code><br>the returned function of <code>useEffect()</code></p>
-</li>
-<li><p><strong>Error Handling</strong><br><code>getDerivedStateFromError(error)</code>: when there is an error during rendering, allowing the component to capture an error in its children.<br><code>componentDidCatch(error, info)</code>: when an error has been thrown by a descendant component. It is used to log error information and display a fallback UI.</p>
-</li>
-</ul>
-<h3 id="change-view"><a href="#change-view" class="headerlink" title="change view"></a>change view</h3><p><strong>change props</strong><br>In React, data flows in a one-way direction, from outside to inside, and from top to bottom. To ensure this simple and predictable data flow, props are kept read-only</p>
-<p><strong>useState() useReducer()</strong> hooks</p>
+<li><p>rendering</p>
 <ul>
-<li><p>the process<br>setState(partialState) =&gt; merges <code>partialState</code> into the current state<br>=&gt; if <code>isBatchingUpdates === true</code>(is react in the batch updating status), then push this update into <code>_pendingStateQueue</code>(the queue of pending updates) , else set <code>isBatchingUpdates = true</code> and re-call the previous step<br>=&gt; call <code>waper()</code> to iterate <code>_pendingStateQueue</code> to execute update<br>=&gt; <code>componentWillReceiveProps</code><br>=&gt; to merge the states to get the new state<br>=&gt; <code>componentShouldUpdate</code>, and then determines whether to continue the update process<br>=&gt; <code>componentWillUpdate</code><br>=&gt; <code>render</code><br>=&gt; <code>componentDidUpdate</code></p>
+<li>class: <code>getSnapshotBeforeUpdate(prevProps, prevState)</code> it could return a value as the third argument of <code>componentDidUpdate</code></li>
+<li>fun:  use <code>useRef</code> to get the old and new state</li>
+<li>class: <code>componentDidUpdate</code></li>
+<li>fun:  <code>useEffect()</code> with watched data</li>
+</ul>
 </li>
-<li><p>the data will not update immediately when we call <code>setState</code>, multiple updates from different components will be merged into a single re-render. that’s because if <code>isBatchingUpdates === true</code>, this means react still in it’s updating mechanism, then the upcoming updates will push into <code>_pendingStateQueue</code></p>
+</ul>
+</li>
+<li><p><strong>unmount stage</strong></p>
+<ul>
+<li>class: <code>componentWillUnmount</code></li>
+<li>fun: the returned function of <code>useEffect()</code></li>
+</ul>
+</li>
+<li><p><strong>Error Handling</strong></p>
+<ul>
+<li><code>getDerivedStateFromError(error)</code>: allow the component to capture errors in its children when they occur during rendering</li>
+<li><code>componentDidCatch(error, info)</code>: It can log error information and display a fallback UI when an error is thrown by a child component.</li>
+</ul>
+</li>
+</ul>
+<h3 id="view-updating"><a href="#view-updating" class="headerlink" title="view updating"></a>view updating</h3><p><strong>props changing</strong><br>In React, data flows in a one-way direction, from outside to inside, and from top to bottom. To ensure this simple and predictable data flow, <code>props</code> are kept read-only</p>
+<p><strong>state changing</strong>：useState(), useReducer(), redux state<br>the data will not update immediately when we call <code>setState</code>, multiple updates from different components will be merged into a single re-render automatically. it’s called <code>batching update</code>.</p>
+<ul>
+<li><p>the process <code>setState</code><br><code>setState(partialState)</code> =&gt; merges <code>partialState</code> into the current state<br>=&gt; if <code>isBatchingUpdates === true</code>(is react in the batch updating status), then push this update into <code>_pendingStateQueue</code>(the queue of pending updates) , else set <code>isBatchingUpdates = true</code> and re-call the previous step<br>=&gt; call <code>waper()</code> to iterate <code>_pendingStateQueue</code> to execute update<br>=&gt; <code>componentWillReceiveProps</code><br>=&gt; to merge the states to get the new state<br>=&gt; <code>componentShouldUpdate</code>, and then determines whether to continue the update process<br>=&gt; <code>componentWillUpdate</code><br>=&gt; <code>render</code><br>=&gt; <code>componentDidUpdate</code></p>
 </li>
 <li><p>even an empty object like <code>this.setState(&#123;&#125;)</code> will also trigger a new update cycle</p>
 </li>
 <li><p>the updated data can be achieved in callback</p>
 </li>
-<li><p>to step over React asynchronous behavior and achieve a sync response with ways of <code>setTimeout</code> or native events</p>
+<li><p><code>setTimeout</code> or native events can step over React asynchronous behavior and achieve a sync response</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="title">componentDidMount</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.setState(&#123; <span class="attr">number</span>: <span class="number">3</span> &#125;)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>.state.number) <span class="comment">// 3</span></span><br><span class="line">  &#125;, <span class="number">0</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="title">componentDidMount</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">  <span class="built_in">document</span>.body.addEventListener(<span class="string">&#x27;click&#x27;</span>, <span class="built_in">this</span>.changeVal, <span class="literal">false</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>ReactDOM.flushSync()</code> in v18, this method is used when you don’t want to apply <code>automatic batching</code>. updates in this method will be update immediately, and it’s a sync method, since we know that <code>setState</code> is a async method.</p>
 </li>
 </ul>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="title">componentDidMount</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.setState(&#123; <span class="attr">number</span>: <span class="number">3</span> &#125;)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>.state.number) <span class="comment">// 3</span></span><br><span class="line">  &#125;, <span class="number">0</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="title">componentDidMount</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">  <span class="built_in">document</span>.body.addEventListener(<span class="string">&#x27;click&#x27;</span>, <span class="built_in">this</span>.changeVal, <span class="literal">false</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">import</span> &#123; flushSync &#125; <span class="keyword">from</span> <span class="string">&#x27;react-dom&#x27;</span>; <span class="comment">// Note: react-dom, not react</span></span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">handleClick</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">flushSync(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  setCounter(<span class="function"><span class="params">c</span> =&gt;</span> c + <span class="number">1</span>);</span><br><span class="line">&#125;);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>context</strong>, this is shallowly compare<br><strong>forceUpdate()</strong>, only support in class component and it will skip <code>shouldComponentUpdate()</code><br><strong>change state</strong> in redux<br>*<em>change dom</em> with ways like <code>ref</code> or <code>native dom handlers</code></p>
+
+<p><strong>context</strong>, this is shallowly compare<br><strong>forceUpdate()</strong>, only support in class component, and <code>shouldComponentUpdate()</code> will be skipped<br><strong>dom changing</strong> through <code>ref</code> or <code>native dom handlers</code></p>
 <h3 id="components-conversation"><a href="#components-conversation" class="headerlink" title="components conversation"></a>components conversation</h3><ul>
 <li>parent to children: props</li>
-<li>children to parent: callbacks inside the parent props</li>
-<li>between brother: find the common parent node, and then use the above methods</li>
-<li>cross layer: by context</li>
-<li>redux</li>
-<li>import module and to interact in the module scope</li>
+<li>children to parent: callbacks inside the parent props, event bubbling(eventually, events will bubble up to the parent)</li>
+<li>between brother: find the common parent node, and then through the above methods</li>
+<li>context, other global state management tools</li>
+<li>ref</li>
+<li>importing a module and interacting within module scope</li>
 </ul>
-<h3 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h3><p>jsx will be translated by babel to `React.createElement()</p>
+<h3 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h3><ul>
+<li>every file should import react, as long as <code>jsx</code> code is contained<ul>
+<li>cause <code>jsx</code> will be translated by <code>babel</code> to <code>React.createElement()</code></li>
+</ul>
+</li>
+<li>a custom component name should begin with a capital letter<ul>
+<li>if the first letter is lowercase, the component will be treated as a native html element. this rule helps to differentiate custom components from standard HTML tags.</li>
+</ul>
+</li>
+<li>a component should only return one element<ul>
+<li>virtual dom is a tree structure, only one root is allowed</li>
+<li>return multiple elements: return an array of elements, <code>&lt;React.Fragment&gt;&lt;/React.Fragment&gt;(&lt;&gt;&lt;/&gt; is a syntax sugar)</code></li>
+</ul>
+</li>
+</ul>
 <h3 id="high-order-component"><a href="#high-order-component" class="headerlink" title="high order component"></a>high order component</h3><ul>
-<li>HOC is a function, that accepts a component and other arguments, and returns a new component that should maintain a similar interface with the original one.</li>
+<li>HOC is a function, which accepts a component and additional arguments, then returns a new component that maintains a similar interface to the original one.</li>
 <li>HOC’s name begins with <code>with</code>, such as <code>withButton</code></li>
 </ul>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">type HOC = <span class="function">(<span class="params">component: React.component, props</span>) =&gt;</span> React.component</span><br></pre></td></tr></table></figure>
@@ -6652,9 +6948,9 @@ console.log(jso4);
 
 <h4 id="ref-forwarding"><a href="#ref-forwarding" class="headerlink" title="ref forwarding"></a>ref forwarding</h4><ul>
 <li>Ref forwarding lets components <strong>opt into</strong> exposing any child component’s ref as their own.</li>
-<li>we can <em>customize the data that the component exposes to the outside</em> using <code>useImperativeHandle()</code> hook.</li>
+<li>we can <em>customize the data exposed to the outside</em> using <code>useImperativeHandle()</code>.</li>
 <li><em>to access child node from a parent component</em> for <strong>triggering focus</strong> or <strong>measuring the size or position of a child dom</strong>.</li>
-<li>it is useful in High Order Component, like assigning ref to input’s ref in a input component</li>
+<li>it is useful in <code>HOC</code>, like assigning ref to input’s ref in a input component</li>
 </ul>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">FancyInput</span>(<span class="params">props, ref</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> inputRef = useRef();</span><br><span class="line">  <span class="comment">// assign focus to inputRef</span></span><br><span class="line">  useImperativeHandle(ref, <span class="function">() =&gt;</span> (&#123;</span><br><span class="line">	  <span class="attr">focus</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">	    inputRef.current.focus();</span><br><span class="line">	  &#125;</span><br><span class="line">  &#125;));</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">ref</span>=<span class="string">&#123;inputRef&#125;/</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&#125;</span><br><span class="line">FancyInput = forwardRef(FancyInput);</span><br><span class="line"></span><br><span class="line"><span class="comment">// this ref will be the input&#x27;s ref and can use the focus method</span></span><br><span class="line"><span class="keyword">const</span> ref = React.createRef();</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">FancyInput</span> <span class="attr">ref</span>=<span class="string">&#123;ref&#125;</span> /&gt;</span></span>;</span><br></pre></td></tr></table></figure>
 
@@ -6743,44 +7039,39 @@ console.log(jso4);
 <li><p>doesn’t need to manage state and life cycle</p>
 </li>
 </ul>
-<h3 id="lazy-loading"><a href="#lazy-loading" class="headerlink" title="lazy loading"></a>lazy loading</h3><ul>
-<li>with <code>React.lazy</code> <code>Suspense</code> <code>import()</code>, we can lazy loading components and can do something in the fallback which will be triggered if the component failed to render</li>
-<li>with webpack code splitting, each module loaded by <code>import()</code> will be split to separate files.</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> OtherComponent = React.lazy(<span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="string">&#x27;./OtherComponent&#x27;</span>));</span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">Suspense</span> <span class="attr">fallback</span>=<span class="string">&#123;</span>&lt;<span class="attr">div</span>&gt;</span>Loading...<span class="tag">&lt;/<span class="name">div</span>&gt;</span>&#125;&gt;</span></span><br><span class="line"><span class="xml"> <span class="tag">&lt;<span class="name">OtherComponent</span> /&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">Suspense</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<h4 id="key"><a href="#key" class="headerlink" title="key"></a>key</h4><p>when an array re-rendering, React will check each list item according to the last render. if an inexistent item of the last render is found in the current render, then react will create an new element. if an item of the last render is altered in the current render, then react will delete the old one and create a new one.</p>
+<h3 id="key"><a href="#key" class="headerlink" title="key"></a>key</h3><p>when an array re-rendering, React will check each list item according to the last render. if an inexistent item of the last render is found in the current render, then react will create an new element. if an item of the last render is altered in the current render, then react will delete the old one and create a new one.</p>
 <ul>
 <li>The index of an item in an array is Lack of Stability, since it can be changed if items are added, removed, or reordered.</li>
 <li>When items are added or removed from the list, React may need to re-render the reset items</li>
 </ul>
 <h3 id="shouldComponentUpdate-VS-pureComponent"><a href="#shouldComponentUpdate-VS-pureComponent" class="headerlink" title="shouldComponentUpdate VS pureComponent"></a>shouldComponentUpdate VS pureComponent</h3><ul>
 <li>the former is in the life cycle of class components, by return a boolean to decide whether to continue update</li>
-<li>the later doesn’t implement <code>shouldComponentUpdate</code>, but it can shallowly compare props and states</li>
-<li>both of them are helpfully for avoiding needless re-render.</li>
+<li>the later can shallowly compare props and states</li>
+<li>both of them are helpful for avoiding needless re-render.</li>
 </ul>
-<h3 id="fiber"><a href="#fiber" class="headerlink" title="fiber"></a>fiber</h3><p><strong>before fiber, stack Reconciliation(differ)</strong></p>
+<h3 id="fiber"><a href="#fiber" class="headerlink" title="fiber"></a>fiber</h3><p><strong>stack Reconciliation(differ process)</strong></p>
 <ul>
-<li><strong>current tree and WIP(working-in-progress) tree</strong> react creates WIP(working-in-progress) tree based on the current tree which marks the current view. WIP tree is used to perform updates under the hood. maintaining the two trees during updating</li>
-<li>React uses <code>DFS(depth first search)</code> to traverse two virtual dom tree, comparing the new with old props, the current tree with the WIP tree to find changed nodes, and then determines the nodes that need to be updated, this process called <strong>Reconciliation</strong>. The result of <code>Reconciliation</code> will be applied to the <code>current tree</code>.</li>
-<li>during Reconciliation, the traversal process can cause performance problems as the DOM tree grows larger, and it cannot be stopped once it’s started. React occupies the resources of the browser until it’s finished, so when handling complex views, it can lead to blocking in the main thread, resulting in unresponsiveness in the page.</li>
+<li><strong>current tree and WIP(working-in-progress) tree</strong> react creates <code>WIP tree(working-in-progress)</code> based on <code>current tree</code> which marks the current view. <code>WIP tree</code> is used to perform updates under the hood.</li>
+<li>React uses <code>DFS(depth first search)</code> to traverse two virtual dom tree, comparing the new and old props, as well as the <code>current tree</code> with the <code>WIP tree</code>, to identify changed nodes and determine which needs to be updated, this process called <strong>Reconciliation</strong>. The result of <code>Reconciliation</code> will be applied to the <code>current tree</code>.</li>
+<li>during <code>Reconciliation</code>, the traversal process can cause performance problems as the DOM tree grows larger, and it cannot be stopped once it’s started. React occupies the resources of the browser until it’s finished, so when handling complex views, it can lead to blocking in the main thread, resulting in unresponsiveness in the page.</li>
 </ul>
 <p><strong>what is fiber</strong></p>
 <ul>
-<li>React saves references to the <code>return (parent)</code>, <code>sibling</code>, and <code>child</code> nodes, similar to a linked list. This more powerful representation of the virtual DOM tree is known as <code>Fiber(纤维)</code>. this feature enables React to memorize the work in progress,  and then pause and resume the <code>Reconciliation</code> process.</li>
+<li>React saves references to the <code>return(parent)</code>, <code>sibling</code>, and <code>child</code> nodes, the data structure is similar to <code>linked list</code>. This more powerful representation of the virtual DOM tree is known as <code>Fiber</code>.</li>
+<li><code>Fiber</code>‘s  references enable React to memorize the work in progress,  and then pause and resume the <code>Reconciliation</code> process.</li>
 </ul>
 <p><strong>Fiber structure</strong></p>
 <ul>
-<li>React slices the process of Reconciliation into small pieces, this is called <code>time slicing</code>. It gives control to the browser to respond to user interactions and then takes back control to continue it’s work slice by slice(react =&gt; browser =&gt; react =&gt; browser ….). this mechanism of handling control is known as <strong>Fiber structure</strong>. in the <code>Fiber structure</code>, react gives control to browser to respond to user interactions at the right time, creating the perception of faster responsiveness.</li>
+<li>React slices the process of <code>Reconciliation</code> into small pieces, this is called <code>time slicing</code>. It gives control to the browser to respond to user interactions and then takes back control to continue it’s work slice by slice(react =&gt; browser =&gt; react =&gt; browser ….). this mechanism of handling control is known as <strong>Fiber structure</strong>. in the <code>Fiber structure</code>, react gives control to browser to respond to user interactions at the right time, creating the perception of faster responsiveness.</li>
 </ul>
-<p><strong>fiber Reconciliation(differ)</strong></p>
+<p><strong>fiber Reconciliation(differ process)</strong></p>
 <ul>
-<li>In the <code>Fiber structure</code>, during <code>Reconciliation</code>, React saves the nodes that has <code>effect(require changes)</code> in the <code>effectTag</code> property of the fiber, and uses <code>nextEffect</code> to link those nodes in <code>linked list</code> structure.</li>
-<li>After <code>Reconciliation</code>, React steps into the <strong>commit phase.</strong> During the <code>commit phase</code>, React applies all the <code>effects</code> to <code>WIP tree</code> in one go, and this process cannot be interrupted.</li>
+<li>In the <code>Fiber structure</code>, during <code>Reconciliation</code>, React saves the nodes that has <code>effect(require changes)</code> in the <code>fiber</code>‘s’ property <code>effectTag</code>, and uses <code>nextEffect</code> to link those nodes in <code>linked list</code> structure.</li>
+<li>After <code>Reconciliation</code>, React steps into the <strong>commit phase.</strong> During the <code>commit phase</code>, React applies all the <code>effects</code> to <code>WIP tree</code> in one go, while this process cannot be interrupted.</li>
 </ul>
 <p><strong>Concurrent Mode</strong></p>
 <ul>
-<li>with time slicing, react ables to bounce back and forth between multiple tasks, but doesn’t mean that those tasks are processing at the same time, rather it’s that one task can be paused while other more urgent task are seen to. once the more urgent one are done, we jump back the less urgent one, bringing with the updated information from the more urgent one.</li>
+<li>with <code>time slicing</code>, react ables to bounce back and forth between multiple tasks, and pause one task while other more urgent task are seen to. once the more urgent one are done, then jump back the less urgent one, bringing with the updated information from the more urgent one.</li>
 <li><code>useTransition</code>, this hook is used to wraps a less urgent update.</li>
 </ul>
 <p><strong>DFS(depth first search) 深度优先遍历</strong> a search algorithm used for traversing or searching tree or graph data structures.<br><strong>linked list 链表</strong>, a common data structure used to store a collection of elements, where each element is connected to the next one through a node. Each node contains two parts: data and a reference (or pointer) to the next node.</p>
@@ -6797,37 +7088,24 @@ console.log(jso4);
 </ul>
 </li>
 </ul>
-<h3 id="automatic-batching"><a href="#automatic-batching" class="headerlink" title="automatic batching"></a>automatic batching</h3><ul>
-<li><p><code>batching update</code> happened when you had multiple state updates, and react will re-render once at the end of a function, not every time the <code>setState</code> is called. however, to choose is only occurred in a browser event handler. for now in the <code>version 18</code>, updates are batched automatically, regardless of what they’re wrapped by.</p>
-</li>
-<li><p><code>ReactDOM.flushSync()</code>, this method is used when you don’t want to apply <code>automatic batching</code>. updates in this method will be update immediately, and it’s a sync method, since we know that setState is a async method.</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">import</span> &#123; flushSync &#125; <span class="keyword">from</span> <span class="string">&#x27;react-dom&#x27;</span>; <span class="comment">// Note: react-dom, not react</span></span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">handleClick</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">flushSync(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  setCounter(<span class="function"><span class="params">c</span> =&gt;</span> c + <span class="number">1</span>);</span><br><span class="line">&#125;);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
 <h3 id="Built-in-React-Components"><a href="#Built-in-React-Components" class="headerlink" title="Built-in React Components"></a>Built-in React Components</h3><h4 id="Fragment"><a href="#Fragment" class="headerlink" title="Fragment"></a>Fragment</h4><figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="comment">// explicitly writing form  is required when pass key to a `Fragment`</span></span><br><span class="line">&lt;Fragment key=&#123;yourKey&#125;&gt;...&lt;/Fragment&gt;.</span><br><span class="line"></span><br><span class="line">&lt;&gt;</span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">OneChild</span> /&gt;</span></span></span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">AnotherChild</span> /&gt;</span></span></span><br><span class="line">&lt;/&gt;</span><br></pre></td></tr></table></figure>
 
 <h4 id="Profiler"><a href="#Profiler" class="headerlink" title="Profiler"></a>Profiler</h4><figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="comment">// measure rendering performance of a React tree. but adds some additional overhead, so it is disabled in the production build by default</span></span><br><span class="line">&lt;Profiler id=<span class="string">&quot;Sidebar&quot;</span> onRender=&#123;<span class="function">(<span class="params">id, phase, actualDuration, baseDuration, startTime, commitTime</span>) =&gt;</span> (&#123;&#125;)&#125;&gt;</span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">Sidebar</span> /&gt;</span></span></span><br><span class="line">&lt;/Profiler&gt;</span><br></pre></td></tr></table></figure>
 
 <h4 id="Suspense-dynamic-import-lazy-loading"><a href="#Suspense-dynamic-import-lazy-loading" class="headerlink" title="Suspense + dynamic import + lazy loading"></a>Suspense + dynamic import + lazy loading</h4><ul>
 <li><code>lazy loading</code> should always be declared at the top level of modules.</li>
+<li>with webpack code splitting, each module loaded by <code>import()</code> will be split to separate files.</li>
 <li>Data fetching, Lazy-loading by <code>lazy</code></li>
-<li><code>fallback</code> will be used if any of <code>the children</code> suspend while waiting for some data. nesting multiple <code>Suspense</code> components can create a loading sequence for revealing a component as it loads.</li>
+<li><code>fallback</code> will be used if any of <code>the children</code> suspend while waiting for data. nesting multiple <code>Suspense</code> components can create a loading sequence for revealing a component as it loads.</li>
 </ul>
 <figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> MarkdownPreview = lazy(<span class="function">() =&gt;</span> delayForDemo(<span class="keyword">import</span>(<span class="string">&#x27;./MarkdownPreview.js&#x27;</span>)));</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">MarkdownEditor</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">Suspense</span> <span class="attr">fallback</span>=<span class="string">&#123;</span>&lt;<span class="attr">Loading</span> /&gt;</span>&#125;&gt;</span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">h2</span>&gt;</span>Preview<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">MarkdownPreview</span>/&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">Suspense</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  );</span><br></pre></td></tr></table></figure>
+
+<h4 id="Portal"><a href="#Portal" class="headerlink" title="Portal"></a>Portal</h4><p>to render a component within other nodes. it can be used for dialog or message components</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">ReactDOM.createPortal(child,container)</span><br></pre></td></tr></table></figure>
 
 <h4 id="StrictMode"><a href="#StrictMode" class="headerlink" title="StrictMode"></a>StrictMode</h4><ul>
 <li>enables additional checks and warnings for its descendants.  it‘s used in the DEV mode only.</li>
 <li>under <code>StrictMode</code>, setState updaters run twice.</li>
-</ul>
-<h3 id="others-1"><a href="#others-1" class="headerlink" title="others"></a>others</h3><ul>
-<li><p>refresh page by router according to hash value</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">this</span>.props.history.replace(&#123; <span class="attr">pathname</span>: <span class="built_in">this</span>.props.location.pathname, <span class="attr">search</span>: <span class="string">`id=<span class="subst">$&#123;id&#125;</span>&amp;api=<span class="subst">$&#123;<span class="built_in">window</span>.location.hash.split(<span class="string">&#x27;&amp;&#x27;</span>)[<span class="number">1</span>].split(<span class="string">&#x27;=&#x27;</span>)[<span class="number">1</span>]&#125;</span>`</span> &#125;)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>the root element may not need a name</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">ref</span>=<span class="string">&#123;inputEl&#125;</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
 </ul>
 <h3 id="redux"><a href="#redux" class="headerlink" title="redux"></a>redux</h3><h4 id="concept"><a href="#concept" class="headerlink" title="concept"></a>concept</h4><p>A(change) –&gt; B(send an <code>action</code> to <code>store</code>) –&gt; C(<code>store</code> dispatch the action to a <code>reducer</code>) –&gt; D(the <code>reducer</code> return a new state to <code>store</code>) –&gt; E(<code>state</code> changed)  –&gt; G(execute <code>listeners</code>)</p>
 <ul>
@@ -6888,9 +7166,23 @@ console.log(jso4);
 <p>createAsyncThunk</p>
 </blockquote>
 <p>accepts <strong>a Redux action type string</strong> and <strong>a callback function that should return a promise</strong>. return <code>a standard Redux thunk action creator</code></p>
+<h3 id="V19"><a href="#V19" class="headerlink" title="V19"></a>V19</h3><ul>
+<li>useActionState</li>
+<li>useFormStatus<ul>
+<li>only returns status information for a parent <code>&lt;form&gt;</code><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function Submit() &#123;</span><br><span class="line">  const &#123; pending &#125; = useFormStatus()</span><br><span class="line">  return (</span><br><span class="line">    &lt;button type=&quot;submit&quot; disabled=&#123;pending&#125;&gt; &#123;pending ? &quot;Submitting...&quot; : &quot;Submit&quot;&#125; &lt;/button&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line">function Username() &#123;</span><br><span class="line">  const &#123; pending, data &#125; = useFormStatus()</span><br><span class="line">  console.log(&quot;Username&quot;, data?.getAll(&quot;username&quot;))</span><br><span class="line">  return &lt;input type=&quot;text&quot; name=&quot;username&quot; disabled=&#123;pending&#125; /&gt;</span><br><span class="line">&#125;</span><br><span class="line">function Form() &#123;</span><br><span class="line">  const &#123; pending &#125; = useFormStatus()</span><br><span class="line">  console.log(&quot;Form&quot;, pending) // always false</span><br><span class="line">  return (</span><br><span class="line">    &lt;form action=&#123;submitForm&#125;&gt;</span><br><span class="line">      &lt;Username /&gt;</span><br><span class="line">      &lt;Submit /&gt;</span><br><span class="line">    &lt;/form&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>useOptimistic</li>
+</ul>
 <h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2><p>2x: Object.defineProperty<br>3x: Proxy, setter and getter</p>
-<h2 id="web3"><a href="#web3" class="headerlink" title="web3"></a>web3</h2><p>window.ethereum (an EIP-1193 compliant provider)<br>Web3.givenProvider</p>
-<h2 id="vite"><a href="#vite" class="headerlink" title="vite"></a>vite</h2><p>based on rullup, intergrating features like code splitting , cache and more from rullup, and provides a development server or HMR out of the box</p>
+<h3 id="computed"><a href="#computed" class="headerlink" title="computed"></a>computed</h3><ul>
+<li>similar to memo(), the function will re-evaluate when some of its reactive dependencies have changed</li>
+<li>a <code>computed</code> variable can be re-written by a setter<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> fullName = computed(&#123;</span><br><span class="line">  <span class="comment">// getter</span></span><br><span class="line">  <span class="function"><span class="title">get</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> firstName.value + <span class="string">&#x27; &#x27;</span> + lastName.value</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// setter</span></span><br><span class="line">  <span class="function"><span class="title">set</span>(<span class="params">newValue</span>)</span> &#123;</span><br><span class="line">    <span class="comment">// Note: we are using destructuring assignment syntax here.</span></span><br><span class="line">    [firstName.value, lastName.value] = newValue.split(<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="nextTick-a-callback-after-a-state-change-to-wait-for-the-DOM-updates-to-complete"><a href="#nextTick-a-callback-after-a-state-change-to-wait-for-the-DOM-updates-to-complete" class="headerlink" title="nextTick() a callback after a state change to wait for the DOM updates to complete."></a>nextTick() a callback after a state change to wait for the DOM updates to complete.</h3><h2 id="web3"><a href="#web3" class="headerlink" title="web3"></a>web3</h2><p>window.ethereum (an EIP-1193 compliant provider)<br>Web3.givenProvider</p>
+<h2 id="vite"><a href="#vite" class="headerlink" title="vite"></a>vite</h2><p>based on rullup, integrating features like code splitting , cache and more from rullup, and provides a development server or HMR out of the box</p>
 <h2 id="turpopack"><a href="#turpopack" class="headerlink" title="turpopack"></a>turpopack</h2><p>currently support nextjs only</p>
 <h2 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h2><blockquote>
 <p>module building, browser compatibility, code compressing, code splitting, lazy loading</p>
@@ -7073,9 +7365,9 @@ console.log(jso4);
 </ul>
 </li>
 </ul>
-<h2 id="real-time-communication"><a href="#real-time-communication" class="headerlink" title="real-time communication"></a>real-time communication</h2><h3 id="SSE"><a href="#SSE" class="headerlink" title="SSE"></a>SSE</h3><p>http long-lasting connection<br>plain text only<br>one-way communication, server to client<br>standard HTTP connection</p>
+<h2 id="thread-and-process"><a href="#thread-and-process" class="headerlink" title="thread and process"></a>thread and process</h2><h2 id="real-time-communication"><a href="#real-time-communication" class="headerlink" title="real-time communication"></a>real-time communication</h2><h3 id="SSE"><a href="#SSE" class="headerlink" title="SSE"></a>SSE</h3><p>http long-lasting connection<br>plain text only<br>one-way communication, server to client<br>standard HTTP connection</p>
 <h3 id="Websocket"><a href="#Websocket" class="headerlink" title="Websocket"></a>Websocket</h3><p>plain text and binary format<br>bidirectional communication, server to client and client to server<br>use HTTP handshake, and then upgrade to <code>ws</code> protocol</p>
-<h2 id="long-polling"><a href="#long-polling" class="headerlink" title="long-polling"></a>long-polling</h2><p>extending the time of timeout, and the server holds the request open until it has new data to send to the client or until a timeout occurs</p>
+<h3 id="long-polling"><a href="#long-polling" class="headerlink" title="long-polling"></a>long-polling</h3><p>extending the time of timeout, and the server holds the request open until it has new data to send to the client or until a timeout occurs</p>
 <h2 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm version patch // v1.0.1</span><br><span class="line"></span><br><span class="line">npm version prepatch // v1.0.2-0</span><br><span class="line"></span><br><span class="line">npm version minor // v1.1.0</span><br><span class="line"></span><br><span class="line">npm version major // v2.0.0</span><br><span class="line"></span><br><span class="line">npm publish --access public</span><br></pre></td></tr></table></figure>
 
 <ul>
@@ -7281,6 +7573,35 @@ console.log(jso4);
 <h2 id="records"><a href="#records" class="headerlink" title="records"></a>records</h2><h3 id="2023-7-19"><a href="#2023-7-19" class="headerlink" title="2023/7/19"></a>2023/7/19</h3><ul>
 <li><code>CSS filter</code> can form <code>stacking context</code></li>
 <li><code>input</code>‘s’ property <code>hidden</code> does not work in Safari</li>
+</ul>
+<h3 id="2024-11-15"><a href="#2024-11-15" class="headerlink" title="2024/11/15"></a>2024/11/15</h3><ul>
+<li>Vertical or horizontal lines with gradient strokes in SVG won’t display.</li>
+<li><blockquote>
+<p>Keyword objectBoundingBox should not be used when the geometry of the applicable element has no width or no height, such as the case of a horizontal or vertical line, even when the line has actual thickness when viewed due to having a non-zero stroke width since stroke width is ignored for bounding box calculations. When the geometry of the applicable element has no width or height and objectBoundingBox is specified, then the given effect (e.g., a gradient or a filter) will be ignored.<br><a href="https://stackoverflow.com/questions/21638169/svg-line-with-gradient-stroke-wont-display-if-vertical-or-horizontal">https://stackoverflow.com/questions/21638169/svg-line-with-gradient-stroke-wont-display-if-vertical-or-horizontal</a></p>
+</blockquote>
+</li>
+<li><ol>
+<li>change pattern to “userSpaceOnUse”</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>Gradually add a tiny amount to the values, ensuring they are not vertical or horizontal</li>
+</ol>
+</li>
+</ul>
+<h3 id="2024-11-26"><a href="#2024-11-26" class="headerlink" title="2024/11/26"></a>2024/11/26</h3><ul>
+<li>yarn network problem, change mirror is not work and the network is fine with the official mirror url “<a href="https://registry.yarnpkg.com&quot;/">https://registry.yarnpkg.com&quot;</a><ul>
+<li>delete .lock file can work, but of couse i cannot do it. so instead delete the lock file, i changed all the mirror in the .lock file, this will helps a little.</li>
+<li>increase the network timeout is working, the default value is 30 seconds. <ul>
+<li><code>yarn install --network-timeout 1000000</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2024-11-27"><a href="#2024-11-27" class="headerlink" title="2024/11/27"></a>2024/11/27</h3><ul>
+<li>rn error, can find a package, because jcenter is derprecated<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">Execution failed <span class="keyword">for</span> task <span class="string">&#x27;:app:checkDevDebugAarMetadata&#x27;</span>.</span><br><span class="line">&gt; Could not <span class="built_in">resolve</span> <span class="keyword">all</span> <span class="keyword">files</span> <span class="keyword">for</span> configuration <span class="string">&#x27;:app:devDebugRuntimeClasspath&#x27;</span>.</span><br><span class="line">  &gt; Could not <span class="keyword">find</span> updateapputils-<span class="number">2.3</span>.<span class="number">0</span>.aar (<span class="keyword">com</span>.teprinciple:updateapputil<span class="variable">s:2</span>.<span class="number">3.0</span>).</span><br><span class="line">    Searched in the following location<span class="variable">s:</span></span><br><span class="line">        http<span class="variable">s:</span>//jcenter.bintray.<span class="keyword">com</span>/<span class="keyword">com</span>/teprinciple/updateapputils/<span class="number">2.3</span>.<span class="number">0</span>/updateapputils-<span class="number">2.3</span>.<span class="number">0</span>.aar</span><br></pre></td></tr></table></figure></li>
+<li>assembleRelease: Builds the release version for the entire project (all modules).<br>app:assembleRelease: Builds the release version for the app module specifically, which is often the main module in an Android project.</li>
 </ul>
 ]]></content>
       <categories>
