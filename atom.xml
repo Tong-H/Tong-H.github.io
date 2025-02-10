@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://mser.xyz/"/>
-  <updated>2024-12-28T14:01:06.580Z</updated>
+  <updated>2025-02-10T14:37:31.748Z</updated>
   <id>https://mser.xyz/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用 Gitlab CI/CD 自动打包和部署微前端</title>
+    <link href="https://mser.xyz/2025/01/23/gitlab_cicd/"/>
+    <id>https://mser.xyz/2025/01/23/gitlab_cicd/</id>
+    <published>2025-01-23T12:50:05.000Z</published>
+    <updated>2025-02-10T14:37:31.748Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;前段时间&lt;a href=&quot;Tong-H.github.io/2025/01/23/micro_frontend&quot;&gt;微前端实践:single-spa+vite &lt;/a&gt;的方式对项目进行了整合，也用 &lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+    
+    
+      <category term="micro_frontend" scheme="https://mser.xyz/tags/micro-frontend/"/>
+    
+      <category term="CI/CD" scheme="https://mser.xyz/tags/CI-CD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微前端实践:single-spa+vite</title>
+    <link href="https://mser.xyz/2025/01/23/micro_frontend/"/>
+    <id>https://mser.xyz/2025/01/23/micro_frontend/</id>
+    <published>2025-01-23T12:50:05.000Z</published>
+    <updated>2025-02-10T14:37:31.749Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;背景介绍&quot;&gt;&lt;a href=&quot;#背景介绍&quot; class=&quot;headerlink&quot; title=&quot;背景介绍&quot;&gt;&lt;/a&gt;背景介绍&lt;/h2&gt;&lt;p&gt;前段时间&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+    
+    
+      <category term="micro_frontend" scheme="https://mser.xyz/tags/micro-frontend/"/>
+    
+  </entry>
   
   <entry>
     <title>notes_jp</title>
@@ -295,7 +349,7 @@
     <link href="https://mser.xyz/2021/11/17/notes_git/"/>
     <id>https://mser.xyz/2021/11/17/notes_git/</id>
     <published>2021-11-17T08:54:34.000Z</published>
-    <updated>2024-12-07T06:18:30.865Z</updated>
+    <updated>2025-02-02T05:42:40.630Z</updated>
     
     <summary type="html">
     
@@ -351,7 +405,7 @@
     <link href="https://mser.xyz/2021/11/17/notes_js/"/>
     <id>https://mser.xyz/2021/11/17/notes_js/</id>
     <published>2021-11-17T08:54:34.000Z</published>
-    <updated>2025-01-02T15:32:30.156Z</updated>
+    <updated>2025-02-10T14:37:31.750Z</updated>
     
     <summary type="html">
     
@@ -504,62 +558,6 @@
           &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;原文地址：&lt;a href=&quot;https://levelup.gitconnected.com/css-is-magic-its-time-you-try-3d-91a2dd49c781&quot;&gt;CSS is magic, its time
-        
-      
-    
-    </summary>
-    
-      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
-    
-    
-      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>(译)用于 JavaScript 应用的前 5 大嵌入式数据库</title>
-    <link href="https://mser.xyz/2021/07/13/translation-top-5-embedded-databases-for-javascript-applications/"/>
-    <id>https://mser.xyz/2021/07/13/translation-top-5-embedded-databases-for-javascript-applications/</id>
-    <published>2021-07-12T16:00:00.000Z</published>
-    <updated>2021-10-11T07:24:15.320Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;原文地址：&lt;a href=&quot;https://blog.bitsrc.io/top-5-embedded-databases-for-javascript-applications-1c68496aebac&quot;&gt;Top 5
-        
-      
-    
-    </summary>
-    
-      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
-    
-    
-      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>(译)面向具有 React 开发经验的开发者介绍 Svelte</title>
-    <link href="https://mser.xyz/2021/07/06/translation-svelte-for-the-experienced-react-dev/"/>
-    <id>https://mser.xyz/2021/07/06/translation-svelte-for-the-experienced-react-dev/</id>
-    <published>2021-07-05T16:00:00.000Z</published>
-    <updated>2021-10-11T07:23:53.191Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;原文地址：&lt;a href=&quot;https://css-tricks.com/svelte-for-the-experienced-react-dev/&quot;&gt;Svelte for the Experienced React
         
       
     

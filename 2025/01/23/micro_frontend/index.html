@@ -1,0 +1,185 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="没事儿,tong-h,Tong-H,tong-h blog"><meta name="descriptioon" content="personal blog by Tong-H"><meta name="renderer" content="wekit"><link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"><link rel="stylesheet" href="/css/public.css"><link rel="stylesheet" href="/css/reset.css"><link rel="stylesheet" href="/css/iconfont.css"><title>微前端实践:single-spa+vite [ Tong-H ]</title><link rel="stylesheet" href="/css/partial/footer.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/partial/sidebar.css"><link rel="stylesheet" href="/css/post.css"><link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"><meta name="generator" content="Hexo 5.4.0"></head><body><link rel="stylesheet" href="/css/partial/header.css"><div class="header"><div class="maxwidth"><div class="nav"><a id="artlist" href="/404"><i class="iconfont icon404"></i><span class="headhid">&nbsp;404</span></a><a id="artlist" href="/archives"><i class="iconfont iconarchives"></i><span class="headhid">&nbsp;Archives</span></a><a id="artlist" href="/link"><i class="iconfont iconlink"></i><span class="headhid">&nbsp;Link</span></a><a id="artlist" href="/about"><i class="iconfont iconabout"></i><span class="headhid">&nbsp;About</span></a></div><a class="search" href="/">TONG-H</a></div></div><div class="main"> <div class="maxwidth"><link rel="stylesheet" href="/css/partial/sidebar.css"><div id="sidebar"><div class="social"><a href="/archives" title="Home"><i class="iconfont iconHome"></i></a><a href="mailto:tongt0232@gmail.com" title="E-Mail"><i class="iconfont iconweibiaoti554"></i></a><a target="_blank" rel="noopener" href="https://github.com/tong-h" title="GitHub"><i class="iconfont iconGitHub"></i></a><a target="_blank" rel="noopener" href="https://juejin.cn/user/1204720474809741" title="juejin"><img src="/images/juejinicon-sidebar.png"></a><a target="_blank" rel="noopener" href="https://www.jianshu.com/u/20de04cc53de" title="jianshu"><img src="/images/jianicon-sidebar.png"></a></div><div class="structure category-list"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%83%8C%E6%99%AF%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">背景介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Single-Spa"><span class="toc-number">2.</span> <span class="toc-text">Single-Spa</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AE%E5%89%8D%E7%AB%AF%E5%BA%94%E7%94%A8%E9%80%9A%E4%BF%A1"><span class="toc-number">2.1.</span> <span class="toc-text">微前端应用通信</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#css-%E9%9A%94%E7%A6%BB"><span class="toc-number">2.2.</span> <span class="toc-text">css 隔离</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#import-map"><span class="toc-number">2.3.</span> <span class="toc-text">import map</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.4.</span> <span class="toc-text">模块类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E8%B7%B5"><span class="toc-number">2.5.</span> <span class="toc-text">实践</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QianKun"><span class="toc-number">3.</span> <span class="toc-text">QianKun</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E6%80%A7"><span class="toc-number">3.1.</span> <span class="toc-text">特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#js-%E6%B2%99%E7%AE%B1"><span class="toc-number">3.2.</span> <span class="toc-text">js 沙箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#webpack-%E6%A8%A1%E5%9D%97%E8%81%94%E7%9B%9F-webpack-module-federation"><span class="toc-number">3.3.</span> <span class="toc-text">webpack 模块联盟(webpack module federation)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web-components"><span class="toc-number">4.</span> <span class="toc-text">web components</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="toc-number">5.</span> <span class="toc-text">参考文章</span></a></li></ol></div><div class="relat category-list"><p>相关文章</p><li><a href="/2025/01/23/micro_frontend" title="使用 Gitlab CI/CD 自动打包和部署微前端">使用 Gitlab CI/CD 自动打包和部署微前端</a></li></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/NOTES/">NOTES</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/OTHER/">OTHER</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/WEB/">WEB</a><span class="category-list-count">45</span></li></ul><div class="tags"><a href="/tags/CI-CD/" style="font-size: 12px; color: #ffac00">CI/CD</a> <a href="/tags/Cache/" style="font-size: 15px; color: #ec9d00">Cache</a> <a href="/tags/ECharts/" style="font-size: 12px; color: #ffac00">ECharts</a> <a href="/tags/Electron/" style="font-size: 12px; color: #ffac00">Electron</a> <a href="/tags/Git/" style="font-size: 12px; color: #ffac00">Git</a> <a href="/tags/JS-%E6%8B%BE%E9%81%97/" style="font-size: 12px; color: #ffac00">JS 拾遗</a> <a href="/tags/JSON/" style="font-size: 12px; color: #ffac00">JSON</a> <a href="/tags/Linux/" style="font-size: 12px; color: #ffac00">Linux</a> <a href="/tags/OTHER/" style="font-size: 12px; color: #ffac00">OTHER</a> <a href="/tags/Svg/" style="font-size: 12px; color: #ffac00">Svg</a> <a href="/tags/angular/" style="font-size: 15px; color: #ec9d00">angular</a> <a href="/tags/canvas/" style="font-size: 21px; color: #c77e00">canvas</a> <a href="/tags/cordova/" style="font-size: 21px; color: #c77e00">cordova</a> <a href="/tags/domain/" style="font-size: 12px; color: #ffac00">domain</a> <a href="/tags/ffmpeg/" style="font-size: 12px; color: #ffac00">ffmpeg</a> <a href="/tags/gitment/" style="font-size: 12px; color: #ffac00">gitment</a> <a href="/tags/hexo/" style="font-size: 18px; color: #da8d00">hexo</a> <a href="/tags/http/" style="font-size: 12px; color: #ffac00">http</a> <a href="/tags/markdown/" style="font-size: 12px; color: #ffac00">markdown</a> <a href="/tags/micro-frontend/" style="font-size: 15px; color: #ec9d00">micro_frontend</a> <a href="/tags/mpvue/" style="font-size: 12px; color: #ffac00">mpvue</a> <a href="/tags/mysql/" style="font-size: 12px; color: #ffac00">mysql</a> <a href="/tags/nginx/" style="font-size: 12px; color: #ffac00">nginx</a> <a href="/tags/nodejs/" style="font-size: 12px; color: #ffac00">nodejs</a> <a href="/tags/npm/" style="font-size: 12px; color: #ffac00">npm</a> <a href="/tags/python/" style="font-size: 18px; color: #da8d00">python</a> <a href="/tags/server/" style="font-size: 12px; color: #ffac00">server</a> <a href="/tags/translation/" style="font-size: 24px; color: #b46e00">translation</a> <a href="/tags/typescript/" style="font-size: 12px; color: #ffac00">typescript</a> <a href="/tags/vue/" style="font-size: 12px; color: #ffac00">vue</a> <a href="/tags/yarn/" style="font-size: 12px; color: #ffac00">yarn</a> <a href="/tags/%E5%8E%9F%E5%9E%8B%E9%93%BE/" style="font-size: 12px; color: #ffac00">原型链</a> <a href="/tags/%E5%9B%BD%E9%99%85%E5%8C%96/" style="font-size: 12px; color: #ffac00">国际化</a> <a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%BB%9A%E5%8A%A8%E6%9D%A1/" style="font-size: 12px; color: #ffac00">自定义滚动条</a> <a href="/tags/%E8%B7%A8%E5%9F%9F/" style="font-size: 12px; color: #ffac00">跨域</a></div></div><div class="post rightside"><h1 class="artititle">微前端实践:single-spa+vite</h1><div class="info"><i class="iconfont iconwenzi" title="字数">3.2k</i><i class="iconfont iconshijian" title="阅读时长">12</i><i class="iconfont iconarchives" title="文章分类"><span>WEB</span></i><i class="iconfont iconbiaoqian" title="文章标签"><span>micro_frontend</span></i><i class="iconfont iconshijian"><span title="文章发布时间">2025-01-23</span></i><i class="iconfont iconshijian"><span title="文章更新时间">2025-02-10</span></i></div><div class="postDetail"><h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><p>前段时间<a href="Tong-H.github.io/2025/01/23/micro_frontend">微前端实践:single-spa+vite </a>的方式对项目进行了整合，也用 <a href="Tong-H.github.io/2025/01/23/micro_frontend">使用 Gitlab CI/CD 自动打包和部署微前端</a></p>
+<p>微前端目前已经是非常成熟的前端技术，类似于微服务模式。允许使用不同的框架和技术栈，独立开发以及部署不同的模块。这也表示一个大型的应用可以拆分成小型的 “app”，在运行时再根据需要去整合以及加载这些 “app”。</p>
+<p>优点很明显：</p>
+<ul>
+<li>可以拆分巨石应用，也可以用于整合小应用</li>
+<li>对灰色部署友好，可以渐进式替换或重写项目的某些部分</li>
+<li>可以共享通用库, 比如 react / vue 这类包，可以加载一次后在多个微前端中复用</li>
+</ul>
+<p>在着手开始做之前调研了一些比较流行的解决方案，也尝试过 <code>QianKun</code>, 最后衡量之下使用了 <code>single-spa</code>，我的场景是整合小型应用，它们的技术栈非常相似，都是 vite + vue，由于都是vue所以重合的包非常多</p>
+<h2 id="Single-Spa"><a href="#Single-Spa" class="headerlink" title="Single-Spa"></a>Single-Spa</h2><p>Single-Spa 的文档非常完善，生态也很丰富。官方对目前流行的大部分框架都有整合方案，也提出了一套<a target="_blank" rel="noopener" href="https://single-spa.js.org/docs/recommended-setup">最佳实践方案</a>, 基本可以覆盖到实践过程中出现的大部分问题和需求。</p>
+<p><strong>workflow</strong></p>
+<p>Single-Spa 通过监听 <code>location</code> 的变化, 匹配路由并加载相应的微前端应用</p>
+<p>每个微前端应用都是独立的, 和目前 spa 应用没有区别，只是入口文件从<code>html</code> 文件变成了 <code>js</code> 文件。每个微应用需要提供 <code>dom</code> 容器 + 入口文件 + <a target="_blank" rel="noopener" href="https://single-spa.js.org/docs/building-applications#lifecycle-props">生命周期</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">singleSpa.registerApplication(&#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;myApp&quot;</span>,</span><br><span class="line">  <span class="attr">app</span>: <span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="string">&quot;src/myApp/main.js&quot;</span>),</span><br><span class="line">  <span class="attr">activeWhen</span>: [</span><br><span class="line">    <span class="string">&quot;/myApp&quot;</span>,</span><br><span class="line">    <span class="function">(<span class="params">location</span>) =&gt;</span> location.pathname.startsWith(<span class="string">&quot;/some/other/path&quot;</span>),</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">customProps</span>: &#123;</span><br><span class="line">    <span class="attr">some</span>: <span class="string">&quot;value&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="微前端应用通信"><a href="#微前端应用通信" class="headerlink" title="微前端应用通信"></a>微前端应用通信</h3><p>微前端应用应当保持隔离, 但在实际应用中共享是不可避免的。比如：函数、组件、业务逻辑、环境变量、API 接口、UI 状态</p>
+<ul>
+<li>常见的实现方式：<code>postMessage</code>、<code>storage</code>、<code>url</code>、<code>SharedWorker</code> <code>WebWorker</code>, <code>import / export</code>, <code>global store</code>(比如 <code>redux</code>, <code>pinia</code>)</li>
+<li><code>props</code>, 在微前端挂载的时候可以通过 <code>customProps</code> 传递 token 之类的参数</li>
+<li>推荐可以使用事件发射器的模式<ul>
+<li><strong>rxjs</strong>, 是一个很成熟的响应式的库</li>
+<li>使用 (CustomEvents)[developer.mozilla.org/en-US/docs/Web/Events/Creating_and_triggering_events] 来实现发布/订阅模式</li>
+</ul>
+</li>
+</ul>
+<h3 id="css-隔离"><a href="#css-隔离" class="headerlink" title="css 隔离"></a>css 隔离</h3><p>css 隔离有很多种方式</p>
+<ul>
+<li><code>命名约定</code>，唯一前缀或遵循特定命名格式</li>
+<li><code>CSS Modules</code>, CSS class 在编译期间由打包工具转换为唯一的、本地范围的类名</li>
+<li><code>Styled Components</code>, 在运行时动态创建样式元素。</li>
+<li><code>Shadow Dom</code> 封装 HTML 和 CSS</li>
+</ul>
+<h3 id="import-map"><a href="#import-map" class="headerlink" title="import map"></a>import map</h3><ul>
+<li><p>在浏览器中支持 <code>裸说明符</code>, 旧版本浏览器需要<code>polyfill</code>(例如 <code>systemjs</code>, <code>es-module-shims</code>), 并手动映射依赖项</p>
+<ul>
+<li>裸说明符(bare specifier) 是指通过模块名称导入该模块, 而不是通过文件路径、URL 或协议, 比如  <code>import &#39;react&#39;</code></li>
+<li>在 nodejs 中, 根据 <code>package.json</code> 映射 <code>node_modules</code> 来解析 <code>裸说明符</code></li>
+<li>在浏览器中, 打包工具在构建时将 <code>裸说明符</code> 映射到特定文件，或使用 <code>import map</code>(例如 <code>vite</code>)</li>
+</ul>
+</li>
+<li><p>允许直接从 <code>CDN</code> 导入模块</p>
+</li>
+<li><p>允许自定义模块的解析方式, 例如重定向到不同版本或实现的包</p>
+</li>
+<li><p>根据范围对特定模块进行不同的映射</p>
+  <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">&quot;imports&quot;</span>: &#123;</span><br><span class="line">		<span class="attr">&quot;react&quot;</span>: <span class="string">&quot;https://cdn.skypack.dev/react@17&quot;</span></span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="attr">&quot;scopes&quot;</span>: &#123; <span class="comment">// Inside /app/, it resolves to version 18.</span></span><br><span class="line">		<span class="attr">&quot;/app/&quot;</span>: &#123;</span><br><span class="line">		<span class="attr">&quot;react&quot;</span>: <span class="string">&quot;https://cdn.skypack.dev/react@18&quot;</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<h3 id="模块类型"><a href="#模块类型" class="headerlink" title="模块类型"></a>模块类型</h3><ul>
+<li><p><code>in-browser</code> / <code>build-time</code> 模块</p>
+<ul>
+<li><code>in-browser</code> 模块<ul>
+<li>模块在运行时由浏览器直接加载, 无需任何预处理或捆绑, 例如 <code>&lt;script type=&quot;module&quot;&gt;</code></li>
+</ul>
+</li>
+<li><code>build-time</code> 模块<ul>
+<li>需要经过预处理或捆绑的模块</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>ES 模块</code> (ESM), 浏览器和 nodejs 支持</p>
+<ul>
+<li><code>import</code> 和 <code>export</code> 在编译时进行静态解析</li>
+<li><code>Tree-Shaking</code>, 打包工具可以在构建时自动删除未使用的导出以优化代码以及减少体积</li>
+<li><code>strict mode</code> 为默认开启</li>
+<li>作用域隔离由 <code>module scope</code> 天然支持</li>
+</ul>
+</li>
+<li><p><code>CommonJS</code> (CJS), nodejs 支持</p>
+<ul>
+<li><code>require</code> 和 <code>module.exports</code> 在运行时动态解析</li>
+</ul>
+</li>
+<li><p><code>IIFE</code> (立即调用函数表达式), 浏览器支持</p>
+<ul>
+<li>模块打包为自执行函数, 在现代模块系统出现之前使用</li>
+</ul>
+</li>
+<li><p><code>AMD</code> (异步模块定义), 浏览器支持</p>
+<ul>
+<li>需要 <code>RequireJS</code>, 使用其 <code>define</code> 函数定义</li>
+</ul>
+</li>
+<li><p><code>UMD</code> (通用模块定义), 通用</p>
+<ul>
+<li>在浏览器中用作 <code>AMD</code>, 在 Node.js 中用作 <code>CommonJS</code></li>
+<li>在没有模块加载器的环境中自行执行</li>
+</ul>
+</li>
+<li><p><code>SystemJS</code>, 通用</p>
+<ul>
+<li>基于 ESM 规范的模块加载器, 支持动态加载多种格式, 包括 <code>CommonJS</code> 和 <code>AMD</code></li>
+<li>运行时动态加载</li>
+</ul>
+</li>
+</ul>
+<h3 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h3><p>官网有的教程我就不赘述了，相关传送: <a href="single-spa.js.org/docs/ecosystem-vue">vue</a>, <a href="single-spa.js.org/docs/ecosystem-vite">vite</a>，建议先过一遍</p>
+<ul>
+<li><strong>共享通用包</strong>，在主应用程序以及微应用中，谁先加载共享包，就把共享包注册到 import map 中, 那么后续的子应用的对应引用都将被 import map 重定向到已经加载的资源<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// import map, 可以在某个应用加载完共享包后设置 import map, 将其余的应用的重定向到当前应用的包地址</span></span><br><span class="line"><span class="keyword">const</span> setImportMap = <span class="function">(<span class="params">myModulePath</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> importmap = <span class="built_in">document</span>.createElement(<span class="string">&quot;script&quot;</span>)</span><br><span class="line">    importmap.type =  <span class="string">&quot;importmap&quot;</span></span><br><span class="line">    <span class="keyword">const</span> apps = [<span class="string">&quot;app1&quot;</span>, <span class="string">&quot;app2&quot;</span>]</span><br><span class="line">    <span class="keyword">const</span> json = &#123;</span><br><span class="line">      <span class="attr">imports</span>: &#123;</span><br><span class="line">        ...Object.fromEntries(apps.map(<span class="function"><span class="params">i</span> =&gt;</span> ([<span class="string">`/micoFrontendApps/<span class="subst">$&#123;i&#125;</span>/modules/`</span>,  <span class="string">`<span class="subst">$&#123;myModulePath&#125;</span>`</span>]))),</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    importmap.innerText = <span class="built_in">JSON</span>.stringify(json)</span><br><span class="line">    <span class="built_in">document</span>.querySelector(<span class="string">&quot;head&quot;</span>)?.appendChild(importmap)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><strong>关于包在 import map 中的引用有两种方式可以参考</strong></p>
+<ul>
+<li><p>如果一个包在项目里接近于全量引入，那么可以考虑在 <code>import map</code> 中设置 cdn 来重定向，这是最简单的方式</p>
+</li>
+<li><p>如果相反，项目只用到了部分功能，那么我们可能不想全量引入，我们可能需要在打包时通过去除不必要的导出缩小加载的大小，缩短运行时的加载时间，这时我们就可以不改变当下的 <code>npm install &amp; import</code> 的方式，在打包的时候做一些处理来构建通用包(vite配置在最后)</p>
+</li>
+<li><p><strong>设置 vue 作为共享包</strong>, <code>vue</code> 有一些内部工具包，比如 <code>vue/runtime-core</code> 等，为了使用方便，vue 导入并重新导出了这些工具包里的 module， 这样我们就可以直接从 vue 导入</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; computed, triggerRef, getCurrentScope, customRef&#125; <span class="keyword">from</span> <span class="string">&quot;vue&quot;</span></span><br><span class="line">  <span class="comment">// `triggerRef`, `getCurrentScope`, `customRef` 并不直接属于 vue 核心包</span></span><br><span class="line"><span class="keyword">import</span> &#123; computed, triggerRef, getCurrentScope, customRef&#125; <span class="keyword">from</span> <span class="string">&quot;@vue/reactivity&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>比如这些工具函数 <code>triggerRef</code>, <code>getCurrentScope</code>, <code>customRef</code>, 我们可以直接从 vue 导入，但其实它们并不直接属于 vue 核心包，即使使用了 <code>* as</code> 语法或者副作用导入(<code>Side-Effect Imports</code>)，如果没有明确使用依然会被  <code>tree shaking</code></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> vue <span class="keyword">from</span> <span class="string">&quot;vue&quot;</span></span><br><span class="line"><span class="built_in">console</span>.log(vue.triggerRef) <span class="comment">// 如果没有明确使用这个函数依然会被 tree shaking</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在设置共享包的时候，vue 核心包是必需的包，但是这些子包却不一定，如果我们只将 vue 设置为共享包，那么 vite 会默认其子包与 vue 共享一个命名空间，也就是会将它们打包在一起</li>
+<li>比如某一个应用使用了<code>@vue/reactivity</code> 里的 <code>triggerRef</code>，但是其他应用没有用到，那么这些应用的共享包就不会有这个函数，所以我们最好把 vue 主包和其子包分开</li>
+</ul>
+</li>
+<li><p><strong>引用规范</strong>: 下面两行代码在构建时生成两个模块名称 <code>pinia</code> <code>Pinia</code>,  生成重复的引用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> pinia <span class="keyword">from</span> <span class="string">&#x27;pinia&#x27;</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> Pinia <span class="keyword">from</span> <span class="string">&#x27;pinia&#x27;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>vite 静态资源处理</strong>，在主应用中方位微前端应用的时候，某些静态可能会出现 404 的情况</p>
+</li>
+<li><p>导入静态文件时, vite 会返回已解析的公共 URL</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> logo <span class="keyword">from</span> <span class="string">&#x27;./logo.png&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(logo);</span><br></pre></td></tr></table></figure>
+<p>通过 <code>new URL(url, import.meta.url)</code>, 也可以获取完整的资源地址 然后根据需要更改来源<br><code>server.origin</code>, 定义开发调试阶段生成的资源的 origin</p>
+</li>
+</ul>
+<p>vite 打包配置供参考</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createHash &#125; <span class="keyword">from</span> <span class="string">&#x27;crypto&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> vitePluginSingleSpa <span class="keyword">from</span> <span class="string">&#x27;vite-plugin-single-spa&#x27;</span></span><br><span class="line"><span class="keyword">import</span> cssInjectedByJsPlugin <span class="keyword">from</span> <span class="string">&#x27;vite-plugin-css-injected-by-js&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> sharedPackages = [<span class="string">&quot;vue&quot;</span>, <span class="string">&quot;vue-router&quot;</span>, <span class="string">&quot;axios&quot;</span>]</span><br><span class="line">defineConfig(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="attr">plugins</span>: [</span><br><span class="line">    <span class="comment">// 默认情况下, Vite 将 css 提取到单独的样式文件中, 这是为了优化加载, 实现更好的缓存和样式更新</span></span><br><span class="line">    <span class="comment">// 但在 single-spa 微应用中, 只需要一个 js 单个入口点, 可以通过插件将 css 内联到 js, 或者在生命周期中通过操作 dom 的方式添加 style</span></span><br><span class="line">    cssInjectedByJsPlugin(),</span><br><span class="line">    <span class="comment">// SingleSpa 插件</span></span><br><span class="line">    vitePluginSingleSpa(&#123;</span><br><span class="line">      <span class="attr">type</span>: <span class="string">&#x27;mife&#x27;</span>,</span><br><span class="line">      <span class="attr">serverPort</span>: <span class="number">4101</span>,</span><br><span class="line">      <span class="attr">spaEntryPoints</span>: path.resolve(__dirname, <span class="string">&#x27;../src/main.ts&#x27;</span>),</span><br><span class="line">      <span class="attr">assetFileNames</span>: <span class="string">&#x27;assets/[name]-[hash][extname]&#x27;</span></span><br><span class="line">    &#125;)</span><br><span class="line">  ],</span><br><span class="line">    <span class="comment">// 显式的包含共享包，确保被打包</span></span><br><span class="line">    <span class="attr">optimizeDeps</span>: &#123;</span><br><span class="line">      <span class="attr">include</span>: sharedPackages,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">build</span>: &#123;</span><br><span class="line">      <span class="attr">rollupOptions</span>: &#123;</span><br><span class="line">        <span class="comment">// 对于入口模块, Rollup 在保留模块签名(export 形状) 严格程度, 同上一条, 在共享包的场景下, 我们可能希望固定内部变量名词</span></span><br><span class="line">        <span class="attr">preserveEntrySignatures</span>: <span class="string">&quot;strict&quot;</span>, </span><br><span class="line">        <span class="attr">output</span>: &#123;</span><br><span class="line">          <span class="comment">// 默认情况下, Rollup 为了压缩代码会把内部变量导出为单个字母的变量</span></span><br><span class="line">          <span class="attr">minifyInternalExports</span>: <span class="literal">false</span>,</span><br><span class="line">          <span class="attr">chunkFileNames</span>: <span class="function">(<span class="params">preRenderedChunk</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">const</span> &#123; name, moduleIds &#125; = preRenderedChunk</span><br><span class="line">            <span class="comment">//  // 可用于将共享包与其他模块单独存放, 便于后续重定向</span></span><br><span class="line">            <span class="keyword">if</span> (sharedPackages.includes(<span class="string">`<span class="subst">$&#123;name&#125;</span>`</span>)) <span class="keyword">return</span> <span class="string">`modules/<span class="subst">$&#123;name&#125;</span>.js`</span></span><br><span class="line">            <span class="keyword">const</span> modulePaths = moduleIds.sort().join(<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line">            <span class="keyword">const</span> hash = createHash(<span class="string">&#x27;md5&#x27;</span>).update(modulePaths || <span class="string">&quot;&quot;</span>).digest(<span class="string">&#x27;hex&#x27;</span>).slice(<span class="number">0</span>, <span class="number">8</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="string">`chunks/<span class="subst">$&#123;name&#125;</span>-<span class="subst">$&#123;hash&#125;</span>.js`</span></span><br><span class="line">          &#125;,</span><br><span class="line">          <span class="attr">assetFileNames</span>: <span class="string">`assets/[name]-[ext].[ext]`</span>,</span><br><span class="line">          <span class="attr">entryFileNames</span>: <span class="string">`entry/[name]-[format].js`</span>,</span><br><span class="line">          <span class="comment">// 创建自定义的公共 chunk</span></span><br><span class="line">          <span class="attr">manualChunks</span>: &#123;</span><br><span class="line">            ...Object.fromEntries(sharedPackages.map(<span class="function">(<span class="params">i</span>) =&gt;</span> [i, [i]])),</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h2 id="QianKun"><a href="#QianKun" class="headerlink" title="QianKun"></a>QianKun</h2><h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><p><code>QianKun</code> 是目前国内最流行的方案，基于 <code>Single-Spa</code> 构建, 依赖 <code>Webpack</code> 的 <code>Module Federation</code> 动态加载 <code>UMD</code> 或者 <code>SystemJS</code> 模块类型的微前端。</p>
+<p><code>QianKun</code> 在 <code>Single-Spa</code> 之上，添加了很多开箱即用的特性</p>
+<ul>
+<li>以 html 为入口文件, 每个微前端都是一个典型的前端 app(以html 为入口)。如果是像我一样，是整合小型 app, 那么就不需要更改微前端的包结构。</li>
+<li>内置 <code>跨应用通信</code>、<code>js 沙箱</code> 和 <code>css 隔离</code></li>
+</ul>
+<p><strong>整合 vite 打包的应用</strong>, 相关<a target="_blank" rel="noopener" href="https://github.com/umijs/qiankun/issues/1257">issue</a></p>
+<ul>
+<li><code>QianKun</code> 作为非常成熟的方案，一开始也是我的首选，但我们项目的应用都是使用的 vite，而 <code>QianKun</code> 的很多特性都是依靠于 <code>Webpack Module Federation</code> 带来的, 和 vite 无法很好的结合在一起, 所以最后还是使用了 <code>single-spa</code>。</li>
+<li>社区是有一些成熟的插件可以试试，但随着 <code>vite</code> , <code>QianKun</code> 及其依赖的不断更新，会出现一些新的问题，可以多看看插件的 issue。</li>
+</ul>
+<h3 id="js-沙箱"><a href="#js-沙箱" class="headerlink" title="js 沙箱"></a>js 沙箱</h3><ul>
+<li><p><code>ProxySandbox</code> <code>LegacySandbox</code></p>
+<ul>
+<li>这两个都是使用 <code>Proxy</code></li>
+<li><code>LegacySandbox</code> 是单例模式，即一个页面只有一个微应用时, <code>sandbox.loose</code><ul>
+<li>使用 <code>Proxy</code> 包装 <code>window</code>, 并且监听 <code>window</code> 上的操作，把操作分为新增和更新然后存进不同的 map 里</li>
+<li>避免了 diff 的操作，也有了恢复环境的依据</li>
+</ul>
+</li>
+<li><code>ProxySandbox</code> 多例模式，页面有多个微应用时<ul>
+<li>使用 proxy 为每一个微应用分配一个 <code>fakeWindow</code>, 当修改全局变量的时候，操作的是 <code>fakeWindow</code>, 这样就不会影响原生 <code>window</code>，使用的时候会优先从<code>fakeWindow</code>，找不到再去原生 <code>window</code></li>
+<li><code>fakeWindow</code> 在微应用失焦的时候会被存起来以便聚焦的时候再用</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>SnapshotSandbox</code>, 当浏览器不支持 <code>Proxy</code> 时</p>
+<ul>
+<li>在微前端挂载时记录一个 <code>window</code> 的快照，也就是浅拷贝 window。当微前端卸载时, <code>QianKun</code> 将当前 <code>window</code> 与快照进行  <code>diff</code> 比较, 并将 <code>window</code> 恢复到其原始状态</li>
+</ul>
+</li>
+</ul>
+<h3 id="webpack-模块联盟-webpack-module-federation"><a href="#webpack-模块联盟-webpack-module-federation" class="headerlink" title="webpack 模块联盟(webpack module federation)"></a>webpack 模块联盟(webpack module federation)</h3><ul>
+<li>每个微前端应用都捆绑其所有依赖项。在浏览器中, 如果下载了任何共享依赖项, 则后续微前端应用将重用该共享依赖项, 而无需重新下载</li>
+</ul>
+<h2 id="web-components"><a href="#web-components" class="headerlink" title="web components"></a>web components</h2><ul>
+<li>通过将 DOM 树附加到某个 element, 并将该树的内部内容隐藏在页面中运行的 JavaScript 和 CSS 中。因此, 样式和行为的自然封装</li>
+<li>应该非常适合小型单页 app，或者封装可重复使用的 UI 组件。如果是构建和管理大型复杂的应用可能会很麻烦</li>
+</ul>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://single-spa.js.org/">single-spa 官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://single-spa.js.org/docs/recommended-setup">single-spa recommended-setup</a></li>
+<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/7120407245728268325?from=search-suggest#heading-1">微前端qiankun 沙箱与样式隔离的实现原理？</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/umijs/qiankun/issues/1257">issue：想问一下，未来是否考虑支持 vite</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/umijs/qiankun/issues/337">issue: Hi from the single-spa core team</a></li>
+</ul>
+</div><div class="copyright"><p>更新时间：2025-01-23</p>转载请注明来源，欢迎指出任何有错误或不够清晰的表达</div><link rel="stylesheet" href="/css/partial/footer.css"><div class="footer"><p><span>Copyright © 2017 - 2023</span><a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/">蜀ICP备19024124号</a></p><p><i class="iconfont iconchakan"><span>本站总访问量</span><span id="busuanzi_container_site_pv">  <span id="busuanzi_value_site_pv"></span> </span></i><i class="iconfont iconabout"><span>本站访客数</span><span id="busuanzi_container_site_uv">  <span id="busuanzi_value_site_uv"></span> </span></i></p></div></div><script> <console class="log" page theme></console></script></div></div><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></body></html>
