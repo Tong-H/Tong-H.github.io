@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://mser.xyz/"/>
-  <updated>2025-02-10T14:46:36.853Z</updated>
+  <updated>2025-02-16T07:40:34.687Z</updated>
   <id>https://mser.xyz/</id>
   
   <author>
@@ -17,11 +17,103 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="https://mser.xyz/2025/02/16/rxjs/"/>
+    <id>https://mser.xyz/2025/02/16/rxjs/</id>
+    <published>2025-02-16T07:40:34.687Z</published>
+    <updated>2025-02-16T07:40:34.687Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>shell</title>
+    <link href="https://mser.xyz/2025/02/16/notes_shell/"/>
+    <id>https://mser.xyz/2025/02/16/notes_shell/</id>
+    <published>2025-02-15T16:00:00.000Z</published>
+    <updated>2025-02-16T07:10:24.200Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;write a shell script with multiple line&lt;/p&gt;
+&lt;figure class=&quot;highlight 1c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+      <category term="Notes" scheme="https://mser.xyz/categories/Notes/"/>
+    
+    
+      <category term="shell" scheme="https://mser.xyz/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2025-02</title>
+    <link href="https://mser.xyz/2025/02/11/202502/"/>
+    <id>https://mser.xyz/2025/02/11/202502/</id>
+    <published>2025-02-10T16:00:00.000Z</published>
+    <updated>2025-02-16T07:16:36.487Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;2025-02-12&quot;&gt;&lt;a href=&quot;#2025-02-12&quot; class=&quot;headerlink&quot; title=&quot;2025/02/12&quot;&gt;&lt;/a&gt;2025/02/12&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;currying&lt;/code&gt;,
+        
+      
+    
+    </summary>
+    
+      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>202501 &amp; before</title>
+    <link href="https://mser.xyz/2025/02/11/202501/"/>
+    <id>https://mser.xyz/2025/02/11/202501/</id>
+    <published>2025-02-10T16:00:00.000Z</published>
+    <updated>2025-02-16T07:16:36.486Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;2023-7-19&quot;&gt;&lt;a href=&quot;#2023-7-19&quot; class=&quot;headerlink&quot; title=&quot;2023/7/19&quot;&gt;&lt;/a&gt;2023/7/19&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;CSS filter&lt;/code&gt; can form
+        
+      
+    
+    </summary>
+    
+      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>使用 Gitlab CI/CD 自动打包和部署微前端</title>
     <link href="https://mser.xyz/2025/01/23/gitlab_cicd/"/>
     <id>https://mser.xyz/2025/01/23/gitlab_cicd/</id>
     <published>2025-01-23T12:50:05.000Z</published>
-    <updated>2025-02-10T14:46:36.853Z</updated>
+    <updated>2025-02-16T07:11:34.805Z</updated>
     
     <summary type="html">
     
@@ -35,7 +127,7 @@
     
     </summary>
     
-      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
     
     
       <category term="micro_frontend" scheme="https://mser.xyz/tags/micro-frontend/"/>
@@ -49,7 +141,7 @@
     <link href="https://mser.xyz/2025/01/23/micro_frontend/"/>
     <id>https://mser.xyz/2025/01/23/micro_frontend/</id>
     <published>2025-01-23T12:50:05.000Z</published>
-    <updated>2025-02-10T14:46:25.485Z</updated>
+    <updated>2025-02-16T06:55:43.864Z</updated>
     
     <summary type="html">
     
@@ -63,7 +155,7 @@
     
     </summary>
     
-      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
     
     
       <category term="micro_frontend" scheme="https://mser.xyz/tags/micro-frontend/"/>
@@ -71,11 +163,11 @@
   </entry>
   
   <entry>
-    <title>notes_jp</title>
-    <link href="https://mser.xyz/2023/11/17/notes_jp/"/>
-    <id>https://mser.xyz/2023/11/17/notes_jp/</id>
-    <published>2023-11-17T08:54:34.000Z</published>
-    <updated>2024-12-28T14:01:06.580Z</updated>
+    <title>janpan words</title>
+    <link href="https://mser.xyz/2024/11/17/notes_jpwords/"/>
+    <id>https://mser.xyz/2024/11/17/notes_jpwords/</id>
+    <published>2024-11-16T21:54:34.000Z</published>
+    <updated>2025-02-16T07:05:19.264Z</updated>
     
     <summary type="html">
     
@@ -83,20 +175,71 @@
       
         
         
-          &lt;style&gt;
-  .postDetail strong {
-    color: #0a95ff ;
-    background: rgb(10 149 255 / 10%);
-    padding: 0px 2px;
-    border-radius: 3px;
-  
+          &lt;h2 id=&quot;名前-名字&quot;&gt;&lt;a href=&quot;#名前-名字&quot; class=&quot;headerlink&quot; title=&quot;名前 名字&quot;&gt;&lt;/a&gt;名前
         
       
     
     </summary>
     
-      <category term="NOTES" scheme="https://mser.xyz/categories/NOTES/"/>
+      <category term="Notes" scheme="https://mser.xyz/categories/Notes/"/>
     
+    
+      <category term="japanese" scheme="https://mser.xyz/tags/japanese/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>japanese</title>
+    <link href="https://mser.xyz/2023/11/17/notes_jp/"/>
+    <id>https://mser.xyz/2023/11/17/notes_jp/</id>
+    <published>2023-11-16T16:00:00.000Z</published>
+    <updated>2025-02-16T07:28:02.077Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;quick-review&quot;&gt;&lt;a href=&quot;#quick-review&quot; class=&quot;headerlink&quot; title=&quot;quick review&quot;&gt;&lt;/a&gt;quick review&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;52&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ところ,
+        
+      
+    
+    </summary>
+    
+      <category term="Notes" scheme="https://mser.xyz/categories/Notes/"/>
+    
+    
+      <category term="japanese" scheme="https://mser.xyz/tags/japanese/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>three.js</title>
+    <link href="https://mser.xyz/2023/09/08/node_graphic/"/>
+    <id>https://mser.xyz/2023/09/08/node_graphic/</id>
+    <published>2023-09-07T16:00:00.000Z</published>
+    <updated>2025-02-16T07:05:09.370Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;PBR&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;anti-aliasing&lt;/strong&gt; 反锯齿&lt;br&gt;&lt;strong&gt;multi-sample anti-aliasing&lt;/strong&gt; 多重采样, this is a build-in WebGL
+        
+      
+    
+    </summary>
+    
+      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
+    
+    
+      <category term="threeJs" scheme="https://mser.xyz/tags/threeJs/"/>
     
   </entry>
   
@@ -105,7 +248,7 @@
     <link href="https://mser.xyz/2023/06/06/i18n/"/>
     <id>https://mser.xyz/2023/06/06/i18n/</id>
     <published>2023-06-06T06:50:05.000Z</published>
-    <updated>2024-05-24T02:26:33.813Z</updated>
+    <updated>2025-02-16T06:55:45.063Z</updated>
     
     <summary type="html">
     
@@ -120,7 +263,7 @@
     
     </summary>
     
-      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
     
     
       <category term="国际化" scheme="https://mser.xyz/tags/%E5%9B%BD%E9%99%85%E5%8C%96/"/>
@@ -132,7 +275,7 @@
     <link href="https://mser.xyz/2023/03/27/translation-a-step-by-step-guide-to-building-a-chatbot-based-on-your-own-documents-with-gpt/"/>
     <id>https://mser.xyz/2023/03/27/translation-a-step-by-step-guide-to-building-a-chatbot-based-on-your-own-documents-with-gpt/</id>
     <published>2023-03-26T16:00:00.000Z</published>
-    <updated>2023-03-30T07:32:29.980Z</updated>
+    <updated>2025-02-16T06:55:43.867Z</updated>
     
     <summary type="html">
     
@@ -148,7 +291,7 @@
     
     </summary>
     
-      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
     
     
       <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
@@ -160,7 +303,7 @@
     <link href="https://mser.xyz/2022/11/27/translation-a-thorough-analysis-of-css-in-js/"/>
     <id>https://mser.xyz/2022/11/27/translation-a-thorough-analysis-of-css-in-js/</id>
     <published>2022-11-26T16:00:00.000Z</published>
-    <updated>2023-03-19T05:19:27.779Z</updated>
+    <updated>2025-02-16T06:55:43.871Z</updated>
     
     <summary type="html">
     
@@ -176,7 +319,7 @@
     
     </summary>
     
-      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
     
     
       <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
@@ -188,7 +331,7 @@
     <link href="https://mser.xyz/2022/07/09/service_worker/"/>
     <id>https://mser.xyz/2022/07/09/service_worker/</id>
     <published>2022-07-09T02:20:44.000Z</published>
-    <updated>2024-02-09T07:36:16.099Z</updated>
+    <updated>2025-02-16T06:55:45.063Z</updated>
     
     <summary type="html">
     
@@ -202,7 +345,7 @@
     
     </summary>
     
-      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
     
     
       <category term="Cache" scheme="https://mser.xyz/tags/Cache/"/>
@@ -214,7 +357,7 @@
     <link href="https://mser.xyz/2022/03/25/translation-use-streams-to-build-high-performing-nodejs-applications%20copy/"/>
     <id>https://mser.xyz/2022/03/25/translation-use-streams-to-build-high-performing-nodejs-applications copy/</id>
     <published>2022-03-24T16:00:00.000Z</published>
-    <updated>2022-11-24T01:24:34.369Z</updated>
+    <updated>2025-02-16T06:55:45.054Z</updated>
     
     <summary type="html">
     
@@ -230,7 +373,7 @@
     
     </summary>
     
-      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
     
     
       <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
@@ -242,7 +385,7 @@
     <link href="https://mser.xyz/2022/03/14/translation-effects-of-too-much-lazy-loading-on-web-performance/"/>
     <id>https://mser.xyz/2022/03/14/translation-effects-of-too-much-lazy-loading-on-web-performance/</id>
     <published>2022-03-13T16:00:00.000Z</published>
-    <updated>2022-06-26T09:11:43.889Z</updated>
+    <updated>2025-02-16T06:55:43.971Z</updated>
     
     <summary type="html">
     
@@ -258,7 +401,7 @@
     
     </summary>
     
-      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
     
     
       <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
@@ -270,7 +413,7 @@
     <link href="https://mser.xyz/2022/01/27/translation-two-way-binding-will-make-your-react-code-better.md/"/>
     <id>https://mser.xyz/2022/01/27/translation-two-way-binding-will-make-your-react-code-better.md/</id>
     <published>2022-01-26T16:00:00.000Z</published>
-    <updated>2022-02-23T03:50:10.711Z</updated>
+    <updated>2025-02-16T06:55:45.054Z</updated>
     
     <summary type="html">
     
@@ -286,7 +429,7 @@
     
     </summary>
     
-      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
     
     
       <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
@@ -297,8 +440,8 @@
     <title>SVG 路径动画</title>
     <link href="https://mser.xyz/2021/12/13/svg-1/"/>
     <id>https://mser.xyz/2021/12/13/svg-1/</id>
-    <published>2021-12-13T08:54:34.000Z</published>
-    <updated>2022-05-13T13:24:29.667Z</updated>
+    <published>2021-12-12T16:00:00.000Z</published>
+    <updated>2025-02-16T07:16:36.491Z</updated>
     
     <summary type="html">
     
@@ -313,7 +456,7 @@
     
     </summary>
     
-      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
+      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
     
     
       <category term="Svg" scheme="https://mser.xyz/tags/Svg/"/>
@@ -321,35 +464,11 @@
   </entry>
   
   <entry>
-    <title>notes_graphic</title>
-    <link href="https://mser.xyz/2021/11/17/node_graphic/"/>
-    <id>https://mser.xyz/2021/11/17/node_graphic/</id>
-    <published>2021-11-17T08:54:34.000Z</published>
-    <updated>2024-02-09T07:36:16.094Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;three-js&quot;&gt;&lt;a href=&quot;#three-js&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="NOTES" scheme="https://mser.xyz/categories/NOTES/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>notes_git</title>
+    <title>git</title>
     <link href="https://mser.xyz/2021/11/17/notes_git/"/>
     <id>https://mser.xyz/2021/11/17/notes_git/</id>
-    <published>2021-11-17T08:54:34.000Z</published>
-    <updated>2025-02-02T05:42:40.630Z</updated>
+    <published>2021-11-16T16:00:00.000Z</published>
+    <updated>2025-02-16T07:16:36.485Z</updated>
     
     <summary type="html">
     
@@ -364,7 +483,7 @@
     
     </summary>
     
-      <category term="NOTES" scheme="https://mser.xyz/categories/NOTES/"/>
+      <category term="Notes" scheme="https://mser.xyz/categories/Notes/"/>
     
     
       <category term="Git" scheme="https://mser.xyz/tags/Git/"/>
@@ -372,11 +491,38 @@
   </entry>
   
   <entry>
-    <title>notes_Linux</title>
+    <title>Financial Market Terms</title>
+    <link href="https://mser.xyz/2021/11/17/notes_invest/"/>
+    <id>https://mser.xyz/2021/11/17/notes_invest/</id>
+    <published>2021-11-16T16:00:00.000Z</published>
+    <updated>2025-02-16T07:16:36.488Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Some investment terminology or concepts in the financial market.&lt;/p&gt;
+&lt;h2 id=&quot;about-Fund&quot;&gt;&lt;a href=&quot;#about-Fund&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Others" scheme="https://mser.xyz/categories/Others/"/>
+    
+    
+      <category term="financial" scheme="https://mser.xyz/tags/financial/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux</title>
     <link href="https://mser.xyz/2021/11/17/notes_linux/"/>
     <id>https://mser.xyz/2021/11/17/notes_linux/</id>
-    <published>2021-11-17T08:54:34.000Z</published>
-    <updated>2024-12-28T14:01:06.590Z</updated>
+    <published>2021-11-16T16:00:00.000Z</published>
+    <updated>2025-02-16T07:16:36.488Z</updated>
     
     <summary type="html">
     
@@ -393,180 +539,10 @@
     
     </summary>
     
-      <category term="NOTES" scheme="https://mser.xyz/categories/NOTES/"/>
+      <category term="Notes" scheme="https://mser.xyz/categories/Notes/"/>
     
     
       <category term="Linux" scheme="https://mser.xyz/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>notes_js</title>
-    <link href="https://mser.xyz/2021/11/17/notes_js/"/>
-    <id>https://mser.xyz/2021/11/17/notes_js/</id>
-    <published>2021-11-17T08:54:34.000Z</published>
-    <updated>2025-02-10T14:37:31.750Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;style&gt;
-  .postDetail strong {
-    color: #0a95ff ;
-    background: rgb(10 149 255 / 10%);
-    padding: 0px 2px;
-    border-radius: 3px;
-  
-        
-      
-    
-    </summary>
-    
-      <category term="NOTES" scheme="https://mser.xyz/categories/NOTES/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>(译) 2021 年 Node.js 的发展趋势</title>
-    <link href="https://mser.xyz/2021/10/24/translation-Top-Node.js-Development-Trends-in-2021/"/>
-    <id>https://mser.xyz/2021/10/24/translation-Top-Node.js-Development-Trends-in-2021/</id>
-    <published>2021-10-23T16:00:00.000Z</published>
-    <updated>2022-03-04T22:21:37.725Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;原文地址：&lt;a href=&quot;https://javascript.plainenglish.io/top-node-js-development-trends-in-2021-807f27fdf1b8&quot;&gt;Top Node.js
-        
-      
-    
-    </summary>
-    
-      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
-    
-    
-      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>(译)使用 TypeScript 时你会想念的 Python 特性</title>
-    <link href="https://mser.xyz/2021/09/13/translation-python-features-that-you-will-miss-in-typescript/"/>
-    <id>https://mser.xyz/2021/09/13/translation-python-features-that-you-will-miss-in-typescript/</id>
-    <published>2021-09-12T16:00:00.000Z</published>
-    <updated>2021-10-11T07:24:00.759Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;原文地址：&lt;a href=&quot;https://levelup.gitconnected.com/python-features-that-you-will-miss-in-typescript-78ecc440b8bc&quot;&gt;Python
-        
-      
-    
-    </summary>
-    
-      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
-    
-    
-      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>(译)使用 PeerJS 轻松实现 P2P 通信</title>
-    <link href="https://mser.xyz/2021/08/17/translation-simplified-peer-to-peer-communication-with-peerjs/"/>
-    <id>https://mser.xyz/2021/08/17/translation-simplified-peer-to-peer-communication-with-peerjs/</id>
-    <published>2021-08-16T16:00:00.000Z</published>
-    <updated>2021-09-12T08:03:23.063Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;原文地址：&lt;a href=&quot;https://blog.bitsrc.io/simplified-peer-to-peer-communication-with-peerjs-e37244267723&quot;&gt;Simplified Peer
-        
-      
-    
-    </summary>
-    
-      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
-    
-    
-      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>(译)可视化 JavaScript 引擎</title>
-    <link href="https://mser.xyz/2021/08/06/translation-javascript-visualized-the-javascript-engine/"/>
-    <id>https://mser.xyz/2021/08/06/translation-javascript-visualized-the-javascript-engine/</id>
-    <published>2021-08-05T16:00:00.000Z</published>
-    <updated>2021-10-11T07:24:03.512Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;原文地址：&lt;a href=&quot;https://javascript.plainenglish.io/javascript-visualized-the-javascript-engine-1e3fc5d5310d&quot;&gt;JavaScript
-        
-      
-    
-    </summary>
-    
-      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
-    
-    
-      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>(译)CSS 是魔法, 是时候试试 3D 了</title>
-    <link href="https://mser.xyz/2021/07/28/translation-css-is-magic-its-time-you-try-3d/"/>
-    <id>https://mser.xyz/2021/07/28/translation-css-is-magic-its-time-you-try-3d/</id>
-    <published>2021-07-27T16:00:00.000Z</published>
-    <updated>2021-09-12T08:01:19.381Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;原文地址：&lt;a href=&quot;https://levelup.gitconnected.com/css-is-magic-its-time-you-try-3d-91a2dd49c781&quot;&gt;CSS is magic, its time
-        
-      
-    
-    </summary>
-    
-      <category term="WEB" scheme="https://mser.xyz/categories/WEB/"/>
-    
-    
-      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
     
   </entry>
   

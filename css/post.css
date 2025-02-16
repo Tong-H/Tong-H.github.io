@@ -41,7 +41,7 @@
 }
 .postDetail li {
 	margin-left: 30px;
-	list-style: decimal;
+	list-style: circle;
 }
 .postDetail hr {
 	border-style: dotted;

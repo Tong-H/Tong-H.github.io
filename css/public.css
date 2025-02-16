@@ -51,24 +51,22 @@ body::-webkit-scrollbar-track {
 #paginator {
 	text-align: center;
 	padding: 40px 0 20px 0;
-	font-weight: 600;
 	color: #ff7d46;
 }
 #paginator .current {
-	margin: 10px;
-	border-bottom: 1px solid;
+	color: #fff;
+	background: #ff7d46;
 	cursor: default;
+	border-radius: 4px;
 }
-#paginator a {
-	padding: 4px 8px;
+#paginator > * {
+	padding: 4px 6px;
 	position: relative;
 	z-index: 1;
 	transition: all 0.4s;
 }
 #paginator a:hover {
-	color: #fff;
-	background: #ff7d46;
-	border-radius: 4px;
+	color: #f4510b;
 }
 
 @keyframes page-hover {
@@ -108,7 +106,7 @@ body::-webkit-scrollbar-track {
 		width: 300px;
 		box-sizing: border-box;
 		position: sticky;
-        top: 76px;
+        top: 0;
 	}
 	.rightside {
 		padding: 30px;
