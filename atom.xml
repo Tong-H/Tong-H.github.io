@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://mser.xyz/"/>
-  <updated>2025-02-16T07:40:34.687Z</updated>
+  <updated>2025-02-16T07:10:24.200Z</updated>
   <id>https://mser.xyz/</id>
   
   <author>
@@ -15,20 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="https://mser.xyz/2025/02/16/rxjs/"/>
-    <id>https://mser.xyz/2025/02/16/rxjs/</id>
-    <published>2025-02-16T07:40:34.687Z</published>
-    <updated>2025-02-16T07:40:34.687Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>shell</title>
@@ -543,6 +529,34 @@
     
     
       <category term="Linux" scheme="https://mser.xyz/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>frontend</title>
+    <link href="https://mser.xyz/2021/11/17/notes_js/"/>
+    <id>https://mser.xyz/2021/11/17/notes_js/</id>
+    <published>2021-11-16T16:00:00.000Z</published>
+    <updated>2025-02-16T09:46:09.216Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;rxjs&quot;&gt;&lt;a href=&quot;#rxjs&quot; class=&quot;headerlink&quot; title=&quot;rxjs&quot;&gt;&lt;/a&gt;rxjs&lt;/h2&gt;&lt;p&gt;features:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;one-directional data flow, from the
+        
+      
+    
+    </summary>
+    
+      <category term="Notes" scheme="https://mser.xyz/categories/Notes/"/>
+    
+    
+      <category term="js" scheme="https://mser.xyz/tags/js/"/>
     
   </entry>
   
