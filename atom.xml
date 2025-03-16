@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://mser.xyz/"/>
-  <updated>2025-02-16T07:10:24.200Z</updated>
+  <updated>2025-03-16T10:55:37.393Z</updated>
   <id>https://mser.xyz/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2025-03</title>
+    <link href="https://mser.xyz/2025/03/01/202503/"/>
+    <id>https://mser.xyz/2025/03/01/202503/</id>
+    <published>2025-02-28T16:00:00.000Z</published>
+    <updated>2025-03-16T10:55:37.393Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;2025-03-16&quot;&gt;&lt;a href=&quot;#2025-03-16&quot; class=&quot;headerlink&quot; title=&quot;2025/03/16&quot;&gt;&lt;/a&gt;2025/03/16&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>shell</title>
@@ -49,7 +74,7 @@
     <link href="https://mser.xyz/2025/02/11/202502/"/>
     <id>https://mser.xyz/2025/02/11/202502/</id>
     <published>2025-02-10T16:00:00.000Z</published>
-    <updated>2025-02-23T09:19:41.641Z</updated>
+    <updated>2025-03-16T08:24:30.417Z</updated>
     
     <summary type="html">
     
@@ -57,33 +82,9 @@
       
         
         
-          &lt;h2 id=&quot;2025-02-23&quot;&gt;&lt;a href=&quot;#2025-02-23&quot; class=&quot;headerlink&quot; title=&quot;2025/02/23&quot;&gt;&lt;/a&gt;2025/02/23&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>202501 &amp; before</title>
-    <link href="https://mser.xyz/2025/02/11/202501/"/>
-    <id>https://mser.xyz/2025/02/11/202501/</id>
-    <published>2025-02-10T16:00:00.000Z</published>
-    <updated>2025-02-23T09:20:48.766Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;2023-7-19&quot;&gt;&lt;a href=&quot;#2023-7-19&quot; class=&quot;headerlink&quot; title=&quot;2023/7/19&quot;&gt;&lt;/a&gt;2023/7/19&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;CSS filter&lt;/code&gt; can form
+          &lt;h2 id=&quot;2025-02-28&quot;&gt;&lt;a href=&quot;#2025-02-28&quot; class=&quot;headerlink&quot; title=&quot;2025/02/28&quot;&gt;&lt;/a&gt;2025/02/28&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;ts supports&lt;/li&gt;
+&lt;li&gt;React.memo
         
       
     
@@ -149,6 +150,31 @@
   </entry>
   
   <entry>
+    <title>202501 &amp; before</title>
+    <link href="https://mser.xyz/2025/01/11/202501/"/>
+    <id>https://mser.xyz/2025/01/11/202501/</id>
+    <published>2025-01-10T16:00:00.000Z</published>
+    <updated>2025-03-16T09:52:44.966Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;2023-7-19&quot;&gt;&lt;a href=&quot;#2023-7-19&quot; class=&quot;headerlink&quot; title=&quot;2023/7/19&quot;&gt;&lt;/a&gt;2023/7/19&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;CSS filter&lt;/code&gt; can form
+        
+      
+    
+    </summary>
+    
+      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>janpan words</title>
     <link href="https://mser.xyz/2024/11/17/notes_jpwords/"/>
     <id>https://mser.xyz/2024/11/17/notes_jpwords/</id>
@@ -179,7 +205,7 @@
     <link href="https://mser.xyz/2023/11/17/notes_jp/"/>
     <id>https://mser.xyz/2023/11/17/notes_jp/</id>
     <published>2023-11-16T16:00:00.000Z</published>
-    <updated>2025-02-23T06:57:45.786Z</updated>
+    <updated>2025-03-16T08:24:30.430Z</updated>
     
     <summary type="html">
     
@@ -187,7 +213,10 @@
       
         
         
-          &lt;h2 id=&quot;quick-review&quot;&gt;&lt;a href=&quot;#quick-review&quot; class=&quot;headerlink&quot; title=&quot;quick review&quot;&gt;&lt;/a&gt;quick
+          &lt;h2 id=&quot;quick-review&quot;&gt;&lt;a href=&quot;#quick-review&quot; class=&quot;headerlink&quot; title=&quot;quick review&quot;&gt;&lt;/a&gt;quick review&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;53&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;を +
         
       
     
@@ -526,34 +555,6 @@
     
     
       <category term="Linux" scheme="https://mser.xyz/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>frontend</title>
-    <link href="https://mser.xyz/2021/11/17/notes_js/"/>
-    <id>https://mser.xyz/2021/11/17/notes_js/</id>
-    <published>2021-11-16T16:00:00.000Z</published>
-    <updated>2025-02-23T09:17:34.929Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;rxjs&quot;&gt;&lt;a href=&quot;#rxjs&quot; class=&quot;headerlink&quot; title=&quot;rxjs&quot;&gt;&lt;/a&gt;rxjs&lt;/h2&gt;&lt;p&gt;features:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;one-directional data flow, from the
-        
-      
-    
-    </summary>
-    
-      <category term="Notes" scheme="https://mser.xyz/categories/Notes/"/>
-    
-    
-      <category term="js" scheme="https://mser.xyz/tags/js/"/>
     
   </entry>
   
