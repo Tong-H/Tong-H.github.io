@@ -77,7 +77,7 @@
 </ul>
 <h2 id="2024-11-27"><a href="#2024-11-27" class="headerlink" title="2024/11/27"></a>2024/11/27</h2><ul>
 <li><p>rn error, can find a package, because jcenter is deprecated</p>
-<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">Execution failed <span class="keyword">for</span> task <span class="string">&#x27;:app:checkDevDebugAarMetadata&#x27;</span>.</span><br><span class="line">&gt; Could not <span class="built_in">resolve</span> <span class="keyword">all</span> <span class="keyword">files</span> <span class="keyword">for</span> configuration <span class="string">&#x27;:app:devDebugRuntimeClasspath&#x27;</span>.</span><br><span class="line">  &gt; Could not <span class="keyword">find</span> updateapputils-<span class="number">2.3</span>.<span class="number">0</span>.aar (<span class="keyword">com</span>.teprinciple:updateapputil<span class="variable">s:2</span>.<span class="number">3.0</span>).</span><br><span class="line">    Searched in the following location<span class="variable">s:</span></span><br><span class="line">        http<span class="variable">s:</span>//jcenter.bintray.<span class="keyword">com</span>/<span class="keyword">com</span>/teprinciple/updateapputils/<span class="number">2.3</span>.<span class="number">0</span>/updateapputils-<span class="number">2.3</span>.<span class="number">0</span>.aar</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Execution failed for task &#x27;:app:checkDevDebugAarMetadata&#x27;.</span><br><span class="line">&gt; Could not resolve all files for configuration &#x27;:app:devDebugRuntimeClasspath&#x27;.</span><br><span class="line">  &gt; Could not find updateapputils-2.3.0.aar (com.teprinciple:updateapputils:2.3.0).</span><br><span class="line">    Searched in the following locations:</span><br><span class="line">        https://jcenter.bintray.com/com/teprinciple/updateapputils/2.3.0/updateapputils-2.3.0.aar</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
@@ -1646,7 +1646,7 @@ console.log(jso4);
     <url>/2025/01/23/micro_frontend/</url>
     <content><![CDATA[<h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><p>前段时间<a href="https://tong-h.github.io/2025/01/23/micro_frontend">微前端实践:single-spa+vite</a>的方式对项目进行了整合，也用 <a href="https://tong-h.github.io/2025/01/23/gitlab_cicd/">使用 Gitlab CI/CD 自动打包和部署微前端</a></p>
 <p>微前端目前已经是非常成熟的前端技术，类似于微服务模式。允许使用不同的框架和技术栈，独立开发以及部署不同的模块。这也表示一个大型的应用可以拆分成小型的 “app”，在运行时再根据需要去整合以及加载这些 “app”。</p>
-<p>优点很明显：</p>
+<p>优点很明显:</p>
 <ul>
 <li>可以拆分巨石应用，也可以用于整合小应用</li>
 <li>对灰色部署友好，可以渐进式替换或重写项目的某些部分</li>
@@ -1820,6 +1820,19 @@ console.log(jso4);
 <h2 id="web-components"><a href="#web-components" class="headerlink" title="web components"></a>web components</h2><ul>
 <li>通过将 DOM 树附加到某个 element, 并将该树的内部内容隐藏在页面中运行的 JavaScript 和 CSS 中。因此, 样式和行为的自然封装</li>
 <li>应该非常适合小型单页 app，或者封装可重复使用的 UI 组件。如果是构建和管理大型复杂的应用可能会很麻烦</li>
+</ul>
+<p>update-20250323</p>
+<p>micro-app by JD, renders based on web-component-<em>like</em>, but not realized by web-component</p>
+<ul>
+<li>Lifecycle hooks are invoked by the main app</li>
+<li>built-in event bus for communication, proxy for js sandbox, ShadowDom for dom isolation, adds a prefix to dom container element When a micro-app is mounted</li>
+<li>route system<ul>
+<li>supports history mode and hash mode</li>
+<li>provides built-in methods to allow navigation between different micro-apps</li>
+<li>supports independent sub-app routing, meaning each micro-app can manage its own routes without interference from the main application</li>
+<li>single-spa uses <code>meta-router</code> which sits above individual micro-frontends, meaning the main application controls which micro-app is loaded based on the current route</li>
+</ul>
+</li>
 </ul>
 <h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ul>
 <li><a href="https://single-spa.js.org/">single-spa 官方文档</a></li>
@@ -6799,15 +6812,11 @@ console.log(jso4);
 
 </li>
 </ul>
-<p>test(), is matching or not</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">regExp.test(str) <span class="comment">// boolean</span></span><br></pre></td></tr></table></figure>
-
+<p>test(), is matching or not, return a boolean</p>
 <p>search()</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">string.search(regExp) <span class="comment">// return an index or -1</span></span><br></pre></td></tr></table></figure>
 
-<p>replace(), es6 replaceAll</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">string.replace(regExp, replaceText) <span class="comment">// return the replaced string</span></span><br></pre></td></tr></table></figure>
-
+<p>replace(), es6 replaceAll, return the replaced string</p>
 <p>exec()</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">regExp.exec(string) <span class="comment">// return an array of information which include lastIndex, allow you to match along the last position.</span></span><br></pre></td></tr></table></figure>
 
@@ -7216,31 +7225,85 @@ console.log(jso4);
 <li><p><code>Release</code> the allocated memory by <code>Garbage-Collection</code></p>
 </li>
 </ul>
-<h4 id="Garbage-Collection-GC"><a href="#Garbage-Collection-GC" class="headerlink" title="Garbage-Collection(GC)"></a>Garbage-Collection(GC)</h4><p>an object has a reference to its <code>prototype</code> (<code>implicit reference 隐式引用</code>) and to its properties values (<code>explicit reference 显示引用</code>).</p>
-<p><strong>Reference-counting Garbage-Collection 引用计数垃圾收集</strong></p>
+<p><strong>Memory fragmentation</strong></p>
+<ul>
+<li>refer to free memory is split into small, non-contiguous blocks across heap</li>
+<li>making it difficult to allocate large chunks of memory. If a 300KB object needs to be allocated, there’s not enough contiguous space</li>
+<li>wasting space when allocated memory blocks are larger than the actual data stored in them</li>
+</ul>
+<p><strong>Bump-Pointer Allocation</strong></p>
+<ul>
+<li>steps<ul>
+<li>A pointer (bump pointer) starts at the beginning of this region</li>
+<li>When a new object is created, the pointer moves forward (“bumps”) by the required size</li>
+<li>No fragmentation occurs because memory is allocated sequentially</li>
+</ul>
+</li>
+</ul>
+<p><strong>New Generation vs. Old Generation</strong></p>
+<ul>
+<li>short-lived<ul>
+<li>uses <code>bump-pointer allocation</code>, Managed by <code>Minor GC</code></li>
+<li>When objects live long enough to survive multiple <code>Minor GCs</code>, they are moved to the <code>Old Generation</code></li>
+</ul>
+</li>
+<li>long lived<ul>
+<li>Uses Mark-Sweep and Mark-Compact GC</li>
+</ul>
+</li>
+</ul>
+<h4 id="Garbage-Collection-GC"><a href="#Garbage-Collection-GC" class="headerlink" title="Garbage-Collection(GC)"></a>Garbage-Collection(GC)</h4><ul>
+<li>an object has a reference<ul>
+<li>to its <code>prototype</code> (<code>implicit reference 隐式引用</code>)</li>
+<li>and to its properties values (<code>explicit reference 显示引用</code>).</li>
+</ul>
+</li>
+<li><strong>FinalizationRegistry</strong>, listen to the garbage-collect event</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> registry = <span class="keyword">new</span> FinalizationRegistry(<span class="function"><span class="params">heldValue</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(heldValue)</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">let</span> obj = &#123; <span class="attr">a</span>: <span class="number">0</span> &#125;</span><br><span class="line">registry.register(obj, <span class="string">&quot;some value&quot;</span>); <span class="comment">// target and holdings cannot be same</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>CPP GC (C++ Garbage Collection)</strong></p>
+<ul>
+<li>garbage collection happening in <em>the C++ layer of V8 engine</em></li>
+<li>typically occurs when Chrome needs to release unused memory that was allocated for native objects but is no longer in use</li>
+</ul>
+<p><strong>V8’s garbage collection</strong></p>
+<ul>
+<li><p>divided into two main phases</p>
+<ul>
+<li><em>Minor GC (Scavenge GC)</em><ul>
+<li>smaller and more frequent garbage collections that occur when the heap is relatively small.</li>
+<li>only deal with <code>new generation</code> and are less expensive in terms of performance</li>
+</ul>
+</li>
+<li><em>Major GC</em><ul>
+<li>occurs after a series of smaller <code>Minor GCs</code> or when the memory heap grows too large</li>
+<li>use <strong>mark and sweep algorithm 标记-清除算法</strong> and <code>Mark-Compact GC</code>, An object is said to be <code>garbage</code>, if <em>an object is unreachable</em>.<ul>
+<li>Starts from root objects, inspects all the children recursively, marks all reachable objects</li>
+<li>Deletes unreachable objects</li>
+<li>compacts the heap if needed. Moves remaining objects together to avoid memory fragmentation and reduce heap fragmentation</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>weakly reference</strong><ul>
+<li>if an object is <em>only held by weakly reference</em>, then the object will be considered as unreachable.</li>
+<li>The keys of <code>WeakMap</code> and <code>WeakSet</code> can be garbage-collected (for <code>WeakMap</code> objects, the values would then be eligible for Garbage-Collection as well) as long as nothing else in the program is referencing the key</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Reference-counting Garbage-Collection 引用计数垃圾收集</strong></p>
 <ul>
 <li><p>An object is said to be <code>garbage</code>, if there are <em>zero references pointing to it</em>.</p>
 </li>
-<li><p><code>circular references</code> easily results in <code>memory leak</code>.</p>
-<ul>
-<li><em>two objects are reference to each other in a function scope</em>. They will go out of the function scope after the function call has completed. they are useless after the function is called, but they will not be considered <code>garbage</code> since they still have at least one reference.</li>
-</ul>
+<li><p><code>circular references</code> easily results in <em>memory leak</em>. <em>two objects are reference to each other in a function scope</em>. They will go out of the function scope after the function call has completed. they are useless after the function is called, but they will not be considered <code>garbage</code> since they still have at least one reference.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> x = &#123;&#125;;</span><br><span class="line">  <span class="keyword">const</span> y = &#123;&#125;;</span><br><span class="line">  x.a = y; <span class="comment">// x references y</span></span><br><span class="line">  y.a = x; <span class="comment">// y references x</span></span><br><span class="line">  <span class="keyword">return</span></span><br><span class="line">&#125;</span><br><span class="line">f()</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
-<p><strong>mark and sweep algorithm 标记-清除算法</strong></p>
-<ul>
-<li>An object is said to be <code>garbage</code>, if <em>an object is unreachable</em>.</li>
-<li>the garbage collector starts from the root(the global object), and inspects all the children recursively. thus, the garbage collector will find all reachable objects and mark them as active. Any memory not marked as active can now be considered garbage.</li>
-<li>with this algorithm, <code>circular references</code> is no longer a problem since the objects is unreachable after the function is completely.</li>
+</li>
 </ul>
-<p><strong>weakly reference</strong></p>
-<p>if an object is only held by weakly reference, then the object will be considered as unreachable.<br>The keys of <code>WeakMap</code> and <code>WeakSet</code> can be garbage-collected (for <code>WeakMap</code> objects, the values would then be eligible for Garbage-Collection as well) as long as nothing else in the program is referencing the key</p>
-<p><strong>FinalizationRegistry</strong></p>
-<p>listen to the garbage-collect event</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> registry = <span class="keyword">new</span> FinalizationRegistry(<span class="function"><span class="params">heldValue</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(heldValue)</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">let</span> obj = &#123; <span class="attr">a</span>: <span class="number">0</span> &#125;</span><br><span class="line">registry.register(obj, <span class="string">&quot;some value&quot;</span>); <span class="comment">// target and holdings cannot be same</span></span><br></pre></td></tr></table></figure>
-
 <h4 id="memory-leak"><a href="#memory-leak" class="headerlink" title="memory leak"></a>memory leak</h4><ul>
 <li><p><code>A memory leak</code> occurs when a program fails to release memory that is no longer needed, leading to increasing memory usage over time</p>
 </li>
@@ -8213,19 +8276,30 @@ console.log(jso4);
 </ul>
 <h3 id="optimization"><a href="#optimization" class="headerlink" title="optimization"></a>optimization</h3><ul>
 <li><code>tree shaking</code></li>
-<li><code>compress code</code> by some plugins, like <code>terser</code>, <code>css minimize</code></li>
-<li><code>code splitting</code>, use <code>import()</code> to split code into multiple chunk and <code>lazy-loading</code> them. <code>import()</code> can cooperate with <code>suspense</code> feature in react.</li>
+<li><code>compress code</code> use tools like <code>terser</code>, <code>css minimize</code> <code>gzip</code></li>
+<li><code>code splitting</code>, use <code>import()</code> to split code into multiple chunk and <code>lazy-loading</code> them. <code>import()</code> can cooperate with <code>suspense</code> feature in react and vue.</li>
+<li><code>code verify</code>, use pluigns like eslint, ts</li>
 </ul>
-<h2 id="vite"><a href="#vite" class="headerlink" title="vite"></a>vite</h2><p>based on <code>rollup</code>, and provides a development server or HMR out of the box</p>
-<h2 id="turpopack"><a href="#turpopack" class="headerlink" title="turpopack"></a>turpopack</h2><p>currently support nextjs only</p>
-<h2 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h2><blockquote>
-<p>module building, browser compatibility, code compressing, code splitting, lazy loading</p>
-</blockquote>
-<h3 id="building-process"><a href="#building-process" class="headerlink" title="building process"></a>building process</h3><ol>
+<h3 id="turpopack"><a href="#turpopack" class="headerlink" title="turpopack"></a>turpopack</h3><p>currently supports <code>nextjs</code> only</p>
+<h3 id="vite"><a href="#vite" class="headerlink" title="vite"></a>vite</h3><ul>
+<li>uses <code>rollup</code> for building, uses <code>esbuild</code> for compilation</li>
+<li>provides <code>HMR</code> by using modern browsers’ native module support, and only recompiles the changed modules</li>
+</ul>
+<h3 id="Rollup"><a href="#Rollup" class="headerlink" title="Rollup"></a>Rollup</h3><ul>
+<li>focusing on ES Modules, parses ES Modules imports statically</li>
+<li>Designed for libraries and smaller projects. </li>
+<li>Rollup removes <code>unused</code> code completely, while Webpack relies on marking code as “unused” (but keeps it in the bundle)</li>
+</ul>
+<h3 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h3><ul>
+<li>starting from an entry point, recursively processes modules, to construct a dependency graph. Uses loaders(like Babel, css loader) to transform files.</li>
+<li>uses different module formats (CommonJS, AMD, ES Modules).</li>
+<li>Webpack relies on marking code as “unused” (but keeps it in the bundle)</li>
+</ul>
+<h3 id="webpack-building-process"><a href="#webpack-building-process" class="headerlink" title="webpack-building-process"></a>webpack-building-process</h3><ol>
 <li>generate a config from the <code>webpack.config.js</code> and the command line.</li>
 <li>use <code>compiler</code> module to create a <code>compilation</code> instance which has access to all modules and their dependencies. execute the <code>compiler.run()</code> to start working. <code>compiler</code> and <code>compilation</code> are the heart of webpack, both of them extend from <code>tapable</code>.</li>
-<li>analysis process is started from the <code>entry</code> file. use <code>acron parser</code> to generates AST(Abstract Syntax Tree / 抽象语法树) for the <code>entry</code> file.</li>
-<li>traverse through entire AST to create a dependency graph. at this stage, if webpack find any matched <code>rules</code> for <code>loader</code>s, the loaders will convert those codes(e.g. css files) into js, and then <code>Parser</code> parses them into AST.</li>
+<li><em>analysis process is started from the <code>entry</code> file. use <code>acron parser</code> to generates AST(Abstract Syntax Tree / 抽象语法树) for the <code>entry</code> file.</em></li>
+<li><em>traverse through entire AST to create a dependency graph</em>. at this stage, if webpack find any matched <code>rules</code> for <code>loader</code>s, the loaders will convert those codes(e.g. css files) into js, and then <code>Parser</code> parses them into AST.</li>
 <li>this process will be repeatedly executed for the each dependency, to recursive traverse.</li>
 <li>bundle all the files.</li>
 <li>in the above process<ol>
@@ -8240,7 +8314,7 @@ console.log(jso4);
 </ol>
 </li>
 </ol>
-<h3 id="boost-build-time"><a href="#boost-build-time" class="headerlink" title="boost build time"></a>boost build time</h3><ul>
+<h3 id="webpack-boost-build-time"><a href="#webpack-boost-build-time" class="headerlink" title="webpack-boost-build-time"></a>webpack-boost-build-time</h3><ul>
 <li>webpack cache strategies</li>
 <li>get precise time by <code>speed-measure-webpack-plugin</code>, like how long the engine spends in each plugin / loader</li>
 <li>save time from each plugin or loader<ul>
@@ -8249,7 +8323,7 @@ console.log(jso4);
 </ul>
 </li>
 </ul>
-<h3 id="module-federation"><a href="#module-federation" class="headerlink" title="module federation"></a>module federation</h3><p>to expose some of our components to the outside, and therefor which can be used in other projects.<br>this feature is considered as an idea of micro-frontend</p>
+<h3 id="webpack-module-federation"><a href="#webpack-module-federation" class="headerlink" title="webpack-module-federation"></a>webpack-module-federation</h3><p>to expose some of our components to the outside, and therefor which can be used in other projects.<br>this feature is considered as an idea of micro-frontend</p>
 <h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><p>http: HTTP &gt; TCP &gt; IP &gt; MAC<br>https: HTTP(application) &gt; SSL/TSL(application) &gt; TCP(transport) &gt; IP(internet) &gt; MAC(link)<br>http2: HTTP &gt; HPack and Stream&gt; SSL/TSL &gt; TCP &gt; IP &gt; MAC</p>
 <ul>
 <li><p><strong>http vs https</strong></p>
@@ -8262,7 +8336,7 @@ console.log(jso4);
 </li>
 <li><p><strong>three-way handshake</strong> is used to establish TCP connection, to ensure that the service and the client both can send and receive data</p>
 <ul>
-<li>The client sends a SYN packet (SYN = synchronize) to the server, and specifying its initial sequence number. (client can send and server can receive).</li>
+<li>The client sends a SYN packet (SYN = synchronize, specifying its initial sequence number) to the server. (client can send and server can receive).</li>
 <li>the server responds with a packet containing both SYN and ACK(Acknowledgement Number) flags. (server can send)</li>
 <li>the client sends back an ACK packet. (client can receive).</li>
 <li><strong>what it’s used for</strong><ul>
@@ -8285,7 +8359,7 @@ console.log(jso4);
 </li>
 </ul>
 <h3 id="CORS"><a href="#CORS" class="headerlink" title="CORS"></a>CORS</h3><ul>
-<li><code>same origin policy</code>, requires same <code>protocol</code>, <code>domain</code> and <code>port</code></li>
+<li><code>same origin policy</code>, requires same <code>protocol</code> + <code>domain</code> + <code>port</code></li>
 </ul>
 <p><strong>skip cors</strong></p>
 <ul>
@@ -8304,14 +8378,14 @@ console.log(jso4);
 </ul>
 </li>
 <li>http2.0<ul>
-<li>Compress both the header and body. Both the client and the server maintain a dynamic table of header information. Every header field is stored in this table and assigned an index number. For headers with the same name, only the index number will be sent. this called <code>HPACK</code></li>
-<li>uses binary format, reducing the step of transforming requests into binary form</li>
-<li>introduces <code>Stream</code> concept, allowing multiple requests and responses to be sent and received concurrently within a single TCP connection.<ul>
+<li><em>Compress both the header and body</em>. Both the client and the server maintain a dynamic table of header information. Every header field is stored in this table and assigned an index number. For headers with the same name, only the index number will be sent. this called <code>HPACK</code></li>
+<li><em>uses binary format</em>, reducing the step of transforming requests into binary form</li>
+<li>introduces <code>Stream</code> concept, allowing <em>multiple requests and responses to be sent and received concurrently within a single TCP connection</em>.<ul>
 <li>multiple streams exist in one tcp connection, and own a stream-id as an identifier. a full request (request and correspondent response) can be split in frames and then sent with the same stream identifier.</li>
 <li>a stream is initiated when client or server sends bytes.</li>
 </ul>
 </li>
-<li>server push. since the server can create stream</li>
+<li><em>server push</em>. since the server can create stream</li>
 <li><code>Head-of-line blocking</code> still exists in the TCP layer. TCP is a byte-oriented protocol, and data is only sent to the application layer when the received bytes are complete. Packet loss triggers TCP to resend the missing packets, which can block all the requests.</li>
 </ul>
 </li>
@@ -8385,19 +8459,38 @@ console.log(jso4);
 <li>4XX - Client Error, 400 Bad Request, 401 Unauthorized, 404 Not Found</li>
 <li>5XX - Server Error, 500 Internal Server Error, 502 Bad Gateway, 503 Service Unavailable</li>
 </ul>
-<h3 id="https-optimization"><a href="#https-optimization" class="headerlink" title="https optimization"></a>https optimization</h3><ul>
+<h3 id="weSecurity"><a href="#weSecurity" class="headerlink" title="weSecurity"></a>weSecurity</h3><p><strong>XSS (Cross-Site Scripting)</strong></p>
+<ul>
+<li><p>Stored XSS</p>
+<ul>
+<li>A comment system where users can input text. an attacker can input a script, and it will be stored and run when other users see the comment.</li>
+</ul>
+</li>
+<li><h2 id="Reflected-XSS"><a href="#Reflected-XSS" class="headerlink" title="Reflected XSS"></a>Reflected XSS</h2></li>
+<li><p>DOM-based XSS</p>
+</li>
+</ul>
+<h3 id="network-optimization"><a href="#network-optimization" class="headerlink" title="network optimization"></a>network optimization</h3><ul>
 <li>reduce the number of request<ul>
 <li>use http cache</li>
 <li>combine small and light requests, like small images</li>
 </ul>
 </li>
-<li>use compress as needed<ul>
+<li>use compress if needed<ul>
 <li><code>lossless compression</code>, <code>Accept-Encoding: gzip, deflate</code> <code>Content-Encoding: gzip</code></li>
 <li><code>lossy compression</code>, <code>Accept: audio/*; q=0.2, audio/basic</code>, q refer to the number of quality</li>
 </ul>
 </li>
 </ul>
-<h2 id="thread-and-process"><a href="#thread-and-process" class="headerlink" title="thread and process"></a>thread and process</h2><h2 id="real-time-communication"><a href="#real-time-communication" class="headerlink" title="real-time communication"></a>real-time communication</h2><h3 id="SSE"><a href="#SSE" class="headerlink" title="SSE"></a>SSE</h3><p>http long-lasting connection<br>plain text only<br>one-way communication, server to client<br>standard HTTP connection</p>
+<h2 id="real-time-connection"><a href="#real-time-connection" class="headerlink" title="real-time connection"></a>real-time connection</h2><h3 id="SSE-ServerSentEvents"><a href="#SSE-ServerSentEvents" class="headerlink" title="SSE(ServerSentEvents)"></a>SSE(ServerSentEvents)</h3><ul>
+<li>Client opens a http connection to the server, Server keeps the connection open and continuously pushes data as events</li>
+<li>uses http long-lasting connection, keep the TCP connection open using the <code>Connection: keep-alive</code> header</li>
+<li>uses a specific format <code>Content-Type: text/event-stream</code></li>
+<li><code>window.evensource</code> api only supports <code>get</code> method</li>
+</ul>
+<p><strong>use fetch with readable streams to initiate SSE-like behavior</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> response = <span class="keyword">await</span> fetch(url, &#123;</span><br><span class="line">	<span class="attr">method</span>: <span class="string">&quot;POST&quot;</span>,</span><br><span class="line">	<span class="attr">headers</span>: &#123;</span><br><span class="line">		<span class="string">&quot;Content-Type&quot;</span>: <span class="string">&quot;application/json&quot;</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="attr">body</span>: <span class="built_in">JSON</span>.stringify(data),</span><br><span class="line">&#125;)</span><br><span class="line"> <span class="comment">// Converts the raw byte data (in Uint8Array) into a readable text string</span></span><br><span class="line"> <span class="keyword">const</span> decoder = <span class="keyword">new</span> TextDecoder();</span><br><span class="line"> <span class="comment">// getReader, Retrieves a ReadableStreamDefaultReader from the response body</span></span><br><span class="line"><span class="keyword">const</span> reader = response.body.pipeThrough(decoder).getReader()</span><br><span class="line"><span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">	<span class="keyword">const</span> &#123; value, done &#125; = <span class="keyword">await</span> reader.read()</span><br><span class="line">	<span class="keyword">if</span> (done) <span class="keyword">break</span></span><br><span class="line">	onMessage(value)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="Websocket"><a href="#Websocket" class="headerlink" title="Websocket"></a>Websocket</h3><p>Relies on Protocol TCP, Uses WSS (WebSocket Secure) over TLS/SSL<br>use HTTP handshake, and then upgrade to <code>ws</code> protocol</p>
 <p>free for CORS<br>plain text and binary format<br>bidirectional communication, server to client and client to server</p>
 <h3 id="mqtt"><a href="#mqtt" class="headerlink" title="mqtt"></a>mqtt</h3><p>Relies on Protocol TCP / IP, can work over WebSocket as a transport layer for web browser compatibility<br>Publish-Subscribe messaging protocol<br>Lightweight Binary Format (Optimized for IoT)<br><code>Broker</code> can retain messages for offline clients</p>
@@ -8549,7 +8642,13 @@ console.log(jso4);
   <entry>
     <title>2025-03</title>
     <url>/2025/03/01/202503/</url>
-    <content><![CDATA[<h2 id="2025-03-16"><a href="#2025-03-16" class="headerlink" title="2025/03/16"></a>2025/03/16</h2><ul>
+    <content><![CDATA[<h2 id="2025-03-23"><a href="#2025-03-23" class="headerlink" title="2025/03/23"></a>2025/03/23</h2><ul>
+<li><a href="/2021/11/17/notes_js/#SSE(ServerSentEvents)">use sse with post</a></li>
+<li><a href="/2021/11/17/notes_js/#Memory-Management">v8 gc manages memory</a></li>
+<li><a href="/2025/01/23/micro_frontend/#web-components">JD micro-app</a></li>
+<li><strong>waiting….</strong> <a href="/2025/01/23/micro_frontend/#weSecurity">weSecurity</a></li>
+</ul>
+<h2 id="2025-03-16"><a href="#2025-03-16" class="headerlink" title="2025/03/16"></a>2025/03/16</h2><ul>
 <li><a href="/2021/11/17/notes_js/#renderOptimization">will-change</a> and <a href="/2021/11/17/notes_js/#renderOptimization">contain</a></li>
 <li><a href="/2021/11/17/notes_js/#improvementsInVue3">improvementsInVue3</a></li>
 </ul>
