@@ -6582,25 +6582,40 @@ console.log(jso4);
 <li><strong>repaint</strong>: when the style(like color, background) of dom are changed<br>If <code>repaint</code> doesn’t affect the geometrical size of the DOM elements, then <code>reflow</code> isn’t required. However, <code>reflow</code>  will inevitably trigger <code>repaint</code>.</li>
 </ol>
 <h3 id="renderOptimization"><a href="#renderOptimization" class="headerlink" title="renderOptimization"></a>renderOptimization</h3><ul>
-<li>Use media=”print” or preload for non-blocking CSS.</li>
-<li><strong>avid <code>reflow</code> and <code>repaint</code> as much as possible</strong><ul>
+<li><p>Use media=”print” or preload for non-blocking CSS.</p>
+</li>
+<li><p><strong>avid <code>reflow</code> and <code>repaint</code> as much as possible</strong></p>
+<ul>
 <li>use <code>transform</code> instead of <code>positive and top</code>, the former performs changes in the GPU instead of <code>causing</code> reflow and occupying the rendering thread.</li>
 <li>use <code>visibility</code> instead of <code>display:none</code>, the former incur repaint only while the latter will change layout</li>
 <li>accessing properties like <code>offsetWidth</code>, <code>offsetHeight</code>, or <code>getComputedStyle()</code> can trigger <code>reflow</code></li>
+<li>prefer <code>textContent</code> instead of <code>innerText</code>.<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent#differences_from_innertext">reading the value of innerText triggers a reflow to ensure up-to-date computed styles</a></li>
+<li><code>textContent</code> gets all elements and their contents, while <code>innerText</code> only shows “human-readable” elements, and is aware of styling and won’t return the text of “hidden” elements</li>
+<li><code>textContent</code> can prevent <code>XSS</code></li>
 </ul>
 </li>
-<li>instead of making multiple small changes to the DOM, try to make all necessary <strong>changes in one go</strong>.</li>
-<li>use browser developer tools to <strong>monitor performance metrics</strong> like reflows, repaints, and rendering performance.</li>
-<li><strong>requestAnimationFrame</strong></li>
-<li><code>will-change</code> to <strong>inform the browser in advance about potential changes</strong> to an element<ul>
+</ul>
+</li>
+<li><p>instead of making multiple small changes to the DOM, try to make all necessary <strong>changes in one go</strong>.</p>
+</li>
+<li><p>use browser developer tools to <strong>monitor performance metrics</strong> like reflows, repaints, and rendering performance.</p>
+</li>
+<li><p><strong>requestAnimationFrame</strong></p>
+</li>
+<li><p><code>will-change</code> to <strong>inform the browser in advance about potential changes</strong> to an element</p>
+<ul>
 <li>don’t overuse and remove it after use. <a href="#https://developer.mozilla.org/en-US/docs/Web/CSS/will-change">Some of the stronger optimizations that are likely to be tied to will-change end up using a lot of a machine’s resources, and when overused like this can cause the page to slow down or consume a lot of resources</a></li>
 <li>particularly useful for <code>animations</code> and <code>transitions</code>, since elements with those properties are changed frequently</li>
 <li><code>scroll-position</code>, to improve scroll performance when an element is going to change due to scrolling</li>
 </ul>
 </li>
-<li><code>contain</code> <strong>restricting a given element’s scope</strong> for layout, style, paint, and size calculations</li>
-<li><code>backface-visibility: hidden</code> Prevents unnecessary rendering of the back side of an element</li>
-<li><code>contain-intrinsic-size</code> Helps browsers allocate space for lazy-loaded images or dynamic content, best for skeleton screens</li>
+<li><p><code>contain</code> <strong>restricting a given element’s scope</strong> for layout, style, paint, and size calculations</p>
+</li>
+<li><p><code>backface-visibility: hidden</code> Prevents unnecessary rendering of the back side of an element</p>
+</li>
+<li><p><code>contain-intrinsic-size</code> Helps browsers allocate space for lazy-loaded images or dynamic content, best for skeleton screens</p>
+</li>
 </ul>
 <h2 id="SVG"><a href="#SVG" class="headerlink" title="SVG"></a>SVG</h2><h3 id="properties"><a href="#properties" class="headerlink" title="properties"></a>properties</h3><p>width/height: define the size in the document<br>viewBox: first two number are min-x and min-y used to define the position,  the other two are define the scale relative to width/height</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">when the viewBox is same as width/height, then the dimension is 1. if it is smaller than width/height, then the dimension is larger than 1, and vice versa.</span><br><span class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">viewBox</span>=<span class="string">&quot;0 0 200 200&quot;</span> <span class="attr">width</span>=<span class="string">&quot;200&quot;</span> <span class="attr">height</span>=<span class="string">&quot;200&quot;</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2000/svg&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -8459,16 +8474,65 @@ console.log(jso4);
 <li>4XX - Client Error, 400 Bad Request, 401 Unauthorized, 404 Not Found</li>
 <li>5XX - Server Error, 500 Internal Server Error, 502 Bad Gateway, 503 Service Unavailable</li>
 </ul>
-<h3 id="weSecurity"><a href="#weSecurity" class="headerlink" title="weSecurity"></a>weSecurity</h3><p><strong>XSS (Cross-Site Scripting)</strong></p>
+<h3 id="webSecurity"><a href="#webSecurity" class="headerlink" title="webSecurity"></a>webSecurity</h3><p><strong>XSS (Cross-Site Scripting)</strong></p>
 <ul>
 <li><p>Stored XSS</p>
 <ul>
-<li>A comment system where users can input text. an attacker can input a script, and it will be stored and run when other users see the comment.</li>
+<li>The injected script is stored permanently on the target servers</li>
+<li>like a comment system where users can input text. an attacker can input a script, and it will be stored and run when other users see the comment.</li>
 </ul>
 </li>
-<li><h2 id="Reflected-XSS"><a href="#Reflected-XSS" class="headerlink" title="Reflected XSS"></a>Reflected XSS</h2></li>
-<li><p>DOM-based XSS</p>
+<li><p>Reflected XSS</p>
+<ul>
+<li>malicious scripts are reflected off a web application onto a user’s browser. typically occur when an application uses user-supplied data without proper validation or escaping</li>
+<li>like an attacker tricks the victim into clicking a link with a script embedded in a URL, and the server echoes it back in the response</li>
+</ul>
 </li>
+<li><p>DOM-based XSS</p>
+<ul>
+<li>The JavaScript manipulates DOM with untrusted data. The browser then executes the data, leading to an XSS attack</li>
+<li>like an application uses document.location or document.URL without proper sanitization.</li>
+</ul>
+</li>
+</ul>
+<p><strong>prevent</strong></p>
+<ul>
+<li>prefer <code>textContent</code> or <code>innerText</code> to update plain text, instead of <code>innerHTML, eval(), document.write()</code>.</li>
+<li>Validate and sanitize user inputs</li>
+<li>Content Security Policy (CSP): Restrict the execution of unauthorized scripts</li>
+<li>Encode data before rendering it in the browser</li>
+</ul>
+<p><strong>Cross-Site Request Forgery (CSRF or XSRF)</strong></p>
+<ul>
+<li><p>The attacker causes the user’s browser to perform a request to the website’s backend without the user’s knowledge</p>
+</li>
+<li><p>a user is tricked into visiting a malicious site while the user’s bank cookie is still valid.<br>The malicious site may contains this hidden form</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;https://bank.com/transfer?amount=1000&amp;to=Eve&quot;</span> <span class="attr">method</span>=<span class="string">&quot;POST&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Click me!&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><strong>prevent</strong></p>
+<ul>
+<li>SameSite Cookies</li>
+<li>use token in a custom header</li>
+<li>Referer or Origin Header Check</li>
+<li>double check for sensitive actions</li>
+</ul>
+<p><strong>Man-In-The-Middle(MitM)</strong></p>
+<ul>
+<li>A third party intercepts traffic between a web server and a client (browser), and impersonates the web server in order to capture data (such as login credentials or credit card information).</li>
+<li><code>Wi-Fi Eavesdropping</code>, attackers create a Wi-Fi hotspot to intercept traffic as users connect.</li>
+<li><code>DNS Spoofing</code> , Typing <code>bank.com</code> might take you to <code>fakeBank.com</code>, where credentials are stolen</li>
+<li><code>HTTPS Spoofing</code>, attackers present a forged SSL certificate that appears valid to the browser</li>
+<li><code>SSL Strip Attack</code>, attackers downgrade the secure HTTPS connection to an insecure HTTP one without the user noticing</li>
+<li><code>Session Hijacking</code>, attackers takes over a valid session between a client and a server though various techniques, allowing them to impersonate the user and and gain unauthorized access</li>
+</ul>
+<p><strong>prevent</strong></p>
+<ul>
+<li>prefer <code>HTTPS</code>, and enforce <code>HSTS</code>(<code>HTTP Strict Transport Security</code>) to prevent HTTPS downgrading</li>
+<li>Implement <code>DNS Security (DNSSEC)</code></li>
+<li>use <code>multi-factor authentication (MFA)</code></li>
+<li>use the <code>Secure</code> and <code>HttpOnly</code> flags to ensure session cookies are secure</li>
 </ul>
 <h3 id="network-optimization"><a href="#network-optimization" class="headerlink" title="network optimization"></a>network optimization</h3><ul>
 <li>reduce the number of request<ul>
@@ -8646,7 +8710,7 @@ console.log(jso4);
 <li><a href="/2021/11/17/notes_js/#SSE(ServerSentEvents)">use sse with post</a></li>
 <li><a href="/2021/11/17/notes_js/#Memory-Management">v8 gc manages memory</a></li>
 <li><a href="/2025/01/23/micro_frontend/#web-components">JD micro-app</a></li>
-<li><strong>waiting….</strong> <a href="/2025/01/23/micro_frontend/#weSecurity">weSecurity</a></li>
+<li><strong>waiting….</strong> <a href="/2021/11/17/notes_js/#webSecurity">webSecurity</a></li>
 </ul>
 <h2 id="2025-03-16"><a href="#2025-03-16" class="headerlink" title="2025/03/16"></a>2025/03/16</h2><ul>
 <li><a href="/2021/11/17/notes_js/#renderOptimization">will-change</a> and <a href="/2021/11/17/notes_js/#renderOptimization">contain</a></li>
@@ -8667,6 +8731,18 @@ console.log(jso4);
 </li>
 <li><p>TS的<code>enum</code>编译为IIFE（立即执行函数）</p>
 </li>
+</ul>
+]]></content>
+      <categories>
+        <category>Daily Snippets</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>2025-04</title>
+    <url>/2025/04/01/202504/</url>
+    <content><![CDATA[<h2 id="2025-03-30"><a href="#2025-03-30" class="headerlink" title="2025/03/30"></a>2025/03/30</h2><ul>
+<li><a href="/2021/11/17/notes_js/#webSecurity">webSecurity</a></li>
+<li><a href="/2021/11/17/notes_js/#renderOptimization">textContent vs innerText</a></li>
 </ul>
 ]]></content>
       <categories>

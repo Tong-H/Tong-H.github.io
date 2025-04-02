@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://mser.xyz/"/>
-  <updated>2025-03-23T06:00:25.179Z</updated>
+  <updated>2025-04-02T05:44:14.114Z</updated>
   <id>https://mser.xyz/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2025-04</title>
+    <link href="https://mser.xyz/2025/04/01/202504/"/>
+    <id>https://mser.xyz/2025/04/01/202504/</id>
+    <published>2025-03-31T16:00:00.000Z</published>
+    <updated>2025-04-02T05:44:14.114Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;2025-03-30&quot;&gt;&lt;a href=&quot;#2025-03-30&quot; class=&quot;headerlink&quot; title=&quot;2025/03/30&quot;&gt;&lt;/a&gt;2025/03/30&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>2025-03</title>
     <link href="https://mser.xyz/2025/03/01/202503/"/>
     <id>https://mser.xyz/2025/03/01/202503/</id>
     <published>2025-02-28T16:00:00.000Z</published>
-    <updated>2025-03-23T06:00:25.179Z</updated>
+    <updated>2025-04-02T03:55:42.854Z</updated>
     
     <summary type="html">
     
@@ -526,35 +551,6 @@
     
     
       <category term="financial" scheme="https://mser.xyz/tags/financial/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux</title>
-    <link href="https://mser.xyz/2021/11/17/notes_linux/"/>
-    <id>https://mser.xyz/2021/11/17/notes_linux/</id>
-    <published>2021-11-16T16:00:00.000Z</published>
-    <updated>2025-02-16T07:16:36.488Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;as root user: &lt;code&gt;sudo su&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;CTRL + L&lt;/code&gt; clear terminal&lt;/p&gt;
-&lt;p&gt;~ is the home directory of user&lt;/p&gt;
-&lt;h2
-        
-      
-    
-    </summary>
-    
-      <category term="Notes" scheme="https://mser.xyz/categories/Notes/"/>
-    
-    
-      <category term="Linux" scheme="https://mser.xyz/tags/Linux/"/>
     
   </entry>
   
