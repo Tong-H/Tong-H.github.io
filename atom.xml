@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://mser.xyz/"/>
-  <updated>2025-04-12T08:16:36.939Z</updated>
+  <updated>2025-04-26T13:53:45.677Z</updated>
   <id>https://mser.xyz/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://mser.xyz/2025/04/01/202504/"/>
     <id>https://mser.xyz/2025/04/01/202504/</id>
     <published>2025-03-31T16:00:00.000Z</published>
-    <updated>2025-04-12T08:16:36.939Z</updated>
+    <updated>2025-04-26T13:53:45.677Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,7 @@
       
         
         
-          &lt;h2 id=&quot;2025-04-12&quot;&gt;&lt;a href=&quot;#2025-04-12&quot; class=&quot;headerlink&quot; title=&quot;2025/04/12&quot;&gt;&lt;/a&gt;2025/04/12&lt;/h2&gt;&lt;ul&gt;
+          &lt;h2 id=&quot;2025-04-27&quot;&gt;&lt;a href=&quot;#2025-04-27&quot; class=&quot;headerlink&quot; title=&quot;2025/04/27&quot;&gt;&lt;/a&gt;2025/04/27&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a
         
       
@@ -230,7 +230,7 @@
     <link href="https://mser.xyz/2023/11/17/notes_jp/"/>
     <id>https://mser.xyz/2023/11/17/notes_jp/</id>
     <published>2023-11-16T16:00:00.000Z</published>
-    <updated>2025-04-12T06:46:40.708Z</updated>
+    <updated>2025-04-26T13:53:45.678Z</updated>
     
     <summary type="html">
     
@@ -238,10 +238,7 @@
       
         
         
-          &lt;h2 id=&quot;quick-review&quot;&gt;&lt;a href=&quot;#quick-review&quot; class=&quot;headerlink&quot; title=&quot;quick review&quot;&gt;&lt;/a&gt;quick review&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;53&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;を +
+          &lt;p&gt;ます：い、ます、きます、します&lt;br&gt;辞書：う、る、くる、する&lt;br&gt;ない：あ(except い=&amp;gt; わ) 、ない、こない、しない&lt;br&gt;た：based on て形&lt;br&gt;可能：え＋る、られる、できる、くられる&lt;br&gt;ば：え＋ば、れば、すれば、くれば&lt;br&gt;命令:
         
       
     
@@ -505,7 +502,7 @@
     <link href="https://mser.xyz/2021/11/17/notes_git/"/>
     <id>https://mser.xyz/2021/11/17/notes_git/</id>
     <published>2021-11-16T16:00:00.000Z</published>
-    <updated>2025-02-16T07:16:36.485Z</updated>
+    <updated>2025-04-21T15:23:54.352Z</updated>
     
     <summary type="html">
     
@@ -513,8 +510,8 @@
       
         
         
-          &lt;p&gt;git config –global push.autoSetupRemote true&lt;br&gt;git rm -r –cached .&lt;/p&gt;
-&lt;h2 id=&quot;bisect&quot;&gt;&lt;a href=&quot;#bisect&quot; class=&quot;headerlink&quot;
+          &lt;p&gt;git config –global push.autoSetupRemote true&lt;br&gt;git rm -r –cached .&lt;br&gt;git commit -m “Your message” –no-verify&lt;/p&gt;
+&lt;h2 id=&quot;bisect&quot;&gt;&lt;a
         
       
     
