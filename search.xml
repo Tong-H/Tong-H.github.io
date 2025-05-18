@@ -4811,10 +4811,43 @@ console.log(jso4);
   <entry>
     <title>japanese</title>
     <url>/2023/11/17/notes_jp/</url>
-    <content><![CDATA[<p>ます：い、ます、きます、します<br>辞書：う、る、くる、する<br>ない：あ(except い=&gt; わ) 、ない、こない、しない<br>た：based on て形<br>可能：え＋る、られる、できる、くられる<br>ば：え＋ば、れば、すれば、くれば<br>命令: え、ろ、しろ、こい<br>意志：おう、よう、しよう、こよう<br>受身形うけみ：なる、られる、される、こられる<br>使役形しえき：せる、させる、させる、こさせる</p>
-<h2 id="quick-review"><a href="#quick-review" class="headerlink" title="quick review"></a>quick review</h2><ul>
-<li><p>54</p>
+    <content><![CDATA[<h2 id="quick-review"><a href="#quick-review" class="headerlink" title="quick-review"></a>quick-review</h2><h3 id="verb-transforming"><a href="#verb-transforming" class="headerlink" title="verb-transforming"></a>verb-transforming</h3><ul>
+<li>ます2：い、ます、きます、します<ul>
+<li>て形: based on ます</li>
+<li>た：based on て形</li>
+</ul>
+</li>
+<li>辞書3：う、る、くる、する</li>
+<li>ない1：あ(except い=&gt; わ) 、ない、こない、しない</li>
+<li>意志5：おう、よう、しよう、こよう</li>
+<li>可能4：え＋る、られる、できる、くられる</li>
+<li>ば4：え＋ば、れば、すれば、くれば</li>
+<li>命令4: え、ろ、しろ、こい</li>
+</ul>
+<hr>
 <ul>
+<li>受身形うけみ：なる、られる、される、こられる</li>
+<li>使役形しえき：せる、させる、させる、こさせる</li>
+</ul>
+<hr>
+<ul>
+<li>敬語: 漢字 =&gt; ご<del>, the rest =&gt; お</del></li>
+</ul>
+<p>like puzzle</p>
+<h3 id="55"><a href="#55" class="headerlink" title="55"></a>55</h3><ul>
+<li>会話<ul>
+<li>CM typically stands for Commercial Message……😳😠😑</li>
+<li>きっと参考になる<em>だろうと思います</em></li>
+<li>コンテストはパーティー 形式[けいしき]にして、有名な 歌手[かしゅ]や 俳優[はいゆう]に 審査員[しんさいん]として参加してもらいます<ul>
+<li> ~ として, As, in the role of</li>
+</ul>
+</li>
+<li>なるほど、それなら、テレビに取り上げてもらう こともできるわれ</li>
+<li>では、企画案の会議までに、それぞれのあんを <em>できるだけ具体的にまとめて</em> ください</li>
+</ul>
+</li>
+</ul>
+<h3 id="54「はしの文化」さまざま"><a href="#54「はしの文化」さまざま" class="headerlink" title="54「はしの文化」さまざま"></a>54「はしの文化」さまざま</h3><ul>
 <li>会話：佐藤さんは中井の大学の先輩で、中井はお昼ご飯の時に王さんにそのことを話ていました<ul>
 <li>ふうん(mild)/へえ(more)/本当(disblief, implying comfim), express surprise<ul>
 <li>ふうん。佐藤さんは中井の大学の先輩で、パスボール部のキャプテンですれ</li>
@@ -4825,8 +4858,23 @@ console.log(jso4);
 </li>
 <li>課文：「はしの文化」さまざま<ul>
 <li>中国、韓国、ベトナム、日本などでは「はしをつう」文化がありますが、ざまざま細かい違いのものもあります</li>
-<li>中国のはしは長くて、 先端[せんたん]が 丸く[まるい]太さが あまり変わらない。韓国のはしは中国より少し短く、やや 平[たい]ら形をしている。ステンレスなど、金属製のものが一般的だ。日本のはしは韓国のものに比べてさらに短く、先のほうは細くなっていて、とがっている。材質は木や竹が多く、漆が塗られていることもある。</li>
-<li><strong>~とされる</strong> は<code>と考えられている</code>と同じ意味である</li>
+<li>中国のはしは長くて、 先端[せんたん]が 丸く[まるい]太さが あまり変わらない。韓国のはしは中国より少し短く、やや 平[たい]ら形<em>をしている</em>。ステンレスなど、金属製のものが一般的だ。日本のはしは 韓国のものに比べて さらに短く、先のほうは 細くなっていて、とがっている。材質は木や竹が多く、漆が塗られていることもある。</li>
+<li><strong>~とされる</strong> は「と考えられている」と同じ意味である, something is generally considered or thought of as something<ul>
+<li>slide ができることはすごいとされている</li>
+</ul>
+</li>
+<li><strong>～といっても</strong>, although, 虽说～<ul>
+<li>「はし」<em>といっても</em>、その 形[かたち]や材料は 国[くに]や 地域[ちいき]によって違う</li>
+</ul>
+</li>
+<li><strong>~ほか、〜も</strong>, “except ~, ~ also exist”<ul>
+<li>会社の近くに、ラーメンやご飯んのほか、様々な種類の菓子もあります</li>
+</ul>
+</li>
+<li><strong>~をしている</strong>, express states or qualities<ul>
+<li>猫は怒った[おこり]顔をしている</li>
+</ul>
+</li>
 <li><strong>さまざま vs それぞれ</strong><ul>
 <li>variety within a group (not necessarily tied to individual items).</li>
 <li>individual differences within a group (each item has its own trait).</li>
@@ -4840,9 +4888,7 @@ console.log(jso4);
 </ul>
 </li>
 </ul>
-</li>
-<li><p>53, 日本語の 語彙[ごい]</p>
-<ul>
+<h3 id="53-日本語の-語彙-ごい"><a href="#53-日本語の-語彙-ごい" class="headerlink" title="53, 日本語の 語彙[ごい]"></a>53, 日本語の 語彙[ごい]</h3><ul>
 <li><code>を + [noun] + に + して(can be omitted)</code>, a means or reason for something to happen, “because of” / 以…为… / “as a result of”<ul>
 <li><code>をきっかけにして</code>, Taking ~ as an opportunity..</li>
 <li><code>を頼りにして</code>, according to ~</li>
@@ -4873,9 +4919,7 @@ console.log(jso4);
 </ul>
 </li>
 </ul>
-</li>
-<li><p>52</p>
-<ul>
+<h3 id="52"><a href="#52" class="headerlink" title="52"></a>52</h3><ul>
 <li>ところ, can refer to a situation or moment in which someone is busy or occupied.<ul>
 <li>お忙しいところ、すみません</li>
 </ul>
@@ -4887,9 +4931,7 @@ console.log(jso4);
 <li>そうです</li>
 <li><a href="#%E3%81%93%E3%81%9D%E3%81%82%E3%81%A9">このように, そのように</a></li>
 </ul>
-</li>
-<li><p>51, 日本の名字の起源と中国の名字の違い</p>
-<ul>
+<h3 id="51-日本の名字の起源と中国の名字の違い"><a href="#51-日本の名字の起源と中国の名字の違い" class="headerlink" title="51, 日本の名字の起源と中国の名字の違い"></a>51, 日本の名字の起源と中国の名字の違い</h3><ul>
 <li>～といわれています，express a common sence, It is believed that ~ People say that ~<ul>
 <li>“いわれています” is the passive form of 言う</li>
 </ul>
@@ -4901,44 +4943,38 @@ console.log(jso4);
 </ul>
 </li>
 </ul>
+<h3 id="50"><a href="#50" class="headerlink" title="50"></a>50</h3><ul>
+<li><p>～ものです、</p>
 </li>
-<li><p>50</p>
-<ul>
-<li>～ものです、</li>
-<li>~中、お電話中・お仕事中</li>
-<li>~ぶり、express a time interval, the interval shouldn’t less than a day. for the first time in X years, 时隔x年，x年一遇</li>
+<li><p>~中、お電話中・お仕事中</p>
+</li>
+<li><p>~ぶり、express a time interval, the interval shouldn’t less than a day. for the first time in X years, 时隔x年，x年一遇</p>
+<h3 id="49"><a href="#49" class="headerlink" title="49"></a>49</h3></li>
+<li><p>とは、というのは、verb + ということは、noun + というものは</p>
+</li>
+<li><p>~ は ~ の１つです、one of the~</p>
+</li>
+<li><p>~化, privatization 民営化</p>
+</li>
+<li><p>~的, trun a noun into a <code>さadj</code>, 世界的、消極的</p>
+</li>
+<li><p><del>と</del>を結ぶ</p>
+</li>
 </ul>
-</li>
-<li><p>49 </p>
-<ul>
-<li>とは、というのは、verb + ということは、noun + というものは</li>
-<li>~ は ~ の１つです、one of the~</li>
-<li>~化, privatization 民営化</li>
-<li>~的, trun a noun into a <code>さadj</code>, 世界的、消極的</li>
-<li><del>と</del>を結ぶ</li>
-</ul>
-</li>
-<li><p>48 283</p>
-<ul>
+<h3 id="48-283"><a href="#48-283" class="headerlink" title="48 283"></a>48 283</h3><ul>
 <li><a href="#%E8%87%AA%E8%AC%99%E8%AA%9E">自謙語</a></li>
 <li>verbて形＋みたい</li>
 <li><a href="#%E5%B0%8A%E6%95%AC%E8%AA%9E">noun/adj convert to 尊敬語</a></li>
 </ul>
-</li>
-<li><p>47 273</p>
-<ul>
+<h3 id="47-273"><a href="#47-273" class="headerlink" title="47 273"></a>47 273</h3><ul>
 <li><a href="#%E5%B0%8A%E6%95%AC%E8%AA%9E">尊敬語</a></li>
 </ul>
-</li>
-<li><p>46</p>
-<ul>
+<h3 id="46"><a href="#46" class="headerlink" title="46"></a>46</h3><ul>
 <li><a href="#conjecture">いかにも noun らしい</a> </li>
 <li><a href="#conjecture">まるで noun みたいです / ようです</a></li>
 <li>までに、すえ</li>
 </ul>
-</li>
-<li><p>45 253</p>
-<ul>
+<h3 id="45-253"><a href="#45-253" class="headerlink" title="45 253"></a>45 253</h3><ul>
 <li>～ていきます/てきました</li>
 <li><a href="#connectPoints">～し～し</a></li>
 <li>ば形＋「辞書形／」＋ほど<ul>
@@ -4949,23 +4985,17 @@ console.log(jso4);
 </ul>
 </li>
 </ul>
-</li>
-<li><p>44 </p>
-<ul>
+<h3 id="44"><a href="#44" class="headerlink" title="44"></a>44</h3><ul>
 <li><a href="#conjecture">ようです</a>, It seems” or “It appears”</li>
 <li><a href="#conjecture">みたいです</a>, “It looks like” or “It seems like”</li>
 <li><a href="#conjecture">らしいです</a>, “I heard that” or “It seems that”</li>
 </ul>
-</li>
-<li><p>43</p>
-<ul>
+<h3 id="43"><a href="#43" class="headerlink" title="43"></a>43</h3><ul>
 <li><a href="#%E5%8F%97%E8%BA%AB%E5%BD%A2%E3%81%86%E3%81%91%E3%81%BF%E3%81%91%E3%81%84">受身形うけみけい</a></li>
 <li><a href="#thinking">のではないでしょうか</a></li>
 <li><a href="#thinking">と考える</a></li>
 </ul>
-</li>
-<li><p>42 217</p>
-<ul>
+<h3 id="42-217"><a href="#42-217" class="headerlink" title="42 217"></a>42 217</h3><ul>
 <li><a href="#conditionalform">た形／ない形＋まま</a></li>
 <li><a href="#possibility">はずです</a></li>
 <li>はずがありません</li>
@@ -4978,15 +5008,11 @@ console.log(jso4);
 </ul>
 </li>
 </ul>
-</li>
-<li><p>41 207</p>
-<ul>
+<h3 id="41-207"><a href="#41-207" class="headerlink" title="41 207"></a>41 207</h3><ul>
 <li><a href="#%E5%8F%97%E8%BA%AB%E5%BD%A2%E3%81%86%E3%81%91%E3%81%BF%E3%81%91%E3%81%84">受身形</a></li>
 <li><a href="#Quantifier">~とも</a></li>
 </ul>
-</li>
-<li><p>40 191</p>
-<ul>
+<h3 id="40-191"><a href="#40-191" class="headerlink" title="40 191"></a>40 191</h3><ul>
 <li>ところです, going to do sth, about to do sth, 正要去<ul>
 <li>ているところです, emphasizes being in the middle of an action right now.</li>
 <li>たところです, an action just finished</li>
@@ -4995,9 +5021,7 @@ console.log(jso4);
 <li>ばかり, alomst same as たところです, but it is preferred when the action has been completed after a long time.”</li>
 <li>ます形 + 続けます,  the action will continue or has been continuing over a period of time.</li>
 </ul>
-</li>
-<li><p>39 181</p>
-<ul>
+<h3 id="39-181"><a href="#39-181" class="headerlink" title="39 181"></a>39 181</h3><ul>
 <li><strong>て形　+　いきます</strong><ul>
 <li>an action that continues or happens away from the speaker’s current location or context.</li>
 </ul>
@@ -5009,77 +5033,63 @@ console.log(jso4);
 <li><a href="#becauseandtherefore">ために、のために</a></li>
 <li><strong>遠く、近く</strong>are noun, diferent from other いadj</li>
 </ul>
-</li>
-<li><p>38</p>
-<ul>
+<h3 id="38"><a href="#38" class="headerlink" title="38"></a>38</h3><ul>
 <li><a href="#%E5%8F%AF%E8%83%BD%E5%BD%A2%E3%81%8B%E3%81%AE%E3%81%86%E3%81%91%E3%81%84">可能形かのうけい</a></li>
 <li><a href="#becauseandtherefore">ように</a></li>
 </ul>
-</li>
-<li><p>37 161</p>
-<ul>
+<h3 id="37-161"><a href="#37-161" class="headerlink" title="37 161"></a>37 161</h3><ul>
 <li><a href="#%E3%81%B0%E5%BD%A2">ば形</a></li>
 <li>なら<a href="#conditionalform">conditionalform</a></li>
 <li><a href="#connectPoints">とか～とか</a>、similar to <del>や</del>など, the later can only connect nouns</li>
 </ul>
-</li>
-<li><p>36 p145</p>
-<ul>
+<h3 id="36-p145"><a href="#36-p145" class="headerlink" title="36 p145"></a>36 p145</h3><ul>
 <li>て／で、express reasons</li>
 <li><a href="#%E3%81%AB">に／のに、to express the use of something</a></li>
 <li>ばかり, <a href="#limitations">limitations</a></li>
-<li>のが＋見えます／聞こえます, able to see or hear, refer to <a href="#clauseAsPartOfSpeech">clauseAsPartOfSpeech</a> when use with adj</li>
+<li>のが＋見えます／聞こえます, able to see or hear, refer to <a href="#PartOfSpeechTransform">PartOfSpeechTransform</a> when use with adj</li>
 </ul>
-</li>
-<li><p>35</p>
-<ul>
+<h3 id="35"><a href="#35" class="headerlink" title="35"></a>35</h3><ul>
 <li><a href="#%E3%81%9F%E3%82%89">たら</a></li>
 <li><strong>ても</strong> = even if, even though</li>
-<li>しか＋negative form, express limitation, nothing but</li>
+<li>しか＋negative form, express limitation, “nothing but”, <a href="#limitations">limitations</a></li>
 <li>だけ = only, <a href="#limitations">limitations</a></li>
 </ul>
-</li>
-<li><p>34 p125</p>
-<ul>
+<h3 id="34-p125"><a href="#34-p125" class="headerlink" title="34 p125"></a>34 p125</h3><ul>
 <li><a href="#%E3%81%A6%E5%BD%A2%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99">てあります</a></li>
 <li><a href="#%E3%81%A6%E5%BD%A2%E3%81%8A%E3%81%8D%E3%81%BE%E3%81%99">ておきます</a></li>
 <li><a href="#%E3%81%A6%E5%BD%A2%E3%81%BF%E3%81%BE%E3%81%99">てみます</a></li>
 <li><a href="#becauseandtherefore">ために</a></li>
 </ul>
-</li>
-<li><p>33</p>
-<ul>
+<h3 id="33"><a href="#33" class="headerlink" title="33"></a>33</h3><ul>
 <li>自动词/他动词</li>
 <li><a href="#%E3%81%A6%E5%BD%A2">「て形」しまいます</a></li>
 <li><a href="#%E3%81%9D%E3%81%86%E3%81%A7%E3%81%99">[いadj(remove い)/さadj/verb(remove ます)] + そうです</a></li>
 <li>かしら</li>
 </ul>
+<h3 id="32-99"><a href="#32-99" class="headerlink" title="32　99"></a>32　99</h3><ul>
+<li><p>辞書形／ない形 + <strong>つもりです</strong>、plan to, <a href="#%E3%81%A8%E6%80%9D%E3%81%84%E3%81%BE%E3%81%99">same as と思っています</a></p>
 </li>
-<li><p>32　99</p>
-<ul>
-<li>辞書形／ない形 + <strong>つもりです</strong>、plan to, <a href="#%E3%81%A8%E6%80%9D%E3%81%84%E3%81%BE%E3%81%99">same as と思っています</a></li>
-<li>ことにします／ことにしました, decide to do sth</li>
-<li>ことになりました = It has been decided. indicates that something has been decided or arranged. It conveys a sense of formality and finality about the situation.</li>
-<li><a href="#%E3%81%9D%E3%81%86%E3%81%A7%E3%81%99">clause + そうです</a></li>
+<li><p>ことにします／ことにしました, decide to do sth</p>
+</li>
+<li><p>ことになりました = It has been decided. indicates that something has been decided or arranged. It conveys a sense of formality and finality about the situation.</p>
+</li>
+<li><p><a href="#%E3%81%9D%E3%81%86%E3%81%A7%E3%81%99">clause + そうです</a></p>
+<h3 id="31"><a href="#31" class="headerlink" title="31"></a>31</h3></li>
+<li><p>辞書形／ない形 + <a href="#%E3%81%A8">と</a></p>
+</li>
+<li><p>辞書形／ない形 + ことがあります，usually used with たまに／時々, refer to something happening at certain times</p>
+</li>
+<li><p>でしょうか，to be polite</p>
+</li>
+<li><p>adj as adverb</p>
+</li>
 </ul>
-</li>
-<li><p>31</p>
-<ul>
-<li>辞書形／ない形 + <a href="#%E3%81%A8">と</a></li>
-<li>辞書形／ない形 + ことがあります，usually used with たまに／時々, refer to something happening at certain times</li>
-<li>でしょうか，to be polite</li>
-<li>adj as adverb</li>
-</ul>
-</li>
-<li><p>30</p>
-<ul>
+<h3 id="30"><a href="#30" class="headerlink" title="30"></a>30</h3><ul>
 <li><a href="#%E6%84%8F%E5%BF%97%E5%BD%A2">意志形</a></li>
 <li>ので <a href="#BecauseandTherefore">BecauseandTherefore</a></li>
 <li>と思います、と思っています</li>
 </ul>
-</li>
-<li><p>29</p>
-<ul>
+<h3 id="29"><a href="#29" class="headerlink" title="29"></a>29</h3><ul>
 <li>命令形　<a href="#imperative-form">Imperative-Form</a></li>
 <li>禁止形　<a href="#negative-imperative-form">Negative-Imperative-Form</a></li>
 <li>という</li>
@@ -5088,20 +5098,18 @@ console.log(jso4);
 </ul>
 </li>
 </ul>
+<h3 id="28"><a href="#28" class="headerlink" title="28"></a>28</h3><ul>
+<li><p>くれます</p>
 </li>
-<li><p>28</p>
-<ul>
-<li>くれます</li>
-<li>て形 of くれます/あげます/もらいます. <a href="#giveandaccept">give and accept</a></li>
-</ul>
+<li><p>て形 of くれます/あげます/もらいます. <a href="#giveandaccept">give and accept</a></p>
 <p>森さんは　李さんに　地図を　くれました<br>森さんは お年寄りの荷物を　持ってあげました<br>森さんは　李さんに　北京を　案内してもらいました<br>女の人が　私の財布を　拾ってくれました</p>
 <p>すてきな　マフラーです<br>小野さんが誕生日にくれたんです</p>
 <p>森さんは　明日引っ越しですれ<br>みんなで　手伝ってあげましよう</p>
 <p>この文章の意味が　わからないです<br>戴さんに訳してもらいましよう。英語が得意ですから</p>
 <p>おいしいお茶を　おくってくれで。ありがとう<br>いいえ、どういたしまして</p>
 </li>
-<li><p>27</p>
-<ul>
+</ul>
+<h3 id="27"><a href="#27" class="headerlink" title="27"></a>27</h3><ul>
 <li>clause + 時 = when, 在…时候，indicates a specific point in time when something happens or a condition is met</li>
 <li>ながら = while, 一边做…一边做…, two actions are happening simultaneously</li>
 <li>でしょう <a href="#possibility">other usages</a>, seeking agreement or confirmation</li>
@@ -5109,23 +5117,19 @@ console.log(jso4);
 <li><a href="#%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">について</a></li>
 <li>と会います</li>
 </ul>
+<h3 id="26"><a href="#26" class="headerlink" title="26"></a>26</h3><ul>
+<li><p>use a clause as a noun, <a href="#clause-as-a-part-of-speech">clause as a part of speech</a></p>
 </li>
-<li><p>26</p>
+<li><p>express possibility, <a href="#possibility">possibility</a></p>
 <ul>
-<li>use a clause as a noun, <a href="#clause-as-a-part-of-speech">clause as a part of speech</a></li>
-<li>express possibility, <a href="#possibility">possibility</a><ul>
 <li>でしょう</li>
 <li>かもしれません</li>
 <li>もしかしたら</li>
 </ul>
+<h3 id="25"><a href="#25" class="headerlink" title="25"></a>25</h3></li>
+<li><p>use a clause as a adj to modify a noun, <a href="#clause-as-a-part-of-speech">clause as a part of speech</a></p>
 </li>
-</ul>
-</li>
-<li><p>25</p>
-<ul>
-<li>use a clause as a adj to modify a noun, <a href="#clause-as-a-part-of-speech">clause as a part of speech</a></li>
-<li>このとこの, このあたり</li>
-</ul>
+<li><p>このとこの, このあたり</p>
 </li>
 </ul>
 <p>n3: the overall score = above 95 out of a total of 180, with each section exceeding 19</p>
@@ -5212,7 +5216,12 @@ console.log(jso4);
 <li><em>だねも</em> いません = people</li>
 <li><em>何も</em> ありません = things</li>
 </ul>
-<h2 id="Number-44"><a href="#Number-44" class="headerlink" title="Number (44)"></a>Number (44)</h2><p>0~9: ねい／ぜろ、いち、に、さん、し／よん、ご、ろく、しち／なな、はち、く／きゆう</p>
+<p><strong>敬語</strong></p>
+<ul>
+<li>おります</li>
+<li>ございます</li>
+</ul>
+<h2 id="Number-44"><a href="#Number-44" class="headerlink" title="Number(44)"></a>Number(44)</h2><p>0~9: ねい／ぜろ、いち、に、さん、し／よん、ご、ろく、しち／なな、はち、く／きゆう</p>
 <p>10:じゆう<br>11<del>19: じゆう + 1</del>9<br>20/30…: 2~9 +  じゆう</p>
 <p>100:ひやく<br>200/300…: 2~9 +  ひやく</p>
 <p>1000: せん<br>2000/3000…: 2~9 +  せん</p>
@@ -5331,10 +5340,13 @@ console.log(jso4);
 <p>For example: 今午後1時23分　いちじにじゅうさんぷん</p>
 <p>【じ】特殊：よじ(four)、しちじ(seven)、くじ(nine)<br>【ぷん】特殊：いっぷん，よんぷん，ろっぷん，ななふん，はっぷん，じゅうぷん</p>
 <ul>
-<li><p>Time に verb = <strong>A specific time that an action happened</strong></p>
+<li><p>Time に verb = <strong>A precise time</strong></p>
 <blockquote>
 <p>私は7時半ごろに起きます</p>
 </blockquote>
+<ul>
+<li>more general time references can drop に for smoother flow in casual language.</li>
+</ul>
 </li>
 <li><p><em>Ignore の</em> between two time expressions if the first one is started from “毎”</p>
 <blockquote>
@@ -5342,7 +5354,7 @@ console.log(jso4);
 </blockquote>
 </li>
 </ul>
-<h3 id="Time-nouns"><a href="#Time-nouns" class="headerlink" title="Time nouns"></a>Time nouns</h3><ul>
+<h3 id="TimeNoun"><a href="#TimeNoun" class="headerlink" title="TimeNoun"></a>TimeNoun</h3><ul>
 <li>午前「ごぜん」／ 午後「ごご」／　30分 = 半「はん」</li>
 <li>さっき(刚才) / ただ今(刚刚)，ただ今 is closer to current</li>
 <li>Number 時　＋　過ぎ　＝　几点过<ul>
@@ -5359,18 +5371,18 @@ console.log(jso4);
 </ul>
 </li>
 </ul>
-<h3 id="Time-period"><a href="#Time-period" class="headerlink" title="Time period"></a>Time period</h3><ul>
+<h3 id="TimePeriod"><a href="#TimePeriod" class="headerlink" title="TimePeriod"></a>TimePeriod</h3><ul>
 <li><p><strong>time から time まで～ ＝ from~ to~</strong>, they can use separately to express the start point and the end point</p>
 <blockquote>
 <p>私は午前九時から午後六時まで働きます</p>
 </blockquote>
 </li>
-<li><p><strong>Time quantifier + verb</strong> = how long the action last</p>
+<li><p><strong>number 時間</strong> = how long the action last</p>
 <blockquote>
 <p>家から会社まで　<code>どのくらい　かかりますか</code>？<br>電車で　<code>１時間くらい</code>　かかります<br>李さんは　毎日<code>七時間</code>　働きます。</p>
 </blockquote>
 </li>
-<li><p><strong>Time quantifier に Frequency</strong> = how much time the action repeated</p>
+<li><p><strong>number に Frequency</strong> = how much time the action repeated</p>
 <ul>
 <li>Special: Ignore number if the quantifier is one<blockquote>
 <p>よく　映画を　見ますか？<br>ええ、１か月に　２回くらい　見ます</p>
@@ -5379,13 +5391,14 @@ console.log(jso4);
 </ul>
 </li>
 </ul>
-<h3 id="Time-query"><a href="#Time-query" class="headerlink" title="Time query"></a>Time query</h3><ul>
+<h3 id="TimeQuery"><a href="#TimeQuery" class="headerlink" title="TimeQuery"></a>TimeQuery</h3><ul>
 <li>いつ action ますか?<blockquote>
 <p>童さんは　いつ起きますが？<br>童さんは　いつから休みますが？</p>
 </blockquote>
 </li>
+<li>何時に</li>
 </ul>
-<h3 id="Time-clause-27"><a href="#Time-clause-27" class="headerlink" title="Time clause(27)"></a>Time clause(27)</h3><ul>
+<h3 id="TimeClause-27"><a href="#TimeClause-27" class="headerlink" title="TimeClause(27)"></a>TimeClause(27)</h3><ul>
 <li>た形/辞書形/nounの + 時(に) = when</li>
 <li><blockquote>
 <p><code>子供の時</code>、大きな地震が　ありました</p>
@@ -5404,10 +5417,6 @@ console.log(jso4);
 <li>Adj + の　can be used as a noun<br>おもしろいのが　ありますよ</li>
 </ul>
 <p>て形 = paralleling /</p>
-<h3 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h3><ul>
-<li>どうですか/どうでしたかかち</li>
-<li>どんな = what’s it like</li>
-</ul>
 <h3 id="イ形"><a href="#イ形" class="headerlink" title="イ形"></a>イ形</h3><p>Ending with い: 旅行は楽しいです</p>
 <p>add です to express <strong>丁寧形</strong></p>
 <p>【くて】= <strong>て形</strong></p>
@@ -5482,6 +5491,11 @@ console.log(jso4);
 <h3 id="to-adverbs"><a href="#to-adverbs" class="headerlink" title="to adverbs"></a>to adverbs</h3><p>い：い　=&gt;　く<br>さ：に　after</p>
 <p><strong>negative form</strong></p>
 <p>しません／なりません</p>
+<h3 id="adjQuery"><a href="#adjQuery" class="headerlink" title="adjQuery"></a>adjQuery</h3><ul>
+<li>どうですか/どうでしたかかち</li>
+<li>どんな = what kind of, query about thing’s qualities or types</li>
+<li>どういう = what kind of, is uesed for abstract, complex, or conceptual words like 意味/人/状況[じょうきょう], they are </li>
+</ul>
 <h2 id="Verb-forms"><a href="#Verb-forms" class="headerlink" title="Verb forms"></a>Verb forms</h2><ul>
 <li>interactive verb (27): noun<strong>は</strong>Noun<strong>と</strong>verb, noun<strong>と</strong>Noun<strong>が</strong>verb<ul>
 <li><blockquote>
@@ -5541,12 +5555,9 @@ console.log(jso4);
 <p><strong>[辞書形] 前に =  before the action happened</strong></p>
 <h2 id="ます形"><a href="#ます形" class="headerlink" title="ます形"></a>ます形</h2><p>transform from 辞書形 to ます形</p>
 <ul>
-<li><p><strong>1verb</strong>, replace the last pronunciation with the corresponding <em>い sound(2)</em></p>
-</li>
-<li><p><strong>2verb</strong>：<em>remove る + ます</em></p>
-</li>
-<li><p><strong>3verb</strong>, きます /くる、します / する</p>
-</li>
+<li><strong>1verb</strong>, replace the last one with the corresponding <em>い sound(2) + ます</em></li>
+<li><strong>2verb</strong>：<em>remove る + ます</em></li>
+<li><strong>3verb</strong>, きます /くる、します / する</li>
 </ul>
 <h2 id="て形"><a href="#て形" class="headerlink" title="て形"></a>て形</h2><ul>
 <li><p>い verb<br>Special:</p>
@@ -5723,6 +5734,10 @@ console.log(jso4);
 <li>replace the last one to <em>え sound(4)</em> and add <em>ば</em></li>
 <li>replace <em>る  to れば</em></li>
 <li>する =&gt; <em>すれば</em>、くる =&gt; <em>くれば</em></li>
+<li>~ ばいい = it would be good if ~ → should ~<ul>
+<li>母にどんなプレゼントをなければいいか分からない</li>
+</ul>
+</li>
 </ul>
 <h2 id="可能形かのうけい"><a href="#可能形かのうけい" class="headerlink" title="可能形かのうけい"></a>可能形かのうけい</h2><p>express the ability or potential to do something,, similar with “ことができます”</p>
 <ul>
@@ -5792,23 +5807,27 @@ console.log(jso4);
 <li>replace <em>ない  =&gt; させる</em></li>
 <li>する =&gt; <em>させる</em>、くる =&gt; <em>こさせる</em></li>
 </ul>
-<h2 id="敬語"><a href="#敬語" class="headerlink" title="敬語"></a>敬語</h2><h3 id="自謙語"><a href="#自謙語" class="headerlink" title="自謙語"></a>自謙語</h3><p>自謙語<sup>じけんご</sup>, refers to “self-deprecating language” or “humble language”, used to lower one’s own status or achievements in conversation, often to show humility or politeness.</p>
-<h3 id="尊敬語"><a href="#尊敬語" class="headerlink" title="尊敬語"></a>尊敬語</h3><ul>
-<li>Politeness refers to the general practice of showing respect and consideration toward others in communication</li>
-<li>尊敬語<sup>そんけいご</sup> honorifics usually towards the people who you are not familar with</li>
-<li><strong>noun / adj transform to 尊敬語</strong><ul>
+<h2 id="敬語"><a href="#敬語" class="headerlink" title="敬語"></a>敬語</h2><ul>
+<li><p>Politeness refers to the general practice of showing respect and consideration toward others in communication</p>
+</li>
+<li><p>尊敬語<sup>そんけいご</sup> honorifics usually towards the people who you are not familar with</p>
+</li>
+<li><p><strong>noun / adj transform to 尊敬語</strong></p>
+<ul>
 <li>漢字 words and fixed phrases are start from ご, while the rest are start from お</li>
 <li>ご利用、ご家族、お忙しい、お暇</li>
 </ul>
 </li>
-<li><a href="#%E5%8F%97%E8%BA%AB%E5%BD%A2%E3%81%86%E3%81%91%E3%81%BF%E3%81%91%E3%81%84">受身形</a> can be used as 尊敬語<ul>
+<li><p><a href="#%E5%8F%97%E8%BA%AB%E5%BD%A2%E3%81%86%E3%81%91%E3%81%BF%E3%81%91%E3%81%84">受身形</a> can be used as 尊敬語</p>
+<ul>
 <li><blockquote>
 <p>周先生<sup>しゅうせんせい</sup>は明日日本へ行かれます</p>
 </blockquote>
 </li>
 </ul>
 </li>
-<li>~ください<ul>
+<li><p>~ください</p>
+<ul>
 <li>お＋い／え verb(remove ます)＋ください<ul>
 <li><blockquote>
 <p>どうぞ、お座りください</p>
@@ -5824,7 +5843,7 @@ console.log(jso4);
 <h3 id="辞書形-1"><a href="#辞書形-1" class="headerlink" title="辞書形"></a>辞書形</h3><ul>
 <li>お＋い／え verb(remove ます)＋になる</li>
 <li>ご＋さ verb(remove ます)＋になる</li>
-<li>some verbs have a special honorific form<ul>
+<li>special verbs<ul>
 <li>a few words which is ending with あいうえお are very likely transform to しゃる</li>
 <li>食べる =&gt; 召し上がる（い verb, 召し上がります）</li>
 <li>行く=&gt; いらっしゃる（いらっしゃいます）</li>
@@ -5839,6 +5858,10 @@ console.log(jso4);
 <p>お客様はもうお帰りになりました</p>
 </blockquote>
 </li>
+</ul>
+<h2 id="自謙語"><a href="#自謙語" class="headerlink" title="自謙語"></a>自謙語</h2><ul>
+<li>自謙語<sup>じけんご</sup>, “self-deprecating language” or “humble language”, used to lower one’s own status or achievements in conversation, often to show humility or politeness.</li>
+<li>no specific transformation rules. intead, it uses entirely different words</li>
 </ul>
 <h2 id="普通形"><a href="#普通形" class="headerlink" title="普通形"></a>普通形</h2><p>22 lesson<br>equal to 简体形</p>
 <ul>
@@ -5857,11 +5880,15 @@ console.log(jso4);
 <blockquote>
 <p>ああ、清水君、<code>どうしたの</code>？<br>太田、今度　中国の北京へ　転勤だって。期間は　四年か　<code>五年かな</code>。</p>
 </blockquote>
-<h2 id="clauseAsPartOfSpeech"><a href="#clauseAsPartOfSpeech" class="headerlink" title="clauseAsPartOfSpeech"></a>clauseAsPartOfSpeech</h2><ul>
+<h2 id="PartOfSpeechTransform"><a href="#PartOfSpeechTransform" class="headerlink" title="PartOfSpeechTransform"></a>PartOfSpeechTransform</h2><ul>
 <li><p>verb</p>
 <ul>
 <li><strong><a href="#%E6%99%AE%E9%80%9A%E5%BD%A2">普通形</a> or <a href="#%E3%81%9F%E5%BD%A2">た形</a></strong>  = an adj</li>
-<li><strong>普通形 or た形</strong>  + <strong>の / こと</strong>= a noun</li>
+<li><strong>普通形 / た形 / Verb stem</strong>  turn verb into noun<ul>
+<li>疲れる =&gt; 疲れ, 食べる =&gt; 食べ</li>
+<li>can affix <strong>の / こと</strong>, the act of ~</li>
+</ul>
+</li>
 </ul>
 </li>
 <li><p>adj<br><strong>イ形</strong> =&gt; <strong>普通形</strong><br><strong>さ形</strong> + <strong>な</strong></p>
@@ -5885,7 +5912,7 @@ console.log(jso4);
 </blockquote>
 </li>
 </ul>
-<h3 id="Express-reasons"><a href="#Express-reasons" class="headerlink" title="Express reasons"></a>Express reasons</h3><ul>
+<h3 id="reasons"><a href="#reasons" class="headerlink" title="reasons"></a>reasons</h3><ul>
 <li><p><strong>~から</strong>, at the end of a sentence</p>
 <blockquote>
 <p>長島さん、スペイン語が　分かりますか？<br>ええ、大学で　習いました<code>から</code>、少し　わかります。</p>
@@ -5924,7 +5951,7 @@ console.log(jso4);
 <li><p>ため, ために、のために</p>
 </li>
 </ul>
-<h3 id="express-purposes-or-goals"><a href="#express-purposes-or-goals" class="headerlink" title="express purposes or goals"></a>express purposes or goals</h3><h4 id="ように"><a href="#ように" class="headerlink" title="ように"></a>ように</h4><ul>
+<h3 id="purposes-or-goals"><a href="#purposes-or-goals" class="headerlink" title="purposes or goals"></a>purposes or goals</h3><h4 id="ように"><a href="#ように" class="headerlink" title="ように"></a>ように</h4><ul>
 <li>express a wish, a desired outcome, or a more general aim.<ul>
 <li>after ない形、辞書形、可能形</li>
 <li>ようになります, express a change</li>
@@ -6055,7 +6082,7 @@ console.log(jso4);
 <p>If the giver is 会社/学校, then use から, to express the start point of goods</p>
 </blockquote>
 </li>
-<li><strong>てform + もらいます, please someone to do something</strong></li>
+<li><strong>てform + もらいます, please someone to do something(for the speaker’s benefit)</strong></li>
 <li><blockquote>
 <p>森さんは　李さんに　北京を　<code>案内してもらいます</code></p>
 </blockquote>
@@ -6137,17 +6164,20 @@ console.log(jso4);
 </li>
 </ul>
 <h2 id="limitations"><a href="#limitations" class="headerlink" title="limitations"></a>limitations</h2><ul>
-<li><p><strong>だけ</strong> = only</p>
+<li><p><strong>しか＋negative form</strong></p>
 <ul>
-<li><blockquote>
-</blockquote>
+<li>“nothing but / only”, implies negative or unsatisfactory feeling</li>
+</ul>
 </li>
+<li><p><strong>だけ</strong></p>
+<ul>
+<li>simply refer to “nothing but / only”, doesn’t necessarily convey a negative feeling</li>
 </ul>
 </li>
 <li><p><strong>ばかり</strong></p>
 <ul>
-<li>nothing but, only</li>
-<li><strong>use with います</strong>, Something happened repeatedly<ul>
+<li>“nothing but / only”, Emphasizes <em>recently</em> or <em>a continuous nature state</em></li>
+<li><strong>use with いる</strong>, Something happened repeatedly<ul>
 <li><blockquote>
 <p>森さんは　いつも失敗してばかりいます</p>
 </blockquote>
@@ -6160,7 +6190,7 @@ console.log(jso4);
 </li>
 </ul>
 </li>
-<li><p><strong>diff between</strong> だけ and ばかり</p>
+<li><p><strong>だけ vs ばかり</strong></p>
 <ul>
 <li>the former can be used to express limitations in number, and can work together with negative forms</li>
 </ul>
@@ -6176,7 +6206,7 @@ console.log(jso4);
 </li>
 </ul>
 <h3 id="なら"><a href="#なら" class="headerlink" title="なら"></a>なら</h3><ul>
-<li>Used for <em>hypothetical or conditional</em> statements </li>
+<li>Used for <em>hypothetical or conditional</em> statements</li>
 <li>implies that the speaker assumes the listener is already aware of the condition. It is commonly used to offer advice, make suggestions, or give opinions based on the known condition.</li>
 </ul>
 <h3 id="ば形-1"><a href="#ば形-1" class="headerlink" title="ば形"></a><a href="#%E3%81%B0%E5%BD%A2">ば形</a></h3><p>Used for <em>hypothetical or conditional</em> statements that may not always be true but depend on certain conditions being met.</p>
@@ -6353,46 +6383,54 @@ console.log(jso4);
 <h2 id="Sentence-structure"><a href="#Sentence-structure" class="headerlink" title="Sentence structure"></a>Sentence structure</h2><p>いいえ、ちがぃます　／はい、そうです<br>何歳ですか／おいくつですか</p>
 <h3 id="nounですか-nounですか"><a href="#nounですか-nounですか" class="headerlink" title="nounですか , nounですか"></a>nounですか , nounですか</h3><p>こねはいくなですか</p>
 <h3 id="Level"><a href="#Level" class="headerlink" title="Level"></a>Level</h3><ul>
-<li><p>ぜひ = must, absolutely</p>
-</li>
-<li><p>かならず  = must, absolutely</p>
-</li>
-<li><p>ほとんど = mostly, almost</p>
-</li>
-<li><p>やや　a little, small changes</p>
-</li>
-<li><p>一般的[いっぱんでき], common, normal</p>
-</li>
-<li><p>なかなか　p14</p>
-</li>
-<li><p>とても = very, extremely.</p>
-</li>
-<li><p>だいぶ = emphasizes the noticeable amount or degree of change, improvement</p>
+<li>ぜひ = must, absolutely</li>
+<li>かならず  = must, absolutely</li>
+<li>ほとんど = mostly, almost</li>
+<li>きっと = “certainly,” or “probably”. a strong belief but also leave a tiny room for doubt</li>
+<li>もうすぐ is used for things that will happen soon (time-based).</li>
+<li>ほぼ is used for things that are almost in a certain state (percentage-based or completion).</li>
+</ul>
+<hr>
 <ul>
-<li><blockquote>
-<p>だいぶ車が　多くなりました</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>ずいぶん = very, quite</p>
-</li>
-<li><p>すっかり = completely</p>
-</li>
-<li><p>よく = “very, much”, also can express “well in a skill”, or “often” / “frequently”</p>
-</li>
-<li><p>いちばん = number one, the most</p>
-</li>
-<li><p>本当に = really, truly, indeed</p>
-</li>
-<li><p>さらに</p>
-</li>
-<li><p>もっと</p>
-</li>
-</ul>
-<h3 id="many"><a href="#many" class="headerlink" title="many"></a>many</h3><ul>
 <li>たくさん</li>
 <li>大勢, describe people only</li>
+</ul>
+<hr>
+<ul>
+<li>一般的[いっぱんでき], common, normal</li>
+<li>なかなか = moderate degree, “Quite” “rather” “fairly”, conveys a slight surprise</li>
+<li>とても / 非常に = high degree, “very”, “extremely”, a directly and straightforward expression<ul>
+<li>the later is more formal and stiff</li>
+</ul>
+</li>
+<li>いちばん = the highest or most superior degree, “the most”</li>
+<li>ずいぶん = a relatively high degree of something, “very”, “quite”</li>
+</ul>
+<hr>
+<ul>
+<li>やや = a little, small changes</li>
+<li>だいぶ = a significant degree or extent of something<ul>
+<li>can also refer to an action or change has occurred to a considerable degree.<ul>
+<li>だいぶ車が 多くなりました</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>すっかり = changes has been made thoroughly or completely.</li>
+</ul>
+<hr>
+<ul>
+<li>よく = “very, much”, also express “well in a skill”, “often” / “frequently”</li>
+<li>本当に = really, truly, indeed</li>
+</ul>
+<hr>
+<ul>
+<li>さらに = “more”, emphasizes an additional level or degree of something</li>
+<li>もっと = “more”, casual and commonly<ul>
+<li>もっと食べたい</li>
+</ul>
+</li>
+<li>一層, often used in written language, literature, emphasizes a significant or deeper level of change</li>
 </ul>
 <h3 id="And"><a href="#And" class="headerlink" title="And"></a>And</h3><ul>
 <li>それに</li>
@@ -6529,7 +6567,133 @@ console.log(jso4);
   <entry>
     <title>frontend</title>
     <url>/2021/11/17/notes_js/</url>
-    <content><![CDATA[<h2 id="Zustand"><a href="#Zustand" class="headerlink" title="Zustand"></a>Zustand</h2><ul>
+    <content><![CDATA[<h2 id="MCP-ModelContextProtocol"><a href="#MCP-ModelContextProtocol" class="headerlink" title="MCP-ModelContextProtocol"></a>MCP-ModelContextProtocol</h2><ul>
+<li><p>allows AI models to access and utilize external resources—such as databases, APIs, and local files—without the need for custom integrations for each data source.</p>
+</li>
+<li><p>it’s particularly beneficial in scenarios where AI models need to interact with multiple data sources or tools.</p>
+</li>
+<li><p>concepts</p>
+<ul>
+<li><code>MCP host</code>, an application that integrates ai modules, like cursor</li>
+<li><code>MCP client</code>, It functions as a plugin within the host, providing a bridge between the host and the server</li>
+<li><code>MCP server</code>, an external server that offers data</li>
+<li><code>Tools</code> allow modules take actions through your server</li>
+<li><code>Resources</code> provide data to modules, not yet supported in Cursor<ul>
+<li>static resources are equal to upload file, but the file can be dynamic</li>
+</ul>
+</li>
+<li><code>Prompts</code> create a message template, or a message workflow</li>
+</ul>
+</li>
+<li><p>claude desktop failed to run mcp servers, but these servers are work great with cursor</p>
+<ul>
+<li><a href="https://github.com/modelcontextprotocol/servers/issues/64">MCP Servers Don’t Work with NVM</a></li>
+<li>call <code>node</code> with an absolute path</li>
+<li>avoid use <code>npx</code>. install packages globally, and then run them using <code>node</code> from their path</li>
+</ul>
+</li>
+<li><p>the official documents and some articles may not follow the updating of Sdk, as many fields and params have changed</p>
+</li>
+<li><p>debugger</p>
+<ul>
+<li><code>npx @modelcontextprotocol/inspector</code></li>
+<li>with claude: Open DevTools: Command-Option-Shift-i</li>
+</ul>
+</li>
+<li><p><strong>The tokenization process</strong> splits text into smaller units called tokens, usually using a sub-word tokenization technique like Byte Pair Encoding (BPE) or WordPiece. but <strong>non-Latin text</strong> will be treated differently. Except the obvious characters, additional splits and encoding for sub-word components, punctuation, or any special tokens may exits and various according to the   tokenization strategy</p>
+</li>
+</ul>
+<h2 id="RAG-RetrievalAugmentedGeneration"><a href="#RAG-RetrievalAugmentedGeneration" class="headerlink" title="RAG-RetrievalAugmentedGeneration"></a>RAG-RetrievalAugmentedGeneration</h2><ul>
+<li>combines traditional information retrieval with generative models.</li>
+<li>allowing the model to retrieve relevant information from an external knowledge base (like a document store or search engine) before generating an answer.<br>When a query (input) is received:<br>  Before-retrieval<pre><code>  Routing
+  rewriting
+  expansion 
+</code></pre>
+  Retrieval<br>  After-retrieval<br>  Rerank<br>  summary<br>  fusion</li>
+</ul>
+<h3 id="Use-LangChain-and-Ollama-to-go-through-the-RAG-workflow"><a href="#Use-LangChain-and-Ollama-to-go-through-the-RAG-workflow" class="headerlink" title="Use LangChain and Ollama to go through the RAG workflow"></a>Use LangChain and Ollama to go through the RAG workflow</h3><p><a href="https://js.langchain.com/docs/tutorials/rag">https://js.langchain.com/docs/tutorials/rag</a></p>
+<ul>
+<li><p>Indexing, a pipeline for ingesting data</p>
+<ul>
+<li>load, load document via <a href="https://js.langchain.com/docs/concepts/document_loaders">document_loaders</a></li>
+<li>split, split doc into chunks via <a href="https://js.langchain.com/docs/concepts/text_splitters/">text splitters</a> that support four strategies. long documents will be hard to fit into the context window of many models and can be struggle for modules to find information in very long inputs<ul>
+<li>length</li>
+<li>text-structure, based on paragraphs, sentences, and words</li>
+<li>document-structure, based on an inherent structure, e.g. HTML, Markdown, or JSON</li>
+<li>semantic-meaning</li>
+</ul>
+</li>
+<li>embed, Wrapper around a text embedding model for converting text to embeddings</li>
+<li>store, store splits into a VectorStore, allowed to add text and Document objects to the store, and query them using various similarity metrics.<ul>
+<li>Can be in-memory or via third party</li>
+<li>allow to connect to an existing vector store</li>
+<li><code>similaritySearch</code>, <code>similaritySearchWithScore</code></li>
+</ul>
+</li>
+<li><code>asRetriever</code>, generate a Retriever, specifically a <code>VectorStoreRetriever</code><ul>
+<li>Retrievers are Runnables, implement a standard set of methods (invoke and batch operations)</li>
+<li>similaritySearch vs Retriever</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Retrieval, takes a user query at run time and retrieves the relevant data from the store via <a href="https://js.langchain.com/docs/concepts/retrievers/">retrievers</a></p>
+<ul>
+<li><a href="https://js.langchain.com/docs/concepts/retrieval/#query-analysis">Query analysis</a><ul>
+<li>can Re-write or expand to improve semantic or lexical searches</li>
+<li>can translate natural language queries into specialized query languages or filters, like sql, cypher</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>generation, passes the relevant data and question to the model</p>
+<ul>
+<li>allow to load prompt template from prompt hub</li>
+</ul>
+</li>
+</ul>
+<h2 id="task-master"><a href="#task-master" class="headerlink" title="task-master"></a>task-master</h2><ul>
+<li>upon on Claude ai(required), Perplexity AI(optional)</li>
+<li>despite Claude ai, it still can manage tasks manually—creating, editing, and tracking them in tasks.json or via the Task Master CLI/MCP tools.<ul>
+<li>Perplexity AI<ul>
+<li>a search engine powered by models like Claude, GPT, and its own fine-tuning</li>
+<li>fact-based, best for research (cited answers)</li>
+<li>Always up-to-date</li>
+<li>Less conversational</li>
+</ul>
+</li>
+<li>Claude<ul>
+<li>more safety and polite. <ul>
+<li>unlike open ai which relying on human feedback to fix bad behavior, Anthropic uses<code>Constitutional AI</code> that includes a set of human principles.</li>
+<li>sometimes too verbose or cautions</li>
+</ul>
+</li>
+<li>best for long document analysis, can handle over 100k tokens and optimized for huge inputs</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Init<ul>
+<li>use <code>parse_prd</code> to analyze <code>PRD</code> document, and create tasks </li>
+<li>a foundational task structure will be created, and used for later tracing</li>
+</ul>
+</li>
+<li>update<ul>
+<li>analyze what changed in the PRD and update / add / cancel tasks</li>
+<li>changes on code need manually implementations</li>
+</ul>
+</li>
+<li>tips for better maintenance<ul>
+<li>use<code>analyze-complexity</code>, based upon <code>Perplexity AI</code><ul>
+<li>to get to know task complexity level</li>
+<li>it’s better to break down complex tasks with <code>expand</code></li>
+</ul>
+</li>
+<li>Periodically <code>validate</code> and <code>fix</code> invalid or circular dependencies.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Zustand"><a href="#Zustand" class="headerlink" title="Zustand"></a>Zustand</h2><ul>
 <li>implements pub-sub (publish-subscribe) pattern</li>
 <li>mutable state, without reducer/action, doesn’t depending on provide/context</li>
 <li><code>Middleware</code> Support may be less powerful, compare to <code>redux</code></li>
@@ -6576,7 +6740,7 @@ console.log(jso4);
 </li>
 <li><code>cold observable</code> and <code>hot observable</code><ul>
 <li><code>cold observable</code>: emits values only when it is subscribed to, the consumer receives values from beginning. is <code>unicast</code>.</li>
-<li><code>hot observable</code>: like websoket, emits values regardless of whether there are any subscribers, the consumer from where the Observable currently is—not from the beginning. is <code>multicast</code>.</li>
+<li><code>hot observable</code>: like websocket, emits values regardless of whether there are any subscribers, the consumer from where the Observable currently is—not from the beginning. is <code>multicast</code>.</li>
 </ul>
 </li>
 </ul>
@@ -6653,19 +6817,6 @@ console.log(jso4);
 <li><strong>Open Closed principle</strong>，software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification</li>
 </ol>
 <p><strong>the levels of a component based on its usage</strong><br>    1. Reading name and props; <strong>best</strong><br>    2. Consulting documentation; <strong>good</strong><br>    3. Exploring the code; <strong>admissible</strong><br>    4. Asking the author. <strong>avoid</strong></p>
-<h2 id="performance-optimization"><a href="#performance-optimization" class="headerlink" title="performance optimization"></a>performance optimization</h2><ul>
-<li>avid <code>reflow</code> and <code>repaint</code></li>
-<li>utilize <code>prefetch</code> and <code>preload</code> to enhance the execution order of js and prevent it from blocking HTML rendering</li>
-<li>enable GZIP compression on the server</li>
-<li>minimize the number of DOM elements and keep the DOM structure as simple as possible</li>
-<li>lazy loading</li>
-<li>virtual scroll<ul>
-<li>listen to scroll event, only render the items within the visible area of parent element according the <code>scrollTop</code> and the visible height of the parent</li>
-<li><em>dynamic height</em></li>
-<li>Use the estimated height initially, and then replace the position value with the actual DOM height after rendering. Add a buffer area by rendering a few items at the top and bottom of the visible area. This provides more time to render and calculate for a smooth scrolling experience.</li>
-</ul>
-</li>
-</ul>
 <h2 id="browser-rendering"><a href="#browser-rendering" class="headerlink" title="browser rendering"></a>browser rendering</h2><h3 id="the-rendering-process"><a href="#the-rendering-process" class="headerlink" title="the rendering process"></a>the rendering process</h3><ul>
 <li>the browser obtains the <code>IP address</code> from the <code>domain name</code> by <code>DNS(domain name system) analysis</code><ul>
 <li>establish a <code>tcp</code> connection with the server</li>
@@ -6699,11 +6850,17 @@ console.log(jso4);
 <h3 id="renderOptimization"><a href="#renderOptimization" class="headerlink" title="renderOptimization"></a>renderOptimization</h3><ul>
 <li><p>Use media=”print” or preload for non-blocking CSS.</p>
 </li>
+<li><p>utilize <code>prefetch</code> and <code>preload</code> to enhance the execution order of js and prevent it from blocking HTML rendering</p>
+</li>
+<li><p>minimize the number of DOM elements and keep the DOM structure as simple as possible</p>
+</li>
+<li><p>instead of making multiple small changes to the DOM, try to make all necessary <strong>changes in one go</strong>.</p>
+</li>
 <li><p><strong>avid <code>reflow</code> and <code>repaint</code> as much as possible</strong></p>
 <ul>
-<li>use <code>transform</code> instead of <code>positive and top</code>, the former performs changes in the GPU instead of <code>causing</code> reflow and occupying the rendering thread.</li>
-<li>use <code>visibility</code> instead of <code>display:none</code>, the former incur repaint only while the latter will change layout</li>
-<li>accessing properties like <code>offsetWidth</code>, <code>offsetHeight</code>, or <code>getComputedStyle()</code> can trigger <code>reflow</code></li>
+<li>use <code>transform</code> instead of <code>positive / top</code>, the former performs changes in the GPU, the later causes reflow and occupying the rendering thread.</li>
+<li>use <code>visibility</code> instead of <code>display:none</code>, the former incur repaint only while the latter changes layout</li>
+<li>properties accessing can trigger <code>reflow</code>. like <code>offsetWidth</code>, <code>offsetHeight</code>, or <code>getComputedStyle()</code></li>
 <li>prefer <code>textContent</code> instead of <code>innerText</code>.<ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent#differences_from_innertext">reading the value of innerText triggers a reflow to ensure up-to-date computed styles</a></li>
 <li><code>textContent</code> gets all elements and their contents, while <code>innerText</code> only shows “human-readable” elements, and is aware of styling and won’t return the text of “hidden” elements</li>
@@ -6711,8 +6868,6 @@ console.log(jso4);
 </ul>
 </li>
 </ul>
-</li>
-<li><p>instead of making multiple small changes to the DOM, try to make all necessary <strong>changes in one go</strong>.</p>
 </li>
 <li><p>use browser developer tools to <strong>monitor performance metrics</strong> like reflows, repaints, and rendering performance.</p>
 </li>
@@ -6730,6 +6885,25 @@ console.log(jso4);
 <li><p><code>backface-visibility: hidden</code> Prevents unnecessary rendering of the back side of an element</p>
 </li>
 <li><p><code>contain-intrinsic-size</code> Helps browsers allocate space for lazy-loaded images or dynamic content, best for skeleton screens</p>
+</li>
+<li><p>lazy loading</p>
+<ul>
+<li>Avoiding Flash Of Loading Component<ul>
+<li>the loading component quickly flashes on the screen if the loading time &lt;200ms</li>
+<li>set a delay time to show the loading component</li>
+<li>compare to <code>react.lazy</code>, <code>Loadable</code> offers SSR support, preloading, delay handling</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>virtual scroll</p>
+<ul>
+<li>listen for scroll event, and only render the items within the visible area of parent element based on <code>scrollTop</code> and the visible height of the parent</li>
+<li><em>dynamic height</em><ul>
+<li>Use the estimated height initially, and then replace the position value with the actual DOM height after rendering. Add a buffer area by rendering a few items at the top and bottom of the visible area. This provides more time to render and calculate for a smooth scrolling experience.</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 <h2 id="SVG"><a href="#SVG" class="headerlink" title="SVG"></a>SVG</h2><h3 id="properties"><a href="#properties" class="headerlink" title="properties"></a>properties</h3><p>width/height: define the size in the document<br>viewBox: first two number are min-x and min-y used to define the position,  the other two are define the scale relative to width/height</p>
@@ -7936,12 +8110,12 @@ console.log(jso4);
 </li>
 <li><p>even an empty object like <code>this.setState(&#123;&#125;)</code> will also trigger a new update cycle</p>
 </li>
-<li><p>the updated data can be achieved in callback</p>
+<li><p>access the updated data in callback</p>
 </li>
 <li><p><code>setTimeout</code> or native events can step over React asynchronous behavior and achieve a sync response</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="title">componentDidMount</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.setState(&#123; <span class="attr">number</span>: <span class="number">3</span> &#125;)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>.state.number) <span class="comment">// 3</span></span><br><span class="line">  &#125;, <span class="number">0</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="title">componentDidMount</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">  <span class="built_in">document</span>.body.addEventListener(<span class="string">&#x27;click&#x27;</span>, <span class="built_in">this</span>.changeVal, <span class="literal">false</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><code>ReactDOM.flushSync()</code> in v18, this method is used when you don’t want to apply <code>automatic batching</code>. updates in this method will be update immediately, and it’s a sync method, since we know that <code>setState</code> is a async method.</p>
+<li><p><code>ReactDOM.flushSync()</code> in v18, this method is used when you don’t want to apply <code>automatic batching</code>. updates in this method will be update immediately, and it’s a sync method, while <code>setState</code> is a async.</p>
 </li>
 </ul>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">import</span> &#123; flushSync &#125; <span class="keyword">from</span> <span class="string">&#x27;react-dom&#x27;</span>; <span class="comment">// Note: react-dom, not react</span></span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">handleClick</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">flushSync(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  setCounter(<span class="function"><span class="params">c</span> =&gt;</span> c + <span class="number">1</span>);</span><br><span class="line">&#125;);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
@@ -8237,6 +8411,14 @@ console.log(jso4);
 </ul>
 </li>
 <li><p>useOptimistic</p>
+</li>
+<li><p>ViewTransition</p>
+</li>
+<li><p><code>activity</code></p>
+<ul>
+<li>allow components to be visually hidden and deprioritized, but will save its state and continue to render at a lower priority than anything visible on screen</li>
+<li>save state or pre-render parts that a user is likely to use next</li>
+</ul>
 </li>
 </ul>
 <h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2><h3 id="vueLifecycle"><a href="#vueLifecycle" class="headerlink" title="vueLifecycle"></a>vueLifecycle</h3><ul>
@@ -8681,7 +8863,7 @@ console.log(jso4);
 <li>use <code>multi-factor authentication (MFA)</code></li>
 <li>use the <code>Secure</code> and <code>HttpOnly</code> flags to ensure session cookies are secure</li>
 </ul>
-<h3 id="network-optimization"><a href="#network-optimization" class="headerlink" title="network optimization"></a>network optimization</h3><ul>
+<h3 id="networkOptimization"><a href="#networkOptimization" class="headerlink" title="networkOptimization"></a>networkOptimization</h3><ul>
 <li>reduce the number of request<ul>
 <li><a href="/2021/11/17/notes_js/#httpCache">httpCache</a></li>
 <li>combine small and light requests, like small images</li>
@@ -8889,7 +9071,8 @@ console.log(jso4);
   <entry>
     <title>2025-04</title>
     <url>/2025/04/01/202504/</url>
-    <content><![CDATA[<h2 id="2025-04-27"><a href="#2025-04-27" class="headerlink" title="2025/04/27"></a>2025/04/27</h2><ul>
+    <content><![CDATA[<h2 id="2025-04-26"><a href="#2025-04-26" class="headerlink" title="2025/04/26"></a>2025/04/26</h2><ul>
+<li>時々雨が降りますが、ほとんどの時間涼しくて快適<sup>かいてき</sup>な天気ですね。四月<sup>しがつ</sup>のチン龍湖<sup>こ</sup>では、野の花🌸がたくさん咲き始めました。小麦🌾<sup>こむぎ</sup>が黄色くなり始めると、初夏<sup>しょか</sup>の兆し<sup>きざし</sup>です。</li>
 <li><a href="/2023/11/17/notes_jp/#quick-review">jp 54, 50%</a></li>
 <li><a href="/2023/11/17/notes_jp/#sounds">連濁れんだく</a></li>
 <li><a href="/2023/11/17/notes_jp/#sounds">loanword transformation</a></li>
@@ -8938,5 +9121,262 @@ console.log(jso4);
       <categories>
         <category>Daily Snippets</category>
       </categories>
+  </entry>
+  <entry>
+    <title>2025-05</title>
+    <url>/2025/04/27/202505/</url>
+    <content><![CDATA[<h2 id="2025-05-18"><a href="#2025-05-18" class="headerlink" title="2025/05/18"></a>2025/05/18</h2><ul>
+<li><code>npm rebuild &lt;pack&gt;</code>, rebuild any native modules that were installed<ul>
+<li>Native modules are modules that require compilation, typically written in C or C++ (e.g., node-sass, bcrypt, etc.).</li>
+<li>especially after changing Node.js versions o issues with binary dependencies</li>
+</ul>
+</li>
+<li>rn-web, based upon bundler aliases to replace components</li>
+<li>Avoiding Flash Of Loading Component, <a href="2021/11/17/notes_js/#renderOptimization">renderOptimization</a></li>
+<li>Use LangChain and Ollama to go through the RAG workflow</li>
+<li>15 母は 枇杷[びわ]を 送って(送ります)くれた</li>
+<li>14 じしんがない、びんかん、かんじょうがふあんてい、きらいです</li>
+<li>12 昨晩<em>遊びすぎた</em>ので、今日は疲れを感じしている<ul>
+<li>に is only used for a precise time</li>
+<li>the noun form of some verbs is the verb stem</li>
+</ul>
+</li>
+</ul>
+<h2 id="2025-05-11"><a href="#2025-05-11" class="headerlink" title="2025/05/11"></a>2025/05/11</h2><ul>
+<li>mcp server and how to parse markdown file</li>
+<li>rocked our socks off</li>
+<li>11 夜にスケートボードを滑るのは素晴らしいですれ。静かな道路には、涼しい風や、少ない人々、明るい満月や、そして星々などがあります。緑道で素敵な道を見つけました。脇道[わきみち]は 小麦畑[はたけ]を <em>通っている</em>、両側[りょうがわ]の 街灯[がいとう]がほんのり黄色く、満月が街灯とてもよく合い、星々がより一層 目立って[めだ]います。<ul>
+<li>The tranquil green-way, with the refreshing breeze, fewer people, the bright full moon, and several stars is a wonderful place for Skateboarding at night. I found a beautiful path in the green-way, with a side road that runs through a wheat field. The streetlights on both sides of the side road are soft yellow, perfectly complementing the full moon, and making the stars more noticeable.</li>
+<li>discovered<ul>
+<li><strong>発見した</strong> often carries a sense of a more significant or impactful finding</li>
+<li><strong>見つけました</strong> neutral and commonly</li>
+</ul>
+</li>
+<li>wonderful<ul>
+<li><strong>すごい</strong>, casual, conveys a similar sense of admiration </li>
+<li><strong>素敵</strong>[すてき], casual, referring to things or people you find charming or nice</li>
+<li><strong>素晴らしい</strong>, common and formal, expressing admiration or appreciation for something great.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>10 青紫いろ[あおむらさき]の空に、 ほぼ満月🌕が明るく輝いていて、涼しい風の中でスケートボードを滑っている。疲れた時は、小麦 畑[はたけ]に座りながら、酒を飲んで些細なことを話します。なんでリナックスした夜なんだろう。<ul>
+<li>A bright and almost full moon in the sky, with shades of blue and purple, shines down as we skate in the refreshing, cool breeze. We sit down on the wheat field when we’re tired, drinking and chatting about various trivial things. What a relaxing night!</li>
+<li>もうずく vs ほぼ</li>
+<li>something will happen soon (time-based).</li>
+<li>something are almost in a certain state (percentage-based or completion).</li>
+</ul>
+</li>
+<li>9 はちじゅう歳のお年寄りがスケートボードの練習するをしていて、とても 驚きました[おどろきます]。私たちはじゅう時半ごろ家に帰りましたが、その方はまだ練習していました。<ul>
+<li>勉強する means “to study” (academically)</li>
+<li>練習する[れんしゅ] refer to physical skills</li>
+<li>「に」 after 「ごろ」 is unnecessary (natural Japanese often drops particles in time expressions).</li>
+</ul>
+</li>
+<li>8 母の日<em>近くづいている</em>けど、母にどんなプレゼントをなければいいか分からない<ul>
+<li>~ ばいい = it would be good if ~ → should ~</li>
+<li>近く＋付き</li>
+</ul>
+</li>
+<li>7 スイカ🍉 は夏の 風物詩[ふうぶつし]です<em>が</em>、 蚊[か]🦟<em>もまた</em>は 夏を感じさせる 存在[そんざ]です。スーか🍉 の 果汁[かじゅう]は 爽やかで[さわ]甘く、どんな飲み物にもよく合います。<ul>
+<li>light and refreshing</li>
+<li>汁 typically used for soupy or savory liquids</li>
+<li>combining も and また strengthens the sense of “likewise” or “equally”</li>
+</ul>
+</li>
+<li><a href="/2023/11/17/notes_jp/#quick-review">jp 55, 20%</a></li>
+</ul>
+<h2 id="2025-05-05"><a href="#2025-05-05" class="headerlink" title="2025/05/05"></a>2025/05/05</h2><ul>
+<li><a href="/2021/11/17/notes_js/#MCP-ModelContextProtocol">MCP-ModelContextProtocol</a></li>
+<li><a href="/2021/11/17/notes_js/#RAG-RetrievalAugmentedGeneration">RAG-RetrievalAugmentedGeneration</a></li>
+<li><a href="/2021/11/17/notes_js/#task-master">task-master</a></li>
+<li><code>npx -y</code>, running npx with the –yes flag, which automatically answers “yes” to any prompts that NPX might ask during execution.</li>
+<li><a href="/2023/11/17/notes_jp/#quick-review">jp 54, 100%</a></li>
+<li>4 いえはとてもよいで, 残りの 二日間[ふつか]は本当に休みです</li>
+<li>3 兵馬俑[へいばよう]では、三十度の天気の中に、いち時間並んで、さんじゅう秒<a href="/2023/11/17/notes_jp/#limitations">しか</a>見れなかった。ひとの 数[かず]は私の想像を 圧倒的[あっとてき]に超えていました。非常に大変な経験でした。</li>
+<li>2 西安では、天気が暑く、人で 溢れ[あふれる]ていて、あまり面白くない観光地で、 死ぬ[しぬ]ほど疲れて、帰りたいと思っていました。<ul>
+<li>行楽地 also means “tourist destination”, but more to leisure or outdoor activities</li>
+</ul>
+</li>
+<li>1 朝のさん時に新幹線に乗ったので、とても疲れて(てnot た)、昼間に寝たくなりました。西安の天気はとても暑いですが、おいしい食べ物を食べたました。<ul>
+<li>なかなか is used for moderate level, and conveys a slight surprise</li>
+</ul>
+</li>
+<li>30 天気が暑く☀️なっていました。朝、地下鉄の駅🚇から会社🏢までスケートボード🛹で滑っていたので、汗をかきました</li>
+<li>29 大雨☔️が降っているので、スケートボード🛹はできません。<strong>筋トレ</strong><sup>きんとれ</sup>🏋️をするつもりです</li>
+<li>28 家🏠を出る<sup>でる</sup>遅くなったので、もう少しで<strong>遅刻するところ</strong>でした。<ul>
+<li>遅刻する vs 遅くなる</li>
+<li>To-be / being late</li>
+<li>becoming late</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Daily Snippets</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>mac</title>
+    <url>/2023/05/11/notes_mac/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th>shortcuts</th>
+<th>des</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Cmd-space</td>
+<td>Search</td>
+</tr>
+<tr>
+<td>Control-Command-Q</td>
+<td>lock screen</td>
+</tr>
+<tr>
+<td>Shift-Command-5</td>
+<td>screen shot</td>
+</tr>
+<tr>
+<td>command-tab, press option after chosen</td>
+<td>Switch between the minimized windows</td>
+</tr>
+<tr>
+<td>Drag or Command-click</td>
+<td>edit the icons on Dock</td>
+</tr>
+<tr>
+<td>Press <code>Space</code></td>
+<td>Widen table column width</td>
+</tr>
+<tr>
+<td>Command-option-up/D/L/R</td>
+<td>Add row/column at up/D/L/R</td>
+</tr>
+<tr>
+<td>Command-Shift-Z</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>terminal</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><code>open &lt;path&gt;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Ctrl-c</td>
+<td>Interrupts (stops) the current foreground command</td>
+</tr>
+<tr>
+<td><strong>window operations</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Command-n</td>
+<td>New a window as focused one</td>
+</tr>
+<tr>
+<td>Command-m</td>
+<td>Minimize</td>
+</tr>
+<tr>
+<td>Fn-Control-F</td>
+<td>Fill</td>
+</tr>
+<tr>
+<td>Fn-Control-C</td>
+<td>Center</td>
+</tr>
+<tr>
+<td>Command-w</td>
+<td>closed</td>
+</tr>
+<tr>
+<td>Command-q</td>
+<td>close and quit</td>
+</tr>
+<tr>
+<td>Command-`</td>
+<td>switch between different windows within same app</td>
+</tr>
+<tr>
+<td><strong>Chrome</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Command-option-i</td>
+<td>devtools</td>
+</tr>
+<tr>
+<td>Command-up-t</td>
+<td>restore tabs</td>
+</tr>
+<tr>
+<td>Command-Option-→/←</td>
+<td>switch between tabs</td>
+</tr>
+<tr>
+<td><strong>Trackpad Gesture</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>click with two fingers</td>
+<td>as right click, show the context menu</td>
+</tr>
+<tr>
+<td>Swipe left/right with two fingers</td>
+<td>Navigate back/forward</td>
+</tr>
+<tr>
+<td>Swipe up with three fingers</td>
+<td>View all open windows</td>
+</tr>
+<tr>
+<td>Swipe left/right with three fingers</td>
+<td>Switch</td>
+</tr>
+<tr>
+<td><strong>Finder</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Command-shift-g</td>
+<td>navigate to a file path</td>
+</tr>
+<tr>
+<td>Command+Shift+Dot</td>
+<td>show hidden files</td>
+</tr>
+<tr>
+<td>Control-click, hold <code>option</code></td>
+<td>reveal the advanced context menu options</td>
+</tr>
+<tr>
+<td>Command-del</td>
+<td>Move to trash</td>
+</tr>
+<tr>
+<td>Command-del-option</td>
+<td>skip Trash and delete</td>
+</tr>
+<tr>
+<td><strong>vscode</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>option-z</td>
+<td>toggle word wrap</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Notes</category>
+      </categories>
+      <tags>
+        <tag>mac</tag>
+      </tags>
   </entry>
 </search>

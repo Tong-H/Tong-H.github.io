@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://mser.xyz/"/>
-  <updated>2025-04-26T13:53:45.677Z</updated>
+  <updated>2025-05-18T16:11:07.118Z</updated>
   <id>https://mser.xyz/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>2025-04</title>
-    <link href="https://mser.xyz/2025/04/01/202504/"/>
-    <id>https://mser.xyz/2025/04/01/202504/</id>
-    <published>2025-03-31T16:00:00.000Z</published>
-    <updated>2025-04-26T13:53:45.677Z</updated>
+    <title>2025-05</title>
+    <link href="https://mser.xyz/2025/04/27/202505/"/>
+    <id>https://mser.xyz/2025/04/27/202505/</id>
+    <published>2025-04-26T16:00:00.000Z</published>
+    <updated>2025-05-18T16:11:07.118Z</updated>
     
     <summary type="html">
     
@@ -29,8 +29,32 @@
       
         
         
-          &lt;h2 id=&quot;2025-04-27&quot;&gt;&lt;a href=&quot;#2025-04-27&quot; class=&quot;headerlink&quot; title=&quot;2025/04/27&quot;&gt;&lt;/a&gt;2025/04/27&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a
+          &lt;h2 id=&quot;2025-05-18&quot;&gt;&lt;a href=&quot;#2025-05-18&quot; class=&quot;headerlink&quot; title=&quot;2025/05/18&quot;&gt;&lt;/a&gt;2025/05/18&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;npm rebuild
+        
+      
+    
+    </summary>
+    
+      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2025-04</title>
+    <link href="https://mser.xyz/2025/04/01/202504/"/>
+    <id>https://mser.xyz/2025/04/01/202504/</id>
+    <published>2025-03-31T16:00:00.000Z</published>
+    <updated>2025-05-07T15:05:14.331Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;2025-04-26&quot;&gt;&lt;a href=&quot;#2025-04-26&quot; class=&quot;headerlink&quot;
         
       
     
@@ -230,7 +254,7 @@
     <link href="https://mser.xyz/2023/11/17/notes_jp/"/>
     <id>https://mser.xyz/2023/11/17/notes_jp/</id>
     <published>2023-11-16T16:00:00.000Z</published>
-    <updated>2025-04-26T13:53:45.678Z</updated>
+    <updated>2025-05-18T16:04:36.763Z</updated>
     
     <summary type="html">
     
@@ -238,7 +262,7 @@
       
         
         
-          &lt;p&gt;ます：い、ます、きます、します&lt;br&gt;辞書：う、る、くる、する&lt;br&gt;ない：あ(except い=&amp;gt; わ) 、ない、こない、しない&lt;br&gt;た：based on て形&lt;br&gt;可能：え＋る、られる、できる、くられる&lt;br&gt;ば：え＋ば、れば、すれば、くれば&lt;br&gt;命令:
+          &lt;h2 id=&quot;quick-review&quot;&gt;&lt;a href=&quot;#quick-review&quot; class=&quot;headerlink&quot; title=&quot;quick-review&quot;&gt;&lt;/a&gt;quick-review&lt;/h2&gt;&lt;h3 id=&quot;verb-transforming&quot;&gt;&lt;a
         
       
     
@@ -301,6 +325,44 @@
     
     
       <category term="国际化" scheme="https://mser.xyz/tags/%E5%9B%BD%E9%99%85%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mac</title>
+    <link href="https://mser.xyz/2023/05/11/notes_mac/"/>
+    <id>https://mser.xyz/2023/05/11/notes_mac/</id>
+    <published>2023-05-10T16:00:00.000Z</published>
+    <updated>2025-05-18T16:04:36.774Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;shortcuts&lt;/th&gt;
+&lt;th&gt;des&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;Cmd-space&lt;/td&gt;
+&lt;td&gt;Search&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Control-Co
+        
+      
+    
+    </summary>
+    
+      <category term="Notes" scheme="https://mser.xyz/categories/Notes/"/>
+    
+    
+      <category term="mac" scheme="https://mser.xyz/tags/mac/"/>
     
   </entry>
   
@@ -494,60 +556,6 @@
     
     
       <category term="Svg" scheme="https://mser.xyz/tags/Svg/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>git</title>
-    <link href="https://mser.xyz/2021/11/17/notes_git/"/>
-    <id>https://mser.xyz/2021/11/17/notes_git/</id>
-    <published>2021-11-16T16:00:00.000Z</published>
-    <updated>2025-04-21T15:23:54.352Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;git config –global push.autoSetupRemote true&lt;br&gt;git rm -r –cached .&lt;br&gt;git commit -m “Your message” –no-verify&lt;/p&gt;
-&lt;h2 id=&quot;bisect&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Notes" scheme="https://mser.xyz/categories/Notes/"/>
-    
-    
-      <category term="Git" scheme="https://mser.xyz/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Financial Market Terms</title>
-    <link href="https://mser.xyz/2021/11/17/notes_invest/"/>
-    <id>https://mser.xyz/2021/11/17/notes_invest/</id>
-    <published>2021-11-16T16:00:00.000Z</published>
-    <updated>2025-02-16T07:16:36.488Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Some investment terminology or concepts in the financial market.&lt;/p&gt;
-&lt;h2 id=&quot;about-Fund&quot;&gt;&lt;a href=&quot;#about-Fund&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Others" scheme="https://mser.xyz/categories/Others/"/>
-    
-    
-      <category term="financial" scheme="https://mser.xyz/tags/financial/"/>
     
   </entry>
   
