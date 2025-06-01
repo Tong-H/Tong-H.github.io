@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://mser.xyz/"/>
-  <updated>2025-05-18T16:11:07.118Z</updated>
+  <updated>2025-06-01T12:51:07.314Z</updated>
   <id>https://mser.xyz/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>2025-05</title>
-    <link href="https://mser.xyz/2025/04/27/202505/"/>
-    <id>https://mser.xyz/2025/04/27/202505/</id>
-    <published>2025-04-26T16:00:00.000Z</published>
-    <updated>2025-05-18T16:11:07.118Z</updated>
+    <title>a day</title>
+    <link href="https://mser.xyz/2025/05/30/a-day/"/>
+    <id>https://mser.xyz/2025/05/30/a-day/</id>
+    <published>2025-05-29T16:00:00.000Z</published>
+    <updated>2025-06-01T12:51:07.314Z</updated>
     
     <summary type="html">
     
@@ -29,8 +29,59 @@
       
         
         
-          &lt;h2 id=&quot;2025-05-18&quot;&gt;&lt;a href=&quot;#2025-05-18&quot; class=&quot;headerlink&quot; title=&quot;2025/05/18&quot;&gt;&lt;/a&gt;2025/05/18&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;npm rebuild
+          &lt;p&gt;i go home with Hello. he is free again, very busy watching the chickens hiding behind the hedges, like a thief plotting stole them. cats
+        
+      
+    
+    </summary>
+    
+      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>升级老项目的包依赖</title>
+    <link href="https://mser.xyz/2025/05/25/switchNpmToYarn/"/>
+    <id>https://mser.xyz/2025/05/25/switchNpmToYarn/</id>
+    <published>2025-05-24T16:00:00.000Z</published>
+    <updated>2025-06-01T07:44:57.222Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;背景介绍&quot;&gt;&lt;a href=&quot;#背景介绍&quot; class=&quot;headerlink&quot; title=&quot;背景介绍&quot;&gt;&lt;/a&gt;背景介绍&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;项目使用 node v12， npm
+        
+      
+    
+    </summary>
+    
+      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
+    
+    
+      <category term="npm" scheme="https://mser.xyz/tags/npm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2025-05</title>
+    <link href="https://mser.xyz/2025/04/27/202505/"/>
+    <id>https://mser.xyz/2025/04/27/202505/</id>
+    <published>2025-04-26T16:00:00.000Z</published>
+    <updated>2025-06-01T12:51:39.688Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;2025-06-01&quot;&gt;&lt;a href=&quot;#2025-06-01&quot; class=&quot;headerlink&quot; title=&quot;2025/06/01&quot;&gt;&lt;/a&gt;2025/06/01&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a
         
       
     
@@ -46,7 +97,7 @@
     <link href="https://mser.xyz/2025/04/01/202504/"/>
     <id>https://mser.xyz/2025/04/01/202504/</id>
     <published>2025-03-31T16:00:00.000Z</published>
-    <updated>2025-05-07T15:05:14.331Z</updated>
+    <updated>2025-06-01T06:24:12.721Z</updated>
     
     <summary type="html">
     
@@ -254,7 +305,7 @@
     <link href="https://mser.xyz/2023/11/17/notes_jp/"/>
     <id>https://mser.xyz/2023/11/17/notes_jp/</id>
     <published>2023-11-16T16:00:00.000Z</published>
-    <updated>2025-05-18T16:04:36.763Z</updated>
+    <updated>2025-06-01T06:23:27.635Z</updated>
     
     <summary type="html">
     
@@ -262,7 +313,7 @@
       
         
         
-          &lt;h2 id=&quot;quick-review&quot;&gt;&lt;a href=&quot;#quick-review&quot; class=&quot;headerlink&quot; title=&quot;quick-review&quot;&gt;&lt;/a&gt;quick-review&lt;/h2&gt;&lt;h3 id=&quot;verb-transforming&quot;&gt;&lt;a
+          &lt;h2 id=&quot;quick-review&quot;&gt;&lt;a href=&quot;#quick-review&quot; class=&quot;headerlink&quot; title=&quot;quick-review&quot;&gt;&lt;/a&gt;quick-review&lt;/h2&gt;&lt;h3 id=&quot;nasty-words&quot;&gt;&lt;a
         
       
     
@@ -333,7 +384,7 @@
     <link href="https://mser.xyz/2023/05/11/notes_mac/"/>
     <id>https://mser.xyz/2023/05/11/notes_mac/</id>
     <published>2023-05-10T16:00:00.000Z</published>
-    <updated>2025-05-18T16:04:36.774Z</updated>
+    <updated>2025-06-01T06:23:27.646Z</updated>
     
     <summary type="html">
     
@@ -501,61 +552,6 @@
     
     
       <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>(译)双向绑定会使你的 React 代码更棒</title>
-    <link href="https://mser.xyz/2022/01/27/translation-two-way-binding-will-make-your-react-code-better.md/"/>
-    <id>https://mser.xyz/2022/01/27/translation-two-way-binding-will-make-your-react-code-better.md/</id>
-    <published>2022-01-26T16:00:00.000Z</published>
-    <updated>2025-02-16T06:55:45.054Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;原文地址：&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
-    
-    
-      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SVG 路径动画</title>
-    <link href="https://mser.xyz/2021/12/13/svg-1/"/>
-    <id>https://mser.xyz/2021/12/13/svg-1/</id>
-    <published>2021-12-12T16:00:00.000Z</published>
-    <updated>2025-02-16T07:16:36.491Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;简单百搭普普通通平平无奇 SVG 路径动画优化网站效果, 如何实现一个 SVG 进度条动画以及虚线走马灯动画&lt;/p&gt;
-&lt;p&gt;我习惯于使用 canvas 来做一些动画效果，数据展示或者图片处理之类的。SVG 和 Canvas
-        
-      
-    
-    </summary>
-    
-      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
-    
-    
-      <category term="Svg" scheme="https://mser.xyz/tags/Svg/"/>
     
   </entry>
   
