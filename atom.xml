@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://mser.xyz/"/>
-  <updated>2025-06-01T12:51:07.314Z</updated>
+  <updated>2025-07-02T23:54:21.800Z</updated>
   <id>https://mser.xyz/</id>
   
   <author>
@@ -17,11 +17,136 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>a day</title>
+    <title>2025-07</title>
+    <link href="https://mser.xyz/2025/07/01/202507/"/>
+    <id>https://mser.xyz/2025/07/01/202507/</id>
+    <published>2025-06-30T16:00:00.000Z</published>
+    <updated>2025-07-02T23:54:21.800Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;0706&quot;&gt;&lt;a href=&quot;#0706&quot; class=&quot;headerlink&quot; title=&quot;0706&quot;&gt;&lt;/a&gt;0706&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;rn render issues&lt;ul&gt;
+&lt;li&gt;gif rendering in rn, Android
+        
+      
+    
+    </summary>
+    
+      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>how to stew meat</title>
+    <link href="https://mser.xyz/2025/07/01/stewMeat/"/>
+    <id>https://mser.xyz/2025/07/01/stewMeat/</id>
+    <published>2025-06-30T16:00:00.000Z</published>
+    <updated>2025-07-02T23:27:58.005Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;thanks to my fracture, I can only muster a tiny bit of strength with my mouth. for nearly three weeks, I’ve been living on stewed
+        
+      
+    
+    </summary>
+    
+      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Maxillofacial fracture</title>
+    <link href="https://mser.xyz/2025/06/10/Maxillofacial-fracture/"/>
+    <id>https://mser.xyz/2025/06/10/Maxillofacial-fracture/</id>
+    <published>2025-06-09T16:00:00.000Z</published>
+    <updated>2025-07-02T23:57:19.687Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;well, congratulation to me, learned a new word &lt;code&gt;Maxillofacial fracture&lt;/code&gt;, and i’m sure i’ll remember it for the rest of my
+        
+      
+    
+    </summary>
+    
+      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2025-06</title>
+    <link href="https://mser.xyz/2025/06/01/202506/"/>
+    <id>https://mser.xyz/2025/06/01/202506/</id>
+    <published>2025-05-31T16:00:00.000Z</published>
+    <updated>2025-07-02T23:53:46.889Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;0629&quot;&gt;&lt;a href=&quot;#0629&quot; class=&quot;headerlink&quot; title=&quot;0629&quot;&gt;&lt;/a&gt;0629&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/2025/06/01/notes_ai/#browsertools&quot;&gt;use
+        
+      
+    
+    </summary>
+    
+      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ai</title>
+    <link href="https://mser.xyz/2025/06/01/notes_ai/"/>
+    <id>https://mser.xyz/2025/06/01/notes_ai/</id>
+    <published>2025-05-31T16:00:00.000Z</published>
+    <updated>2025-07-02T23:44:00.421Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;memory-bank&quot;&gt;&lt;a href=&quot;#memory-bank&quot; class=&quot;headerlink&quot; title=&quot;memory bank&quot;&gt;&lt;/a&gt;memory bank&lt;/h2&gt;&lt;p&gt;maintain context across
+        
+      
+    
+    </summary>
+    
+      <category term="Notes" scheme="https://mser.xyz/categories/Notes/"/>
+    
+    
+      <category term="js" scheme="https://mser.xyz/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>some day</title>
     <link href="https://mser.xyz/2025/05/30/a-day/"/>
     <id>https://mser.xyz/2025/05/30/a-day/</id>
     <published>2025-05-29T16:00:00.000Z</published>
-    <updated>2025-06-01T12:51:07.314Z</updated>
+    <updated>2025-07-02T23:27:57.964Z</updated>
     
     <summary type="html">
     
@@ -305,7 +430,7 @@
     <link href="https://mser.xyz/2023/11/17/notes_jp/"/>
     <id>https://mser.xyz/2023/11/17/notes_jp/</id>
     <published>2023-11-16T16:00:00.000Z</published>
-    <updated>2025-06-01T06:23:27.635Z</updated>
+    <updated>2025-06-11T11:48:43.594Z</updated>
     
     <summary type="html">
     
@@ -380,11 +505,11 @@
   </entry>
   
   <entry>
-    <title>mac</title>
+    <title>mac_shortcuts</title>
     <link href="https://mser.xyz/2023/05/11/notes_mac/"/>
     <id>https://mser.xyz/2023/05/11/notes_mac/</id>
     <published>2023-05-10T16:00:00.000Z</published>
-    <updated>2025-06-01T06:23:27.646Z</updated>
+    <updated>2025-07-02T23:27:57.997Z</updated>
     
     <summary type="html">
     
@@ -400,11 +525,8 @@
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;&lt;tr&gt;
-&lt;td&gt;Cmd-space&lt;/td&gt;
-&lt;td&gt;Search&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Control-Co
+&lt;td&gt;control-space&lt;/td&gt;
+&lt;td&gt;switch between input
         
       
     
@@ -414,144 +536,6 @@
     
     
       <category term="mac" scheme="https://mser.xyz/tags/mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>(译)使用 GPT 基于个人文档建立聊天机器人的逐步教程</title>
-    <link href="https://mser.xyz/2023/03/27/translation-a-step-by-step-guide-to-building-a-chatbot-based-on-your-own-documents-with-gpt/"/>
-    <id>https://mser.xyz/2023/03/27/translation-a-step-by-step-guide-to-building-a-chatbot-based-on-your-own-documents-with-gpt/</id>
-    <published>2023-03-26T16:00:00.000Z</published>
-    <updated>2025-02-16T06:55:43.867Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;原文地址：&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
-    
-    
-      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>(译) 全面刨析 CSS-in-JS</title>
-    <link href="https://mser.xyz/2022/11/27/translation-a-thorough-analysis-of-css-in-js/"/>
-    <id>https://mser.xyz/2022/11/27/translation-a-thorough-analysis-of-css-in-js/</id>
-    <published>2022-11-26T16:00:00.000Z</published>
-    <updated>2025-02-16T06:55:43.871Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;原文地址：&lt;a href=&quot;https://css-tricks.com/a-thorough-analysis-of-css-in-js/&quot;&gt;A Thorough Analysis of
-        
-      
-    
-    </summary>
-    
-      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
-    
-    
-      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Service Worker 缓存静态资源</title>
-    <link href="https://mser.xyz/2022/07/09/service_worker/"/>
-    <id>https://mser.xyz/2022/07/09/service_worker/</id>
-    <published>2022-07-09T02:20:44.000Z</published>
-    <updated>2025-02-16T06:55:45.063Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;最近有用到 &lt;code&gt;Service Worker&lt;/code&gt; 和 &lt;code&gt;CacheStorage&lt;/code&gt; 做离线缓存,  一方面是因为项目资源包着实大, 另一方面也是因为之前没有用缓存, 这也是需要的优化。&lt;br&gt;相比起
-        
-      
-    
-    </summary>
-    
-      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
-    
-    
-      <category term="Cache" scheme="https://mser.xyz/tags/Cache/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>(译)使用 Stream 构建高性能的 Node.js 应用</title>
-    <link href="https://mser.xyz/2022/03/25/translation-use-streams-to-build-high-performing-nodejs-applications%20copy/"/>
-    <id>https://mser.xyz/2022/03/25/translation-use-streams-to-build-high-performing-nodejs-applications copy/</id>
-    <published>2022-03-24T16:00:00.000Z</published>
-    <updated>2025-02-16T06:55:45.054Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;原文地址：&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
-    
-    
-      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>(译)CSS 是魔法, 是时候试试 3D 了</title>
-    <link href="https://mser.xyz/2022/03/14/translation-effects-of-too-much-lazy-loading-on-web-performance/"/>
-    <id>https://mser.xyz/2022/03/14/translation-effects-of-too-much-lazy-loading-on-web-performance/</id>
-    <published>2022-03-13T16:00:00.000Z</published>
-    <updated>2025-02-16T06:55:43.971Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;原文地址：&lt;a href=&quot;https://blog.bitsrc.io/effects-of-too-much-lazy-loading-on-performance-4dbe8df33c37&quot;&gt;Effects of Too
-        
-      
-    
-    </summary>
-    
-      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
-    
-    
-      <category term="translation" scheme="https://mser.xyz/tags/translation/"/>
     
   </entry>
   

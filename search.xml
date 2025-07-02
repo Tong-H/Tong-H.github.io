@@ -2171,6 +2171,8 @@ console.log(jso4);
 </li>
 <li><p><code>git reset --hard origin/feat-windows</code> setting branch to match remote exactly</p>
 </li>
+<li><p><code>git reset --soft &lt;commit number&gt;</code> undo commits but keep the changes into working directory</p>
+</li>
 <li><p><code>git push origin +&lt;commit&gt;:master</code> revert to a certain commit, and force push to the remote </p>
 </li>
 </ul>
@@ -4834,15 +4836,13 @@ console.log(jso4);
 <ul>
 <li>[み]ます, to see, or to try(writting in みる)</li>
 <li>[み]られる, able to see via some actions</li>
-<li>[み]えます, intransitive, to be visible, to be displayed </li>
-<li>[み]せます, transitive, to make sth visible naturally without effort, to display </li>
+<li>[み]えます, intransitive, to be visible, to be displayed</li>
+<li>[み]せます, transitive, to make sth visible naturally without effort, to display</li>
 <li>発[けん]します</li>
 <li>見つけます, discover</li>
 <li>見つかります, passive form, be discovered</li>
 </ul>
 </li>
-</ul>
-<ul>
 <li><p>行, かきくけこ</p>
 <ul>
 <li>[い]きます</li>
@@ -4857,7 +4857,7 @@ console.log(jso4);
 <li>[で]ます, intransitive, to go out</li>
 <li>[だ]します, transitive, to make sth out</li>
 <li>[で]かけます, just means “to go out” from a specific location</li>
-<li>外[しゅつ] </li>
+<li>外[しゅつ]</li>
 </ul>
 </li>
 <li><p>食</p>
@@ -6314,7 +6314,7 @@ console.log(jso4);
 </ul>
 <h3 id="ば形-1"><a href="#ば形-1" class="headerlink" title="ば形"></a><a href="#%E3%81%B0%E5%BD%A2">ば形</a></h3><p>Used for <em>hypothetical or conditional</em> statements that may not always be true but depend on certain conditions being met.</p>
 <h3 id="さえ"><a href="#さえ" class="headerlink" title="さえ"></a>さえ</h3><ul>
-<li>すえ have similar functions as さえ, but it’s usually used in writting</li>
+<li>すえ have similar functions as さえ, but it’s usually used in writing</li>
 <li>using in conditional sentences means <strong>if a Minimum Condition is meet</strong>, as long as, if only</li>
 </ul>
 <hr>
@@ -6736,132 +6736,6 @@ console.log(jso4);
 <ul>
 <li> if an element is changed, the elements on the path from the changed one to the root will be cloned, and the rest will be shared by the old and new trees(same reference will be keeped).</li>
 <li>minimizing unnecessary re-renders(React’s memo/PureComponent won’t update if references are the same) and memory usage (no duplicate objects).</li>
-</ul>
-<h2 id="MCP-ModelContextProtocol"><a href="#MCP-ModelContextProtocol" class="headerlink" title="MCP-ModelContextProtocol"></a>MCP-ModelContextProtocol</h2><ul>
-<li><p>allows AI models to access and utilize external resources—such as databases, APIs, and local files—without the need for custom integrations for each data source.</p>
-</li>
-<li><p>it’s particularly beneficial in scenarios where AI models need to interact with multiple data sources or tools.</p>
-</li>
-<li><p>concepts</p>
-<ul>
-<li><code>MCP host</code>, an application that integrates ai modules, like cursor</li>
-<li><code>MCP client</code>, It functions as a plugin within the host, providing a bridge between the host and the server</li>
-<li><code>MCP server</code>, an external server that offers data</li>
-<li><code>Tools</code> allow modules take actions through your server</li>
-<li><code>Resources</code> provide data to modules, not yet supported in Cursor<ul>
-<li>static resources are equal to upload file, but the file can be dynamic</li>
-</ul>
-</li>
-<li><code>Prompts</code> create a message template, or a message workflow</li>
-</ul>
-</li>
-<li><p>claude desktop failed to run mcp servers, but these servers are work great with cursor</p>
-<ul>
-<li><a href="https://github.com/modelcontextprotocol/servers/issues/64">MCP Servers Don’t Work with NVM</a></li>
-<li>call <code>node</code> with an absolute path</li>
-<li>avoid use <code>npx</code>. install packages globally, and then run them using <code>node</code> from their path</li>
-</ul>
-</li>
-<li><p>the official documents and some articles may not follow the updating of Sdk, as many fields and params have changed</p>
-</li>
-<li><p>debugger</p>
-<ul>
-<li><code>npx @modelcontextprotocol/inspector</code></li>
-<li>with claude: Open DevTools: Command-Option-Shift-i</li>
-</ul>
-</li>
-<li><p><strong>The tokenization process</strong> splits text into smaller units called tokens, usually using a sub-word tokenization technique like Byte Pair Encoding (BPE) or WordPiece. but <strong>non-Latin text</strong> will be treated differently. Except the obvious characters, additional splits and encoding for sub-word components, punctuation, or any special tokens may exits and various according to the   tokenization strategy</p>
-</li>
-</ul>
-<h2 id="RAG-RetrievalAugmentedGeneration"><a href="#RAG-RetrievalAugmentedGeneration" class="headerlink" title="RAG-RetrievalAugmentedGeneration"></a>RAG-RetrievalAugmentedGeneration</h2><ul>
-<li>combines traditional information retrieval with generative models.</li>
-<li>allowing the model to retrieve relevant information from an external knowledge base (like a document store or search engine) before generating an answer.<br>When a query (input) is received:<br>  Before-retrieval<pre><code>  Routing
-  rewriting
-  expansion 
-</code></pre>
-  Retrieval<br>  After-retrieval<br>  Rerank<br>  summary<br>  fusion</li>
-</ul>
-<h3 id="Use-LangChain-and-Ollama-to-go-through-the-RAG-workflow"><a href="#Use-LangChain-and-Ollama-to-go-through-the-RAG-workflow" class="headerlink" title="Use LangChain and Ollama to go through the RAG workflow"></a>Use LangChain and Ollama to go through the RAG workflow</h3><p><a href="https://js.langchain.com/docs/tutorials/rag">https://js.langchain.com/docs/tutorials/rag</a></p>
-<ul>
-<li><p>Indexing, a pipeline for ingesting data</p>
-<ul>
-<li>load, load document via <a href="https://js.langchain.com/docs/concepts/document_loaders">document_loaders</a></li>
-<li>split, split doc into chunks via <a href="https://js.langchain.com/docs/concepts/text_splitters/">text splitters</a> that support four strategies. long documents will be hard to fit into the context window of many models and can be struggle for modules to find information in very long inputs<ul>
-<li>length</li>
-<li>text-structure, based on paragraphs, sentences, and words</li>
-<li>document-structure, based on an inherent structure, e.g. HTML, Markdown, or JSON</li>
-<li>semantic-meaning</li>
-</ul>
-</li>
-<li>embed, Wrapper around a text embedding model for converting text to embeddings</li>
-<li>store, store splits into a VectorStore, allowed to add text and Document objects to the store, and query them using various similarity metrics.<ul>
-<li>Can be in-memory or via third party</li>
-<li>allow to connect to an existing vector store</li>
-<li><code>similaritySearch</code>, <code>similaritySearchWithScore</code></li>
-</ul>
-</li>
-<li><code>asRetriever</code>, generate a Retriever, specifically a <code>VectorStoreRetriever</code><ul>
-<li>Retrievers are Runnables, implement a standard set of methods (invoke and batch operations)</li>
-<li>similaritySearch vs Retriever</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Retrieval, takes a user query at run time and retrieves the relevant data from the store via <a href="https://js.langchain.com/docs/concepts/retrievers/">retrievers</a></p>
-<ul>
-<li><a href="https://js.langchain.com/docs/concepts/retrieval/#query-analysis">Query analysis</a><ul>
-<li>can Re-write or expand to improve semantic or lexical searches</li>
-<li>can translate natural language queries into specialized query languages or filters, like sql, cypher</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>generation, passes the relevant data and question to the model</p>
-<ul>
-<li>allow to load prompt template from prompt hub</li>
-</ul>
-</li>
-</ul>
-<h2 id="task-master"><a href="#task-master" class="headerlink" title="task-master"></a>task-master</h2><ul>
-<li>upon on Claude ai(required), Perplexity AI(optional)</li>
-<li>despite Claude ai, it still can manage tasks manually—creating, editing, and tracking them in tasks.json or via the Task Master CLI/MCP tools.<ul>
-<li>Perplexity AI<ul>
-<li>a search engine powered by models like Claude, GPT, and its own fine-tuning</li>
-<li>fact-based, best for research (cited answers)</li>
-<li>Always up-to-date</li>
-<li>Less conversational</li>
-</ul>
-</li>
-<li>Claude<ul>
-<li>more safety and polite. <ul>
-<li>unlike open ai which relying on human feedback to fix bad behavior, Anthropic uses<code>Constitutional AI</code> that includes a set of human principles.</li>
-<li>sometimes too verbose or cautions</li>
-</ul>
-</li>
-<li>best for long document analysis, can handle over 100k tokens and optimized for huge inputs</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Init<ul>
-<li>use <code>parse_prd</code> to analyze <code>PRD</code> document, and create tasks </li>
-<li>a foundational task structure will be created, and used for later tracing</li>
-</ul>
-</li>
-<li>update<ul>
-<li>analyze what changed in the PRD and update / add / cancel tasks</li>
-<li>changes on code need manually implementations</li>
-</ul>
-</li>
-<li>tips for better maintenance<ul>
-<li>use<code>analyze-complexity</code>, based upon <code>Perplexity AI</code><ul>
-<li>to get to know task complexity level</li>
-<li>it’s better to break down complex tasks with <code>expand</code></li>
-</ul>
-</li>
-<li>Periodically <code>validate</code> and <code>fix</code> invalid or circular dependencies.</li>
-</ul>
-</li>
 </ul>
 <h2 id="Zustand"><a href="#Zustand" class="headerlink" title="Zustand"></a>Zustand</h2><ul>
 <li>implements pub-sub (publish-subscribe) pattern</li>
@@ -9426,7 +9300,7 @@ console.log(jso4);
       </categories>
   </entry>
   <entry>
-    <title>mac</title>
+    <title>mac_shortcuts</title>
     <url>/2023/05/11/notes_mac/</url>
     <content><![CDATA[<table>
 <thead>
@@ -9436,6 +9310,10 @@ console.log(jso4);
 </tr>
 </thead>
 <tbody><tr>
+<td>control-space</td>
+<td>switch between input source</td>
+</tr>
+<tr>
 <td>Cmd-space</td>
 <td>Search</td>
 </tr>
@@ -9488,6 +9366,10 @@ console.log(jso4);
 <td>clean the entire current line of input, the above one also work for this</td>
 </tr>
 <tr>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
 <td><strong>window operations</strong></td>
 <td></td>
 </tr>
@@ -9518,6 +9400,10 @@ console.log(jso4);
 <tr>
 <td>Command-`</td>
 <td>switch between different windows within same app</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
 </tr>
 <tr>
 <td><strong>Chrome</strong></td>
@@ -9556,6 +9442,10 @@ console.log(jso4);
 <td>Switch</td>
 </tr>
 <tr>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
 <td><strong>Finder</strong></td>
 <td></td>
 </tr>
@@ -9578,6 +9468,10 @@ console.log(jso4);
 <tr>
 <td>Command-del-option</td>
 <td>skip Trash and delete</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
 </tr>
 <tr>
 <td><strong>vscode</strong></td>
@@ -9653,19 +9547,251 @@ console.log(jso4);
       </tags>
   </entry>
   <entry>
-    <title>a day</title>
+    <title>some day</title>
     <url>/2025/05/30/a-day/</url>
-    <content><![CDATA[<p>i go home with Hello. he is free again, very busy watching the chickens hiding behind the hedges, like a thief plotting stole them. cats love to stand on the high places, watching the world below. he climbing over the yard wall, exploring and  investigate unknown places. we have three dogs now. they are happy, passionate and well, noisy. Hello seems intimidated by them, so i have no choices but keep the dogs in the backyard for three days. i feel sorry for them—it’s only been three days, but maybe i should make a little sorry gift.</p>
-<p>i have a picture in my memory, and i never found words that perfectly capture it except for 木漏れ日. just imagine lying beneath the shade of plum trees. the trees have such a fresh and vivid green that give a feeling of life. sunlight filters though these lively green leaves and spills onto your skin. the flowers in the gardened field beneath the trees—mostly red and pink like rose, some are white like gardenia(栀子花), pure, and many, i don’t know their name. they are start blooming as if summer’s breath alone was enough to wake them. if you lift your head and squint, you can see the soft blue sky peeking through the gaps in the leaves that melts the fresh green, while the juicy plums are delicately dangle from the branches. you can reach out and pick the plums just by lifting you hand, while lying down beneath the trees. they tempt you every second—hanging low, swaying gently, sometimes falling, and maybe landing on you if the wind passes by. most are green, cool and crisp with a perfect balance of sweet and sour; some are red and much sweeter; the purple ones-fully ripe, heavy with juice and no sourness at all.</p>
+    <content><![CDATA[<p>i go home with Hello. he is free again, very busy watching the chickens hiding behind the hedges, like a thief plotting stole them. cats love to stand on the high places, watching the world below. he climbing over the yard wall, exploring and  investigating unknown places. we have three dogs now. they are happy, passionate, well…. also noisy. Hello seems intimidated by them, so i have no choices but keep the dogs in the backyard for three days. i feel sorry for them—it’s only been three days, but maybe i should make a little sorry gift.</p>
+<p>i have a picture in my memory, and i never found words that perfectly capture it, except for 木漏れ日. just imagine lying beneath the shade of plum trees. the trees have such a fresh and vivid green that give a feeling of life. sunlight filters though these lively green leaves and spills onto your skin. the flowers in the gardened field beneath the trees—mostly red and pink like rose, some are white like gardenia(栀子花), pure, and many, i don’t know their name. they are start blooming as if summer’s breath alone was enough to wake them. if you lift your head and squint, you can see the soft blue sky peeking through the gaps in the leaves that melts the fresh green, while the juicy plums are delicately dangle from the branches. you can reach out and pick the plums just by lifting you hand, while lying down beneath the trees. they tempt you every second—hanging low, swaying gently, sometimes falling, and maybe landing on you if the wind passes by. most are green, cool and crisp with a perfect balance of sweet and sour; some are red and much sweeter; the purple ones-fully ripe, heavy with juice and no sourness at all.</p>
 <p>but but but, Unfortunately, all three holidays are cloudy or rainy, no sun at all, so …….  🙃🥲🙃  it’s supposed to be plum-eating time around the dragon boat festival. however, this year is colder than last 🙃🥲. the plums are still unripe, but the loquats have extended their season a little longer. at least one comfort.</p>
 <p>even the weather is uncooperative, but the beauty of the paddy rice fields on both sides of the country road holds a unique healing power all its own. skateboarding along on that path, surrounded by green waves helps me calm down and feel at peace.</p>
-<div style="display: flex;">
-<image src="/a-day/202506012002055.jpg">
-<image src="/a-day/202506012002056.jpg">
-<image src="/a-day/202506012002061.jpg">
-</image></image></image></div>
-
 <p>the world is a filthy, disgusting mess, broken, twisted, a wasteland of decay and despair. i wanna to pile on more words. but it still holds that much fragile treasures. sometimes i can’t see them—sometimes i miss them—but I’ll walk these broken paths anyway as long as the game is playing, so how about give more attention to the rubbish bin where the worthless things lie.</p>
+]]></content>
+      <categories>
+        <category>Daily Snippets</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>2025-06</title>
+    <url>/2025/06/01/202506/</url>
+    <content><![CDATA[<h3 id="0629"><a href="#0629" class="headerlink" title="0629"></a>0629</h3><ul>
+<li><a href="/2025/06/01/notes_ai/#browsertools">use browsertools with cursor</a></li>
+<li>28 屋台が開くで、飲み物を売りたいです。</li>
+</ul>
+<h3 id="0608"><a href="#0608" class="headerlink" title="0608"></a>0608</h3><ul>
+<li><a href="/2021/11/17/notes_js/#react-native">re-learn rn, the missed point, the new/old bridge, Fabric-renderer</a></li>
+<li>use <code>PanResponder</code> and <code>Animated</code> to realize a swiper component, similar in behavior to what “豆瓣/书影音页面” uses</li>
+<li>05 コンピりのさつまいも(sweet potato)は甘く美味い</li>
+<li>04 少量の痛みが必要だ</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Daily Snippets</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>2025-07</title>
+    <url>/2025/07/01/202507/</url>
+    <content><![CDATA[<h2 id="0706"><a href="#0706" class="headerlink" title="0706"></a>0706</h2><ul>
+<li>rn render issues<ul>
+<li>gif rendering in rn, Android have performance issues with large GIFs.<ul>
+<li>use <code>react-native-fast-image</code> is a popular choice</li>
+</ul>
+</li>
+<li>rendering multiple webviews on a single page can lead to performance issues<ul>
+<li>Each WebView is a separate instance of Chromium (Android System WebView or Chrome), consuming ~20-100MB+ RAM per instance</li>
+<li>depending on: Device RAM, WebView content complexity and Whether WebViews are active.</li>
+<li>Low-end Android devices may lead to crash with the number of 3</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="/2025/07/01/stewMeat/">how to stew meat</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Daily Snippets</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Maxillofacial fracture</title>
+    <url>/2025/06/10/Maxillofacial-fracture/</url>
+    <content><![CDATA[<p>well, congratulation to me, learned a new word <code>Maxillofacial fracture</code>, and i’m sure i’ll remember it for the rest of my life.</p>
+<p>i barely recall how it all happened – there’s not much memory left with me. the road is just opened, and the street lights aren’t start working. it’s almost pitch-black, and barely see the road surface. i guess my wheels get stuck in a rock or stick. since the road slopes downward, i’m definitely not going slow — i guess, without a little speeding there’s no way i could have this face now. i‘m not really aware of how badly i’m hurt, until looking at myself in the hospital washroom mirror. with this face, i could scare kids into crying effortlessly, or play as an NPC in a haunted house—i guess i’d be welcomed there. i transferring from a small hospital to a medium-sized one, and eventually settling in one of the city’s biggest. truly thankful for my friends. whether at work or in life, i prefer not to brother others. it’s almost midnight. if put myself in this shoes, i know i’d struggle. but maybe, in these small troubles that real connections grow.</p>
+<p>about the surgery. sometimes fractures can heal naturally over time. but the bones can heal in a wrong position, and cause facial asymmetry. however, no choice leaves to me, since i can’t open my mouth wide. the breaking bones are pressing against the bones of mouth. the surgery is going very well, except the part of anesthetic injection. as my mouth couldn’t open wide enough. so the doctor have to inject it from my throat while i’m still conscious 🤐 . however, it wasn’t as scary as I imagined.</p>
+<p>while lying in a hospital bed with nothing to do, i often wonder if i will stop skateboarding. the answer comes to my mind is yes — because fear speaks louder than anything else. only when confined in a hospital bed, i come to truly appreciate the comfort of home and the priceless value of a healthy body. i may not afraid of the final curtain call, but the endless waiting in the wings terrifies me. i already witnessed several accidents, and i should have heeded their lessons with greater caution. yet, i failed to learn from the past – i ignored the risks and dangers for too long, or perhaps misjudging my own limits, blinded by overconfidence. this time, i pay my price for my shallow wisdom and careless actions, and in return, i re-gain a deeper reverence. life stretches far beyond this moment, i still long for the freedom, the thrill, the joy that skateboarding brings to me. so the final answer remains i refuse to stop.</p>
+<p><strong>however, the fear will stay with me, a constant reminder to approach every action with cautions, never rush, always be mindful and patient.</strong></p>
+]]></content>
+      <categories>
+        <category>Daily Snippets</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>ai</title>
+    <url>/2025/06/01/notes_ai/</url>
+    <content><![CDATA[<h2 id="memory-bank"><a href="#memory-bank" class="headerlink" title="memory bank"></a>memory bank</h2><p>maintain context across sessions</p>
+<p><a href="https://forum.cursor.com/t/how-to-add-cline-memory-bank-feature-to-your-cursor/67868">https://forum.cursor.com/t/how-to-add-cline-memory-bank-feature-to-your-cursor/67868</a></p>
+<h2 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h2><ul>
+<li>each chat should be dedicated to a single feature, to prevent the interference of irrelevant context</li>
+</ul>
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><p><a href="https://github.com/zhangchenchen/self-consistent-coder/blob/main/cursor-large-project-tips.md">https://github.com/zhangchenchen/self-consistent-coder/blob/main/cursor-large-project-tips.md</a></p>
+<h2 id="MCP-ModelContextProtocol"><a href="#MCP-ModelContextProtocol" class="headerlink" title="MCP-ModelContextProtocol"></a>MCP-ModelContextProtocol</h2><ul>
+<li><p>allows AI models to access and utilize external resources—such as databases, APIs, and local files—without the need for custom integrations for each data source.</p>
+</li>
+<li><p>it’s particularly beneficial in scenarios where AI models need to interact with multiple data sources or tools.</p>
+</li>
+<li><p>concepts</p>
+<ul>
+<li><code>MCP host</code>, an application that integrates ai modules, like cursor</li>
+<li><code>MCP client</code>, It functions as a plugin within the host, providing a bridge between the host and the server</li>
+<li><code>MCP server</code>, an external server that offers data</li>
+<li><code>Tools</code> allow modules take actions through your server</li>
+<li><code>Resources</code> provide data to modules, not yet supported in Cursor<ul>
+<li>static resources are equal to upload file, but the file can be dynamic</li>
+</ul>
+</li>
+<li><code>Prompts</code> create a message template, or a message workflow</li>
+</ul>
+</li>
+<li><p>claude desktop failed to run mcp servers, but these servers are work great with cursor</p>
+<ul>
+<li><a href="https://github.com/modelcontextprotocol/servers/issues/64">MCP Servers Don’t Work with NVM</a></li>
+<li>call <code>node</code> with an absolute path</li>
+<li>avoid use <code>npx</code>. install packages globally, and then run them using <code>node</code> from their path</li>
+</ul>
+</li>
+<li><p>the official documents and some articles may not follow the updating of Sdk, as many fields and params have changed</p>
+</li>
+<li><p>debugger</p>
+<ul>
+<li><code>npx @modelcontextprotocol/inspector</code></li>
+<li>with claude: Open DevTools: Command-Option-Shift-i</li>
+</ul>
+</li>
+<li><p><strong>The tokenization process</strong> splits text into smaller units called tokens, usually using a sub-word tokenization technique like Byte Pair Encoding (BPE) or WordPiece. but <strong>non-Latin text</strong> will be treated differently. Except the obvious characters, additional splits and encoding for sub-word components, punctuation, or any special tokens may exits and various according to the   tokenization strategy</p>
+</li>
+</ul>
+<h2 id="browsertools"><a href="#browsertools" class="headerlink" title="browsertools"></a>browsertools</h2><ul>
+<li><p>useful for inspecting dom and adjusting style</p>
+<ul>
+<li><blockquote>
+<p>Q: get the selected element. it’s child element has a padding thus is used to make a gap between two elements. the gap is need when the two elements are aligned.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>get network logs and console logs</p>
+<ul>
+<li><blockquote>
+<p>Q: getnetwork. log the requests with <code>pageSize:20</code> set</p>
+</blockquote>
+</li>
+<li>this feature is not work as expected, it’s tend to miss logs. the repo are still many unresolved issues related to log retrieval</li>
+<li>sometimes, wiping logs or closing other F12 panels can help</li>
+</ul>
+</li>
+</ul>
+<h2 id="RAG-RetrievalAugmentedGeneration"><a href="#RAG-RetrievalAugmentedGeneration" class="headerlink" title="RAG-RetrievalAugmentedGeneration"></a>RAG-RetrievalAugmentedGeneration</h2><ul>
+<li>combines traditional information retrieval with generative models.</li>
+<li>allowing the model to retrieve relevant information from an external knowledge base (like a document store or search engine) before generating an answer.<br>When a query (input) is received:<br>  Before-retrieval<pre><code>  Routing
+  rewriting
+  expansion 
+</code></pre>
+  Retrieval<br>  After-retrieval<br>  Rerank<br>  summary<br>  fusion</li>
+</ul>
+<h3 id="Use-LangChain-and-Ollama-to-go-through-the-RAG-workflow"><a href="#Use-LangChain-and-Ollama-to-go-through-the-RAG-workflow" class="headerlink" title="Use LangChain and Ollama to go through the RAG workflow"></a>Use LangChain and Ollama to go through the RAG workflow</h3><p><a href="https://js.langchain.com/docs/tutorials/rag">https://js.langchain.com/docs/tutorials/rag</a></p>
+<ul>
+<li><p>Indexing, a pipeline for ingesting data</p>
+<ul>
+<li>load, load document via <a href="https://js.langchain.com/docs/concepts/document_loaders">document_loaders</a></li>
+<li>split, split doc into chunks via <a href="https://js.langchain.com/docs/concepts/text_splitters/">text splitters</a> that support four strategies. long documents will be hard to fit into the context window of many models and can be struggle for modules to find information in very long inputs<ul>
+<li>length</li>
+<li>text-structure, based on paragraphs, sentences, and words</li>
+<li>document-structure, based on an inherent structure, e.g. HTML, Markdown, or JSON</li>
+<li>semantic-meaning</li>
+</ul>
+</li>
+<li>embed, Wrapper around a text embedding model for converting text to embeddings</li>
+<li>store, store splits into a VectorStore, allowed to add text and Document objects to the store, and query them using various similarity metrics.<ul>
+<li>Can be in-memory or via third party</li>
+<li>allow to connect to an existing vector store</li>
+<li><code>similaritySearch</code>, <code>similaritySearchWithScore</code></li>
+</ul>
+</li>
+<li><code>asRetriever</code>, generate a Retriever, specifically a <code>VectorStoreRetriever</code><ul>
+<li>Retrievers are Runnables, implement a standard set of methods (invoke and batch operations)</li>
+<li>similaritySearch vs Retriever</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Retrieval, takes a user query at run time and retrieves the relevant data from the store via <a href="https://js.langchain.com/docs/concepts/retrievers/">retrievers</a></p>
+<ul>
+<li><a href="https://js.langchain.com/docs/concepts/retrieval/#query-analysis">Query analysis</a><ul>
+<li>can Re-write or expand to improve semantic or lexical searches</li>
+<li>can translate natural language queries into specialized query languages or filters, like sql, cypher</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>generation, passes the relevant data and question to the model</p>
+<ul>
+<li>allow to load prompt template from prompt hub</li>
+</ul>
+</li>
+</ul>
+<h2 id="task-master"><a href="#task-master" class="headerlink" title="task-master"></a>task-master</h2><ul>
+<li>upon on Claude ai(required), Perplexity AI(optional)</li>
+<li>despite Claude ai, it still can manage tasks manually—creating, editing, and tracking them in tasks.json or via the Task Master CLI/MCP tools.<ul>
+<li>Perplexity AI<ul>
+<li>a search engine powered by models like Claude, GPT, and its own fine-tuning</li>
+<li>fact-based, best for research (cited answers)</li>
+<li>Always up-to-date</li>
+<li>Less conversational</li>
+</ul>
+</li>
+<li>Claude<ul>
+<li>more safety and polite. <ul>
+<li>unlike open ai which relying on human feedback to fix bad behavior, Anthropic uses<code>Constitutional AI</code> that includes a set of human principles.</li>
+<li>sometimes too verbose or cautions</li>
+</ul>
+</li>
+<li>best for long document analysis, can handle over 100k tokens and optimized for huge inputs</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Init<ul>
+<li>use <code>parse_prd</code> to analyze <code>PRD</code> document, and create tasks </li>
+<li>a foundational task structure will be created, and used for later tracing</li>
+</ul>
+</li>
+<li>update<ul>
+<li>analyze what changed in the PRD and update / add / cancel tasks</li>
+<li>changes on code need manually implementations</li>
+</ul>
+</li>
+<li>tips for better maintenance<ul>
+<li>use<code>analyze-complexity</code>, based upon <code>Perplexity AI</code><ul>
+<li>to get to know task complexity level</li>
+<li>it’s better to break down complex tasks with <code>expand</code></li>
+</ul>
+</li>
+<li>Periodically <code>validate</code> and <code>fix</code> invalid or circular dependencies.</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Notes</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>how to stew meat</title>
+    <url>/2025/07/01/stewMeat/</url>
+    <content><![CDATA[<p>thanks to my fracture, I can only muster a tiny bit of strength with my mouth. for nearly three weeks, I’ve been living on stewed dishes. vigatables, egg and fishs are easy to stewed to achieve tenderness. but meat? let’s say under my cooking skills, it’s just leather. so I’m seeking how to stew meat until it can melt in my mouth.</p>
+<p>one thing can’t ignore is that some cuts with a bit of fat are the secret to the perfect stew. but guess what? my fridge is basically a lean meat warehouse. and the most of it? beef. achieving my goal with lean beef is like to run a marathon on stilts. i’ve tried, and all i can do is swallow without chewing. chewing would be a waste of energy.</p>
+<p>but i still wanna to try. there are some tips, though, according to Deepseek…maybe they’ll help.</p>
+<ul>
+<li>slice meat against the grain (the direction of the muscle fibers). (<input type="checkbox" checked> truly helpful)</li>
+<li>after blanching the meat, place it into boiling water—instead of cold water. cause the cold water could seize up the fibers.(<input type="checkbox" checked> makes sense, so i prefer skip the blanching step)</li>
+<li>brown the meat in a hot pan with a bit of oil. (troublesome ❌)</li>
+<li>simmer, don’t boil. keep the water below the boiling point. (<input type="checkbox">)</li>
+<li>Dry brine meat by salting it at least 30 minutes before cooking, instead of sprinkling salt during cooking. (<input type="checkbox">)</li>
+<li>Acidic marinades like vinegar, or enzymatic tenderizers like pineapple can tenderize meat. It works by breaking down proteins and connective tissues. (<input type="checkbox">)</li>
+<li>A small pinch of baking soda (or sodium bicarbonate) in a marinade can raise the pH on the surface of the meat, which can cause the meat proteins to break down and prevents water loss. (<input type="checkbox">)</li>
+</ul>
 ]]></content>
       <categories>
         <category>Daily Snippets</category>
