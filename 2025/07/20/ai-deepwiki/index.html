@@ -1,0 +1,156 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="没事儿,tong-h,Tong-H,tong-h blog"><meta name="descriptioon" content="personal blog by Tong-H"><meta name="renderer" content="wekit"><link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"><link rel="stylesheet" href="/css/public.css"><link rel="stylesheet" href="/css/reset.css"><link rel="stylesheet" href="/css/iconfont.css"><title>AI 实践-DeepWiki-open 为项目生成 wiki 文档 [ Tong-H ]</title><link rel="stylesheet" href="/css/partial/footer.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/partial/sidebar.css"><link rel="stylesheet" href="/css/post.css"><link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"><meta name="generator" content="Hexo 5.4.0"></head><body><link rel="stylesheet" href="/css/partial/header.css"><div class="header"><div class="maxwidth"><div class="nav"><a id="artlist" href="/404"><i class="iconfont icon404"></i><span class="headhid">&nbsp;404</span></a><a id="artlist" href="/archives"><i class="iconfont iconarchives"></i><span class="headhid">&nbsp;Archives</span></a><a id="artlist" href="/about"><i class="iconfont iconabout"></i><span class="headhid">&nbsp;About</span></a></div><a class="search" href="/">TONG-H</a></div></div><div class="main"> <div class="maxwidth"><link rel="stylesheet" href="/css/partial/sidebar.css"><div id="sidebar"><div class="social"><a href="/archives" title="Home"><i class="iconfont iconHome"></i></a><a href="mailto:tongt0232@gmail.com" title="E-Mail"><i class="iconfont iconweibiaoti554"></i></a><a target="_blank" rel="noopener" href="https://github.com/tong-h" title="GitHub"><i class="iconfont iconGitHub"></i></a><a target="_blank" rel="noopener" href="https://juejin.cn/user/1204720474809741" title="juejin"><img src="/images/juejinicon-sidebar.png"></a><a target="_blank" rel="noopener" href="https://www.jianshu.com/u/20de04cc53de" title="jianshu"><img src="/images/jianicon-sidebar.png"></a></div><div class="structure category-list"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%83%8C%E6%99%AF"><span class="toc-number">1.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E8%B0%83%E7%A0%94"><span class="toc-number">2.</span> <span class="toc-text">技术调研</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#cursor-rule"><span class="toc-number">2.1.</span> <span class="toc-text">cursor + rule</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E5%AE%83"><span class="toc-number">2.2.</span> <span class="toc-text">其它</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">3.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E8%B7%B5"><span class="toc-number">4.</span> <span class="toc-text">实践</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#workflow"><span class="toc-number">5.</span> <span class="toc-text">workflow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E8%B7%B5%E9%97%AE%E9%A2%98"><span class="toc-number">6.</span> <span class="toc-text">实践问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#No-valid-XML-found-in-response"><span class="toc-number">6.1.</span> <span class="toc-text">No valid XML found in response</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9F%E5%BA%A6%E5%BE%88%E6%85%A2"><span class="toc-number">6.2.</span> <span class="toc-text">速度很慢</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Module-not-found-Can%E2%80%99t-resolve-%E2%80%98-vercel-turbopack-next-internal-font-google-font%E2%80%99"><span class="toc-number">6.3.</span> <span class="toc-text">Module not found: Can’t resolve ‘@vercel&#x2F;turbopack-next&#x2F;internal&#x2F;font&#x2F;google&#x2F;font’</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E8%B0%83%E6%95%B4%E6%96%87%E6%A1%A3%E7%9A%84%E7%94%9F%E6%88%90"><span class="toc-number">6.4.</span> <span class="toc-text">如何调整文档的生成</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="toc-number">7.</span> <span class="toc-text">参考文章</span></a></li></ol></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Daily-Snippets/">Daily Snippets</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Frontend/">Frontend</a><span class="category-list-count">53</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Notes/">Notes</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Others/">Others</a><span class="category-list-count">14</span></li></ul><div class="tags"><a href="/tags/CI-CD/" style="font-size: 12px; color: #ffac00">CI/CD</a> <a href="/tags/Cache/" style="font-size: 15px; color: #ec9d00">Cache</a> <a href="/tags/ECharts/" style="font-size: 12px; color: #ffac00">ECharts</a> <a href="/tags/Electron/" style="font-size: 12px; color: #ffac00">Electron</a> <a href="/tags/Git/" style="font-size: 12px; color: #ffac00">Git</a> <a href="/tags/JS/" style="font-size: 12px; color: #ffac00">JS</a> <a href="/tags/JSON/" style="font-size: 12px; color: #ffac00">JSON</a> <a href="/tags/Linux/" style="font-size: 12px; color: #ffac00">Linux</a> <a href="/tags/OTHERS/" style="font-size: 12px; color: #ffac00">OTHERS</a> <a href="/tags/Svg/" style="font-size: 12px; color: #ffac00">Svg</a> <a href="/tags/ai/" style="font-size: 18px; color: #da8d00">ai</a> <a href="/tags/angular/" style="font-size: 15px; color: #ec9d00">angular</a> <a href="/tags/canvas/" style="font-size: 21px; color: #c77e00">canvas</a> <a href="/tags/cordova/" style="font-size: 21px; color: #c77e00">cordova</a> <a href="/tags/domain/" style="font-size: 12px; color: #ffac00">domain</a> <a href="/tags/ffmpeg/" style="font-size: 12px; color: #ffac00">ffmpeg</a> <a href="/tags/financial/" style="font-size: 12px; color: #ffac00">financial</a> <a href="/tags/gitment/" style="font-size: 12px; color: #ffac00">gitment</a> <a href="/tags/hexo/" style="font-size: 18px; color: #da8d00">hexo</a> <a href="/tags/http/" style="font-size: 12px; color: #ffac00">http</a> <a href="/tags/japanese/" style="font-size: 15px; color: #ec9d00">japanese</a> <a href="/tags/js/" style="font-size: 15px; color: #ec9d00">js</a> <a href="/tags/mac/" style="font-size: 12px; color: #ffac00">mac</a> <a href="/tags/markdown/" style="font-size: 12px; color: #ffac00">markdown</a> <a href="/tags/micro-frontend/" style="font-size: 15px; color: #ec9d00">micro_frontend</a> <a href="/tags/mpvue/" style="font-size: 12px; color: #ffac00">mpvue</a> <a href="/tags/mysql/" style="font-size: 12px; color: #ffac00">mysql</a> <a href="/tags/nginx/" style="font-size: 12px; color: #ffac00">nginx</a> <a href="/tags/nodejs/" style="font-size: 12px; color: #ffac00">nodejs</a> <a href="/tags/npm/" style="font-size: 15px; color: #ec9d00">npm</a> <a href="/tags/python/" style="font-size: 18px; color: #da8d00">python</a> <a href="/tags/server/" style="font-size: 12px; color: #ffac00">server</a> <a href="/tags/shell/" style="font-size: 12px; color: #ffac00">shell</a> <a href="/tags/threeJs/" style="font-size: 12px; color: #ffac00">threeJs</a> <a href="/tags/translation/" style="font-size: 24px; color: #b46e00">translation</a> <a href="/tags/typescript/" style="font-size: 12px; color: #ffac00">typescript</a> <a href="/tags/vue/" style="font-size: 12px; color: #ffac00">vue</a> <a href="/tags/worker/" style="font-size: 12px; color: #ffac00">worker</a> <a href="/tags/yarn/" style="font-size: 12px; color: #ffac00">yarn</a> <a href="/tags/%E5%8E%9F%E5%9E%8B%E9%93%BE/" style="font-size: 12px; color: #ffac00">原型链</a> <a href="/tags/%E5%9B%BD%E9%99%85%E5%8C%96/" style="font-size: 12px; color: #ffac00">国际化</a> <a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%BB%9A%E5%8A%A8%E6%9D%A1/" style="font-size: 12px; color: #ffac00">自定义滚动条</a> <a href="/tags/%E8%B7%A8%E5%9F%9F/" style="font-size: 12px; color: #ffac00">跨域</a></div></div><div class="post rightside"><h1 class="artititle">AI 实践-DeepWiki-open 为项目生成 wiki 文档</h1><div class="info"><i class="iconfont iconwenzi" title="字数">1.9k</i><i class="iconfont iconshijian" title="阅读时长">7</i><i class="iconfont iconarchives" title="文章分类"><span>Frontend</span></i><i class="iconfont iconbiaoqian" title="文章标签"><span>ai</span></i><i class="iconfont iconshijian"><span title="文章发布时间">2025-07-20</span></i><i class="iconfont iconshijian"><span title="文章更新时间">2025-08-24</span></i></div><div class="postDetail"><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul>
+<li>有一些仓库的 readme 文件很草率，如果作为一个新人去接手一个仓库，看完 readme 连这个仓库的作用都不知道，需要多花时间看代码才能理解这个仓库的功能。但换个角度，作为一个开发人员，大部分时候都会疏于去写文档。</li>
+<li><a target="_blank" rel="noopener" href="https://deepwiki.com/">DeepWiki</a>是专门解决这个问题的，用于为 github/gitlab 仓库生成全面详细文档，但这是个闭源项目，且能集成的平台有限<a target="_blank" rel="noopener" href="https://docs.devin.ai/integrations/gh">https://docs.devin.ai/integrations/gh</a></li>
+<li>DeepWiki-open 是 DeepWiki 的一个开源实现<ul>
+<li>基于 adalflow, 支持本地部署，以及结合 ollama 使用本地模型</li>
+<li>支持基于仓库像模型提问</li>
+</ul>
+</li>
+</ul>
+<h2 id="技术调研"><a href="#技术调研" class="headerlink" title="技术调研"></a>技术调研</h2><p>在决定使用deepwiki之前有了解过一些其他的方式</p>
+<h3 id="cursor-rule"><a href="#cursor-rule" class="headerlink" title="cursor + rule"></a>cursor + rule</h3><ul>
+<li>只用一个rule，不会深入代码比较浅，适合当readme文件</li>
+<li>通过不通的 rule 来生成不同的内容，再去搜索每个页面信息的时候，多半会超时，可能会需要额外的对话。但 mpa 这类，每个entry都是独立的部分，一个page一个reademe组合起来的效果也能是一个 wiki 了</li>
+</ul>
+<figure class="highlight plaintext"><figcaption><span>Text</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">readme.mdc //通过 @filename.ts 指向其他的 rule</span><br><span class="line">	page-doc-agent.mdc // 生成页面信息的 rule，从入口文件进入根据组件引用以及数据流来获取内容</span><br><span class="line">  api-interface.mdc // 生成 api 集成相关信息</span><br></pre></td></tr></table></figure>
+
+<h3 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h3><p>gitdiagram 只支持 openai，github 仓库</p>
+<p>Context7 不适用，更新库文档的</p>
+<p>mintlify, 和 deepwiki 类似，闭源，不支持本地仓库</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>deepwiki-open + ollama<a target="_blank" rel="noopener" href="https://github.com/AsyncFuncAI/deepwiki-open/blob/main/Ollama-instruction.md">安装和启动</a>，ollama 需要单独配置<a target="_blank" rel="noopener" href="https://ollama.com/">安装</a></p>
+<ul>
+<li>如果 python 安装很慢，可以使用镜像</li>
+</ul>
+<figure class="highlight plaintext"><figcaption><span>Text</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install -r api/requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果中途遇到报错，比如 openai 版本不兼容什么的，可以尝试升级 pip<a target="_blank" rel="noopener" href="https://js.langchain.com/docs/tutorials/rag"></a></li>
+</ul>
+<h2 id="实践"><a href="#实践" class="headerlink" title="实践"></a><strong>实践</strong></h2><p>拿一个项目 A 为案例，本地仓库/多页面模式</p>
+<p>从日志可以看出时间线和流程，3点半到5点，一个半</p>
+<p>2025-07-2515:30:48 读取仓库, 读取配置过滤文件</p>
+<p>2025-07-2515:32:05 有152 个文档，根据配置拆分成 1854 chunk</p>
+<p>…</p>
+<p>调用 olamam 的 /api/embeddings 接口，使用 nomic-embed-text 模型，进行 embedding 转化和存储，生成 VectorStore</p>
+<p>…</p>
+<p>2025-07-2515:46:21<strong>Successfully</strong>processed 1854/1854 documents with consistent embeddings</p>
+<p>2025-07-2515:46:21FAISS retriever created successfully（Facebook AI Similarity Search， 做相似性搜索的，VectorStore =&gt;  Retriever）</p>
+<p>2025-07-2515:46:21生成 wiki 的结构</p>
+<p>…</p>
+<p>按照结构分段式的给提示生成wiki</p>
+<p>…</p>
+<p>2025-07-2516:55:51Wiki cache<strong>successfully</strong>saved to /.adalflow/wikicache/deepwiki_cache_local_local_A_zh.json</p>
+<h2 id="workflow"><a href="#workflow" class="headerlink" title="workflow"></a>workflow</h2><p>1.获取仓库，在线的本地公开的私有的(需要提供 token)都可以</p>
+<ol start="2">
+<li>使用<a target="_blank" rel="noopener" href="https://adalflow.sylph.ai/tutorials/text_splitter.html#how-to-use-it">text_splitter</a>拆分 chunk，过长的文档可能会难以适配模型的上下文，以及后面检索的步骤</li>
+</ol>
+<ul>
+<li><p>可以通过配置调整传递给 text splitter 的参数</p>
+<ul>
+<li>split_by：默认 word，按词汇拆分，支持的值：<code>&quot;word&quot;</code>,<code>&quot;sentence&quot;</code>,<code>&quot;page&quot;</code>,<code>&quot;passage&quot;</code>, and<code>&quot;token&quot;</code> </li>
+<li>chunk_size=350</li>
+<li>chunk_overlap=100，可以和上一个chunk重合的词汇数量，用于维护分块之间的上下文</li>
+<li>batch_size=1000, 可以批量处理的chunk数量，这个就看电脑配置了</li>
+</ul>
+</li>
+<li><p>/api/embeddings 接口 转化成向量，配置调整可以参考<a target="_blank" rel="noopener" href="https://adalflow.sylph.ai/new_tutorials/embedder.html">adalflow-embedder</a>和<a target="_blank" rel="noopener" href="https://github.com/ollama/ollama/blob/main/docs/modelfile.md#valid-parameters-and-values">ollom 的文档</a></p>
+</li>
+<li><p>使用 AdalFlow’s LocalDB 进行<strong>存储</strong></p>
+</li>
+<li><p>生成<a target="_blank" rel="noopener" href="https://adalflow.sylph.ai/tutorials/retriever.html#faissretriever">FAISS Retriever</a>，Facebook AI Similarity Search 相似性搜索</p>
+</li>
+<li><p>收到用户需求后，先查缓存，如果没有，携带readme + 文件树 + prompt 传递给模型生成 wiki 结构</p>
+</li>
+<li><p>根据结构，一个章节一个章节的进行：prompt 转化 =&gt; 向量检索 =&gt; 传递给模型 =&gt; 持续接收流以及转发给前端</p>
+</li>
+<li><p>prompt 转化为向量，进行FAISS 向量检索, 获取文档索引</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><figcaption><span>Text</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">retrieve_embedder = self.query_embedder if self.is_ollama_embedder else self.embedder</span><br><span class="line">            self.retriever = FAISSRetriever(</span><br><span class="line">                \*\*configs[&quot;retriever&quot;],</span><br><span class="line">                embedder=retrieve_embedder,</span><br><span class="line">                documents=self.transformed_docs,</span><br><span class="line">                document_map_func=lambda doc: doc.vector,</span><br><span class="line">            )</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>通过索引寻找文档</li>
+</ul>
+<figure class="highlight plaintext"><figcaption><span>Text</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">retrieved_documents[0].documents = [</span><br><span class="line">    self.transformed_docs[doc_index]</span><br><span class="line">    for doc_index in retrieved_documents[0].doc_indices</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>将文件内容填充进prompt</li>
+</ul>
+<figure class="highlight plaintext"><figcaption><span>Text</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">if retrieved_documents and retrieved_documents[0].documents:</span><br><span class="line">    \# Format context for the prompt in a more structured way</span><br><span class="line">    documents = retrieved_documents[0].documents</span><br><span class="line">    logger.info(f&quot;Retrieved &#123;len(documents)&#125; documents&quot;)</span><br><span class="line"></span><br><span class="line">    \# Group documents by file path</span><br><span class="line">    docs_by_file = &#123;&#125;</span><br><span class="line">    for doc in documents:</span><br><span class="line">        file_path = doc.meta_data.get(&#x27;file_path&#x27;, &#x27;unknown&#x27;)</span><br><span class="line">        if file_path not in docs_by_file:</span><br><span class="line">            docs_by_file[file_path] = []</span><br><span class="line">        docs_by_file[file_path].append(doc)</span><br><span class="line"></span><br><span class="line">    \# Format context text with file path grouping</span><br><span class="line">    context_parts = []</span><br><span class="line">    for file_path, docs in docs_by_file.items():</span><br><span class="line">        \# Add file header with metadata</span><br><span class="line">        header = f&quot;\#\# File Path: &#123;file_path&#125;\n\n&quot;</span><br><span class="line">        \# Add document content</span><br><span class="line">        content = &quot;\n\n&quot;.join([doc.text for doc in docs])</span><br><span class="line"></span><br><span class="line">        context_parts.append(f&quot;&#123;header&#125;&#123;content&#125;&quot;)</span><br><span class="line"></span><br><span class="line">    \# Join all parts with clear separation</span><br><span class="line">    context_text = &quot;\n\n&quot; + &quot;-&quot; \* 10 + &quot;\n\n&quot;.join(context_parts)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>调用 api/generate 接口向模型发起请求，持续接收流以及转发给前端</li>
+</ul>
+<figure class="highlight plaintext"><figcaption><span>Text</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">response = await model.acall(api_kwargs=api_kwargs, model_type=ModelType.LLM)</span><br><span class="line">                \# Handle streaming response from Ollama</span><br><span class="line">                async for chunk in response:</span><br><span class="line">                    text = getattr(chunk, &#x27;response&#x27;, None) or getattr(chunk, &#x27;text&#x27;, None) or str(chunk)</span><br><span class="line">                    if text and not text.startswith(&#x27;model=&#x27;) and not text.startswith(&#x27;created_at=&#x27;):</span><br><span class="line">                        text = text.replace(&#x27;&lt;think&gt;&#x27;, &#x27;&#x27;).replace(&#x27;&lt;/think&gt;&#x27;, &#x27;&#x27;)</span><br><span class="line">                        await websocket.send_text(text)</span><br></pre></td></tr></table></figure>
+
+<h2 id="实践问题"><a href="#实践问题" class="headerlink" title="实践问题"></a>实践问题</h2><h3 id="No-valid-XML-found-in-response"><a href="#No-valid-XML-found-in-response" class="headerlink" title="No valid XML found in response"></a><strong>No valid XML found in response</strong></h3><p>只是一个笼统的报错，检查 application.log，可以找到真实的原因，多半和 embedding 模型有关系</p>
+<ul>
+<li><p>有可能 embedding model 不存在</p>
+</li>
+<li><p>达到最大限制，尤其如果仓库文件包含不寻常的格式很有可能促使达到限制</p>
+</li>
+<li><p>删除文件 ～/.adalflow</p>
+</li>
+<li><p>如果日志说No valid document embeddings found，在 read_all_documents 函数里没有找到文档</p>
+<ul>
+<li>检查一下配置里的文件过滤file_filters， 以及看下日志里的过滤模式，文件过滤模式分为 include 和 exlcude，优先 include 后 exclude</li>
+<li>在界面上设置过的配置会保存在 localstorge，可以清下前端缓存</li>
+</ul>
+</li>
+</ul>
+<p>可以看看这个 issue 自查<a target="_blank" rel="noopener" href="https://github.com/AsyncFuncAI/deepwiki-open/issues/198">https://github.com/AsyncFuncAI/deepwiki-open/issues/198</a></p>
+<h3 id="速度很慢"><a href="#速度很慢" class="headerlink" title="速度很慢"></a>速度很慢</h3><p>从项目实践来看，152 个文档，1854 chunk，一个半小时</p>
+<p>时间问题和仓库大小电脑配置都有关系，从时间线来看，前面消化数据的时间都差不多，主要差异是在后半段耗时会比较长，prompt转化+向量检索+等待模型生成内容，一个生成大概十分钟左右，wiki结构 + 9个page，10个*10分钟</p>
+<p>如果前面wiki结构生成花的时间很长，那可能 readme 的内容是不是太多</p>
+<p>tips：最好用空闲时间来生成，电脑会很卡</p>
+<p><strong>优化措施</strong></p>
+<ul>
+<li><p>尽可能过滤不需要的文件和文件夹，这是最直接的方式，减少chunk减少向量，一些样式 / test / mock 文件….</p>
+</li>
+<li><p>调整 prompt 删减一些不需要章节</p>
+</li>
+<li><p>可以尝试在 embedder.json 中减少 num_ctx, chunk_size, and chunk_overlap</p>
+</li>
+<li><p>尝试切换模型</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Model</strong></th>
+<th><strong>Size</strong></th>
+<th><strong>Speed</strong></th>
+<th><strong>Quality</strong></th>
+<th><strong>Use Case</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>phi3:mini</td>
+<td>1.3GB</td>
+<td>Fast</td>
+<td>Good</td>
+<td>Small projects, quick testing</td>
+</tr>
+<tr>
+<td>qwen3:1.7b</td>
+<td>3.8GB</td>
+<td>Medium</td>
+<td>Better</td>
+<td>Default, good balance</td>
+</tr>
+<tr>
+<td>llama3:8b</td>
+<td>8GB</td>
+<td>Slow</td>
+<td>Best</td>
+<td>Complex projects, detailed analysis</td>
+</tr>
+</tbody></table>
+<h3 id="Module-not-found-Can’t-resolve-‘-vercel-turbopack-next-internal-font-google-font’"><a href="#Module-not-found-Can’t-resolve-‘-vercel-turbopack-next-internal-font-google-font’" class="headerlink" title="Module not found: Can’t resolve ‘@vercel/turbopack-next/internal/font/google/font’"></a>Module not found: Can’t resolve ‘@vercel/turbopack-next/internal/font/google/font’</h3><p>日语字体加载失败，可以删除</p>
+<p>deepwiki-open/src/app/layout.tsx</p>
+<h3 id="如何调整文档的生成"><a href="#如何调整文档的生成" class="headerlink" title="如何调整文档的生成"></a>如何调整文档的生成</h3><p>一开头可以选择类型，全面/简洁，这个类型会影响 prompt</p>
+<p>但是文档的结构 以及每个章节的生成，在 ./deepwiki-open/src/app/[owner]/[repo]/page.tsx 里的 RepoWikiPage 和 generatePageContent函数，可以通过修改 promopt 来调整</p>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p>作者简单介绍了他的初衷，deepwiki的功能和机制<a target="_blank" rel="noopener" href="https://medium.com/@sjng/deepwiki-why-i-open-sourced-an-ai-powered-wiki-generator-b67b624e4679">DeepWiki: Why I Open-Sourced an AI-Powered Wiki Generator</a></p>
+<p>可以用来了解 rag 和检索流程<a target="_blank" rel="noopener" href="https://js.langchain.com/docs/tutorials/rag">https://js.langchain.com/docs/tutorials/rag</a></p>
+<p>deepwiki的文档，可以帮助了解源码<a target="_blank" rel="noopener" href="https://deepwiki.com/AsyncFuncAI/deepwiki-open/5-backend-implementation#websocket-communication">https://deepwiki.com/AsyncFuncAI/deepwiki-open/5-backend-implementation#websocket-communication</a><a target="_blank" rel="noopener" href="https://deepwiki.com/AsyncFuncAI/deepwiki-open">https://deepwiki.com/AsyncFuncAI/deepwiki-open</a><a target="_blank" rel="noopener" href="https://deepwiki.com/AsyncFuncAI/deepwiki-open/5-backend-implementation#websocket-communication">https://deepwiki.com/AsyncFuncAI/deepwiki-open/5-backend-implementation#websocket-communication</a></p>
+</div><link rel="stylesheet" href="/css/partial/footer.css"><div class="footer"><p><span>Copyright © 2017 - 2023</span><a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/">蜀ICP备19024124号</a></p><p><i class="iconfont iconchakan"><span>本站总访问量</span><span id="busuanzi_container_site_pv">  <span id="busuanzi_value_site_pv"></span> </span></i><i class="iconfont iconabout"><span>本站访客数</span><span id="busuanzi_container_site_uv">  <span id="busuanzi_value_site_uv"></span> </span></i></p></div></div><script> <console class="log" page theme></console></script></div></div><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></body></html>

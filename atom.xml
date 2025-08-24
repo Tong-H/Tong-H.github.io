@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://mser.xyz/"/>
-  <updated>2025-07-02T23:54:21.800Z</updated>
+  <updated>2025-08-24T06:33:24.672Z</updated>
   <id>https://mser.xyz/</id>
   
   <author>
@@ -17,11 +17,137 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CAT-TV</title>
+    <link href="https://mser.xyz/2025/08/03/fish_tank/"/>
+    <id>https://mser.xyz/2025/08/03/fish_tank/</id>
+    <published>2025-08-02T16:00:00.000Z</published>
+    <updated>2025-08-24T06:33:24.672Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;0803&quot;&gt;&lt;a href=&quot;#0803&quot; class=&quot;headerlink&quot; title=&quot;0803&quot;&gt;&lt;/a&gt;0803&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;i set up a small fish tank as a CAT TV for
+        
+      
+    
+    </summary>
+    
+      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2025-08</title>
+    <link href="https://mser.xyz/2025/08/01/202508/"/>
+    <id>https://mser.xyz/2025/08/01/202508/</id>
+    <published>2025-07-31T16:00:00.000Z</published>
+    <updated>2025-08-24T07:05:23.294Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;0803&quot;&gt;&lt;a href=&quot;#0803&quot; class=&quot;headerlink&quot; title=&quot;0803&quot;&gt;&lt;/a&gt;0803&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;learn from deepwiki-open code and go though rag
+        
+      
+    
+    </summary>
+    
+      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>AI 实践-DeepWiki-open 为项目生成 wiki 文档</title>
+    <link href="https://mser.xyz/2025/07/20/ai-deepwiki/"/>
+    <id>https://mser.xyz/2025/07/20/ai-deepwiki/</id>
+    <published>2025-07-19T16:00:00.000Z</published>
+    <updated>2025-08-03T17:34:21.404Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;有一些仓库的 readme 文件很草率，如果作为一个新人去接手一个仓库，看完 readme
+        
+      
+    
+    </summary>
+    
+      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
+    
+    
+      <category term="ai" scheme="https://mser.xyz/tags/ai/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI practice-use `cursor` to migrate features from an old project to a new one.</title>
+    <link href="https://mser.xyz/2025/07/20/ai_project_migration/"/>
+    <id>https://mser.xyz/2025/07/20/ai_project_migration/</id>
+    <published>2025-07-19T16:00:00.000Z</published>
+    <updated>2025-08-03T16:54:10.827Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;background&quot;&gt;&lt;a href=&quot;#background&quot; class=&quot;headerlink&quot; title=&quot;background&quot;&gt;&lt;/a&gt;background&lt;/h2&gt;&lt;p&gt;I’ve got to migrate pages from an old
+        
+      
+    
+    </summary>
+    
+      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
+    
+    
+      <category term="ai" scheme="https://mser.xyz/tags/ai/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在富文本编辑器中处理图文资源</title>
+    <link href="https://mser.xyz/2025/07/13/img_in_richeditor/"/>
+    <id>https://mser.xyz/2025/07/13/img_in_richeditor/</id>
+    <published>2025-07-12T16:00:00.000Z</published>
+    <updated>2025-08-03T17:23:42.106Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;功能是在富文本编辑器创建/编辑一些图文内容, 图文图文, “文”没什么需要操心的, 主要是“图”
+        
+      
+    
+    </summary>
+    
+      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>2025-07</title>
     <link href="https://mser.xyz/2025/07/01/202507/"/>
     <id>https://mser.xyz/2025/07/01/202507/</id>
     <published>2025-06-30T16:00:00.000Z</published>
-    <updated>2025-07-02T23:54:21.800Z</updated>
+    <updated>2025-08-24T07:02:42.375Z</updated>
     
     <summary type="html">
     
@@ -63,6 +189,32 @@
     
       <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
     
+    
+  </entry>
+  
+  <entry>
+    <title>AI 实践-Memory Bank</title>
+    <link href="https://mser.xyz/2025/07/01/ai_memorybank/"/>
+    <id>https://mser.xyz/2025/07/01/ai_memorybank/</id>
+    <published>2025-06-30T16:00:00.000Z</published>
+    <updated>2025-08-03T16:23:03.708Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Cline&quot;&gt;&lt;a href=&quot;#Cline&quot; class=&quot;headerlink&quot; title=&quot;Cline&quot;&gt;&lt;/a&gt;Cline&lt;/h1&gt;&lt;h2 id=&quot;集成&quot;&gt;&lt;a href=&quot;#集成&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
+    
+    
+      <category term="ai" scheme="https://mser.xyz/tags/ai/"/>
     
   </entry>
   
@@ -120,7 +272,7 @@
     <link href="https://mser.xyz/2025/06/01/notes_ai/"/>
     <id>https://mser.xyz/2025/06/01/notes_ai/</id>
     <published>2025-05-31T16:00:00.000Z</published>
-    <updated>2025-07-02T23:44:00.421Z</updated>
+    <updated>2025-08-03T16:23:03.730Z</updated>
     
     <summary type="html">
     
@@ -128,7 +280,7 @@
       
         
         
-          &lt;h2 id=&quot;memory-bank&quot;&gt;&lt;a href=&quot;#memory-bank&quot; class=&quot;headerlink&quot; title=&quot;memory bank&quot;&gt;&lt;/a&gt;memory bank&lt;/h2&gt;&lt;p&gt;maintain context across
+          &lt;h2 id=&quot;MCP-ModelContextProtocol&quot;&gt;&lt;a href=&quot;#MCP-ModelContextProtocol&quot; class=&quot;headerlink&quot;
         
       
     
@@ -371,171 +523,6 @@
     
     
       <category term="micro_frontend" scheme="https://mser.xyz/tags/micro-frontend/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>202501 &amp; before</title>
-    <link href="https://mser.xyz/2025/01/11/202501/"/>
-    <id>https://mser.xyz/2025/01/11/202501/</id>
-    <published>2025-01-10T16:00:00.000Z</published>
-    <updated>2025-03-23T03:56:18.959Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;2023-7-19&quot;&gt;&lt;a href=&quot;#2023-7-19&quot; class=&quot;headerlink&quot; title=&quot;2023/7/19&quot;&gt;&lt;/a&gt;2023/7/19&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;CSS filter&lt;/code&gt; can form
-        
-      
-    
-    </summary>
-    
-      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>janpan words</title>
-    <link href="https://mser.xyz/2024/11/17/notes_jpwords/"/>
-    <id>https://mser.xyz/2024/11/17/notes_jpwords/</id>
-    <published>2024-11-16T21:54:34.000Z</published>
-    <updated>2025-02-23T06:57:45.792Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;名前-vs-名字&quot;&gt;&lt;a href=&quot;#名前-vs-名字&quot; class=&quot;headerlink&quot; title=&quot;名前 vs 名字&quot;&gt;&lt;/a&gt;名前 vs 名字&lt;/h2&gt;&lt;p&gt;名字 pecifically refer to a person’s family
-        
-      
-    
-    </summary>
-    
-      <category term="Notes" scheme="https://mser.xyz/categories/Notes/"/>
-    
-    
-      <category term="japanese" scheme="https://mser.xyz/tags/japanese/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>japanese</title>
-    <link href="https://mser.xyz/2023/11/17/notes_jp/"/>
-    <id>https://mser.xyz/2023/11/17/notes_jp/</id>
-    <published>2023-11-16T16:00:00.000Z</published>
-    <updated>2025-06-11T11:48:43.594Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;quick-review&quot;&gt;&lt;a href=&quot;#quick-review&quot; class=&quot;headerlink&quot; title=&quot;quick-review&quot;&gt;&lt;/a&gt;quick-review&lt;/h2&gt;&lt;h3 id=&quot;nasty-words&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Notes" scheme="https://mser.xyz/categories/Notes/"/>
-    
-    
-      <category term="japanese" scheme="https://mser.xyz/tags/japanese/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>three.js</title>
-    <link href="https://mser.xyz/2023/09/08/node_graphic/"/>
-    <id>https://mser.xyz/2023/09/08/node_graphic/</id>
-    <published>2023-09-07T16:00:00.000Z</published>
-    <updated>2025-02-16T07:05:09.370Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;strong&gt;PBR&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;anti-aliasing&lt;/strong&gt; 反锯齿&lt;br&gt;&lt;strong&gt;multi-sample anti-aliasing&lt;/strong&gt; 多重采样, this is a build-in WebGL
-        
-      
-    
-    </summary>
-    
-      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
-    
-    
-      <category term="threeJs" scheme="https://mser.xyz/tags/threeJs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>i18n-plan 前端多语言方案</title>
-    <link href="https://mser.xyz/2023/06/06/i18n/"/>
-    <id>https://mser.xyz/2023/06/06/i18n/</id>
-    <published>2023-06-06T06:50:05.000Z</published>
-    <updated>2025-02-16T06:55:45.063Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;想要给大家介绍一个 i18n 插件，写这个插件的起源也是因为项目中对 i18n 的需求，这个插件覆盖了我们项目中遇到的大部分 i18n 需求，说不定也能覆盖你的，try 一 try 不后悔&lt;/p&gt;
-&lt;p&gt;集成 &lt;strong&gt;ChatGPT 和
-        
-      
-    
-    </summary>
-    
-      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
-    
-    
-      <category term="国际化" scheme="https://mser.xyz/tags/%E5%9B%BD%E9%99%85%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>mac_shortcuts</title>
-    <link href="https://mser.xyz/2023/05/11/notes_mac/"/>
-    <id>https://mser.xyz/2023/05/11/notes_mac/</id>
-    <published>2023-05-10T16:00:00.000Z</published>
-    <updated>2025-07-02T23:27:57.997Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;shortcuts&lt;/th&gt;
-&lt;th&gt;des&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td&gt;control-space&lt;/td&gt;
-&lt;td&gt;switch between input
-        
-      
-    
-    </summary>
-    
-      <category term="Notes" scheme="https://mser.xyz/categories/Notes/"/>
-    
-    
-      <category term="mac" scheme="https://mser.xyz/tags/mac/"/>
     
   </entry>
   
