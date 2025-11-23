@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://mser.xyz/"/>
-  <updated>2025-08-24T06:33:24.672Z</updated>
+  <updated>2025-11-23T06:10:53.082Z</updated>
   <id>https://mser.xyz/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>CAT-TV</title>
-    <link href="https://mser.xyz/2025/08/03/fish_tank/"/>
-    <id>https://mser.xyz/2025/08/03/fish_tank/</id>
-    <published>2025-08-02T16:00:00.000Z</published>
-    <updated>2025-08-24T06:33:24.672Z</updated>
+    <title>nonsense</title>
+    <link href="https://mser.xyz/2025/11/09/nonsense/"/>
+    <id>https://mser.xyz/2025/11/09/nonsense/</id>
+    <published>2025-11-08T16:00:00.000Z</published>
+    <updated>2025-11-23T06:10:53.082Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,57 @@
       
         
         
-          &lt;h2 id=&quot;0803&quot;&gt;&lt;a href=&quot;#0803&quot; class=&quot;headerlink&quot; title=&quot;0803&quot;&gt;&lt;/a&gt;0803&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;i set up a small fish tank as a CAT TV for
+          &lt;p&gt;i’ve learned a bit of …. philosophy. well, yes…. philosophy. this word itself is used like a fraud to me. however, i’ve been grappling
+        
+      
+    
+    </summary>
+    
+      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>202509-202511</title>
+    <link href="https://mser.xyz/2025/09/01/202509/"/>
+    <id>https://mser.xyz/2025/09/01/202509/</id>
+    <published>2025-08-31T16:00:00.000Z</published>
+    <updated>2025-11-23T06:00:43.606Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;0921&quot;&gt;&lt;a href=&quot;#0921&quot; class=&quot;headerlink&quot; title=&quot;0921&quot;&gt;&lt;/a&gt;0921&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;vibe coding, coding with a good vibe, where you’re
+        
+      
+    
+    </summary>
+    
+      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CAT-TV</title>
+    <link href="https://mser.xyz/2025/08/03/fish_tank/"/>
+    <id>https://mser.xyz/2025/08/03/fish_tank/</id>
+    <published>2025-08-02T16:00:00.000Z</published>
+    <updated>2025-11-09T05:54:31.071Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;0803&quot;&gt;&lt;a href=&quot;#0803&quot; class=&quot;headerlink&quot; title=&quot;0803&quot;&gt;&lt;/a&gt;0803&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;i set up a small fish tank as a CAT TV for
         
       
     
@@ -45,7 +95,7 @@
     <link href="https://mser.xyz/2025/08/01/202508/"/>
     <id>https://mser.xyz/2025/08/01/202508/</id>
     <published>2025-07-31T16:00:00.000Z</published>
-    <updated>2025-08-24T07:05:23.294Z</updated>
+    <updated>2025-08-30T19:40:04.333Z</updated>
     
     <summary type="html">
     
@@ -223,7 +273,7 @@
     <link href="https://mser.xyz/2025/06/10/Maxillofacial-fracture/"/>
     <id>https://mser.xyz/2025/06/10/Maxillofacial-fracture/</id>
     <published>2025-06-09T16:00:00.000Z</published>
-    <updated>2025-07-02T23:57:19.687Z</updated>
+    <updated>2025-11-09T04:42:10.010Z</updated>
     
     <summary type="html">
     
@@ -272,7 +322,7 @@
     <link href="https://mser.xyz/2025/06/01/notes_ai/"/>
     <id>https://mser.xyz/2025/06/01/notes_ai/</id>
     <published>2025-05-31T16:00:00.000Z</published>
-    <updated>2025-08-03T16:23:03.730Z</updated>
+    <updated>2025-11-09T04:22:22.468Z</updated>
     
     <summary type="html">
     
@@ -280,7 +330,8 @@
       
         
         
-          &lt;h2 id=&quot;MCP-ModelContextProtocol&quot;&gt;&lt;a href=&quot;#MCP-ModelContextProtocol&quot; class=&quot;headerlink&quot;
+          &lt;h2 id=&quot;claude-code&quot;&gt;&lt;a href=&quot;#claude-code&quot; class=&quot;headerlink&quot; title=&quot;claude code&quot;&gt;&lt;/a&gt;claude code&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;error: country is not
         
       
     
@@ -469,60 +520,6 @@
     
       <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>使用 Gitlab CI/CD 自动打包和部署微前端</title>
-    <link href="https://mser.xyz/2025/01/23/gitlab_cicd/"/>
-    <id>https://mser.xyz/2025/01/23/gitlab_cicd/</id>
-    <published>2025-01-23T12:50:05.000Z</published>
-    <updated>2025-02-16T07:11:34.805Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;前段时间&lt;a href=&quot;https://tong-h.github.io/2025/01/23/micro_frontend&quot;&gt;微前端实践:single-spa+vite&lt;/a&gt;的方式对项目进行了整合，也用 &lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
-    
-    
-      <category term="micro_frontend" scheme="https://mser.xyz/tags/micro-frontend/"/>
-    
-      <category term="CI/CD" scheme="https://mser.xyz/tags/CI-CD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微前端实践:single-spa+vite</title>
-    <link href="https://mser.xyz/2025/01/23/micro_frontend/"/>
-    <id>https://mser.xyz/2025/01/23/micro_frontend/</id>
-    <published>2025-01-23T12:50:05.000Z</published>
-    <updated>2025-03-23T05:04:28.772Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;背景介绍&quot;&gt;&lt;a href=&quot;#背景介绍&quot; class=&quot;headerlink&quot; title=&quot;背景介绍&quot;&gt;&lt;/a&gt;背景介绍&lt;/h2&gt;&lt;p&gt;前段时间&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
-    
-    
-      <category term="micro_frontend" scheme="https://mser.xyz/tags/micro-frontend/"/>
     
   </entry>
   

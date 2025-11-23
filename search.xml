@@ -4866,6 +4866,23 @@ console.log(jso4);
 <li>[く]う, causal</li>
 </ul>
 </li>
+<li><p>生</p>
+<ul>
+<li>訓読み<ul>
+<li>[なま] fresh raw, mostly used in food areas<ul>
+<li>生魚</li>
+</ul>
+</li>
+<li>[う]生まれます</li>
+</ul>
+</li>
+<li>音読み<ul>
+<li>[せい]生存</li>
+<li>[しょう]一生</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <h3 id="verb-transforming"><a href="#verb-transforming" class="headerlink" title="verb-transforming"></a>verb-transforming</h3><ul>
 <li>ます2：い、ます、きます、します<ul>
@@ -6295,7 +6312,7 @@ console.log(jso4);
 </ul>
 </li>
 </ul>
-<h2 id="conditionalForm"><a href="#conditionalForm" class="headerlink" title="conditionalForm"></a>conditionalForm</h2><h3 id="たら"><a href="#たら" class="headerlink" title="たら"></a>たら</h3><p>can be used in a <em>wider range</em> of contexts, including past, present, and future conditions.</p>
+<h2 id="conditionalForm"><a href="#conditionalForm" class="headerlink" title="conditionalForm"></a>conditionalForm</h2><h3 id="たら"><a href="#たら" class="headerlink" title="たら"></a>たら</h3><p>can be used in a <em>wider range</em> of contexts, including past, present, and future conditions.　“after\when/if I did …”</p>
 <ul>
 <li><em>verbs, adj and noun</em>: replace た to たら in the past form</li>
 <li><em>special</em>: remove は from  the past negative of さ adj and noun</li>
@@ -9378,8 +9395,8 @@ console.log(jso4);
 <td>New a window as focused one</td>
 </tr>
 <tr>
-<td>Command-m</td>
-<td>Minimize</td>
+<td>Command-m/Command-up</td>
+<td>Minimize/re-open</td>
 </tr>
 <tr>
 <td>Fn-Control-F</td>
@@ -9631,8 +9648,8 @@ console.log(jso4);
     <content><![CDATA[<p>well, congratulation to me, learned a new word <code>Maxillofacial fracture</code>, and i’m sure i’ll remember it for the rest of my life.</p>
 <p>i barely recall how it all happened – there’s not much memory left with me. the road is just opened, and the street lights aren’t start working. it’s almost pitch-black, and barely see the road surface. i guess my wheels get stuck in a rock or stick. since the road slopes downward, i’m definitely not going slow — i guess, without a little speeding there’s no way i could have this face now. i‘m not really aware of how badly i’m hurt, until looking at myself in the hospital washroom mirror. with this face, i could scare kids into crying effortlessly, or play as an NPC in a haunted house—i guess i’d be welcomed there. i transferring from a small hospital to a medium-sized one, and eventually settling in one of the city’s biggest. truly thankful for my friends. whether at work or in life, i prefer not to brother others. it’s almost midnight. if put myself in this shoes, i know i’d struggle. but maybe, in these small troubles that real connections grow.</p>
 <p>about the surgery. sometimes fractures can heal naturally over time. but the bones can heal in a wrong position, and cause facial asymmetry. however, no choice leaves to me, since i can’t open my mouth wide. the breaking bones are pressing against the bones of mouth. the surgery is going very well, except the part of anesthetic injection. as my mouth couldn’t open wide enough. so the doctor have to inject it from my throat while i’m still conscious 🤐 . however, it wasn’t as scary as I imagined.</p>
-<p>while lying in a hospital bed with nothing to do, i often wonder if i will stop skateboarding. the answer comes to my mind is yes — because fear speaks louder than anything else. only when confined in a hospital bed, i come to truly appreciate the comfort of home and the priceless value of a healthy body. i may not afraid of the final curtain call, but the endless waiting in the wings terrifies me. i already witnessed several accidents, and i should have heeded their lessons with greater caution. yet, i failed to learn from the past – i ignored the risks and dangers for too long, or perhaps misjudging my own limits, blinded by overconfidence. this time, i pay my price for my shallow wisdom and careless actions, and in return, i re-gain a deeper reverence. life stretches far beyond this moment, i still long for the freedom, the thrill, the joy that skateboarding brings to me. so the final answer remains i refuse to stop.</p>
-<p><strong>however, the fear will stay with me, a constant reminder to approach every action with cautions, never rush, always be mindful and patient.</strong></p>
+<p>while lying in a hospital bed with nothing to do, i often wonder if i will stop skateboarding. the answer comes to my mind is yes — because fear speaks louder than anything else. only when confined in a hospital bed, i come to truly appreciate the comfort of home and the priceless value of a healthy body. i may not afraid of the final curtain call, but the endless waiting in the wings terrifies me. i already witnessed several accidents, and i should have heeded their lessons with greater caution. yet, i failed to learn from the past – i ignored the risks and dangers for too long, or perhaps misjudging my own limits, blinded by overconfidence. </p>
+<p><strong>this time, i pay my price for my shallow wisdom and careless actions, and in return, i re-gain a deeper reverence. life stretches far beyond this moment, i still long for the freedom, the thrill, the joy that skateboarding brings to me. so the final answer remains i refuse to stop. however, the fear will stay with me, a constant reminder to approach every action with cautions, never rush, always be mindful and patient.</strong></p>
 ]]></content>
       <categories>
         <category>Daily Snippets</category>
@@ -9641,7 +9658,20 @@ console.log(jso4);
   <entry>
     <title>ai</title>
     <url>/2025/06/01/notes_ai/</url>
-    <content><![CDATA[<h2 id="MCP-ModelContextProtocol"><a href="#MCP-ModelContextProtocol" class="headerlink" title="MCP-ModelContextProtocol"></a>MCP-ModelContextProtocol</h2><ul>
+    <content><![CDATA[<h2 id="claude-code"><a href="#claude-code" class="headerlink" title="claude code"></a>claude code</h2><ul>
+<li><p>error: country is not support , and i use US vpn node with global model</p>
+<ul>
+<li>test if it’s really the reason of country<br>  curl <a href="https://ipinfo.io/">https://ipinfo.io</a></li>
+</ul>
+</li>
+<li><p>try disable ipv6, some vpn only proxy ipv4. not work</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># disable</span></span><br><span class="line">sudo networksetup -setv6off <span class="string">&quot;Wi-Fi&quot;</span></span><br><span class="line"><span class="comment"># recover</span></span><br><span class="line">sudo networksetup -setv6automatic <span class="string">&quot;Wi-Fi&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>vpn proxy doesn’t system-wide covering</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># check vpn port</span></span><br><span class="line">lsof -iTCP -sTCP:LISTEN -nP | grep -E <span class="string">&#x27;v2ray|clash|qv2ray&#x27;</span></span><br><span class="line">curl -x socks5h://127.0.0.1:1080 https://ipinfo.io <span class="comment"># test</span></span><br><span class="line"><span class="comment"># set macOS system proxy</span></span><br><span class="line">sudo networksetup -setsocksfirewallproxy <span class="string">&quot;Wi-Fi&quot;</span> 127.0.0.1 1080</span><br><span class="line">sudo networksetup -setsocksfirewallproxystate <span class="string">&quot;Wi-Fi&quot;</span> on</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="MCP-ModelContextProtocol"><a href="#MCP-ModelContextProtocol" class="headerlink" title="MCP-ModelContextProtocol"></a>MCP-ModelContextProtocol</h2><ul>
 <li><p>allows AI models to access and utilize external resources—such as databases, APIs, and local files—without the need for custom integrations for each data source.</p>
 </li>
 <li><p>it’s particularly beneficial in scenarios where AI models need to interact with multiple data sources or tools.</p>
@@ -9666,7 +9696,12 @@ console.log(jso4);
 <li>avoid use <code>npx</code>. install packages globally, and then run them using <code>node</code> from their path</li>
 </ul>
 </li>
-<li><p>the official documents and some articles may not follow the updating of Sdk, as many fields and params have changed</p>
+<li><p>the official documents and some articles may not follow the updating of Sdk</p>
+<ul>
+<li><a href="https://github.com/modelcontextprotocol/typescript-sdk">typescript-sdk</a></li>
+<li><a href="https://github.com/modelcontextprotocol/typescript-sdk/tree/main/src/examples">examples</a></li>
+<li><a href="https://github.com/modelcontextprotocol/servers/tree/main/src/everything">a test server for showcase MCP capabilities</a></li>
+</ul>
 </li>
 <li><p>debugger</p>
 <ul>
@@ -10161,6 +10196,11 @@ console.log(jso4);
 <li><a href="/2025/08/03/fish_tank/">CAT-TV</a></li>
 <li>the weather is being annoying this week. like the weather is running on a loop task set by God,  ten minutes of rain and then finish, and few hours later start again. God : oh, just wanna keep the ground wet, isn’t that nice? you’re welcome!🙃🙃🙃</li>
 </ul>
+<h2 id="0829"><a href="#0829" class="headerlink" title="0829"></a>0829</h2><ul>
+<li>zustand</li>
+<li>playwright actions</li>
+<li><a href="/2025/08/03/fish_tank/">CAT-TV</a></li>
+</ul>
 ]]></content>
       <categories>
         <category>Daily Snippets</category>
@@ -10169,7 +10209,10 @@ console.log(jso4);
   <entry>
     <title>CAT-TV</title>
     <url>/2025/08/03/fish_tank/</url>
-    <content><![CDATA[<h2 id="0803"><a href="#0803" class="headerlink" title="0803"></a>0803</h2><p><strong>i set up a small fish tank as a CAT TV for hello.</strong> i bought some fish and shrimp online, they are really tiny, barely bigger than a mosquito. but <strong>hello doesn’t seems interesting in them at all</strong>. I can’t believe a cat wouldn’t enjoy watching a group of fish swimming around. It makes me wonder if he can even see such small fish. but cats are supposed to have good eyesight. let’s just wait and see</p>
+    <content><![CDATA[<h2 id="0803"><a href="#0803" class="headerlink" title="0803"></a>0803</h2><ul>
+<li><strong>i set up a small fish tank as a CAT TV for hello.</strong> i bought some fish and shrimp online, they are really tiny, barely bigger than a mosquito. however <strong>hello doesn’t seems interesting in them at all</strong>. I can’t believe a cat wouldn’t enjoy watching a group of fish swimming around. It makes me wonder if he can even see such small fish. but cats are supposed to have good eyesight.</li>
+<li>let’s just wait and see</li>
+</ul>
 <h2 id="0817"><a href="#0817" class="headerlink" title="0817"></a>0817</h2><ul>
 <li><strong>the fish are still swimming in the tank</strong>. I haven’t see any fish or shrimp floating on the surface, so maybe none have died</li>
 <li><strong>mosquitoes have increased</strong>—it’s really annoying. I suspect the fish tank has something to do with this. sleeping in a room with a cat pet, i lost the killing weapon-the old but the most useful killer-mosquitoes incense. ALL I CAN DO IS SUFFER🤬🤬🤬. getting woken up by mosquitoes in the middle of the night makes me want to kill both Hello and the mosquitoes</li>
@@ -10179,6 +10222,178 @@ console.log(jso4);
 <li>this actually beyond my expectation. I thought fish ware difficult to keep alive, and i didn’t prepare much …. my ingrained belief is break. <u><strong>some precious fish require special conditions to survive, but there are always, some lives weed-like, strong and stubborn. if they are fighting to survive, i’d support them</strong></u>.</li>
 <li>i’ve changed my mind-i’m planning to get some larger fish. let’s give it a second try, and see if hello will be interested this time.</li>
 </ul>
+<h2 id="0829"><a href="#0829" class="headerlink" title="0829"></a>0829</h2><ul>
+<li>i was misled by those internet posts. those posts make building an eco tank seem like a walk in the park, and highlight how easy and simple it is. while the tanks in those videos are absolutely stunning-clean tank, crystal-clear water, fresh green plants and lovely fish. i thought that all are benefit from the ecosystem, i was to young too naive 😑 😑 . </li>
+<li><strong>actually… a lot of them have died, and the water in the tank smells awful</strong>. i found this while i preparing to replace the tank. my fault  ☹️, i didn’t pay enough attention to the tank, and locked of knowledge. i get them a new tank, larger than the old and set up clean volcano rocks and new water plants, some snails and fish are on the delivery way. the tap water needs to sit under the sun for a while to help reduce the chemicals in it, but the recent days are running all the time. hope this doesn’t harm much</li>
+<li>a key point is that i’m creating a little ecosystem not a fish tank. as i learn more about it, i become more interesting in this. maintaining biodiversity is important. everything in the tank has it’s own role, contributing to the balance of the ecosystem.</li>
+</ul>
+<h2 id="0907"><a href="#0907" class="headerlink" title="0907"></a>0907</h2><ul>
+<li>i found a dried fish in the kitchen. there is no way it jumped in the kitchen on its own. definitely, absolutely, no doubt, <code>Hello</code> lent a very helpful paw. it’s funny</li>
+</ul>
+<h2 id="0914"><a href="#0914" class="headerlink" title="0914"></a>0914</h2><ul>
+<li>one of the shrimps got eggs, it feels like magic to me. i’ve seen a bunch of post online, where shrimp don’t last long, many of them pass away pretty soon, maybe due to the tank conditions or others lives in the tank. but seen one with eggs makes me think my tank hits that sweet spot—it’s thriving with a healthy and balanced ecosystem.</li>
+<li>it’s true, cat loves the water in a fish tank. actually, they love the water from anywhere, except in their own bowl. <strong>i love to watch hello drinks from the tank~. the tank is illuminated by a soft light from the above, under the light, the plants glowing, colorful fish drift though the fresh green, while the cat drinking from the top of the tank. it’s a tranquil atmosphere, and a healing power</strong>.<br>by the way, the cat drinks from the surface,it helps to reduce <strong>pesky oil layer</strong> on top.</li>
+</ul>
+<h2 id="0921"><a href="#0921" class="headerlink" title="0921"></a>0921</h2><ul>
+<li>my shrimp didn’t get thrive, but the <strong>spiral shell</strong> are popping up out of a sudden. i didn’t even buy them, must some <strong>parasite eggs hitching a ride on the plants</strong>. i noticed one a week ago, thought it was no big deal, just one. but now … 头疼. i don’t know the exact number but definitely above thirty. where i get this number from? because i’ve been sending them to see god 💀💀💀. they are about two millimeters, too small to be seen, perhaps i need an amplifier.</li>
+<li>such insane growth ability and with no natural predators, they are about to ruin the balance, devouring my plants and eventually taking over the whole tank. 头疼</li>
+</ul>
+<h2 id="1109"><a href="#1109" class="headerlink" title="1109"></a>1109</h2><p>the spiral shell are still blooming but not enough number to take over the tank. i think they can be a part of the echo chain, so no need to panic.<br>i have bought some shrimp again, but they are not thriving like i expected. however, the plants, fish, shrimps and well, spiral shell are worked fine. and the conditions in the tank are stable. i believing it’s a little ecosystem, nature will sort itself out.</p>
+]]></content>
+      <categories>
+        <category>Daily Snippets</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>202509-202511</title>
+    <url>/2025/09/01/202509/</url>
+    <content><![CDATA[<h2 id="0921"><a href="#0921" class="headerlink" title="0921"></a>0921</h2><ul>
+<li><p>vibe coding, coding with a good vibe, where you’re not stressing about bugs or edge cases too much but rather enjoying the problem-solving process</p>
+</li>
+<li><p>trying use mcp tool and playwright to guide llm to write a page and refine the style of page until the page machs the design picture</p>
+<ul>
+<li>It’s a long and pretty complex workflow. it works best for pages with a simple style or ones that closely follow UI frameworks.</li>
+<li>work terribly for custom pages. modules like claude-3.7, chatgpt-5 are must blind rebatos, they are really struggle to identify details like color/border/shadow, and sometimes can’t even detect them at all</li>
+</ul>
+</li>
+<li><p><strong>Node versions older than 15 do not work on apple silicon machines</strong> (ARM) because ARM architecture is not supported.</p>
+<ul>
+<li>temporary setting: arch -x86_64 zsh // a zsh shell under Intel (x86_64) architecture emulation</li>
+</ul>
+</li>
+</ul>
+<h2 id="0931"><a href="#0931" class="headerlink" title="0931"></a>0931</h2><ul>
+<li>using imagemargick to process img for friendly llm img analysis<ul>
+<li>add a grid layer for better size measurement, but still not accurate, with about a 2px deviation</li>
+<li>imagemagick<ul>
+<li>resize the image to match the design size<ul>
+<li>the user’s image could be a screenshot or downloaded from the design platform, so the dimensions might not match the design size exactly.<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">magick input.png -resize 1030 input1030.png</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>to convert an image to linear grayscale  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">magick in.png -colorspace LinearGray out.png</span><br></pre></td></tr></table></figure></li>
+<li>applies an edge detection filter  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># threshold converts the image into a black-and-white image, acts as a cutoff point, deciding which pixels become part of the white edges and which pixels are ignored (turned black).</span></span><br><span class="line">magick out.png -edge 1 -threshold 6% edges.png</span><br></pre></td></tr></table></figure></li>
+<li>morphology applies various morphological transformations to an img,  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Dilate expands the white shapes, making a shape bigger</span></span><br><span class="line">magick edges.png -morphology Dilate Disk:3 output.png</span><br><span class="line"><span class="comment"># Thinning removes pixels in a way that reduces the size of features in the image while preserving the general shape</span></span><br><span class="line">morphology + Thinning = reduce unnecessary pixels</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="1008"><a href="#1008" class="headerlink" title="1008"></a>1008</h2><ul>
+<li><p>got a new board that’s more flexible, and surprisingly it can stay stable. it looks pretty, goes well with my red shoes. it’s very very smooth, and i can feel graceful for the first time</p>
+</li>
+<li><p>恍惚, a <strong>dazed</strong> feeling, a sense of dreaminess, a state of mild trance or detachment</p>
+</li>
+<li><p>display omit for multiple lines</p>
+  <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">display</span>: -webkit-box;</span><br><span class="line">-webkit-box-orient: vertical;</span><br><span class="line">-webkit-line-clamp: <span class="number">2</span>;</span><br><span class="line"><span class="attribute">overflow</span>: hidden;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>drag an image from another web page or an app, not a local file:</p>
+<ul>
+<li>The dataTransfer.files will be empty (because the browser can’t expose file data for security reasons).</li>
+<li>use getData to get the url, e.dataTransfer.getData(‘text/uri-list’);</li>
+</ul>
+</li>
+</ul>
+<h2 id="1116"><a href="#1116" class="headerlink" title="1116"></a>1116</h2><ul>
+<li><p><strong>kelly criterion</strong></p>
+<ul>
+<li><p>b: represents the ratio of profit to your stake if you win. </p>
+<ul>
+<li>If b is large (you win a lot when you win), Kelly will tell you to bet more.</li>
+<li>If b is small (low reward), Kelly will tell you to bet less.</li>
+</ul>
+</li>
+<li><p>p: probability of winning</p>
+</li>
+<li><p>q: probability of losing, 1 - p</p>
+<p>kelly criterion = (bp - q) / b * captial<br>for example:</p>
+<ul>
+<li>p: 0.6, q: 0.4, b: 1, kelly criterion is 0.2</li>
+<li>captial: $100, bet $20 at each time.<ul>
+<li>if win, captial becomes $120 and the invest capital is $24 at the next time.</li>
+<li>if lose, captial becomes $80 and the invest capital is $16 at the next time.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>css relative color</strong></p>
+<ul>
+<li>it makes easy to generate relative colors, like darker / lighter<table>
+<thead>
+<tr>
+<th>Hue (°)</th>
+<th>Color</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0°</td>
+<td>Red</td>
+</tr>
+<tr>
+<td>60°</td>
+<td>Yellow</td>
+</tr>
+<tr>
+<td>120°</td>
+<td>Green</td>
+</tr>
+<tr>
+<td>240°</td>
+<td>Blue</td>
+</tr>
+<tr>
+<td>300°</td>
+<td>Purple</td>
+</tr>
+</tbody></table>
+</li>
+<li><code>color-mix(in srgb, color1, color2 percentage)</code>, color module, color1, color2 the percentage of mix level</li>
+<li><code>hsl</code>, hue/staturation/lightness, <code>hsl(from red calc(h + 90) c h)</code></li>
+<li><code>lch</code>, lightness / chroma / hue, <code>lch(from red calc(h + 90) c h)</code><br>  -<code>hsl</code> is calculated from pure RGB. whereas <code>hcl</code> fixs uniformity issues of hue / chroma / lightness.  if a single color component is changed, <code>hcl</code> will produces a smoother visual transition<ul>
+<li><strong>staturation vs chroms</strong>, staturation is compared with pure gray. while chrome is compared to a neutral gray of the same lightness</li>
+</ul>
+</li>
+<li><code>OKLCH</code>, the human vision 2.0 of <code>hcl</code></li>
+<li><code>xyz</code>, red/green, brightness, blue/green</li>
+</ul>
+</li>
+</ul>
+<h2 id="1123"><a href="#1123" class="headerlink" title="1123"></a>1123</h2><ul>
+<li>the three views</li>
+<li>obsession with perfection</li>
+<li>1117, 間違ったパスワードを入力したら、カードがロックさまでした<ul>
+<li>たら, conditional form, “after i did …”, slightly different from ので/から</li>
+</ul>
+</li>
+<li>1118, キャッシュカードと身分証を持ってくるのを忘れたので、お金を借りなければなりません<ul>
+<li>持ってくる =&gt; 持って + くる =&gt; hold + come =&gt; to bring (something here)</li>
+<li>みぶんしょう</li>
+</ul>
+</li>
+<li>1119, やっぱり、銀行の窓口でカードを解除しました<ul>
+<li>まどくち</li>
+<li>かいじょ</li>
+</ul>
+</li>
+<li>1120, 明るくて晴れた、とても気持ちのいい日です</li>
+<li>1121, コンピュータの言葉を日本語に変えたら、外来語が多くて、本当に嫌になります</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Daily Snippets</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>nonsense</title>
+    <url>/2025/11/09/nonsense/</url>
+    <content><![CDATA[<p>i’ve learned a bit of …. philosophy. well, yes…. philosophy. this word itself is used like a fraud to me. however, i’ve been grappling with questions that cut so deeply they feel almost self-destructive at times. i don’t know if i’m overly sentimental, or dramatic.does my life hold any true meaning? are all the suffering and pain worth to pay? is it really necessary to stick to the journey? is my mind far away from the reality?</p>
+<p>well, at least, now i know they are <strong>metaphysical</strong>. of course, no great thinker can offer me an answer. yet certain ideas can serve as a helpful guide and a positive power.</p>
+<p><strong>existence precedes essence</strong>, sartre.<br>my life, in itself, carries no meaning–we are born without any purpose or predefined nature. i existfirst, as a becoming, an ing form, i making choices and performing actions at any time. though those actions, consequnesces unfold, and from those consquences, meaning arises. meaning is not something one receive, but something one create. <strong>you are shaped and defined though your actions</strong></p>
+<p><strong>hell is others</strong> Sartre’s. we know that we are free to do anything, free to define ourself. but the point is the <strong><u>awareness</u></strong> that we know we are living in other people’s eyes. the constant judgments and staring from workplace, social media, relationships and friendships, you know you are <strong>observed and evaluated</strong>. you freedom and identity are always entangled with how others see you. it’s the existential dilemma,  you are free, but the cage exists.</p>
+<p><strong>i would believe only in a god who could dance</strong>, nietzsche.<br>this is a poetic, sounds like emotional booster. it reminds me that my life have more, more than suffering and pain. i must cherish and embrace the present, to try harder and harder to celebrate the simple, fleeting moments that make existence meaningful</p>
 ]]></content>
       <categories>
         <category>Daily Snippets</category>
