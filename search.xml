@@ -2276,84 +2276,170 @@ console.log(jso4);
   <entry>
     <title>Financial Market Terms</title>
     <url>/2021/11/17/notes_invest/</url>
-    <content><![CDATA[<p>Some investment terminology or concepts in the financial market.</p>
-<h2 id="about-Fund"><a href="#about-Fund" class="headerlink" title="about Fund"></a>about Fund</h2><ul>
-<li><strong>Mutual Fund(共同基金)</strong> 专业的基金经理进行投资管理<ul>
-<li><strong>主动型基金</strong>：基金经理通过自身分析（包括技术分析和基本面分析）来选股和择时以取得市场超额收益</li>
-<li><strong>混合型基金</strong>: 依赖基金经理的能力，仓位较为灵活随股市行情而波动</li>
-<li><strong>被动型基金</strong>: 一般选取特定的指数作为跟踪对象，因此通常又被称为指数基金, 复制指数，与其保持一致，适合定投</li>
-<li>混合行业**: 含有两个行业以及以上的主动性基金</li>
-<li>灵活配置混合**: 不规定股票、债券、可转债、现金、其他资产的比例</li>
-</ul>
-</li>
-<li><strong>ETF (Exchange-Traded Fund)</strong><ul>
-<li><strong>上证指数</strong>：反映上证所上市公司股票整体表现的股价指数。</li>
-<li><strong>科创</strong>：科技创新板，上证所上市。主要吸引的是在生物医药、新一代信息技术、人工智能、高端制造、新材料等领域具备创新能力的公司</li>
-<li><strong>沪深300</strong>：上证券所和深证所上市的300只市值较大、流动性较好的股票组成，旨在反映中国A股市场的整体表现。相比上证，其反映的市场动态可能更集中在蓝筹股上，而上证指数则涵盖了更多中小型公司</li>
-<li><strong>中概股</strong>：海外上市的中国公司，通常指中国公司在美国等海外证券市场（尤其是纳斯达克或纽约证券交易所）上市的股票。由于这些公司通常在中国开展主要业务，但选择在海外上市，因此被称为“中概股”（中国概念股）</li>
-<li><strong>中概互联ETF</strong>：选取在美国和香港上市的中国互联网企业</li>
-<li><strong>恒生指数</strong>：在香港联合交易所上市的最大、最具流动性的公司。恒生指数的目的是反映香港股市的整体表现，尤其是香港市场中的蓝筹股。</li>
-<li><strong>恒生科技指数</strong></li>
-<li><strong>道琼斯工业平均指数</strong>：美国30家市值最大、流动性最好的公司组成</li>
-<li><strong>标普500指数</strong>：美国500家市值最大、流动性最好的公司组成，是全球投资者中使用最广泛的市场基准之一。该指数的多样性和覆盖面使其成为衡量美国经济整体表现的重要指标</li>
-<li><strong>纳斯达克综合指数</strong>：在纳斯达克交易所上市的科技股，以科技企业为主。</li>
-<li><strong>MSCI</strong> 摩根士丹利资本国际</li>
-<li><strong>MSCI全球指数</strong></li>
-<li><strong>MSCI新兴市场指数</strong></li>
-</ul>
-</li>
-<li><strong>Private Equity Fund(私募)</strong><ul>
-<li>typically hold investments for 5 to 10 years</li>
-<li><strong>Hedge Fund(对冲)</strong></li>
-</ul>
-</li>
-<li><strong>Closed-End Fund(封闭式)</strong></li>
-</ul>
-<h2 id="bond-types"><a href="#bond-types" class="headerlink" title="bond types"></a>bond types</h2><p><strong>bond types</strong> are categorized into different risk levels based on the issuer’s creditworthiness, financial stability</p>
+    <content><![CDATA[<h2 id="reading-notes"><a href="#reading-notes" class="headerlink" title="reading notes"></a>reading notes</h2><h3 id="the-most-important-thing"><a href="#the-most-important-thing" class="headerlink" title="the most important thing"></a>the most important thing</h3><ol>
+<li>First-level thinking and second-level thinking</li>
+</ol>
 <ul>
-<li><strong>First-Level Bonds 一级债券</strong><ul>
-<li>Chinese Government Bonds, Policy Bank Bonds, Savings Bonds (储蓄国债)</li>
+<li>Brokerage firms want you to think everyone’s capable of investing—at $10 per trade. Mutual fund companies want you to think they can do it</li>
+<li>collectively, they are the market. (every one is )</li>
+<li>it’s a zero-sum game, why others fail?</li>
+<li>Unconventionality shouldn’t be a goal in itself, but rather a way of thinking</li>
+<li>Nonconsensus forecasts</li>
 </ul>
-</li>
-<li><strong>Second-Level Bonds 二级债券</strong></li>
-<li><strong>Third-Level Bonds 二级债券</strong></li>
-</ul>
-<h2 id="金融市场"><a href="#金融市场" class="headerlink" title="金融市场"></a>金融市场</h2><ul>
-<li><p><strong>一级市场</strong></p>
+<p>Darnedest, espoused</p>
+<ol start="2">
+<li></li>
+</ol>
 <ul>
-<li>政府或公司将新发行的股票、债券或其他证券出售给投资者，用于融资。投资者(机构投资者、个人投资者)在一级市场上直接从发行方购买证券，而不是从其他投资者手中购买</li>
-<li>政府通过发行国债筹集资金</li>
-<li>公司通过IPO集中交易所首次发行股票</li>
-<li>发行方式<ul>
-<li><strong>IPO</strong>（首次公开募股）：公司首次在公开市场上发行股票。</li>
-<li><strong>增发</strong>：公司已经上市，但需要额外融资，会通过发行新股或债券来进行增发。</li>
-<li><strong>私募</strong>：公司通过非公开方式向特定的机构或个人发行股票或债券。</li>
+<li>asset prices immediately reflect the <strong>consensus view</strong> of the information’s significance</li>
+<li>consensus view and non-nonconsensus view. sharing the consensus view will make you likely to earn just<br>an average return. To beat the market you must hold an idiosyncratic, or nonconsensus, view.</li>
+<li> Psychological influences</li>
 </ul>
-</li>
+<p>ramification</p>
+<h2 id="止跌信号"><a href="#止跌信号" class="headerlink" title="止跌信号"></a>止跌信号</h2><p>长下影线，有大资金进场<br>成交量下跌，空头力量耗尽<br>支撑点位，年线 / 历史低位<br>底背离<br>板块联动，同板块的其他股票是否企稳</p>
+<h2 id="止损"><a href="#止损" class="headerlink" title="止损"></a>止损</h2><p>买入逻辑崩塌<br>设定止损点，12%</p>
+<h2 id="lof-arbitrage"><a href="#lof-arbitrage" class="headerlink" title="lof arbitrage"></a>lof arbitrage</h2><ul>
+<li>applying found shares from found company, and selling shares in the market. it earns money from the price differences between the net asset value (NAV), and the price in the open market.</li>
+<li>nav, the actual value of funds, NAV= (Total Assets − Total Liabilities​) / Shares</li>
+<li>not suit for individual retail investors,  usually done by instituational investors</li>
 </ul>
-</li>
-<li><p><strong>二级市场</strong></p>
+<h2 id="etf"><a href="#etf" class="headerlink" title="etf"></a>etf</h2><ol>
+<li>初始投入 100 万，分 3、3、4 在 513630+515180+513500 </li>
+<li>每次大盘下穿 ma120，6%时加 12 万在所跟踪的指数 3. 每月定投 3 万，在上个月表现最好的 etf 里，etf 池为： 医药 ETF-159929 /机器人 ETF-159530 /港股低波红利 ETF-513630/恒生科技ETF-513010/ 标普 500ETF-513500 /纳指 ETF 159941/</li>
+</ol>
+<h3 id="depending-Ma120"><a href="#depending-Ma120" class="headerlink" title="depending Ma120"></a>depending Ma120</h3><ul>
+<li>pe &lt; 20, Dividend Yield &gt; 3%</li>
+<li>waiting the price to drop -12% below Ma120</li>
+</ul>
+<h3 id="Trapezoidal-Position-Building"><a href="#Trapezoidal-Position-Building" class="headerlink" title="Trapezoidal Position Building"></a>Trapezoidal Position Building</h3><p>gradual Buy-in on a Downtrend, like at every 12%<br>if the price is 10$, then 10/1, 8.8/2, 7.74/3, 6,.8/4</p>
 <ul>
-<li>通过公开市场（如股票交易所）进行交易</li>
-<li>证券的价格由市场供求关系决定</li>
+<li>consider the market ma120, above ma120 =&gt; reduce price points</li>
+<li>price fuctuate in a controlable range, health PE</li>
+<li>Missed Opportunities. may end up buying fewer shares</li>
+<li>be discipined, avoid emotional painc during market fluctuations</li>
 </ul>
-</li>
-<li><p><strong>三级市场</strong></p>
+<h2 id="Bollinger-Bands"><a href="#Bollinger-Bands" class="headerlink" title="Bollinger Bands"></a>Bollinger Bands</h2><ul>
+<li>touchs or breaks the upper / lower band, indicates overbought / oversold</li>
+<li>Band Squeeze (Volatility Breakout):</li>
+</ul>
+<h2 id="RSI"><a href="#RSI" class="headerlink" title="RSI"></a>RSI</h2><p>Relative Strength Index, measures the speed and change of price movements</p>
 <ul>
-<li>通过经纪商网络或场外市场进行交易，为大宗交易服务</li>
-<li>公开显示在交易所的订单薄上，但也受监管机构的监管</li>
-</ul>
+<li><blockquote>
+<p>80 typically overbought, meaning it may be due for a pullback. or strong upward momentum</p>
+</blockquote>
 </li>
-<li><p><strong>四级市场</strong></p>
+<li>&lt; 20 suggests oversold, or undervalued and might be set for a rebound</li>
+</ul>
+<p>overbought or oversold could indicate emotional operations(a sign of pullback), like chasing price movements</p>
 <ul>
-<li>机构投资者直接彼此交易，不通过中介或经纪商。避免了交易所和经纪商的费用</li>
-<li>主要服务于大宗交易，尤其是机构投资者间的跨资产类别交易</li>
-<li>不公开披露，更具隐私性，避免影响市场</li>
+<li><strong>vs kdj</strong><ul>
+<li>k primary line, d signal line, j moves more dramatically and measures extreme conditions</li>
+<li>both of them indicate a sign of overbought or oversell. ksi represents emotional extremes. while rsi measures structual strength, and more relable</li>
+<li>kdj is sensitive to short-term moves</li>
 </ul>
 </li>
-<li><p><strong>场内</strong> 场内市场指的是在上海证券交易所等集中交易所进行的公开交易。</p>
+</ul>
+<h2 id="MACD"><a href="#MACD" class="headerlink" title="MACD"></a>MACD</h2><ul>
+<li>Bullish Cross (Golden Cross): MACD line crosses <strong>above</strong> the Signal line.</li>
+<li>Bearish Cross (Death Cross): MACD line crosses <strong>below</strong> the Signal line.</li>
+<li>Bullish Divergence 底背离: the price is making new lows, but the MACD is making higher lows. = downward momentum is weakening</li>
+<li>Bearish Divergence 顶背离: the price is making new highs, but the MACD is making lower highs. = upward momentum is weakening</li>
+</ul>
+<p>Divergence</p>
+<h2 id="Price-÷-Earnings-P-E-ratio-市盈率"><a href="#Price-÷-Earnings-P-E-ratio-市盈率" class="headerlink" title="Price ÷ Earnings, P/E ratio 市盈率"></a>Price ÷ Earnings, P/E ratio 市盈率</h2><p>how much investors willing to pay for each dollar of earnings.</p>
+<ul>
+<li>High P/E, Investors are willing to pay more. it represents high growth expectations, but can also mean overvalued</li>
+<li>Low P/E, Investors pay less. weak growth prospections, or undervalued</li>
+</ul>
+<p>for example:   P/E = 100(stock is $100) ÷ 5(its EPS is $5) = 20,  <strong>$20 for every $1 of earnings</strong></p>
+<p><strong>two types of pe</strong></p>
+<ul>
+<li>(Trailing/static) P/E (TTM)<ul>
+<li>Uses past 12 months earnings.</li>
+</ul>
 </li>
-<li><p><strong>场外</strong> OTC，Over-the-Counter Market** 通过经纪商、做市商或其他中介机构在不同地点进行。买卖双方通过协商确定价格和交易条件</p>
+<li>(Forward/dynmic) P/E<ul>
+<li>Uses forecast earnings for the next 12 months.</li>
+</ul>
+</li>
+</ul>
+<p><strong>relative indicators</strong></p>
+<ul>
+<li>PEG growth rate of pe</li>
+<li>Company sells products → customers pay $100 =&gt; PS, Price ÷ Sales<ul>
+<li>&lt; 1 → very cheap</li>
+<li>1–3 → normal range</li>
+<li><blockquote>
+<p>5 → expensive</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>After subtracting costs, company keeps $80 =&gt; PE, earnings</li>
+<li>Maybe the company actually only gets $60 cash in hand =&gt; PCF, Price ÷ Cash Flow<ul>
+<li>Low → stock may be undervalued</li>
+<li>High → stock may be overvalued</li>
+</ul>
+</li>
+</ul>
+<p>compare within the same industry<br>consider the type of business. usually low in bank, real easte<br>compare with the company’s history</p>
+<h2 id="Price-÷-Book-Value-PB-ratio"><a href="#Price-÷-Book-Value-PB-ratio" class="headerlink" title="Price ÷ Book Value, PB ratio"></a>Price ÷ Book Value, PB ratio</h2><p><strong>Book Value</strong> = Total Assets – Total Liabilities, represents the company’s net assets<br>the ratio of market price to the company’s net assets.</p>
+<ul>
+<li><blockquote>
+<p>1, market expects the company to earn more than just its asset value.</p>
+</blockquote>
+</li>
+<li>=1, Market values the company roughly at its accounting value.</li>
+<li>&lt;1, lower than the company’s net asset value. means undervalued or that the market has low expectations</li>
+</ul>
+<h2 id="Dividend-Yield-股息"><a href="#Dividend-Yield-股息" class="headerlink" title="Dividend Yield 股息"></a>Dividend Yield 股息</h2><p>Annual Dividends per Share ÷ price per Share​<br>if a company pays $2 in annual dividends per share, and its stock is priced at $40, then *<em>Dividend Yield = 2 / 40 * 100 = 5%*</em></p>
+<p>how much money a company returns to its shareholders <strong>in the form of dividends relative to its stock price</strong></p>
+<ul>
+<li>a high dividend yield can be attractive For income-focused investors</li>
+<li>a low dividend yield may be, if the company reinvests profits into growth opportunities instead of paying dividends</li>
+</ul>
+<h2 id="terminology"><a href="#terminology" class="headerlink" title="terminology"></a>terminology</h2><ul>
+<li><p>周期型 &amp;&amp; 非周期性</p>
+<ul>
+<li>非周期性：食品、饮料、银行、保险、消费等，与衣食住行相关，不论经济发展如何都需要的行业</li>
+<li>周期性：随着经济周期盛衰大起大落的行业， 和国内或国际经济波动相关性较强。与国运关联较大。钢铁、有色、煤炭等大宗商品、船舶、机械等</li>
+</ul>
+</li>
+<li><p><code>Engel&#39;s Coefficient</code> refers to the proportion of household income that is spent on food. Engelobserved that as income increases, the percentage of income spent on food decreases, even if the absolute amount spent on food increases.</p>
+</li>
+<li><p><strong>做空/空头Short Selling</strong></p>
+<ul>
+<li>指投资者从券商或其他持有者借入资产（如股票、期货合约等），在市场上卖出，期望未来价格下跌时再以更低的价格买回资产归还给借出方，从而赚取价差利润</li>
+<li><strong>空头挤压（Short Squeeze）</strong> 若股票价格上涨，空头投资者为了避免进一步损失，可能会被迫平仓（即买回股票），这种大量买回股票的行为会进一步推高价格，形成一种循环，使得股票价格在短时间内急剧上升，从而使空头投资者遭受更大的损失。</li>
+</ul>
+</li>
+<li><p><strong>Premium rate 溢价率</strong></p>
+<ul>
+<li>(市场价格-净值)/净值*100%, (1 - 0.8) / 0.8 = 0.25, 溢价率为 25%</li>
+<li>为正时：市场价格高于净值，反映出市场对该ETF的需求上涨。</li>
+<li>为负时：市场价格低于净值，反映出市场对该ETF的需求下降。</li>
+<li><strong>市场价格</strong> 是通过交易所的实时交易价格产生</li>
+</ul>
+</li>
+<li><p><strong>最大回撤</strong></p>
+<ul>
+<li>在选定的时间周期内，找出资产价格的最高点（峰值）和随后出现的最低点（谷值）</li>
+<li>(峰值-谷值)/谷值*100%, (100 - 80)/ 80 = 0.25, 回撤为 25%</li>
+<li>反映了在最不利情况下可能面临的最大损失</li>
+</ul>
+</li>
+<li><p><strong>Dividend Yield</strong></p>
+</li>
+<li><p><strong>trading volume 换手</strong> the buying and selling of shares between investors</p>
+</li>
+<li><p><strong>Amplitude  振幅</strong></p>
+<ul>
+<li>the range of price fluctuations of a stock</li>
+<li>Amplitude = High Price−Low Price</li>
+<li>A large amplitude signifies significant price fluctuations (high volatility), while a small amplitude indicates relatively stable price movement (low volatility).</li>
+</ul>
+</li>
+<li><p><strong>Structural Bull Market 结构性牛市</strong> refers to a long-term upward trend in stock prices that is driven by fundamental changes in the economy or market structure.</p>
 </li>
 </ul>
 <h2 id="M1-amp-M2-amp-M3"><a href="#M1-amp-M2-amp-M3" class="headerlink" title="M1&amp;M2&amp;M3"></a>M1&amp;M2&amp;M3</h2><p>Refer to the total amount of money available in an economy. categorized based on liquidity, or how easily the money can be used for transactions.</p>
@@ -2410,62 +2496,83 @@ console.log(jso4);
 </ul>
 </li>
 </ul>
-<h2 id="terminology"><a href="#terminology" class="headerlink" title="terminology"></a>terminology</h2><ul>
-<li><p>周期型 &amp;&amp; 非周期性</p>
-<ul>
-<li>非周期性：食品、饮料、银行、保险、消费等，与衣食住行相关，不论经济发展如何都需要的行业</li>
-<li>周期性：随着经济周期盛衰大起大落的行业， 和国内或国际经济波动相关性较强。与国运关联较大。钢铁、有色、煤炭等大宗商品、船舶、机械等</li>
+<h1 id="basic"><a href="#basic" class="headerlink" title="basic"></a>basic</h1><h2 id="Fund-types"><a href="#Fund-types" class="headerlink" title="Fund types"></a>Fund types</h2><ul>
+<li><strong>Mutual Fund(共同基金)</strong> 专业的基金经理进行投资管理<ul>
+<li><strong>主动型基金</strong>：基金经理通过自身分析（包括技术分析和基本面分析）来选股和择时以取得市场超额收益</li>
+<li><strong>混合型基金</strong>: 依赖基金经理的能力，仓位较为灵活随股市行情而波动</li>
+<li><strong>被动型基金</strong>: 一般选取特定的指数作为跟踪对象，因此通常又被称为指数基金, 复制指数，与其保持一致，适合定投</li>
+<li>混合行业**: 含有两个行业以及以上的主动性基金</li>
+<li>灵活配置混合**: 不规定股票、债券、可转债、现金、其他资产的比例</li>
 </ul>
 </li>
-<li><p><code>Engel&#39;s Coefficient</code> refers to the proportion of household income that is spent on food. Engelobserved that as income increases, the percentage of income spent on food decreases, even if the absolute amount spent on food increases.</p>
-</li>
-<li><p><strong>做空/空头Short Selling</strong></p>
-<ul>
-<li>指投资者从券商或其他持有者借入资产（如股票、期货合约等），在市场上卖出，期望未来价格下跌时再以更低的价格买回资产归还给借出方，从而赚取价差利润</li>
-<li><strong>空头挤压（Short Squeeze）</strong> 若股票价格上涨，空头投资者为了避免进一步损失，可能会被迫平仓（即买回股票），这种大量买回股票的行为会进一步推高价格，形成一种循环，使得股票价格在短时间内急剧上升，从而使空头投资者遭受更大的损失。</li>
+<li><strong>ETF (Exchange-Traded Fund)</strong><ul>
+<li><strong>上证指数</strong>：反映上证所上市公司股票整体表现的股价指数。</li>
+<li><strong>科创</strong>：科技创新板，上证所上市。主要吸引的是在生物医药、新一代信息技术、人工智能、高端制造、新材料等领域具备创新能力的公司</li>
+<li><strong>沪深300</strong>：上证券所和深证所上市的300只市值较大、流动性较好的股票组成，旨在反映中国A股市场的整体表现。相比上证，其反映的市场动态可能更集中在蓝筹股上，而上证指数则涵盖了更多中小型公司</li>
+<li><strong>中概股</strong>：海外上市的中国公司，通常指中国公司在美国等海外证券市场（尤其是纳斯达克或纽约证券交易所）上市的股票。由于这些公司通常在中国开展主要业务，但选择在海外上市，因此被称为“中概股”（中国概念股）</li>
+<li><strong>中概互联ETF</strong>：选取在美国和香港上市的中国互联网企业</li>
+<li><strong>恒生指数</strong>：在香港联合交易所上市的最大、最具流动性的公司。恒生指数的目的是反映香港股市的整体表现，尤其是香港市场中的蓝筹股。</li>
+<li><strong>恒生科技指数</strong></li>
+<li><strong>道琼斯工业平均指数</strong>：美国30家市值最大、流动性最好的公司组成</li>
+<li><strong>标普500指数</strong>：美国500家市值最大、流动性最好的公司组成，是全球投资者中使用最广泛的市场基准之一。该指数的多样性和覆盖面使其成为衡量美国经济整体表现的重要指标</li>
+<li><strong>纳斯达克综合指数</strong>：在纳斯达克交易所上市的科技股，以科技企业为主。</li>
+<li><strong>MSCI</strong> 摩根士丹利资本国际</li>
+<li><strong>MSCI全球指数</strong></li>
+<li><strong>MSCI新兴市场指数</strong></li>
 </ul>
 </li>
-<li><p><strong>利空</strong> 是指能够促使股价下跌的信息</p>
-</li>
-<li><p><strong>Premium rate 溢价率</strong></p>
-<ul>
-<li>(市场价格-净值)/净值*100%, (1 - 0.8) / 0.8 = 0.25, 溢价率为 25%</li>
-<li>为正时：市场价格高于净值，反映出市场对该ETF的需求上涨。</li>
-<li>为负时：市场价格低于净值，反映出市场对该ETF的需求下降。</li>
-<li><strong>市场价格</strong> 是通过交易所的实时交易价格产生</li>
+<li><strong>Private Equity Fund(私募)</strong><ul>
+<li>typically hold investments for 5 to 10 years</li>
+<li><strong>Hedge Fund(对冲)</strong></li>
 </ul>
 </li>
-<li><p><strong>最大回撤</strong></p>
+<li><strong>Closed-End Fund(封闭式)</strong></li>
+</ul>
+<h2 id="bond-types"><a href="#bond-types" class="headerlink" title="bond types"></a>bond types</h2><p><strong>bond types</strong> are categorized into different risk levels based on the issuer’s creditworthiness, financial stability</p>
 <ul>
-<li>在选定的时间周期内，找出资产价格的最高点（峰值）和随后出现的最低点（谷值）</li>
-<li>(峰值-谷值)/谷值*100%, (100 - 80)/ 80 = 0.25, 回撤为 25%</li>
-<li>反映了在最不利情况下可能面临的最大损失</li>
+<li><strong>First-Level Bonds 一级债券</strong><ul>
+<li>Chinese Government Bonds, Policy Bank Bonds, Savings Bonds (储蓄国债)</li>
 </ul>
 </li>
-<li><p><strong>投机</strong>：期望在短时间内通过市场价格波动获得利润</p>
-</li>
-<li><p><strong>对冲</strong></p>
+<li><strong>Second-Level Bonds 二级债券</strong></li>
+<li><strong>Third-Level Bonds 二级债券</strong></li>
+</ul>
+<h2 id="market"><a href="#market" class="headerlink" title="market"></a>market</h2><ul>
+<li><p><strong>一级市场</strong></p>
 <ul>
-<li>通过在不同的市场或资产上持有相反的头寸，来减少单一市场或资产价格变动对投资的影响。如果一种资产的价格下跌，对应的对冲头寸可能会上涨，从而减少整体损失</li>
+<li>政府或公司将新发行的股票、债券或其他证券出售给投资者，用于融资。投资者(机构投资者、个人投资者)在一级市场上直接从发行方购买证券，而不是从其他投资者手中购买</li>
+<li>政府通过发行国债筹集资金</li>
+<li>公司通过IPO集中交易所首次发行股票</li>
+<li>发行方式<ul>
+<li><strong>IPO</strong>（首次公开募股）：公司首次在公开市场上发行股票。</li>
+<li><strong>增发</strong>：公司已经上市，但需要额外融资，会通过发行新股或债券来进行增发。</li>
+<li><strong>私募</strong>：公司通过非公开方式向特定的机构或个人发行股票或债券。</li>
 </ul>
 </li>
-<li><p><strong>dividend 股息</strong></p>
-</li>
-<li><p><strong>Price-to-Earnings (P/E) ratio 市盈率</strong></p>
-<ul>
-<li>best compared within the same industry</li>
 </ul>
 </li>
-<li><p><strong>trading volume 换手</strong> the buying and selling of shares between investors</p>
-</li>
-<li><p><strong>Amplitude  振幅</strong></p>
+<li><p><strong>二级市场</strong></p>
 <ul>
-<li>the range of price fluctuations of a stock</li>
-<li>Amplitude = High Price−Low Price</li>
-<li>A large amplitude signifies significant price fluctuations (high volatility), while a small amplitude indicates relatively stable price movement (low volatility).</li>
+<li>通过公开市场（如股票交易所）进行交易</li>
+<li>证券的价格由市场供求关系决定</li>
 </ul>
 </li>
-<li><p><strong>Structural Bull Market 结构性牛市</strong> refers to a long-term upward trend in stock prices that is driven by fundamental changes in the economy or market structure.</p>
+<li><p><strong>三级市场</strong></p>
+<ul>
+<li>通过经纪商网络或场外市场进行交易，为大宗交易服务</li>
+<li>公开显示在交易所的订单薄上，但也受监管机构的监管</li>
+</ul>
+</li>
+<li><p><strong>四级市场</strong></p>
+<ul>
+<li>机构投资者直接彼此交易，不通过中介或经纪商。避免了交易所和经纪商的费用</li>
+<li>主要服务于大宗交易，尤其是机构投资者间的跨资产类别交易</li>
+<li>不公开披露，更具隐私性，避免影响市场</li>
+</ul>
+</li>
+<li><p><strong>场内</strong> 场内市场指的是在上海证券交易所等集中交易所进行的公开交易。</p>
+</li>
+<li><p><strong>场外</strong> OTC，Over-the-Counter Market** 通过经纪商、做市商或其他中介机构在不同地点进行。买卖双方通过协商确定价格和交易条件</p>
 </li>
 </ul>
 ]]></content>
@@ -5631,7 +5738,7 @@ console.log(jso4);
 </ul>
 </li>
 </ul>
-<h2 id="辞書形"><a href="#辞書形" class="headerlink" title="辞書形"></a>辞書形</h2><p>the basic form of verb</p>
+<h2 id="辞書形-う-sound-3"><a href="#辞書形-う-sound-3" class="headerlink" title="辞書形, う sound(3)"></a>辞書形, う sound(3)</h2><p>the basic form of verb</p>
 <ul>
 <li><p><strong>1verb</strong>, remove ます, replace the last pronunciation with the corresponding <em>う sound(3)</em></p>
 <blockquote>
@@ -5656,16 +5763,25 @@ console.log(jso4);
 <p>これは　<code>明日会議使う</code>資料です<br>私が　<code>明日乗る</code>飛行機は　中国航空です</p>
 </blockquote>
 <p><strong>[辞書形] 前に =  before the action happened</strong></p>
-<h2 id="ます形"><a href="#ます形" class="headerlink" title="ます形"></a>ます形</h2><p>transform from 辞書形 to ます形</p>
-<ul>
-<li><strong>1verb</strong>, replace the last one with the corresponding <em>い sound(2) + ます</em></li>
-<li><strong>2verb</strong>：<em>remove る + ます</em></li>
+<h2 id="連用形-い"><a href="#連用形-い" class="headerlink" title="連用形,  い"></a>連用形,  い</h2><ul>
+<li><strong>1verb</strong>, replace the last one with the corresponding *い sound(2) *</li>
+<li><strong>2verb</strong>：<em>remove る</em></li>
 <li><strong>3verb</strong>, きます /くる、します / する</li>
 </ul>
-<h2 id="て形"><a href="#て形" class="headerlink" title="て形"></a>て形</h2><ul>
+<h2 id="ます形-い"><a href="#ます形-い" class="headerlink" title="ます形, い"></a>ます形, い</h2><p>transform from 辞書形 to ます形</p>
+<ul>
+<li><p><strong>1verb</strong>, replace the last one with the corresponding <em>い sound(2) + ます</em></p>
+</li>
+<li><p><strong>2verb</strong>：<em>remove る + ます</em></p>
+</li>
+<li><p><strong>3verb</strong>, きます /くる、します / する<br>らりる</p>
+<h2 id="て形-い"><a href="#て形-い" class="headerlink" title="て形, い"></a>て形, い</h2></li>
 <li><p>い verb<br>Special:</p>
 <ul>
-<li>き　＝＞　いて，except：行きます／行って</li>
+<li>き　＝＞　いて，except：行きます／行って<ul>
+<li>巻く/巻いて</li>
+</ul>
+</li>
 <li>ぎ　＝＞　いで</li>
 <li>ひ／み／に　＝＞　んで</li>
 <li>ち／り／い　＝＞　って</li>
@@ -5767,8 +5883,8 @@ console.log(jso4);
 <li>て形+は　いけません　not able to do something</li>
 </ul>
 <hr>
-<h3 id="て形-しまう"><a href="#て形-しまう" class="headerlink" title="て形+しまう"></a>て形+しまう</h3><p>to  express that something is completed, done unintentionally, often implying regret</p>
-<p>食べてしまう<br>食べてしまって<br>食べてしまった<br>食べてしまえ<br>食べてしまおう</p>
+<h3 id="て形-しまう"><a href="#て形-しまう" class="headerlink" title="て形+しまう"></a>て形+しまう</h3><p>to express that something is happened without planning, sometimes implying regret</p>
+<p>食べてしまう<br>食べてしまって、しまう =&gt; しまい =&gt; しまって<br>食べてしまった<br>食べてしまえ<br>食べてしまおう</p>
 <h2 id="た形"><a href="#た形" class="headerlink" title="た形"></a>た形</h2><p>Replace the [て／で] of [て形] with た／だ</p>
 <ul>
 <li><p>です　＝＞　だった</p>
@@ -5794,17 +5910,16 @@ console.log(jso4);
 <blockquote>
 <p><code>中国で買ったＣＤ</code>は　友達に　貸しました</p>
 </blockquote>
-<h2 id="ない形"><a href="#ない形" class="headerlink" title="ない形"></a>ない形</h2><ul>
-<li>い：replace the ending word with the corresponding <em>あ sound(1)</em>(except い=&gt; わ) + ます =&gt;  ない</li>
+<h2 id="ない形-あ"><a href="#ない形-あ" class="headerlink" title="ない形, あ"></a>ない形, あ</h2><ul>
+<li>い：replace the ending word with the corresponding <em>あ(except い=&gt; わ)</em> + ます =&gt;  ない</li>
 <li>え：ます =&gt;  ない</li>
 <li>きます=&gt;こない、します＝＞しない</li>
 </ul>
 <h3 id="express-imperative-mood"><a href="#express-imperative-mood" class="headerlink" title="express imperative mood"></a>express imperative mood</h3><p>give commands, make requests</p>
 <ul>
-<li>「ない形」と　いけません <strong>double negative</strong>, abbr 「ない形」と</li>
-<li>abbr 「ない形」なければ, “must,” “have to,” or “should”<ul>
-<li>なければならない </li>
-<li>なければなりません polite form</li>
+<li><strong>double negative</strong>「ない形」+ なければ(なきゃ), “must,” “have to,” or “should”<ul>
+<li>なければならない / なければなりません polite form, a little more serious than  なければいけない</li>
+<li>なければいけない / なければいけません</li>
 </ul>
 </li>
 </ul>
@@ -5817,7 +5932,7 @@ console.log(jso4);
 <p>a negative conjunction that means “without doing something” or “instead of doing something.”</p>
 </blockquote>
 <p>する　＝＞　せずに</p>
-<h2 id="Imperative-Form"><a href="#Imperative-Form" class="headerlink" title="Imperative-Form"></a>Imperative-Form</h2><h3 id="命令形-めいれいけ"><a href="#命令形-めいれいけ" class="headerlink" title="命令形(めいれいけ)"></a>命令形(めいれいけ)</h3><p>a general way, which is used to give commands or make requests</p>
+<h2 id="Imperative-Form"><a href="#Imperative-Form" class="headerlink" title="Imperative-Form"></a>Imperative-Form</h2><h3 id="命令形-めいれいけ-え"><a href="#命令形-めいれいけ-え" class="headerlink" title="命令形(めいれいけ), え"></a>命令形(めいれいけ), え</h3><p>a general way, which is used to give commands or make requests</p>
 <ul>
 <li>replace the last one to <em>え sound(4)</em></li>
 <li>replace <em>る  to ろ</em></li>
@@ -5846,7 +5961,7 @@ console.log(jso4);
 </ul>
 </li>
 </ul>
-<h2 id="可能形かのうけい"><a href="#可能形かのうけい" class="headerlink" title="可能形かのうけい"></a>可能形かのうけい</h2><p>express the ability or potential to do something,, similar with “ことができます”</p>
+<h2 id="可能形かのうけい"><a href="#可能形かのうけい" class="headerlink" title="可能形かのうけい"></a>可能形かのうけい</h2><p>express the ability or potential to do something, similar with “ことができます”<br>can / able to do sth<br>can’t to do sth = 可能形 =&gt; ない</p>
 <ul>
 <li>を switch to が<ul>
 <li><blockquote>
@@ -5947,7 +6062,7 @@ console.log(jso4);
 </ul>
 </li>
 </ul>
-<h3 id="辞書形-1"><a href="#辞書形-1" class="headerlink" title="辞書形"></a>辞書形</h3><ul>
+<h3 id="辞書形"><a href="#辞書形" class="headerlink" title="辞書形"></a>辞書形</h3><ul>
 <li>お＋い／え verb(remove ます)＋になる</li>
 <li>ご＋さ verb(remove ます)＋になる</li>
 <li>special verbs<ul>
@@ -5958,7 +6073,7 @@ console.log(jso4);
 </ul>
 </li>
 </ul>
-<h3 id="ます形-1"><a href="#ます形-1" class="headerlink" title="ます形"></a>ます形</h3><ul>
+<h3 id="ます形"><a href="#ます形" class="headerlink" title="ます形"></a>ます形</h3><ul>
 <li>お＋い／え verb(remove ます)＋になります</li>
 <li>words like 見ます, 寝ます, and います, which have only <em>one syllable left after removing ます</em>, and <em>さ verb</em> cannot apply this transformation.</li>
 <li><blockquote>
@@ -6123,7 +6238,7 @@ console.log(jso4);
 <li>私は　えいがを　みたいです</li>
 </ul>
 </li>
-<li><p>verbて形＋みたい = want <em>to do</em> something</p>
+<li><p>verbて形＋みたい = want to try doing</p>
 <ul>
 <li><blockquote>
 <p>社長：そうだよ。事務所へ 直行<sup>ちょっこ</sup>しょうか。早く 見てみたいからな</p>
@@ -6280,16 +6395,17 @@ console.log(jso4);
 </li>
 </ul>
 <h2 id="limitations"><a href="#limitations" class="headerlink" title="limitations"></a>limitations</h2><ul>
-<li><p><strong>しか＋negative form</strong></p>
-<ul>
+<li><strong>しか＋negative form</strong><ul>
 <li>“nothing but / only”, implies negative or unsatisfactory feeling</li>
 </ul>
 </li>
-<li><p><strong>だけ</strong></p>
-<ul>
+<li><strong>だけ</strong><ul>
 <li>simply refer to “nothing but / only”, doesn’t necessarily convey a negative feeling</li>
+<li>だけでなく, not only</li>
 </ul>
 </li>
+</ul>
+<ul>
 <li><p><strong>ばかり</strong></p>
 <ul>
 <li>“nothing but / only”, Emphasizes <em>recently</em> or <em>a continuous nature state</em></li>
@@ -10132,41 +10248,46 @@ console.log(jso4);
       </tags>
   </entry>
   <entry>
-    <title>AI practice-use `cursor` to migrate features from an old project to a new one.</title>
+    <title>ai 实践-项目迁移</title>
     <url>/2025/07/20/ai_project_migration/</url>
-    <content><![CDATA[<h2 id="background"><a href="#background" class="headerlink" title="background"></a>background</h2><p>I’ve got to migrate pages from an old project to a new one. i’m totally new to the code, whether the old or the new project. so my principle is to keep it safe and stay stable, and to minimize my verification work as much as i can.</p>
-<p>the two projects are based on different tech stacks.</p>
+    <content><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>需要将页面从一个旧项目迁移到新项目，由于我对这两个项目都完全陌生，对功能也不熟悉，所以我的原则是：小心翼翼，确保安全稳定</p>
+<p>这两个项目基于不同的技术栈：</p>
 <ul>
-<li><strong>Old:</strong> React 15, Webpack, jQuery, internal ui framework</li>
-<li><strong>New:</strong> React 16.8+ and TypeScript and Redux, Vite, Axios, Ant Design</li>
+<li>旧项目： React 15、Webpack、jQuery、内部 UI 框架</li>
+<li>新项目： React 16.8+、TypeScript、Redux、Vite、Axios、Ant Design</li>
 </ul>
-<h2 id="implementation"><a href="#implementation" class="headerlink" title="implementation"></a>implementation</h2><p>a few points i noted are as below:</p>
-<ul>
-<li><strong>technical stack gaps</strong><ul>
-<li>obviously, <code>js</code> vs <code>ts</code></li>
-<li><strong>class components with lifecycle methods</strong> vs <strong>functional components with hooks</strong>, etc.</li>
-<li>direct DOM manipulation or jQuery usage should be refactored or removed.</li>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><ul>
+<li>技术栈差异<ul>
+<li>显而易见的 JS 与 TS 的区别</li>
+<li><strong>类组件（带有生命周期方法）与函数组件（使用 Hooks）</strong>等的转换</li>
+<li>应重构或移除直接的 DOM 操作或 jQuery 的使用</li>
 </ul>
 </li>
-<li><strong>ui and style differences</strong>.<ul>
-<li>both projects are using scss.</li>
-<li>the old one using bootstrap and is imported by <code>CDN</code>, while the new one is using modern framework ant design.</li>
+<li>UI 与样式差异<ul>
+<li>两个项目都使用 SCSS</li>
+<li>旧项目使用通过 CDN 引入的 Bootstrap，而新项目使用现代框架 Ant Design</li>
 </ul>
 </li>
-<li><strong>api calls</strong><ul>
-<li><strong>jQuery</strong> vs <strong>axios with API service functions</strong>.</li>
+<li>API 调用<ul>
+<li>从 jQuery 迁移到 带有 API 服务封装的 Axios</li>
 </ul>
 </li>
-<li><strong>building differences</strong>, mainly on the proxy configs.</li>
-<li><strong>project structure</strong> in the new project should be followed.</li>
+<li>构建差异<ul>
+<li>主要集中在代理（proxy）配置上</li>
 </ul>
-<p>i should not paste code here, but i can share tips for future references:</p>
+</li>
+<li>项目结构<ul>
+<li>必须遵循新项目的目录结构</li>
+</ul>
+</li>
+</ul>
+<p>我不能粘贴代码，但我可以分享一些经验供未来参考</p>
 <ul>
-<li><strong>for safety</strong>, i move pages and verify them one by one. i’m unfamiliar with the code, so changes means to spend extra time in the verification process. as for the migration, i hope it to be safe and stable,  basically, moving the code from one place to another without any changes in the business logic and features</li>
-<li>once one page’s migration is complete, we can instruct ai module to <strong>learn from this migration process and use that knowledge for the next one</strong>.</li>
-<li>the part of <strong>technical stack gaps</strong> is kind of easy for ai. module can spot technical stack gaps and generate a transformation plan after analyzing the codebase of two projects, and then execute the plan quickly.</li>
-<li>**features (like url jumps or relatively file paths) that depend on the env info (like location) should be double-checked—and might need to tweak them manually!</li>
-<li>module may <strong>remove or change code for reasons of optimization</strong> during the migration without notifying the user. it’s not bad idea if you are familiar with the code and want to optimize it from long term perspective.</li>
+<li>由于我对代码不熟悉，任何改动都意味着需要投入额外的验证时间，所以安全起见，就挨个页面迁移以及挨个验证。</li>
+<li>一旦完成一个页面的迁移，就可以引导 AI 模型学习这次迁移过程，并将所获经验应用到下一个页面的迁移中</li>
+<li>技术栈差异部分对 AI 来说相对简单。在分析了两个项目的代码库后，模块可以识别技术栈差距，生成转换计划并快速执行。</li>
+<li>依赖环境信息（如 location）的功能（如 URL 跳转或相对文件路径）必须反复检查——这些可能需要手动进行微调！</li>
+<li>在迁移过程中，大模型可能会出于优化目的在未通知用户的情况下删除或修改代码。这个需要注意，因为对于迁移本身，我希望它是安全稳定的，基本上就是将代码从一处搬到另一处，不要改变任何业务逻辑和功能。</li>
 </ul>
 ]]></content>
       <categories>
@@ -10238,10 +10359,17 @@ console.log(jso4);
 <li>my shrimp didn’t get thrive, but the <strong>spiral shell</strong> are popping up out of a sudden. i didn’t even buy them, must some <strong>parasite eggs hitching a ride on the plants</strong>. i noticed one a week ago, thought it was no big deal, just one. but now … 头疼. i don’t know the exact number but definitely above thirty. where i get this number from? because i’ve been sending them to see god 💀💀💀. they are about two millimeters, too small to be seen, perhaps i need an amplifier.</li>
 <li>such insane growth ability and with no natural predators, they are about to ruin the balance, devouring my plants and eventually taking over the whole tank. 头疼</li>
 </ul>
-<h2 id="1109"><a href="#1109" class="headerlink" title="1109"></a>1109</h2><p>the spiral shell are still blooming but not enough number to take over the tank. i think they can be a part of the echo chain, so no need to panic.<br>i have bought some shrimp again, but they are not thriving like i expected. however, the plants, fish, shrimps and well, spiral shell are worked fine. and the conditions in the tank are stable. i believing it’s a little ecosystem, nature will sort itself out.</p>
+<h2 id="1109"><a href="#1109" class="headerlink" title="1109"></a>1109</h2><ul>
+<li>the spiral shell are still blooming but not enough number to take over the tank. i think they can be a part of the echo chain, so no need to panic.</li>
+<li>i have bought some shrimp again, but they are not thriving like i expected. however, the plants, fish, shrimps and well, spiral shell are worked fine. and the conditions in the tank are stable. i believing it’s a little ecosystem, nature will sort itself out.</li>
+</ul>
+<h2 id="1221"><a href="#1221" class="headerlink" title="1221"></a>1221</h2><ul>
+<li>the lager black one which looked like the big brother, has dead. the seven fish i bought in november were all fully grown, and now only one, the bright orange one, is alive. meanwhile the other three that grew up in the tank are doing very well. they are three survivors out of 15 in total, tough fighters absolutely.</li>
+<li>at night, under the tank light, the silhouettes of the water plants and the gentle waves stirred by the fish are illuminated and reflected onto the ceiling. smooth flowing movements glowing on the white ceiling. it’s a peaceful and magical</li>
+</ul>
 ]]></content>
       <categories>
-        <category>Daily Snippets</category>
+        <category>Others</category>
       </categories>
   </entry>
   <entry>
@@ -10380,6 +10508,41 @@ console.log(jso4);
 </li>
 <li>1120, 明るくて晴れた、とても気持ちのいい日です</li>
 <li>1121, コンピュータの言葉を日本語に変えたら、外来語が多くて、本当に嫌になります</li>
+<li>1123, 巻く<ul>
+<li>髪が巻かれました. my hair got curled, passive form</li>
+<li>髪を巻いてもらいました. i got my hair curled</li>
+</ul>
+</li>
+</ul>
+<h2 id="1130"><a href="#1130" class="headerlink" title="1130"></a>1130</h2><ul>
+<li>1124, 顔認証の画面を見て笑ってしまう。なんかバカで可愛かった<ul>
+<li>かおにんしょう、がめん</li>
+<li>バカ, silly or dumb, and comes not from english</li>
+</ul>
+</li>
+<li>1125, 人と人の格差は思ったより大きいです<ul>
+<li>かくさ</li>
+</ul>
+</li>
+<li>1126, 新しいスポーツインナーがちょっときつい、でも、けっこうかわいい</li>
+<li>1127, 蒸しパンを食べたいてす<ul>
+<li>むす</li>
+</ul>
+</li>
+<li>1128, ノードパソウコンを持たなければいけないから、重くてスケートボードに乗れない<ul>
+<li>のる =&gt; のられる =&gt; 乗れる(omit ら) =&gt; ない形</li>
+<li>スケートボードする</li>
+</ul>
+</li>
+<li>1129, 友達と飲んで、雰囲気がとてもいいです<ul>
+<li>ふんいき</li>
+</ul>
+</li>
+<li>1130, 今日は具合が悪くて、体がだるくて不快だ<ul>
+<li>ぐあい</li>
+<li>からだ</li>
+</ul>
+</li>
 </ul>
 ]]></content>
       <categories>
@@ -10389,7 +10552,7 @@ console.log(jso4);
   <entry>
     <title>nonsense</title>
     <url>/2025/11/09/nonsense/</url>
-    <content><![CDATA[<p>i’ve learned a bit of …. philosophy. well, yes…. philosophy. this word itself is used like a fraud to me. however, i’ve been grappling with questions that cut so deeply they feel almost self-destructive at times. i don’t know if i’m overly sentimental, or dramatic.does my life hold any true meaning? are all the suffering and pain worth to pay? is it really necessary to stick to the journey? is my mind far away from the reality?</p>
+    <content><![CDATA[<p>i’ve learned a bit of …. philosophy. well, yes…. philosophy. this word itself is used like a fraud to me. however, i’ve been grappling with questions that cut so deeply they feel almost self-destructive at times. i don’t know if i’m overly sentimental, or dramatic. does my life hold any true meaning? are all the suffering and pain worth to pay? is it really necessary to stick to the journey? is my mind far away from the reality?</p>
 <p>well, at least, now i know they are <strong>metaphysical</strong>. of course, no great thinker can offer me an answer. yet certain ideas can serve as a helpful guide and a positive power.</p>
 <p><strong>existence precedes essence</strong>, sartre.<br>my life, in itself, carries no meaning–we are born without any purpose or predefined nature. i existfirst, as a becoming, an ing form, i making choices and performing actions at any time. though those actions, consequnesces unfold, and from those consquences, meaning arises. meaning is not something one receive, but something one create. <strong>you are shaped and defined though your actions</strong></p>
 <p><strong>hell is others</strong> Sartre’s. we know that we are free to do anything, free to define ourself. but the point is the <strong><u>awareness</u></strong> that we know we are living in other people’s eyes. the constant judgments and staring from workplace, social media, relationships and friendships, you know you are <strong>observed and evaluated</strong>. you freedom and identity are always entangled with how others see you. it’s the existential dilemma,  you are free, but the cage exists.</p>
@@ -10397,6 +10560,218 @@ console.log(jso4);
 ]]></content>
       <categories>
         <category>Daily Snippets</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>202512</title>
+    <url>/2025/12/01/202512/</url>
+    <content><![CDATA[<h2 id="0112-0118"><a href="#0112-0118" class="headerlink" title="0112-0118"></a>0112-0118</h2><ul>
+<li>たくさん投資の知識を習得した<ul>
+<li>とうし、ちしき、しゅうとくする</li>
+<li>学習する: learning. the process of learning or studying</li>
+<li>習得する: learned. the result of having acquired knowledge or skills</li>
+</ul>
+</li>
+<li>macd / rsi / boll / streatgies</li>
+<li></li>
+</ul>
+<p>1006 error, discord gateway error: Error: connect ETIMEDOUT<br>bug, VPN might be configured for HTTP/HTTPS proxy, but the Discord bot needs direct socket connections to Discord’s gateway servers<br>use TUN mode as a transparent proxy so ALL system traffic (not just browser) goes through it<br><a href="https://github.com/2dust/v2rayN/wiki/Release-files-introduction">https://github.com/2dust/v2rayN/wiki/Release-files-introduction</a><br>,  v2rayn’s tun mode works fine on mac<br><a href="https://github.com/openclaw/openclaw/issues/4772">https://github.com/openclaw/openclaw/issues/4772</a><br> Uncaught exception: Error: Max reconnect attempts (0) reached after code 1006</p>
+<h2 id="1207"><a href="#1207" class="headerlink" title="1207"></a>1207</h2><ul>
+<li>猫ちゃんがまたドアを開きた。頭、ちゃうといたい….</li>
+<li>予算を超えてしまったので、節約したいです<ul>
+<li>て + しまう =&gt; しまい =&gt; しまって</li>
+<li>せつやく</li>
+</ul>
+</li>
+<li>母の誕生日ですれ. 深夜に見た落ち葉は、秋を感じさせる</li>
+<li>　おなかが張っていますよ<ul>
+<li>はる =&gt; はり =&gt; はって</li>
+</ul>
+</li>
+<li>すごく晴れの日に、ねこと散歩して、友達と飲みに行きました</li>
+<li>pb と pe</li>
+<li>When a negative or restrictive adverb (like Hardly, Never, Rarely, Scarcely, No sooner) begins a sentence, we invert the subject and auxiliary verb</li>
+</ul>
+<h2 id="1214"><a href="#1214" class="headerlink" title="1214"></a>1214</h2><ul>
+<li>新しいタイブのゆず酒、最高で、完全にゆずジュースのような味です。<ul>
+<li>大体に日本酒は米酒で、英語では saka と言います</li>
+</ul>
+</li>
+<li>米酒は届いてもらいました。値段に見合う<ul>
+<li>べいしゅ</li>
+</ul>
+</li>
+<li>家の近くのジムが閉まっていました<ul>
+<li>が, not を, it’s not performed by myself</li>
+<li>閉まっていました, not 閉めました. it’s a state not an action</li>
+</ul>
+</li>
+<li>起こることすべてが私のためになる</li>
+</ul>
+<h2 id="1221"><a href="#1221" class="headerlink" title="1221"></a>1221</h2><ul>
+<li>ホッキョクグマのマルル???? 日本人は正気でない, 片仮名は英語だけでなく漢字ものに使われる<ul>
+<li>使う =&gt; ない form あ sound (except い=&gt; わ)</li>
+</ul>
+</li>
+<li>ガス給湯器が完全に壊れた<ul>
+<li>きゅうとうき</li>
+</ul>
+</li>
+<li>今週は大体もやがかかり、気分が沈みやすい天気でしょう<ul>
+<li>霧 きり, Thick fog</li>
+<li>靄 もや, caused by humidity, heat, or pollution</li>
+<li>かかります、To be covered or affected by something</li>
+</ul>
+</li>
+<li>発泡[はっぽう] リンゴしゅはすごい！まさにリンゴの 炭酸[たんさん] ジューすです<ul>
+<li>はっぽう</li>
+<li>たんさん</li>
+<li>全然 normally goes with negative sentences, and cann’t followed by に: 全然美味しくない</li>
+</ul>
+</li>
+<li>友達の誕生日で、楽しみ晩ご飯を食べで、カラオケに行きました</li>
+</ul>
+<h2 id="1228"><a href="#1228" class="headerlink" title="1228"></a>1228</h2><ul>
+<li>table with fixed columns in rn, three plans<ul>
+<li>use position + dynmicly set the position for fixed columns</li>
+<li>split into two tables. simple view container for fixed columns, scrollview for the others<ul>
+<li> dynmic height settings.</li>
+<li>various height value will received before layout finished. so delay to set height</li>
+</ul>
+</li>
+<li>webview<ul>
+<li>user </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Daily Snippets</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>自媒体</title>
+    <url>/2026/05/17/Self-media/</url>
+    <content><![CDATA[<p>all my focus has been on self-media recently. i know this should be a secondary, since i can’t make living from it. but i’m enjoying in it, creating content and expressing my ideas, publishing them, and watching how the videos perform on different platforms. it’s not bad even see it as a hobby.</p>
+<p>three months from 0212 to 0512, across 3 platforms, i’ve been gained followers 820+320+400 = 1540, i haven’t achieve an amazing result, but not the worsrt either. it’s been a steady growth, one day slower another day faster, overall it’s moving in the right direction. it gives me a positive feedback, and it’s sustainable. i say to myself when i started, three months to try, stick with it at least for three months, and see whether it could eventually make money. so how much moneny i made? no money! but a product worth ¥200.</p>
+<h2 id="extra-achievements"><a href="#extra-achievements" class="headerlink" title="extra achievements"></a>extra achievements</h2><p>money was my original goal, but now it means more than that. it becomes a way for me to share, develop ideas, create content to realize my ideas, and accept the real reactions from real people. I’ve experienced a lot through this process: anxiety over traffic and views, disappointment or satisfaction with people’s reactions, surprise at unexpected results, and excitement when i have a good idea, or when i shot something amazing.</p>
+<p>sharing desire. it’s been three months, i definitly know which space i’m stepping into, why people follow my account, what kind of content i should publish. but there is another side of it. the content - i personally want to share and express, but mybe helpless for my account grow. it’s just satisfying my desire of sharing my thoughts and expressing myself. it’s kind of funny. when i started, i didn’t know what’s the popular content on each platform, so i kept try different ideas to see how people would react across different platforms.  but once i figured out what’s the viral content, and i know i should try to copy it, and keep my videos consistent. but it becomes boring quickly. i lost the part of fun and the excitement of uncertainty.</p>
+<p>hard work doesn’t terrifies me, what worries me is putting in effort and seeing no progress and hope at all. whether it’s building muscle, learning a skill. putting in effort day after day pays off - as long as i can see something and believe in where it’s leading me</p>
+<h2 id="platforms"><a href="#platforms" class="headerlink" title="platforms"></a>platforms</h2><p>i posted across three platforms, each starting at different stages. i initially focused on xhs, a few days later, i decide to try dy. i barely a new user on dy, so the data of my first few videos are really bad. after a month, i was totured by the traffic and views, so i figured why not add one more platform, since the video was already made, so i have blilili. </p>
+<p>i’m a regular user on b back when i just a viewer not a content creater, and now i consider myslef a loyal user. the community atmosphere there is best. some videos i put my heart into it, and i get a normal response even terrible on other platforms. but on b, a totally different response. they leave comments on my videos to encourage me to keep going, and not give up.</p>
+<p>my account has seen fastest growth in followers on dy. after all it has 7 times more users than other platforms. the purpose of my videos there is to help the platform to keep user stay. this guides me to publish short and simple videos. I don’t need to spend too much time on the content. so it becomes the easiest one to keep publish.</p>
+<p>xhs is the worset one, but it has the strongest commercial value. it had the fastest follower growth at first, but after about a month, the triffic suddenly dropped, and then follower growth almost came to a halt. triffic comes in waves, and it feels like it’s being controlled by the platform. I can clearly sense it — views rise and drop very suddenly.</p>
+<p>以 dy 为主要平台，快爽短的视频满足dy也同样满足 xhs，b 站可能得尝试做集合</p>
+<ul>
+<li><p><strong>dy</strong>，日活用户七八亿，人群覆盖率广，流量霸主</p>
+<ul>
+<li>考核核心：完播率， 用户留存率，能留住用户</li>
+<li>搞笑/狰狞/离谱/吸引眼球，最好的放第一帧，即时爽感，不需要铺垫，神曲加卡点</li>
+<li>用户筛选: 标签匹配机制，用户和内容一样都是有标签的，系统会先将视频推送给有相同标签的用户，如果这部分精准用户反馈好，才会破圈推送给更多人，</li>
+<li>流量分配机制: 依然是阶梯式的淘汰赛，内容放到流量池里，如果数据达标就再去往下一个更大的流量池里</li>
+<li><table>
+<thead>
+<tr>
+<th align="left">预估曝光量</th>
+<th align="left">流量池性质</th>
+<th align="left">考核核心</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">200 - 500</td>
+<td align="left">初始流量池 冷启动测试</td>
+<td align="left">账号权重、标签匹配度</td>
+</tr>
+<tr>
+<td align="left">1,000 - 5000</td>
+<td align="left">初级流量池 优质苗子</td>
+<td align="left">完播率、点赞率</td>
+</tr>
+<tr>
+<td align="left">1万 - 5万</td>
+<td align="left">中级流量池 小爆款预备</td>
+<td align="left">评论率、转发率</td>
+</tr>
+<tr>
+<td align="left">10万 - 50万</td>
+<td align="left">高级流量池 热门作品</td>
+<td align="left">综合指标，尤其是粉丝增长率</td>
+</tr>
+<tr>
+<td align="left">100万 - 500万</td>
+<td align="left">顶级流量池 全站热榜</td>
+<td align="left">社会话题度、价值观引导</td>
+</tr>
+<tr>
+<td align="left">1000 万+</td>
+<td align="left">现象级流量+ 全网刷屏</td>
+<td align="left">极强的共鸣或全网模仿（挑战赛）</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+<li><p><strong>xhs</strong>，日活用户1亿</p>
+<ul>
+<li>考核核心：看重互动，点击率，要注意封面，CES (Community Engagement Score) 评分标准，点赞量×1分 + 收藏量×1分 + 评论量×4分 + 转发量×4分 + 关注量×8分</li>
+<li>软萌/可爱，共情 / 情绪价值，搜索流量</li>
+<li>流量分配机制：阶梯式流量池</li>
+<li><table>
+<thead>
+<tr>
+<th align="left">预估曝光量</th>
+<th align="left">流量池性质</th>
+<th align="left">考核核心</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">100 - 300</td>
+<td align="left">初始测试池</td>
+<td align="left">只要内容不违规，系统都会给的基础曝光，测试受众反应</td>
+</tr>
+<tr>
+<td align="left">500 - 2,000</td>
+<td align="left">初级流量池</td>
+<td align="left">笔记表现优于平均值，开始匹配更多精准标签用户</td>
+</tr>
+<tr>
+<td align="left">2,000 - 10,000</td>
+<td align="left">中级流量池</td>
+<td align="left">笔记开始有“小爆”的迹象，进入特定话题/频道的前列</td>
+</tr>
+<tr>
+<td align="left">1万 - 5万</td>
+<td align="left">高级流量池</td>
+<td align="left">互动率稳定，系统开始全平台扩散</td>
+</tr>
+<tr>
+<td align="left">5万 - 10万+</td>
+<td align="left">热门流量池</td>
+<td align="left">已经成为当周或当月的“爆款”笔记</td>
+</tr>
+<tr>
+<td align="left">100万+</td>
+<td align="left">全站级流量池</td>
+<td align="left">现象级笔记，通常具有极强的社会共鸣或视觉冲击力</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+<li><p><strong>b</strong>，日活用户1亿</p>
+<ul>
+<li>考核核心：平均播放时长 &gt; 弹幕 &gt; 投币 &gt; 收藏 &gt; 点赞 &gt; 点击率，弹幕和投币是b站的特色，硬币有限，投币代表极高的认可</li>
+<li>玩梗或者温情，做集合去满足b站用户长线追踪的特质</li>
+<li>用户筛选：会优先推给粉丝，看重私域流量</li>
+<li>特点：喜欢养成系，粘性极高，社区氛围好</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Others</category>
       </categories>
   </entry>
 </search>

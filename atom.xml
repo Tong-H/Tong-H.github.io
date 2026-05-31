@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://mser.xyz/"/>
-  <updated>2025-11-23T06:10:53.082Z</updated>
+  <updated>2026-05-31T10:03:58.760Z</updated>
   <id>https://mser.xyz/</id>
   
   <author>
@@ -17,11 +17,59 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>自媒体</title>
+    <link href="https://mser.xyz/2026/05/17/Self-media/"/>
+    <id>https://mser.xyz/2026/05/17/Self-media/</id>
+    <published>2026-05-16T16:00:00.000Z</published>
+    <updated>2026-05-31T10:03:58.760Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;all my focus has been on self-media recently. i know this should be a secondary, since i can’t make living from it. but i’m enjoying in
+        
+      
+    
+    </summary>
+    
+      <category term="Others" scheme="https://mser.xyz/categories/Others/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>202512</title>
+    <link href="https://mser.xyz/2025/12/01/202512/"/>
+    <id>https://mser.xyz/2025/12/01/202512/</id>
+    <published>2025-11-30T16:00:00.000Z</published>
+    <updated>2026-05-31T09:47:28.626Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;0112-0118&quot;&gt;&lt;a href=&quot;#0112-0118&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>nonsense</title>
     <link href="https://mser.xyz/2025/11/09/nonsense/"/>
     <id>https://mser.xyz/2025/11/09/nonsense/</id>
     <published>2025-11-08T16:00:00.000Z</published>
-    <updated>2025-11-23T06:10:53.082Z</updated>
+    <updated>2026-05-31T09:47:28.643Z</updated>
     
     <summary type="html">
     
@@ -45,7 +93,7 @@
     <link href="https://mser.xyz/2025/09/01/202509/"/>
     <id>https://mser.xyz/2025/09/01/202509/</id>
     <published>2025-08-31T16:00:00.000Z</published>
-    <updated>2025-11-23T06:00:43.606Z</updated>
+    <updated>2026-02-20T06:48:48.558Z</updated>
     
     <summary type="html">
     
@@ -70,7 +118,7 @@
     <link href="https://mser.xyz/2025/08/03/fish_tank/"/>
     <id>https://mser.xyz/2025/08/03/fish_tank/</id>
     <published>2025-08-02T16:00:00.000Z</published>
-    <updated>2025-11-09T05:54:31.071Z</updated>
+    <updated>2026-05-31T10:03:33.399Z</updated>
     
     <summary type="html">
     
@@ -85,7 +133,7 @@
     
     </summary>
     
-      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
+      <category term="Others" scheme="https://mser.xyz/categories/Others/"/>
     
     
   </entry>
@@ -143,11 +191,11 @@
   </entry>
   
   <entry>
-    <title>AI practice-use `cursor` to migrate features from an old project to a new one.</title>
+    <title>ai 实践-项目迁移</title>
     <link href="https://mser.xyz/2025/07/20/ai_project_migration/"/>
     <id>https://mser.xyz/2025/07/20/ai_project_migration/</id>
     <published>2025-07-19T16:00:00.000Z</published>
-    <updated>2025-08-03T16:54:10.827Z</updated>
+    <updated>2026-05-31T10:01:51.308Z</updated>
     
     <summary type="html">
     
@@ -155,7 +203,7 @@
       
         
         
-          &lt;h2 id=&quot;background&quot;&gt;&lt;a href=&quot;#background&quot; class=&quot;headerlink&quot; title=&quot;background&quot;&gt;&lt;/a&gt;background&lt;/h2&gt;&lt;p&gt;I’ve got to migrate pages from an old
+          &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;
         
       
     
@@ -459,60 +507,6 @@
         
           &lt;h2 id=&quot;2025-03-23&quot;&gt;&lt;a href=&quot;#2025-03-23&quot; class=&quot;headerlink&quot; title=&quot;2025/03/23&quot;&gt;&lt;/a&gt;2025/03/23&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>shell</title>
-    <link href="https://mser.xyz/2025/02/16/notes_shell/"/>
-    <id>https://mser.xyz/2025/02/16/notes_shell/</id>
-    <published>2025-02-15T16:00:00.000Z</published>
-    <updated>2025-02-16T07:10:24.200Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;write a shell script with multiple line&lt;/p&gt;
-&lt;figure class=&quot;highlight 1c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
-        
-      
-    
-    </summary>
-    
-      <category term="Notes" scheme="https://mser.xyz/categories/Notes/"/>
-    
-    
-      <category term="shell" scheme="https://mser.xyz/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2025-02</title>
-    <link href="https://mser.xyz/2025/02/11/202502/"/>
-    <id>https://mser.xyz/2025/02/11/202502/</id>
-    <published>2025-02-10T16:00:00.000Z</published>
-    <updated>2025-03-16T08:24:30.417Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;2025-02-28&quot;&gt;&lt;a href=&quot;#2025-02-28&quot; class=&quot;headerlink&quot; title=&quot;2025/02/28&quot;&gt;&lt;/a&gt;2025/02/28&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;ts supports&lt;/li&gt;
-&lt;li&gt;React.memo
         
       
     
