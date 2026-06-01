@@ -41,6 +41,32 @@
   </entry>
   
   <entry>
+    <title>OpenClaw + 即梦自动运营小红书</title>
+    <link href="https://mser.xyz/2026/04/29/ai_jimeng_generator/"/>
+    <id>https://mser.xyz/2026/04/29/ai_jimeng_generator/</id>
+    <published>2026-04-28T16:00:00.000Z</published>
+    <updated>2026-06-01T15:42:47.967Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;github 地址： &lt;a href=&quot;https://github.com/Tong-H/jimeng-generator&quot;&gt;https://github.com/Tong-H/jimeng-generator&lt;/a&gt;&lt;br&gt;使用 OpenClaw + 即梦 + 小红书
+        
+      
+    
+    </summary>
+    
+      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
+    
+    
+      <category term="ai" scheme="https://mser.xyz/tags/ai/"/>
+    
+  </entry>
+  
+  <entry>
     <title>202512</title>
     <link href="https://mser.xyz/2025/12/01/202512/"/>
     <id>https://mser.xyz/2025/12/01/202512/</id>
@@ -69,7 +95,7 @@
     <link href="https://mser.xyz/2025/11/09/nonsense/"/>
     <id>https://mser.xyz/2025/11/09/nonsense/</id>
     <published>2025-11-08T16:00:00.000Z</published>
-    <updated>2026-05-31T09:47:28.643Z</updated>
+    <updated>2026-06-01T15:42:48.015Z</updated>
     
     <summary type="html">
     
@@ -83,17 +109,17 @@
     
     </summary>
     
-      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
+      <category term="Others" scheme="https://mser.xyz/categories/Others/"/>
     
     
   </entry>
   
   <entry>
-    <title>202509-202511</title>
-    <link href="https://mser.xyz/2025/09/01/202509/"/>
-    <id>https://mser.xyz/2025/09/01/202509/</id>
-    <published>2025-08-31T16:00:00.000Z</published>
-    <updated>2026-02-20T06:48:48.558Z</updated>
+    <title>基于 Playwright 的开发辅助工具-dev-playkit</title>
+    <link href="https://mser.xyz/2025/09/29/ai_dev_playkit/"/>
+    <id>https://mser.xyz/2025/09/29/ai_dev_playkit/</id>
+    <published>2025-09-28T16:00:00.000Z</published>
+    <updated>2026-06-01T15:42:47.957Z</updated>
     
     <summary type="html">
     
@@ -101,15 +127,16 @@
       
         
         
-          &lt;h2 id=&quot;0921&quot;&gt;&lt;a href=&quot;#0921&quot; class=&quot;headerlink&quot; title=&quot;0921&quot;&gt;&lt;/a&gt;0921&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;vibe coding, coding with a good vibe, where you’re
+          &lt;p&gt;github 地址： &lt;a href=&quot;https://github.com/Tong-H/dev-playkit&quot;&gt;https://github.com/Tong-H/dev-playkit&lt;/a&gt;&lt;br&gt;这是一个基于 Playwright
         
       
     
     </summary>
     
-      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
+      <category term="Frontend" scheme="https://mser.xyz/categories/Frontend/"/>
     
+    
+      <category term="ai" scheme="https://mser.xyz/tags/ai/"/>
     
   </entry>
   
@@ -139,11 +166,11 @@
   </entry>
   
   <entry>
-    <title>2025-08</title>
+    <title>202508/09</title>
     <link href="https://mser.xyz/2025/08/01/202508/"/>
     <id>https://mser.xyz/2025/08/01/202508/</id>
     <published>2025-07-31T16:00:00.000Z</published>
-    <updated>2025-08-30T19:40:04.333Z</updated>
+    <updated>2026-06-01T15:42:47.866Z</updated>
     
     <summary type="html">
     
@@ -151,8 +178,8 @@
       
         
         
-          &lt;h2 id=&quot;0803&quot;&gt;&lt;a href=&quot;#0803&quot; class=&quot;headerlink&quot; title=&quot;0803&quot;&gt;&lt;/a&gt;0803&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;learn from deepwiki-open code and go though rag
+          &lt;h2 id=&quot;0921&quot;&gt;&lt;a href=&quot;#0921&quot; class=&quot;headerlink&quot; title=&quot;0921&quot;&gt;&lt;/a&gt;0921&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;vibe coding, coding with a good vibe, where you’re
         
       
     
@@ -241,56 +268,6 @@
   </entry>
   
   <entry>
-    <title>2025-07</title>
-    <link href="https://mser.xyz/2025/07/01/202507/"/>
-    <id>https://mser.xyz/2025/07/01/202507/</id>
-    <published>2025-06-30T16:00:00.000Z</published>
-    <updated>2025-08-24T07:02:42.375Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;0706&quot;&gt;&lt;a href=&quot;#0706&quot; class=&quot;headerlink&quot; title=&quot;0706&quot;&gt;&lt;/a&gt;0706&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;rn render issues&lt;ul&gt;
-&lt;li&gt;gif rendering in rn, Android
-        
-      
-    
-    </summary>
-    
-      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>how to stew meat</title>
-    <link href="https://mser.xyz/2025/07/01/stewMeat/"/>
-    <id>https://mser.xyz/2025/07/01/stewMeat/</id>
-    <published>2025-06-30T16:00:00.000Z</published>
-    <updated>2025-07-02T23:27:58.005Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;thanks to my fracture, I can only muster a tiny bit of strength with my mouth. for nearly three weeks, I’ve been living on stewed
-        
-      
-    
-    </summary>
-    
-      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>AI 实践-Memory Bank</title>
     <link href="https://mser.xyz/2025/07/01/ai_memorybank/"/>
     <id>https://mser.xyz/2025/07/01/ai_memorybank/</id>
@@ -317,11 +294,35 @@
   </entry>
   
   <entry>
+    <title>how to stew meat</title>
+    <link href="https://mser.xyz/2025/07/01/stewMeat/"/>
+    <id>https://mser.xyz/2025/07/01/stewMeat/</id>
+    <published>2025-06-30T16:00:00.000Z</published>
+    <updated>2026-06-01T15:42:48.065Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;thanks to my fracture, I can only muster a tiny bit of strength with my mouth. for nearly three weeks, I’ve been living on stewed
+        
+      
+    
+    </summary>
+    
+      <category term="Others" scheme="https://mser.xyz/categories/Others/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Maxillofacial fracture</title>
     <link href="https://mser.xyz/2025/06/10/Maxillofacial-fracture/"/>
     <id>https://mser.xyz/2025/06/10/Maxillofacial-fracture/</id>
     <published>2025-06-09T16:00:00.000Z</published>
-    <updated>2025-11-09T04:42:10.010Z</updated>
+    <updated>2026-06-01T15:42:47.881Z</updated>
     
     <summary type="html">
     
@@ -335,17 +336,17 @@
     
     </summary>
     
-      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
+      <category term="Others" scheme="https://mser.xyz/categories/Others/"/>
     
     
   </entry>
   
   <entry>
-    <title>2025-06</title>
+    <title>2025-06/07</title>
     <link href="https://mser.xyz/2025/06/01/202506/"/>
     <id>https://mser.xyz/2025/06/01/202506/</id>
     <published>2025-05-31T16:00:00.000Z</published>
-    <updated>2025-07-02T23:53:46.889Z</updated>
+    <updated>2026-06-01T15:42:47.855Z</updated>
     
     <summary type="html">
     
@@ -353,8 +354,9 @@
       
         
         
-          &lt;h3 id=&quot;0629&quot;&gt;&lt;a href=&quot;#0629&quot; class=&quot;headerlink&quot; title=&quot;0629&quot;&gt;&lt;/a&gt;0629&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/2025/06/01/notes_ai/#browsertools&quot;&gt;use
+          &lt;h2 id=&quot;0706&quot;&gt;&lt;a href=&quot;#0706&quot; class=&quot;headerlink&quot; title=&quot;0706&quot;&gt;&lt;/a&gt;0706&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;rn render issues&lt;ul&gt;
+&lt;li&gt;gif rendering in rn, Android
         
       
     
@@ -393,11 +395,11 @@
   </entry>
   
   <entry>
-    <title>some day</title>
-    <link href="https://mser.xyz/2025/05/30/a-day/"/>
-    <id>https://mser.xyz/2025/05/30/a-day/</id>
+    <title>day</title>
+    <link href="https://mser.xyz/2025/05/30/someday/"/>
+    <id>https://mser.xyz/2025/05/30/someday/</id>
     <published>2025-05-29T16:00:00.000Z</published>
-    <updated>2025-07-02T23:27:57.964Z</updated>
+    <updated>2026-06-01T15:42:48.056Z</updated>
     
     <summary type="html">
     
@@ -411,7 +413,7 @@
     
     </summary>
     
-      <category term="Daily Snippets" scheme="https://mser.xyz/categories/Daily-Snippets/"/>
+      <category term="Others" scheme="https://mser.xyz/categories/Others/"/>
     
     
   </entry>
